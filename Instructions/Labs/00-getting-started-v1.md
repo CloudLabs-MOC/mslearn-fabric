@@ -67,6 +67,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ![Manage Your Virtual Machine](./Images/updatedimg4.png)
   
+## Lab Validation
+
+After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+
+   ![Inline Validation](./Images/inline-validation.png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 

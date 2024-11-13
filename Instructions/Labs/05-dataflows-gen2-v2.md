@@ -47,11 +47,11 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 8. In the left menu bar, click on **Workspaces (1)**, then select **+ New Workspace (2)**.
 
-   ![](./Images/new_workspace.png)
+   ![New lakehouse.](./Images/fab-image2.png)
 
 9. Create a new workspace with a name **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, Choose a licensing mode as a **trial (2)** under **Advanced**. and click on **Apply (3)**
 
-   ![Screenshot of an empty workspace in Power BI.](./Images/dp-lakehouse-1.png)
+   ![New lakehouse.](./Images/fab-image3.png)
     
 10. When your new workspace opens, it should be empty, as shown here:
 
@@ -72,16 +72,18 @@ Now that you have a workspace, it's time to switch to the **Data Engineering** e
 
 1. At the bottom left of the Power BI portal, click the **Power BI (1)** icon to access the **Data Engineering (2)** experience.
    
-      ![New lakehouse.](./Images/data-engineer.png)
+      ![New lakehouse.](./Images/fab-image13.png)
    
 2. From the **Data Engineering** homepage, select **Lakehouse**.
 
-      ![New lakehouse.](./Images/lakehouse-1-1.png)
+      ![New lakehouse.](./Images/fab-image1.png)
 
 3. Create a new Lakehouse
 
-    Name: Enter **dp_lakehouse**.
+    Name: Enter **dp_lakehouse** and click on **Create**.
 
+    ![New lakehouse.](./Images/fab-image12.png)
+   
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -100,7 +102,11 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 2. Search for **Dataflow Gen2** and select it .
 
       ![New dataflow.](./Images/datagenflow.png)
-   
+
+      >**Note**: If the option is not visible as mentioned above, please follow the steps highlighted in the screenshot below.
+      
+      ![New lakehouse.](./Images/fab-image4.png)
+
 3. After a few seconds, the Power Query editor for your new dataflow opens as shown here.
 
       ![New dataflow.](./Images/m6-fabric-2.png)
@@ -114,7 +120,9 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
     - **Authentication kind**: Anonymous
     - **Privacy level** : none
 
-      ![Query in the Power Query editor.](./Images/connect-data-source.png)
+      ![New lakehouse.](./Images/fab-image5.png)
+
+      ![New lakehouse.](./Images/fab-image6.png)
    
 5. Select **Next** to preview the file data, and then **Create** the data source. The Power Query editor shows the data source and an initial set of query steps to 
    format the data, as shown here:
@@ -123,7 +131,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 6. On the toolbar ribbon, select the **Add column** tab. Then select **Custom column**.
 
-      ![Custom column in Power Query editor.](./Images/custom_column.png)
+      ![New lakehouse.](./Images/fab-image7.png)
    
 7. Create a new column named **MonthNo** that contains a number based on the formula `Date.Month([OrderDate])` - as shown here and 
    Click on **OK**.
@@ -146,7 +154,7 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
       > **Note:** If this option is grayed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the 
       right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
-      ![Query with a custom column step.](./Images/lakehouse_1-1.png)
+      ![New lakehouse.](./Images/fab-image8.png)
 
 2. In the **Connect to data destination** dialog box, edit the connection and sign in using your Power BI organizational account to set the identity that the dataflow 
    uses to access the lakehouse, Select **Next**.
@@ -192,16 +200,18 @@ Now that you have a lakehouse, you need to ingest some data into it. One way to 
 
 You can include a dataflow as an activity in a pipeline. Pipelines are used to orchestrate data ingestion and processing activities, enabling you to combine dataflows with other kinds of operation in a single, scheduled process. Pipelines can be created in a few different experiences, including Data Factory experience.
 
-1. In the fabric workspace, ensure you are in the **Data Engineering** experience. Select **Data pipeline**, then create a new pipeline and name it **Load Orders 
-   pipeline**.
+1. In the fabric workspace, ensure you are in the **Data Engineering** experience. Select **Data pipeline** (select > the arrow if the Data pipeline option is not 
+   visible.)  then create a new pipeline and name it **Load Orders pipeline**.
 
-      ![Empty data pipeline.](./Images/dataflow_pipeline.png)
+      ![New lakehouse.](./Images/fab-image9.png)
+
+      ![New lakehouse.](./Images/fab-image10.png)
 
       > **Note**: If the Copy Data wizard opens automatically, close it!
 
-2. Select **Pipeline activity**, and add a **Dataflow** activity to the pipeline.
+3. Select **Pipeline activity**, and add a **Dataflow** activity to the pipeline.
 
-      ![Empty data pipeline.](./Images/dataflow_1.png)
+      ![New lakehouse.](./Images/fab-image11.png)
 
 4. With the new **Dataflow1** activity selected, on the **Settings** tab, in the **Dataflow** drop-down list, select **Dataflow 1** (the data flow you created previously)
 

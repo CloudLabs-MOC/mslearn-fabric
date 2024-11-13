@@ -29,11 +29,16 @@ For convenience, you can open the lab guide in a separate window by selecting th
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](./Images/res.png)
+
+## Lab Validation
+
+1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+
+   ![Inline Validation](./Images/inline-validation.png)
  
+ 1. Click "Next" from the bottom right corner to embark on your Lab journey!
  
- Click "Next" from the bottom right corner to embark on your Lab journey!
- 
-  ![Start Your Azure Journey](./Images/next.png)
+    ![Start Your Azure Journey](./Images/next.png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
