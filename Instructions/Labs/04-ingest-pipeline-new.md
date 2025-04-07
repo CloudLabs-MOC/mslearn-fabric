@@ -1,6 +1,6 @@
 # Lab 02: Ingest data with a pipeline
 
-### Estimated Duration: 90 minutes
+### Estimated Duration: 120 minutes
 
 ## Overview
 Data pipelines define a sequence of activities that orchestrate an overall process, usually by extracting data from one or more sources and loading it into a destination; often transforming it along the way. Pipelines are commonly used to automate extract, transform, and load (ETL) processes that ingest transactional data from operational data stores into an analytical data store, such as a lakehouse or data warehouse. The graphical pipeline canvas in the Fabric user interface enables you to build complex pipelines with minimal or no coding required.
