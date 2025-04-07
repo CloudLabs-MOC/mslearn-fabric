@@ -76,6 +76,12 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 ![Manage Your Virtual Machine](./Images/res.png)
 
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](./Images/labzoom-1.png)    
+
 ## Support Contact
  
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
