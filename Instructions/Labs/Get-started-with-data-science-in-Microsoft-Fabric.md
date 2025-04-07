@@ -91,21 +91,13 @@ You will explore how to import data into a DataFrame in Microsoft Fabric for pro
 
 Now you're ready to run code to prepare data and train a model. To work with data, you'll use *dataframes*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
 
-1. Select **Lakehouses** from the explorer.
+1. Click on Data items in the Explorer panel, then select Add data items and choose Existing data sources from the dropdown menu.
 
-   ![](./Images/25.png)
+   ![](./Images/nb-01.png)
 
-1. In the **Add lakehouse** pane, select **Add** to add a lakehouse.
+1. Select the lakehouse you created in a previous section and select **Connect**.
 
-   ![](./Images/26.png)
-
-1. Select **Existing Lakehouse without Schema** in Add Lakehouse pane and select **Add**.
-
-    ![](./Images/27.png)
-
-1. Select the lakehouse you created in a previous section and select **Add**
-
-   ![](./Images/28.png)
+   ![](./Images/nb-02.png)
 
 1. Click on the **Files (1)** folder to display the CSV file next to the notebook editor. Then, open the **...** menu for **churn.csv (2)** and select **Load data (3)** > **Pandas (4)**.
 
