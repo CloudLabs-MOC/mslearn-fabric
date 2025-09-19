@@ -25,7 +25,7 @@ These labs follow a structured, step-by-step workflow to streamline data process
 
 ## Architecture Diagram
 
-![Architecture Diagram](./Images/archdia.png)
+![Architecture Diagram](./Images/arch.png)
 
 ## Explanation of Components
 

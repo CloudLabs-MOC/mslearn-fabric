@@ -8,8 +8,8 @@ Microsoft Fabric provides an end-to-end platform for data solutions, including r
 
 You will be able to complete the following tasks:
 
-- Task 1: Create a workspace and download a file for the KQL database
-- Task 2: Create a KQL database
+- Task 1: Create a workspace
+- Task 2: Download file for KQL database and create a KQL database
 - Task 3: Use KQL to query the sales table
 - Task 4: Create a Power BI report from a KQL Query set
 
@@ -35,7 +35,7 @@ This task will guide you through creating a workspace in Microsoft Fabric.
 
    ![Screenshot of an empty workspace in Power BI.](./Images/E1T2S3.png)
  
-## Task 3: Download file for KQL database and create a KQL database
+## Task 2: Download file for KQL database and create a KQL database
 
 In this task, you will learn how to download a file for a KQL database and create a KQL database in Microsoft Fabric for querying and analyzing data efficiently.
 
@@ -98,7 +98,7 @@ Now that you have a workspace, download the data file for analysis. Using *Kusto
 
 > **Note:** In this task, you imported a very small amount of static data from a file, which is fine for the purposes of this task. In reality, you can use Kusto to analyze much larger volumes of data, including real-time data from a streaming source such as Azure Event Hubs.
 
-## Task 4: Use KQL to query the sales table
+## Task 3: Use KQL to query the sales table
 
 This task will walk you through using KQL (Kusto Query Language) to query the Sales table and analyze data efficiently in Microsoft Fabric.
 
@@ -151,7 +151,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
 
     ![](./Images/E1T4S10-2.png)
 
-## Task 5: Create a Power BI report from a KQL Query set
+## Task 4: Create a Power BI report from a KQL Query set
 
 This task will guide you through visualizing and analyzing data effectively by creating a Power BI report using a KQL query set. You will learn how to transform query results into insightful reports and dashboards.
 
