@@ -349,7 +349,7 @@ If you've finished exploring your data warehouse, you can delete the workspace y
 
 3. In the **General (1)** Pane, Under the **Delete workspace** section, click **Remove this workspace (2)**.
 
-   ![](./Images/L2T5S22.png)
+   ![](./Images/deleteworkspace.png)
 
 ## Summary
 
