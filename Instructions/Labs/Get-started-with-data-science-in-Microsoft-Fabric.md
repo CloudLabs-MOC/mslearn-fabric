@@ -69,7 +69,7 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
    ![](./Images/49.png)
 
-1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Notebook (2)** and select **Notebook (3)**.
+1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Notebook (2)** and select **Notebook (3)**. Then click on **Create**.
 
      ![](./Images/E2T2S2.png)
 

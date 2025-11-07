@@ -95,7 +95,7 @@ Now that you have a workspace, download the data file for analysis. Using *Kusto
             - Create table (sales)
             - Create mapping (sales_mapping)
             - Data queuing
-            - Blob ingestion
+            
         - Select the **Close (2)** button
 
           ![New table wizard step six](./Images/E1T3S7-5.png)

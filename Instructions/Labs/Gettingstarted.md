@@ -90,11 +90,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
        ![Enter Your Username](./Images/GS5.png)
  
-1. Next, provide your password **(1)** and click on **Sign in (2)**
+1. Next, provide your Temporary Access Password **(1)** and click on **Sign in (2)**
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](./Images/GS6.png)
+       ![Enter Your Password](./Images/GS8.png)
 
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
@@ -102,7 +102,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. When the **Welcome to the Fabric view** dialog appears, click **Cancel**.
 
-   ![](./Images/GS8.png)
+   ![](./Images/G13.png)
 
 1. A new pop-up will appear with the message **Microsoft Fabric (Free) license assigned**. Click on **OK**.
 
@@ -118,9 +118,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    >**Note:** The trial capacity region may differ from the one shown in the screenshot. No need to worry – simply use the default selected region, activate it, and continue to the next step.
 
-1. If you see a pop-up message saying **Successfully upgraded to Microsoft Fabric**, click **Got it**.
+1. If you see a pop-up message saying **Successfully upgraded to Microsoft Fabric**, click on **OK**.
 
-   ![Enter Your Password](./Images/GS12.png)
+   ![Enter Your Password](./Images/GS14.png)
+
+1. On the **Invite teammates to try Fabric** pop-up, click on **Close**.
+
+![Enter Your Password](./Images/GS15.png)
    
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
