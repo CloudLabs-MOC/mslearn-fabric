@@ -58,11 +58,11 @@ In this task, you’ll create a dedicated workspace in Microsoft Fabric with the
 
    ![](./Images/p2t1p10.png)
    
-6. On the **Successfully upgraded to Microsoft Fabric** pop-up, click **OK**.
+6. On the **Successfully upgraded to Microsoft Fabric** pop-up, click **Stay on current page**.
 
-   ![](./Images/p2t1p11.png)
+   ![](./Images/Update-2.png)
 
-1. Close the **Invite teammates to try Fabric to extend your trial** window when it appears.
+      >**Note:** If **Invite teammates to try Fabric to extend your trial** window appears, **X** close it.
 
       ![](./Images/p2t1p12.png)
    
@@ -103,9 +103,9 @@ In this task, you’ll create a Lakehouse within your Fabric workspace to serve 
 
       ![New lakehouse.](./Images/p2t2p1.png)
 
-3. In the **New lakehouse** pop-up, enter the Name as  **dp_lakehouse (1)** and click on **Create (2)**.
+3. In the **New Lakehouse** pop-up, enter the Name as  **dp_lakehouse (1)** and click on **Create (2)**.
 
-    ![New lakehouse.](./Images/p2t2p2.png)
+    ![New lakehouse.](./Images/Update-3.png)
    
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -128,13 +128,13 @@ In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse us
 
       - **Name:** Keep as default **(1)**
       - **Enable Git integration, deployment pipelines, and Public API Scenarios:** Uncheck **(2)**
-            ![](./Images/p2t3p2.png)
+       ![](./Images/p2t3p2.png)
 
-      After a few seconds, the Power Query editor for your new dataflow will open.
+   After a few seconds, the Power Query editor for your new dataflow will open.
 
 1. From the center **Get data** pane, select **Import from a Text/CSV file**.
 
-      ![New lakehouse.](./Images/fab-image5upd.png)
+    ![New lakehouse.](./Images/fab-image5upd.png)
 
 5. Create a new data source with the following settings and click on **Next (7)** :
  
