@@ -2,11 +2,13 @@
 
 ### Estimated Duration: 120 Minutes
 
-This exercise provides a complete, end-to-end data-science workflow in Microsoft Fabric, guiding you from raw data ingestion through model training, experiment tracking, and model preservation. Over eight sequential tasks, you build practical skills for preparing data, creating experiments, training machine-learning models, and managing outputs.
+## Overview
 
-## Lab Objectives
+In this lab, you will work through a complete end-to-end data science workflow in Microsoft Fabric, from raw data ingestion to model training, experiment tracking, and model preservation. Across eight sequential tasks, you will develop practical skills in data preparation, experiment creation, machine-learning model training, and managing outputs.
 
-You will be able to complete the following tasks:
+## Objectives
+
+In this lab, you will be able to complete the following tasks:
 
 - Task 1: Create a Lakehouse and upload files
 - Task 2: Create a Notebook
@@ -31,9 +33,9 @@ Now that you have a workspace, it's time to switch to the *Data science* experie
    
    ![](./Images/E2T1S2.png)
 
-1. Enter **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** as the name and click **Create (2)**.
+1. In the **New Lakehouse** window, enter **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** as the name, select the **Location** as your workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (2)** and click **Create (3)**. Keep the Lakehouse schemas unchecked.
 
-    ![](./Images/E2T1S3.png)
+    ![](./Images/L2T1S3n-2611.png)
 
     >**Note:** After a minute or so, a new lakehouse with no **Tables** or **Files** will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this task, you'll simply download and extract a folder of text files from your local computer (or lab VM if applicable) and then upload them to your lakehouse.
 
@@ -45,9 +47,9 @@ Now that you have a workspace, it's time to switch to the *Data science* experie
 
     ![](./Images/E2T1S5.png)
 
-1. Select the **churn.csv (1)** file from your LabVM to the lakehouse and **Upload (2)** it.
+1. Click on the **Browse (1)** option and navigate to **C:\LabFiles\dp-data-main (2)** location. Select the **churn.csv (3)** file, click on **Open (4)** and then **Upload (5)**.
 
-   ![](./Images/E2T1S6-1.png)
+   ![](./Images/L2T1S6-2611.png)
 
 1. After the file is **uploaded (3)**, close the tab by **clicking (4)**.
 
@@ -69,9 +71,11 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
    ![](./Images/49.png)
 
-1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Notebook (2)** and select **Notebook (3)**. Then click on **Create**.
+1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Notebook (2)** and select **Notebook (3)**. Then click on **Create (4)**.
 
      ![](./Images/E2T2S2.png)
+
+     ![](./Images/L2T2S2n-2611.png)
 
 1. On the pop-up **Enhance your notebook experience with AI tools** select **Skip tour**.
 
@@ -81,7 +85,7 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
     ![](./Images/E2T2S3.png)
 
-    When the cell changes to a markdown cell, the text it contains is rendered.
+    When the cell changes to a markdown cell, the text it contents is rendered.
 
 1. Use the **&#128393;** (Edit) button to switch the cell to editing mode.
 
@@ -150,7 +154,7 @@ In this task, you will learn how to train a Machine Learning model in Microsoft 
 
 Now that you've loaded the data, you can use it to train a machine learning model and predict customer churn. You'll train a model using the Scikit-Learn library and track the model with MLflow. 
 
-1. Use the **+ Code** icon below the cell output to add a new code cell to the notebook.
+1. Hover the mouse below the output sections and use the **+ Code** icon below the cell output to add a new code cell to the notebook.
 
    ![](./Images/E2T4S1.png)
 
@@ -169,7 +173,7 @@ Now that you've loaded the data, you can use it to train a machine learning mode
 
     ![](./Images/E2T4S3.png)
    
-1. Add another new code cell to the notebook, enter the following code in it, and run it:
+1. Add another new code cell to the notebook, enter the following code in it, and run the cell:
     
     ```python
    import mlflow
@@ -181,7 +185,7 @@ Now that you've loaded the data, you can use it to train a machine learning mode
 
     The code creates an MLflow experiment named `experiment-churn`. Your models will be tracked in this experiment.   
 
-1. Add another new code cell to the notebook, enter the following code in it, and run it:
+1. Add another new code cell to the notebook, enter the following code in it, and run the cell:
 
     ```python
    from sklearn.linear_model import LogisticRegression
@@ -198,7 +202,7 @@ Now that you've loaded the data, you can use it to train a machine learning mode
 
      The code trains a classification model using Logistic Regression. Parameters, metrics, and artifacts are automatically logged with MLflow. Additionally, you're logging a parameter called `estimator`, with the value `LogisticRegression`.
 
-1. Add another new code cell to the notebook, enter the following code in it, and run it:
+1. Add another new code cell to the notebook, enter the following code in it, and run the cell:
 
     ```python
    from sklearn.tree import DecisionTreeClassifier
@@ -221,7 +225,7 @@ You will learn how to use MLflow to search and view your machine learning experi
 
 When you've trained and tracked models with MLflow, you can use the MLflow library to retrieve your experiments and their details.
 
-1. To list all experiments, use the following code:
+1. Add another code cell to list all experiments, use the following code and run the cell:
 
     ```python
    import mlflow
@@ -234,7 +238,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
    This code retrieves and prints the names of all existing `MLflow experiments`.
 
-1. To retrieve a specific experiment, you can get it by its name:
+1. Add a new cell to retrieve a specific experiment, you can get it by its name and run the cell:
 
     ```python
    experiment_name = "experiment-churn"
@@ -246,7 +250,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
     This code fetches the details of a `specific experiment` using its name.
 
-1. Using an experiment name, you can retrieve all jobs of that experiment:
+1. In the next cell using an experiment name, you can retrieve all jobs of that experiment by running the below code:
 
     ```python
    mlflow.search_runs(exp.experiment_id)
@@ -256,7 +260,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
     This code displays all recorded runs under a given experiment.
 
-1. To more easily compare job runs and outputs, you can configure the search to order the results. For example, the following cell orders the results by `start_time`, and only shows a maximum of `2` results: 
+1. To more easily compare job runs and outputs, you can configure the search to order the results. For example, the following cell orders the results by `start_time`, and only shows a maximum of `2` results. Add a new cell and run the below code:
 
     ```python
    mlflow.search_runs(exp.experiment_id, order_by=["start_time DESC"], max_results=2)
@@ -266,7 +270,7 @@ When you've trained and tracked models with MLflow, you can use the MLflow libra
 
     This code displays retrieves the latest two runs sorted by start time in descending order.
 
-1. Finally, you can plot the evaluation metrics of multiple models next to each other to easily compare models:
+1. Finally, you can plot the evaluation metrics of multiple models next to each other to easily compare models by executing the below code in a new cell:
 
     ```python
    import matplotlib.pyplot as plt
@@ -310,6 +314,8 @@ Microsoft Fabric will keep track of all your experiments and allow you to visual
     ![](./Images/E2T6S2-1.png)
 
 1. Review the **Run metrics** to explore how accurate your regression model is.
+
+    ![](./Images/L2T6S4-2611.png)
 
 ## Task 7: Save the model
 
