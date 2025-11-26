@@ -102,6 +102,14 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Images/GS7.png)
 
+   >**Note:** In case if you see **You've selected Microsoft Fabric free, Lets get you started** page click on **Sign in (1)**. On the **create your account** page, **enter any role (2)** and **any random 10 digit number (3)** and click on **Get started (4)**. On the **Confirmation details** page, click on **Get started (5)**.
+
+      ![](./Images/fabricsignup1-2611.png)
+
+      ![](./Images/fabricsignup2-2611.png)
+
+      ![](./Images/fabricsignup3-2611.png)      
+
 1. When the **Welcome to the Fabric view** dialog appears, click **Cancel**.
 
    ![](./Images/G13.png)
