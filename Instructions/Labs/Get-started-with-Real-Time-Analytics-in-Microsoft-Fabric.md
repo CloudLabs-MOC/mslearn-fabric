@@ -2,11 +2,13 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Overview
+
 Microsoft Fabric provides an end-to-end platform for data solutions, including real-time data analytics. Synapse Real-Time Analytics in Fabric uses a KQL Database to provide table storage and Kusto Query Language (KQL), which is a powerful tool for analyzing data. This structure provides an efficient way to find insights and patterns from textual or structured data. Moreover, KQL is optimized for data that includes a time series component, such as real-time data from log files or streaming services. With Real-Time Analytics, you can focus and scale up your analytics solution while democratizing data for the needs of your entire data organization.
 
-## Lab Objectives
+## Objectives
 
-You will be able to complete the following tasks:
+In this lab, you will be able to complete the following tasks:
 
 - Task 1: Create a workspace
 - Task 2: Download the file for the KQL database and create a KQL database
@@ -19,7 +21,7 @@ This task will guide you through creating a workspace in Microsoft Fabric.
 
 1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;) and click on **+ New workspace (2)**.
 
-   ![](./Images/E1T1S1.png)
+   ![](./Images/L1T1S1-2611.png)
 
 1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**.
    
@@ -83,9 +85,9 @@ Now that you have a workspace, download the data file for analysis. Using *Kusto
 
           ![New table wizard step two](./Images/E1T3S7-2.png)
 
-        - Browse or drag your **sales.csv** onto the screen from **C:\LabFiles\dp-data-main** and wait for the Status box to change to a green check box, and then select **Next**.
+        - Browse or drag your **sales.csv (1)** onto the screen from **C:\LabFiles\dp-data-main** and wait for the Status box to change to a green check box, and then select **Next (2)**.
 
-          ![New table wizard step three](./Images/E1T3S7-3.png)
+          ![New table wizard step three](./Images/L1T2S8.3-2611.png)
 
         - In the screen below, you'll notice that the column headings are in the first row. Although the system has detected them, we still need to move the **First row is column header (1)** slider above these lines to prevent any errors. Once you adjust the slider, everything should appear correctly. Finally, click the **Finish (2)** button in the bottom right corner of the panel to proceed.
 
@@ -100,7 +102,7 @@ Now that you have a workspace, download the data file for analysis. Using *Kusto
 
           ![New table wizard step six](./Images/E1T3S7-5.png)
 
-> **Note:** In this task, you imported a very small amount of static data from a file, which is fine for the purposes of this task. In reality, you can use Kusto to analyze much larger volumes of data, including real-time data from a streaming source such as Azure Event Hubs.
+            > **Note:** In this task, you imported a very small amount of static data from a file, which is fine for the purposes of this task. In reality, you can use Kusto to analyze much larger volumes of data, including real-time data from a streaming source such as Azure Event Hubs.
 
 ## Task 3: Use KQL to query the sales table
 
@@ -111,6 +113,10 @@ Now that you have a table of data in your database, you can use KQL code to quer
 1. Right-click on the **sales (1)** table, select the **Query with code (2)**, and then **Show any 100 records**.
 
    ![](./Images/E1T4S1.png)
+
+   >Note: If you are unable to see the sales table, please zoom out a little in the browser wiindow inside the lab vm and check.
+
+      ![](./Images/zoomout-2611.png)
 
 1. A new pane will open with the query and its result. 
 
@@ -194,6 +200,8 @@ You can use your KQL Queryset as the basis for a Power BI report.
     Refresh the Workspace page if necessary to view all of the items it contains.
 
 1. In the list of items in your workspace, note that the **Revenue by Item** report is listed.
+
+     ![](./Images/L1T4S7-2611.png)
    
 ## Summary:
 
