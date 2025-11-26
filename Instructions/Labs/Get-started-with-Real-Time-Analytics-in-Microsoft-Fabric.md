@@ -2,11 +2,13 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Overview
+
 Microsoft Fabric provides an end-to-end platform for data solutions, including real-time data analytics. Synapse Real-Time Analytics in Fabric uses a KQL Database to provide table storage and Kusto Query Language (KQL), which is a powerful tool for analyzing data. This structure provides an efficient way to find insights and patterns from textual or structured data. Moreover, KQL is optimized for data that includes a time series component, such as real-time data from log files or streaming services. With Real-Time Analytics, you can focus and scale up your analytics solution while democratizing data for the needs of your entire data organization.
 
-## Lab Objectives
+## Objectives
 
-You will be able to complete the following tasks:
+IN this lab, you will be able to complete the following tasks:
 
 - Task 1: Create a workspace
 - Task 2: Download the file for the KQL database and create a KQL database
@@ -19,7 +21,7 @@ This task will guide you through creating a workspace in Microsoft Fabric.
 
 1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;) and click on **+ New workspace (2)**.
 
-   ![](./Images/E1T1S1.png)
+   ![](./Images/L1T1S1-2611.png)
 
 1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**.
    
