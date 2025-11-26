@@ -40,7 +40,7 @@ The architecture for this lab involves several key components:
 
 ## Getting Started with the Lab
 
-Welcome to Real-Time Analytics and Data Science with Microsoft Fabric Workshop! We've prepared a seamless environment for you to explore and learn about fabric services. Let's begin by making the most of this experience.
+We've prepared a seamless environment for you to explore and learn about fabric services. Let's begin by making the most of this experience.
 
 ## Accessing Your Lab Environment
 
@@ -62,7 +62,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](./Images/GS3.png)
  
@@ -120,11 +120,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. If you see a pop-up message saying **Successfully upgraded to Microsoft Fabric**, click on **OK**.
 
-   ![Enter Your Password](./Images/GS14.png)
+   ![Enter Your Password](./Images/pg1S10-2611.png)
 
 1. On the **Invite teammates to try Fabric** pop-up, click on **Close**.
 
-![Enter Your Password](./Images/GS15.png)
+   ![Enter Your Password](./Images/pg1S11-2611.png)
    
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
