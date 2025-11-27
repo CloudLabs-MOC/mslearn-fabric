@@ -29,7 +29,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will provision a new data warehouse within Microsoft Fabric. A data warehouse in Fabric offers a fully managed relational database designed for large-scale analytics. Unlike the default read-only SQL endpoint provided for lakehouse tables, a data warehouse supports complete SQL capabilities, including inserting, updating, and deleting data. This enables you to design and manage structured schemas, load data efficiently, and prepare it for advanced querying and reporting.
 
-1. In the Power BI portal, in the workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**, then click **Power BI** **(1)** on the left navigation bar, and click **+ New item** **(2)** to create a new workspace item.
+1. In the Power BI portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**, then click **Power BI** **(1)** on the left navigation bar, and click **+ New item** **(2)** to create a new workspace item.
 
    ![](<./Images/L2T1S1.png>)
 
@@ -47,7 +47,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. In your new warehouse, select the **Create tables** with **T-SQL** tile, and replace the default SQL code with the following CREATE TABLE statement:
 
-   ![Screenshot of a new warehouse.](<./Images/L2T2S2.png>)
+   ![Screenshot of a new warehouse.](./Images/L2T2S2.png)
 
    ```sql
    CREATE TABLE dbo.DimProduct
@@ -63,7 +63,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
 
-   ![](<./Images/L2T2S2.png>)
+   ![](./Images/L2T2S2-1.png)
 
 1. To refresh the Explorer pane and view the latest changes, click the **Refresh** icon in the top left menu bar.
 
@@ -135,7 +135,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
 1. Enter **dw semantic model** **(1)** in the name field and select the tables **DimCustomer**,**DimDate**,**DimProduct**,**FactSalesOrder** **(2)**, than click on **Confirm** **(3)** to proceed.
 
-   ![](<./Images/L2T3S2.png>)
+   ![](./Images/L2T3S2-1.png)
 
 1. In the hub menu bar on the left, Click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**
 
@@ -153,7 +153,15 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![Screenshot of the data warehouse model page.](./Images/L2T3S6.png)
 
-1. Drag the **ProductKey** field from the **FactSalesOrder** table and drop it on the **ProductKey** field in the **DimProduct** table. In the **New relationship** dialog, confirm the following:
+1. In the **Home** tab, click on **Manage relationships**.
+
+   ![](./Images/select-managerelationship.png)
+
+1. In the Manage relationships window, select **+ New relationship**.
+
+   ![](./Images/new-relationship.png)
+
+1. In the **New relationship** dialog, confirm the following:
 
    - **From table**: FactSalesOrder **(1)**
    - **Column**: ProductKey **(2)**
@@ -164,7 +172,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
    - **Make this relationship active**: Checked **(7)**
    - Click **Save** **(8)** to create the relationship.
 
-      ![](<./Images/gr_fb_e2_13.png>)
+      ![](./Images/gr_fb_e2_13.png)
 
 1. Repeat the process to create many-to-one relationships between the following tables:
 
@@ -191,7 +199,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](<./Images/L1T62.png>)
 
-1. Run the following code:
+1. Copy and paste the following code and click on **Run**:
 
    ```sql
    SELECT  d.[Year] AS CalendarYear,
@@ -206,7 +214,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](<./Images/L2T4S3.png>)
 
-   > **Note:** that the attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
+   > **Note:** The attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
 1. Modify the query as follows to add a second dimension to the aggregation.
 
