@@ -528,3 +528,5 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
 In this lab, you created a workspace, set up a lakehouse, and uploaded data for processing. You explored data in a DataFrame, converted it into Delta tables, and utilized Delta’s versioning and time-travel features for efficient data management. Finally, you implemented streaming data pipelines using Delta tables, gaining practical experience in ingesting, transforming, and managing data within a scalable and robust data architecture.
 
 ### You have successfully completed Lab 1. Click **Next >>** to proceed to the next lab.
+
+![](./Images/ns-fab-g2.png)
