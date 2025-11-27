@@ -43,7 +43,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![](./Images/htpsrch.png)
 
-1. You will be navigated to Connect to data source.
+1. You will be taken to the Connect to data source pane.
 
 1. In the **Connect to data source** pane, provide the following details:
     - **URL (1)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
@@ -76,7 +76,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![](./Images/imag12.png)
 
-    >**Note:** If the fabric lakehouse is already selected, please continue with the further steps.
+    >**Note:** If the Fabric lakehouse is already selected, continue to the next steps.
 
 1. Configure the data destination with the following settings:
     - **Root folder (1)**: Files
@@ -152,11 +152,9 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![](./Images/runall.png)
 
-1. After the notebook run completes, open the **Settings (1)** panel and update the **Name (2)** of the notebook to **Load Sales**, then close the pane.
+1. After the notebook run completes, open the ⚙️ **Settings (1)** panel and update the **Name (2)** of the notebook to **Load Sales**, then close the pane.
 
     ![](./Images/fab-ms-ex1-g50.png)
-
-1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales** and close the settings pane.
 
 1. In the hub menu bar on the left, select your lakehouse.
 
@@ -184,7 +182,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
     - **Connection (2)**: Your lakehouse connection  
     - **Lakehouse (3)**: Select your lakehouse  
     - **File path type (4)**: Wildcard file path  
-    - **Folder path (5)**: Files / new_data  
+    - **Folder path (5)**: Files/new_data
     - **Wildcard file name (6)**: *.csv  
     - **Recursively (7)**: Selected
 
@@ -200,7 +198,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
     ![](./Images/fab-ms-ex1-g55.png)
 
-1. Select the **Copy data** activity and then connect its **On Completion** output to the **Notebook** activity as shown here:
+1. Select the **Copy data** activity and then connect its **On completion** output to the **Notebook** activity as shown here:
 
     ![](./Images/notebookpline1.png)
 
