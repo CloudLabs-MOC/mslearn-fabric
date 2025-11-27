@@ -111,7 +111,7 @@ Now your workspace is ready, let’s create a new Lakehouse to store and analyze
 
     ![](./Images/fab-ms-ex1-g11.png)
    
-     After a minute or so, a new empty lakehouse will appear. You need to ingest some data into the lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll download a CSV file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.
+     After a minute or so, a new empty lakehouse will appear. You need to ingest some data into the lakehouse for analysis. There are multiple ways to do this, but in this exercise, you'll download a CSV file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
     
@@ -179,7 +179,7 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
 
     ![](./Images/fab-ms-ex1-g20.png)
 
-    >**Note:** If you are not able to find **Lakehouse explorer**, under **Explorer** pane, expand Items and expand the lakehouse, you now see the lakehouse explorer.
+    >**Note:** If you are not able to find **Lakehouse explorer**, under the **Explorer** pane, expand Items and expand the lakehouse, you will now see the lakehouse explorer.
 
 1. In the **ellipsis (...)** menu for **products.csv (1)**, select **Load data (2)** > **Spark (3)**. A new code cell containing the following code should be added to the notebook:
 
@@ -239,11 +239,11 @@ You can save the dataframe as a delta table by using the `saveAsTable` method. D
 
 You can also create *external* tables for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
-1. Select **+ Code** to add another new code cell.
+1. Select **+ Code** to add a new code cell.
 
    ![](./Images/fab-ms-ex1-g26.png)
 
-   > **Note:** If the **+ Code** button doesn’t appear, move your mouse around the empty notebook area, it will show up when you hover.
+   > **Note:** If the **+ Code** button doesn’t appear, move your mouse around the empty notebook area; it will show up when you hover.
 
 1. And add the following code to it:
 
