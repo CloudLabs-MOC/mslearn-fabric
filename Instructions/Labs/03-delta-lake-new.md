@@ -211,28 +211,44 @@ You can save the dataframe as a delta table by using the `saveAsTable` method. D
 
 *Managed* tables are tables for which both the schema metadata and the data files are managed by Fabric. The data files for the table are created in the **Tables** folder.
 
-1. Under the results returned by the first code cell, use the **+ Code** button to add a new code cell if one doesn't already exist. Then enter the following code in the new cell and run it:
+1. Under the results returned by the first code cell, use the **+ Code** button to add a new code cell
+
+   ![](./Images/fab-ms-ex1-g22.png)
+
+    > **Note:** If the **+ Code** button isn’t visible, hover your mouse in the empty notebook area the option will appear.
+
+1. Enter the following code in the new cell and select **Run (1)** to execute it:
 
     ```python
    df.write.format("delta").saveAsTable("managed_products")
     ```
 
-1. In the **Lakehouse explorer** pane, in the **...** menu for the **Tables** folder, select **Refresh**. Then expand the **Tables** node and verify that the **managed_products** table has been created.
+   ![](./Images/fab-ms-ex1-g23.png)
 
-   ![](./Images/fbimg2.png)
+1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Tables** folder and select **Refresh (2)**.
 
-   ![](./Images/fbimg3.png)
+   ![](./Images/fab-ms-ex1-g24.png)
+
+1. Expand the **Tables** folder and verify that the **managed_products** table has been created.
+
+   ![](./Images/fab-ms-ex1-g25.png)
 
 ### Create an *external* table
 
 You can also create *external* tables for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
-1. Add another new code cell, and add the following code to it:
+1. Select **+ Code** to add another new code cell.
+
+   ![](./Images/fab-ms-ex1-g26.png)
+
+   > **Note:** If the **+ Code** button doesn’t appear, move your mouse around the empty notebook area, it will show up when you hover.
+
+1. And add the following code to it:
 
     ```python
    df.write.format("delta").saveAsTable("external_products", path="<abfs_path>/external_products")
     ```
-    
+
     **Note:** Make sure to replace the **abfs_path**.
 
 1. In the **Lakehouse explorer** pane, in the **ellipsis (...) (1)** menu for the **Files** folder, select **Copy ABFS path (2)**.
@@ -245,13 +261,17 @@ You can also create *external* tables for which the schema metadata is defined i
 
     *abfss://workspace@tenant-onelake.dfs.fabric.microsoft.com/lakehousename.Lakehouse/Files/external_products*
 
-1. In the **Lakehouse explorer** pane, in the **ellipsis (...)** menu for the **Tables** folder, select **Refresh**. Then expand the **Tables** node and verify that the **external_products** table has been created.
+1. After replacing **<abfs_path>** with the correct ABFS path, select **Run** to execute the cell.
 
-   ![](./Images/updtextprodtable.png)
+   ![](./Images/fab-ms-ex1-g27.png)
 
-1. In the **Lakehouse explorer** pane, in the **ellipsis (...)** menu for the **Files** folder, select **Refresh**. Then expand the **Files** node and verify that the **external_products** folder has been created for the table's data files.
+1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Tables** folder and select **Refresh (2)**. Then expand **Tables** and verify that the **external_products (3)** table has been created.
 
-   ![](./Images/fbimg4.png)
+   ![](./Images/fab-ms-ex1-g28.png)
+
+1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Files** folder and select **Refresh (2)**. Then expand **Files** and verify that the **external_products (3)** folder has been created.
+
+   ![](./Images/fab-ms-ex1-g29.png)
 
 ### Compare *managed* and *external* tables
 
@@ -296,9 +316,9 @@ Let's explore the differences between managed and external tables.
    DROP TABLE external_products;
     ```
 
-1. In the **Lakehouse explorer** pane, in the **ellipsis (...)** menu for the **Tables** folder, select **Refresh**. Then expand the **Tables** node and verify that no tables are listed.
+1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Tables** folder and select **Refresh (2)**. Then expand **Tables** and verify that no tables are listed.
 
-    ![](./Images/droptableverify.png)
+    ![](./Images/fab-ms-ex1-g32.png)
 
 1. In the **Lakehouse explorer** pane, expand the **Files** folder and verify that the **external_products (1)** has not been deleted. Select this folder to view the **Parquet data files (2)** and **_delta_log** folder for the data that was previously in the **external_products** table. The table metadata for the external table was deleted, but the files were not affected.
 
@@ -316,9 +336,9 @@ Let's explore the differences between managed and external tables.
    LOCATION 'Files/external_products';
     ```
 
-1. In the **Lakehouse explorer** pane, in the **ellipsis (...)** menu for the **Tables** folder, select **Refresh**. Then expand the **Tables** node and verify that a new table named **products** is listed. Then expand the table to verify that its schema matches the original dataframe that was saved in the **external_products** folder.
+1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Tables** folder and select **Refresh**. Then expand the **products (1)** table and verify that its schema fields (2) match the original dataframe from the **external_products** folder.
 
-   ![](./Images/fbimg5.png)
+   ![](./Images/fab-ms-ex1-g33.png)
 
 1. Add another code cell and run the following code:
 
