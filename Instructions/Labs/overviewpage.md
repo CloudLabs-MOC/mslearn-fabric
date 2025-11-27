@@ -51,9 +51,11 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 # Getting Started with the lab
 
+Welcome to your Get started with Microsoft Fabric with Its Lakehouses workshop! We've prepared a seamless environment for you to explore and learn Microsoft Fabric and lakehouse. Let's begin by making the most of this experience:
+
 ## Accessing Your Lab Environment
 
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
 ![](./Images/fb_g_1_1.png)
 
