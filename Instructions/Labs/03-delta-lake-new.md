@@ -101,7 +101,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 ## Task 2: Create a lakehouse and upload data
 
-Now your workspace is ready, let’s create a new lakehouse to store and analyze your data.
+Now your workspace is ready, let’s create a new Lakehouse to store and analyze your data.
 
 1. In the newly created workspace, click the **+ New Item (1)** button and search for **Lakehouse (2)** and select **Lakehouse (3)**.
 
@@ -109,7 +109,7 @@ Now your workspace is ready, let’s create a new lakehouse to store and analyze
  
 1. Create a new **Lakehouse** with a name **fabric_lakehouse (1)**, uncheck the box of **Lakehouse schemas (2)** and click on **Create (3)**.
 
-   ![](./Images/lakeschema.png)
+   ![](./Images/fab-ms-ex1-g11.png)
    
     After a minute or so, a new empty lakehouse. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise, you'll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.
 
@@ -125,9 +125,13 @@ Now your workspace is ready, let’s create a new lakehouse to store and analyze
 
    >**Note**: To download the file, open a new tab in the browser and paste it into the URL.
    
-   >Right-click anywhere on the page containing the data and select **Save as** to save the page as a CSV file.
+   >Right-click anywhere on the page displaying the data and select Save as  **products.csv (1)**, then choose **Save (2)** to download the file as **products.csv**.
 
-      - OR If you are using the lab virtual machine (lab VM) provided to you, you can get the file from the **C:\LabFiles\dp-data-main** directory.
+    ![](./Images/fab-ms-ex1-g12.png)
+
+      - **OR**, if you are using the lab virtual machine (lab VM), navigate to **C:\LabFiles\dp-data-main (1)** and select **products.csv (2)** to use the file.
+
+        ![](./Images/fab-ms-ex1-g13.png)
 
 1. Return to the web browser tab containing your lakehouse, and in the **ellipsis (...) (1)** menu for the **Files** folder in the **Explorer** pane, select **New subfolder (2)**.
    
@@ -135,11 +139,19 @@ Now your workspace is ready, let’s create a new lakehouse to store and analyze
    
 1. On **New subfolder** pop up, provide the Folder name as **products (1)** and click on **Create (2)**.
 
-   ![](./Images/prodcreate.png)
+   ![](./Images/fab-ms-ex1-g14.png)
 
-1. In the **ellipsis (...)** menu for the **products** folder, select **Upload** and **Upload files**, and then upload the **products.csv** file from your local computer (or lab VM if applicable) to the lakehouse.
+1. In the **products (1)** folder, open the **ellipsis (...)** menu, select **Upload (2)**, and then choose **Upload files (3)**.
 
    ![](./Images/fbimg1.png)
+
+1. On the **Upload files** window, select the **folder icon** and choose the **products.csv** file to upload.
+
+   ![](./Images/fab-ms-ex1-g16.png)
+
+1. After selecting the file, verify that **products.csv (1)** is shown, then select **Upload (2)** to upload the file.
+
+   ![](./Images/fab-ms-ex1-g17.png)
 
 1. After the file has been uploaded, select the **products** folder, and verify that the **products.csv** file has been uploaded, as shown here:
 
@@ -147,19 +159,23 @@ Now your workspace is ready, let’s create a new lakehouse to store and analyze
 
 ## Task 3: Explore data in a dataframe
 
-1. On the **Home** page while viewing the contents of the **products** folder in your datalake, in the **Open notebook (1)** menu, select **New notebook (2)**.
+1. On the **Home (1)** page, open the **Open notebook (2)** menu and select **New notebook (3)** while viewing the contents of the **products** folder.
 
-    ![](./Images/imag6.png)
+    ![](./Images/fab-ms-ex1-g18.png)
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+    **Note:** After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+
+1. If the AI tools introduction screen appears, select **Skip tour** to continue.
+
+    ![](./Images/fab-ms-ex1-g19.png)
 
 1. Select the existing cell in the notebook, which contains some simple code, and then use its **&#128465;** (*Delete*) icon at its top-right to remove it - you will not need this code.
 
     ![](./Images/updtdelcode.png)
 
-1. In the **Lakehouse explorer** pane on the left, expand **Files** and select **products** to reveal a new pane showing the **products.csv** file you uploaded previously:
+1. In the **Lakehouse explorer**, expand **Files (1)** and then select **products (2)** to view the **products.csv (3)** file you uploaded earlier.
 
-    ![](./Images/prodcsvt3.png)
+    ![](./Images/fab-ms-ex1-g20.png)
 
     >**Note:** If you are not able to find **Lakehouse explorer**, under **Explorer** pane, expand Items and expand the lakehouse, you now see the lakehouse explorer.
 
@@ -176,6 +192,8 @@ Now your workspace is ready, let’s create a new lakehouse to store and analyze
     > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
 
 1. Use the **&#9655;** (*Run cell*) button on the left of the cell to run it.
+
+    ![](./Images/fab-ms-ex1-g21.png)
 
     > **Note**: Since this is the first time you've run any Spark code in this notebook, a Spark session must be started. This means that the first run can take a minute or so to complete. Subsequent runs will be quicker.
 
