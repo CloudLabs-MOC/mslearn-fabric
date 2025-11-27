@@ -89,15 +89,19 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
-    A new pipeline containing a **Copy Data** activity is created, as shown here:
+1. A new pipeline containing a **Copy Data** activity is created:
 
     ![](./Images/updt12cpdt.png)
 
 1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
-1. In the menu bar on the left, select your lakehouse.
+    ![](./Images/fab-ms-ex1-g43.png)
 
-1. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files (1)** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+1. In the menu bar on the left, select your **Lakehouse**.
+
+    ![](./Images/fab-ms-ex1-g49.png)
+
+1. Expand **Files (1)** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![](./Images/new_data1.png)
 
@@ -105,7 +109,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
-   ![](./Images/imag6.png)
+   ![](./Images/fab-ms-ex1-g45.png)
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -115,11 +119,11 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
    table_name = "sales"
     ```
 
-1. In the **ellipsis (...)** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+1. Open the **ellipsis (1)** menu for the cell and select **Toggle parameter cell (2)** to mark this cell as a parameter cell for pipeline runs.
 
-    ![](./Images/imag11.png)
+    ![](./Images/ns-fab-g3.png)
 
-1. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+1. Below the parameters cell, select **+ Code (1)** to insert a new code cell, then paste the transformation code into that cell (2).
 
     ```python
    from pyspark.sql.functions import *
@@ -140,13 +144,17 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
    df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
+    ![](./Images/fab-ms-ex1-g46.png)
+
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
 1. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     ![](./Images/runall.png)
 
-1. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **ellipsis (...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+1. After the notebook run completes, open the **Settings (1)** panel and update the **Name (2)** of the notebook to **Load Sales**, then close the pane.
+
+    ![](./Images/fab-ms-ex1-g50.png)
 
 1. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales** and close the settings pane.
 
@@ -162,36 +170,35 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 1. In the hub menu bar on the left, select the **Ingest Sales Data** pipeline you created previously.
 
-1. On the **Activities** tab, in the **More activities** list, select **Delete data**. Then position the new **Delete data**  activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown below:
+1. Open the **Activities (1)** tab, select the **More activities (2)** menu, and choose **Delete data (3)**. Drag the new Delete data activity to the left of the Copy data activity and connect its **On completion** output to Copy data.
 
-    ![](./Images/imag13.png)
+    ![](./Images/fab-ms-ex1-g51.png)
 
     ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/delete-data-activity2.png)
 
-1. Select the **Delete data** activity, and in the pane below the design canvas, set the following properties:
-    - **General**:
-        - **Name**: Delete old files
+1. Select the **Delete data** activity and, in the pane below the canvas, set **General (1)** → **Name (2)** to **Delete old files**.
 
-          ![](./Images/imag14.png)
+    ![](./Images/fab-ms-ex1-g52.png)
 
-    - **Source**
-        - **Data store type**: Workspace
-        - **Workspace data store**: *Your lakehouse*
-        - **File path type**: Wildcard file path
-        - **Folder path**: Files / **new_data**
-        - **Wildcard file name**: *.csv        
-        - **Recursively**: *Selected*
+1. In the **Source (1)** section, configure the following:
+    - **Connection (2)**: Your lakehouse connection  
+    - **Lakehouse (3)**: Select your lakehouse  
+    - **File path type (4)**: Wildcard file path  
+    - **Folder path (5)**: Files / new_data  
+    - **Wildcard file name (6)**: *.csv  
+    - **Recursively (7)**: Selected
 
-          ![](./Images/imag15.png)
+        ![](./Images/fab-ms-ex1-g53.png)
 
-    - **Logging settings**:
-        - **Enable logging**: *<u>Un</u>selected*
+1. In the **Logging settings**, ensure **Enable logging** is **unselected**.
 
-          ![](./Images/imag16.png)
+    ![](./Images/fab-ms-ex1-g54.png)
 
-    These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
+    **Note:** These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
 
-1. In the pipeline designer, on the **Activities** tab, select **Notebook** to add a **Notebook** activity to the pipeline.
+1. In the pipeline designer, select **Notebook** to add a **Notebook** activity to the pipeline.
+
+    ![](./Images/fab-ms-ex1-g55.png)
 
 1. Select the **Copy data** activity and then connect its **On Completion** output to the **Notebook** activity as shown here:
 
@@ -217,7 +224,7 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 1. On the **Home** tab, use the **&#128427;** (*Save*) icon to save the pipeline. Then use the **&#9655; Run** button to run the pipeline, and wait for all of the activities to complete.
 
-    ![](./Images/runsuccess.png)
+    ![](./Images/fab-ms-ex1-g59.png)
 
 1. In the hub menu bar on the left edge of the portal, select your lakehouse.
 
