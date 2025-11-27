@@ -4,7 +4,7 @@
 
 ## Overview
 
-Tables in a Microsoft Fabric lakehouse are based on the Delta Lake storage format commonly used in Apache Spark. By using the enhanced capabilities of delta tables, you can create  advanced analytics solutions.
+Tables in a Microsoft Fabric lakehouse are based on the Delta Lake storage format commonly used in Apache Spark. By using the enhanced capabilities of delta tables, you can create advanced analytics solutions.
 
 Delta Lake is an open-source storage layer that adds relational database semantics to Spark-based data lake processing. Tables in Microsoft Fabric lakehouses are Delta tables, which is signified by the triangular Delta (▴) icon on tables in the lakehouse user interface.
 
@@ -85,7 +85,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/fab-ms-ex1-g8.png)
 
-1. Create a new workspace with a name **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)**, scroll down to **Advanced (2)** section and expand it , select **License mode** as **Trial (2)**, and click on **Apply (4)**
+1. Create a new workspace with a name **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)**, scroll down to the **Advanced (2)** section and expand it, select **License mode** as **Trial (2)**, and click **Apply (4)**
 
     ![](./Images/wrkspcname.png)
 
@@ -109,9 +109,9 @@ Now your workspace is ready, let’s create a new Lakehouse to store and analyze
  
 1. Create a new **Lakehouse** with a name **fabric_lakehouse (1)**, uncheck the box of **Lakehouse schemas (2)** and click on **Create (3)**.
 
-   ![](./Images/fab-ms-ex1-g11.png)
+    ![](./Images/fab-ms-ex1-g11.png)
    
-    After a minute or so, a new empty lakehouse. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this exercise, you'll simply download a text file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.
+     After a minute or so, a new empty lakehouse will appear. You need to ingest some data into the lakehouse for analysis. There are multiple ways to do this, but in this exercise you'll download a CSV file to your local computer (or lab VM if applicable) and then upload it to your lakehouse.
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
     
@@ -123,9 +123,9 @@ Now your workspace is ready, let’s create a new Lakehouse to store and analyze
 
 1. Download the data file for this exercise from [https://github.com/MicrosoftLearning/dp-data/raw/main/products.csv](https://github.com/MicrosoftLearning/dp-data/raw/main/products.csv), saving it as **products.csv** on your local computer (or lab VM if applicable).
 
-   >**Note**: To download the file, open a new tab in the browser and paste it into the URL.
-   
-   >Right-click anywhere on the page displaying the data and select Save as  **products.csv (1)**, then choose **Save (2)** to download the file as **products.csv**.
+    >**Note**: To download the file, open a new tab and paste the URL into the address bar.
+
+    >Right-click anywhere on the page displaying the data and select Save as **products.csv (1)**, then choose **Save (2)** to download the file as **products.csv**.
 
     ![](./Images/fab-ms-ex1-g12.png)
 
@@ -137,7 +137,7 @@ Now your workspace is ready, let’s create a new Lakehouse to store and analyze
    
    ![](./Images/filesbfldr.png)
    
-1. On **New subfolder** pop up, provide the Folder name as **products (1)** and click on **Create (2)**.
+1. On the **New subfolder** popup, provide the folder name as **products (1)** and click **Create (2)**.
 
    ![](./Images/fab-ms-ex1-g14.png)
 
@@ -158,6 +158,8 @@ Now your workspace is ready, let’s create a new Lakehouse to store and analyze
     ![](./Images/fileuploddone.png)
 
 ## Task 3: Explore data in a dataframe
+
+In this task, you'll use a Fabric notebook to load and view the data you uploaded into your lakehouse. By reading the CSV file into a Spark dataframe, you can explore the structure and contents of the data before transforming it in later steps. This helps verify that the file was uploaded correctly and lets you preview the dataset using Spark’s built-in display capabilities.
 
 1. On the **Home (1)** page, open the **Open notebook (2)** menu and select **New notebook (3)** while viewing the contents of the **products** folder.
 
@@ -215,7 +217,7 @@ You can save the dataframe as a delta table by using the `saveAsTable` method. D
 
    ![](./Images/fab-ms-ex1-g22.png)
 
-    > **Note:** If the **+ Code** button isn’t visible, hover your mouse in the empty notebook area the option will appear.
+    > **Note:** If the **+ Code** button isn’t visible, hover your mouse in the empty notebook area; the option will appear.
 
 1. Enter the following code in the new cell and select **Run (1)** to execute it:
 
@@ -249,7 +251,7 @@ You can also create *external* tables for which the schema metadata is defined i
    df.write.format("delta").saveAsTable("external_products", path="<abfs_path>/external_products")
     ```
 
-    **Note:** Make sure to replace the **abfs_path**.
+    **Note:** Make sure to replace the **abfs_path** placeholder with the ABFS path you copied.
 
 1. In the **Lakehouse explorer** pane, in the **ellipsis (...) (1)** menu for the **Files** folder, select **Copy ABFS path (2)**.
 
@@ -305,7 +307,7 @@ Let's explore the differences between managed and external tables.
 
    In the results, view the **Location** property for the table, which should be a path to the OneLake storage for the lakehouse ending with **/Files/external_products** (you may need to widen the **Data type** column to see the full path).
 
-    The files for the managed table are stored in the **Tables** folder in the OneLake storage for the lakehouse. In this case, a folder named **managed_products** has been created to store the Parquet files and **delta_log** folder for the table you created.
+    The files for the managed table are stored in the **Tables** folder in the OneLake storage for the lakehouse. In this case, a folder named **managed_products** has been created to store the Parquet files and the **_delta_log** folder for the table you created.
 
 1. Add another code cell and run the following code:
 
@@ -358,7 +360,7 @@ Transaction history for delta tables is stored in JSON files in the **delta_log*
 
 1. Add a new code cell to the notebook and run the following code:
 
-    ```Python
+    ```sql
    %%sql
 
    UPDATE products
@@ -400,7 +402,7 @@ Transaction history for delta tables is stored in JSON files in the **delta_log*
    display(original_data)
     ```
 
-    The results show two dataframes - one containing the data after the price reduction, and the other showing the original version of the data.
+    The results show two DataFrames — one containing the data after the price reduction, and the other showing the original version of the data.
 
     The output will look similar to this:
 
@@ -462,7 +464,7 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    print("Streaming to delta sink...")
     ```
 
-    This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the path for the folder location in the **Tables** folder, a table will automatically be created for it.
+    This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the folder is created under the **Tables** location, a table will automatically be created for it.
 
     The output will look similar to this:
 
