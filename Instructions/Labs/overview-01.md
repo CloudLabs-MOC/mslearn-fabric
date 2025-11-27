@@ -53,7 +53,7 @@ Welcome to your Work with Data Lake and Data Factory Pipelines in Microsoft Fabr
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](./Images/gt-001.png)
+![](./Images/fab-gs-ms1-g1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -73,15 +73,15 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+You can start, stop, restart, or open your virtual machine from the **Resources (1)** tab using the available action buttons (2).
 
 ![Manage Your Virtual Machine](./Images/gt-004.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level of the lab guide, select the **A↕ (1)** icon and choose your preferred zoom **percentage (2)**.
 
-![](./Images/gt-005.png)
+![](./Images/ns-fab-g5.png)
 
 ## Support Contact
  
@@ -93,6 +93,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](./Images/lab-next.png)
+![](./Images/ns-fab-g1.png)
 
 ### Happy Learning!!

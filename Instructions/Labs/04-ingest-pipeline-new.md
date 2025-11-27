@@ -29,75 +29,79 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
 
-1. On the **Home** page for your lakehouse, Under **Get data (1)** select **New pipeline (2)**.
+1. Select your **Lakehouse (1)**, then open **Get data (2)** and choose **New pipeline (3)**.
 
-    ![](./Images/npline.png)
+    ![](./Images/fab-ms-ex1-g36.png)
 
-1. Create a new data pipeline named **Ingest Sales Data (3)** and click **Create (4)**.
+1. Create a new data pipeline named **Ingest Sales Data (1)** and click **Create (2)**.
 
-    ![](./Images/createnp.png)
+    ![](./Images/fab-ms-ex1-g37.png)
 
-2. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
+1. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
 
-3. In the **Copy Data** wizard, on the **Choose a data source (1)** page, in the **New sources (2)** section, search **Http (3)** and select **Http (4)**.
+1. In the **Copy Data** wizard, on the **Choose a data source (1)** page, in the **New sources (2)** section, search **Http (3)** and select **Http (4)**.
 
     ![](./Images/htpsrch.png)
 
-4. You will be navigated to Connect to data source.
+1. You will be taken to the Connect to data source pane.
 
-5. In the **Connect to data source** section, enter the following settings for the connection to your data source:
-    - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
-    - **Connection**: Create new connection
-    - **Connection name**: *Specify a unique name*
-    - **Authentication kind**: Basic (*Provide the username and password and note it in notepad*)
+1. In the **Connect to data source** pane, provide the following details:
+    - **URL (1)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
+    - **Connection (2)**: Create new connection
+    - **Connection name (3)**: *Specify a unique name*
+    - **Authentication kind (4)**: Basic
+    - **Username (5)**: *Enter a unique username and note it down*
+    - **Password**: *Enter a unique password and note it down*
+    - Select **Next (6)** to continue.
 
-5. Select **Next**. Then ensure the following settings are selected:
-    - **Relative URL**: *Leave blank*
-    - **Request method**: GET
-    - **Additional headers**: *Leave blank*
-    - **Binary copy**: <u>Un</u>selected
-    - **Request timeout**: *Leave blank*
-    - **Max concurrent connections**: *Leave blank*
+        ![](./Images/fab-ms-ex1-g38.png)
 
-6. Select **Next**, and wait for the data to be sampled and then ensure that the following settings are selected:
-    - **File format**: DelimitedText
-    - **Column delimiter**: Comma (,)
-    - **Row delimiter**: Line feed (\n)
-    - **First row as header**: Selected
-    - **Compression type**: None
+1. Set the **Request method (1)** to **GET** and leave the remaining fields unchanged. Select **Next (2)** to continue.
 
-7. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+    ![](./Images/fab-ms-ex1-g39.png)
 
-8. On the **Choose data destination** page, select your existing lakehouse.
+1. After the data is sampled, verify the following settings:
+    - **File format (1)**: DelimitedText
+    - **Column delimiter (2)**: Comma (,)
+    - **Row delimiter (3)**: Default (\r, \n, or \r\n)
+    - **First row as header (4)**: Selected
+    - **Compression type (5)**: No compression  
+    Then select **Next (6)**.
+
+        ![](./Images/fab-ms-ex1-g40.png)
+
+1. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+
+1. On the **Choose data destination** page, select your existing lakehouse.
 
     ![](./Images/imag12.png)
 
-    >**Note:** If the fabric lakehouse is already selected, please continue with the further steps.
+    >**Note:** If the Fabric lakehouse is already selected, continue to the next steps.
 
-9. Set the following data destination options, and then select **Next**:
-    - **Root folder**: Files
-    - **Folder path name**: new_data
-    - **File name**: sales.csv
-    - **Copy behavior**: None
+1. Configure the data destination with the following settings:
+    - **Root folder (1)**: Files
+    - **Folder path (2)**: new_data
+    - **File name (3)**: sales.csv
+    - **Copy behavior**: None  
+    Then select **Next (4)**.
 
-10. Set the following file format options and then select **Next**:
-    - **File format**: DelimitedText
-    - **Column delimiter**: Comma (,)
-    - **Row delimiter**: Line feed (\n)
-    - **Add header to file**: Selected
-    - **Compression type**: None
+        ![](./Images/fab-ms-ex1-g44.png)
 
-11. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+1. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
 
-    A new pipeline containing a **Copy Data** activity is created, as shown here:
+1. A new pipeline containing a **Copy Data** activity is created:
 
     ![](./Images/updt12cpdt.png)
 
-12. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
-13. In the menu bar on the left, select your lakehouse.
+    ![](./Images/fab-ms-ex1-g43.png)
 
-14. On the **Home** page, in the **Lakehouse explorer** pane, expand **Files (1)** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+1. In the menu bar on the left, select your **Lakehouse**.
+
+    ![](./Images/fab-ms-ex1-g49.png)
+
+1. Expand **Files (1)** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![](./Images/new_data1.png)
 
@@ -105,21 +109,21 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
 
-   ![](./Images/imag6.png)
+   ![](./Images/fab-ms-ex1-g45.png)
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-2. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
+1. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
 
     ```python
    table_name = "sales"
     ```
 
-3. In the **ellipsis (...)** menu for the cell (at its top-right) select **Toggle parameter cell**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
+1. Open the **ellipsis (1)** menu for the cell and select **Toggle parameter cell (2)** to mark this cell as a parameter cell for pipeline runs.
 
-    ![](./Images/imag11.png)
+    ![](./Images/ns-fab-g3.png)
 
-4. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+1. Below the parameters cell, select **+ Code (1)** to insert a new code cell, then paste the transformation code into that cell (2).
 
     ```python
    from pyspark.sql.functions import *
@@ -140,19 +144,21 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
    df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
+    ![](./Images/fab-ms-ex1-g46.png)
+
     This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
-5. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
+1. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
     ![](./Images/runall.png)
 
-6. When the notebook run has completed, in the **Lakehouse explorer** pane on the left, in the **ellipsis (...)** menu for **Tables** select **Refresh** and verify that a **sales** table has been created.
+1. After the notebook run completes, open the ⚙️ **Settings (1)** panel and update the **Name (2)** of the notebook to **Load Sales**, then close the pane.
 
-7. In the notebook menu bar, use the ⚙️ **Settings** icon to view the notebook settings. Then set the **Name** of the notebook to **Load Sales** and close the settings pane.
+    ![](./Images/fab-ms-ex1-g50.png)
 
-8. In the hub menu bar on the left, select your lakehouse.
+1. In the hub menu bar on the left, select your lakehouse.
 
-9. In the **Explorer** pane, refresh the view. Then expand **Tables (1)**, and select the **sales (2)** table to see a preview of the data it contains.
+1. In the **Explorer** pane, refresh the view. Then expand **Tables (1)**, and select the **sales (2)** table to see a preview of the data it contains.
 
    ![](./Images/saletable.png)
 
@@ -162,42 +168,41 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
 1. In the hub menu bar on the left, select the **Ingest Sales Data** pipeline you created previously.
 
-2. On the **Activities** tab, in the **More activities** list, select **Delete data**. Then position the new **Delete data**  activity to the left of the **Copy data** activity and connect its **On completion** output to the **Copy data** activity, as shown below:
+1. Open the **Activities (1)** tab, select the **More activities (2)** menu, and choose **Delete data (3)**. Drag the new Delete data activity to the left of the Copy data activity and connect its **On completion** output to Copy data.
 
-    ![](./Images/imag13.png)
+    ![](./Images/fab-ms-ex1-g51.png)
 
     ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/delete-data-activity2.png)
 
-3. Select the **Delete data** activity, and in the pane below the design canvas, set the following properties:
-    - **General**:
-        - **Name**: Delete old files
+1. Select the **Delete data** activity and, in the pane below the canvas, set **General (1)** → **Name (2)** to **Delete old files**.
 
-          ![](./Images/imag14.png)
+    ![](./Images/fab-ms-ex1-g52.png)
 
-    - **Source**
-        - **Data store type**: Workspace
-        - **Workspace data store**: *Your lakehouse*
-        - **File path type**: Wildcard file path
-        - **Folder path**: Files / **new_data**
-        - **Wildcard file name**: *.csv        
-        - **Recursively**: *Selected*
+1. In the **Source (1)** section, configure the following:
+    - **Connection (2)**: Your lakehouse connection  
+    - **Lakehouse (3)**: Select your lakehouse  
+    - **File path type (4)**: Wildcard file path  
+    - **Folder path (5)**: Files/new_data
+    - **Wildcard file name (6)**: *.csv  
+    - **Recursively (7)**: Selected
 
-          ![](./Images/imag15.png)
+        ![](./Images/fab-ms-ex1-g53.png)
 
-    - **Logging settings**:
-        - **Enable logging**: *<u>Un</u>selected*
+1. In the **Logging settings**, ensure **Enable logging** is **unselected**.
 
-          ![](./Images/imag16.png)
+    ![](./Images/fab-ms-ex1-g54.png)
 
-    These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
+    **Note:** These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
 
-4. In the pipeline designer, on the **Activities** tab, select **Notebook** to add a **Notebook** activity to the pipeline.
+1. In the pipeline designer, select **Notebook** to add a **Notebook** activity to the pipeline.
 
-5. Select the **Copy data** activity and then connect its **On Completion** output to the **Notebook** activity as shown here:
+    ![](./Images/fab-ms-ex1-g55.png)
+
+1. Select the **Copy data** activity and then connect its **On completion** output to the **Notebook** activity as shown here:
 
     ![](./Images/notebookpline1.png)
 
-6. Select the **Notebook** activity, and then in the pane below the design canvas, set the following properties:
+1. Select the **Notebook** activity, and then in the pane below the design canvas, set the following properties:
     - **General**:
         - **Name**: Load Sales notebook
 
@@ -215,13 +220,13 @@ Now that you've implemented a notebook to transform data and load it into a tabl
 
     The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
 
-7. On the **Home** tab, use the **&#128427;** (*Save*) icon to save the pipeline. Then use the **&#9655; Run** button to run the pipeline, and wait for all of the activities to complete.
+1. On the **Home** tab, use the **&#128427;** (*Save*) icon to save the pipeline. Then use the **&#9655; Run** button to run the pipeline, and wait for all of the activities to complete.
 
-    ![](./Images/runsuccess.png)
+    ![](./Images/fab-ms-ex1-g59.png)
 
-8. In the hub menu bar on the left edge of the portal, select your lakehouse.
+1. In the hub menu bar on the left edge of the portal, select your lakehouse.
 
-9. In the **Explorer** pane, expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
+1. In the **Explorer** pane, expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
 
    ![](./Images/newsalesdata1.png)
 
