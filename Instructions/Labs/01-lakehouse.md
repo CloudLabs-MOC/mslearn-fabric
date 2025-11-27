@@ -39,21 +39,25 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. Open the Edge browser and sign in to [Microsoft Fabric](https://app.fabric.microsoft.com).
 
-   - On the **Microsoft Fabric** page, enter your **Email:** <inject key="AzureAdUserEmail"></inject> **(1)** and click **Submit** **(2)**.
+1. On the **Microsoft Fabric** page, enter the following email and click on **Submit** **(2)**.
 
-     ![](./Images/fabric-image2.png)
+   - **Email: (1)** <inject key="AzureAdUserEmail"></inject>
 
-   - On the **Enter Temporary Access Pass** screen, enter your **Password:** <inject key="AzureAdUserPassword"></inject> **(1)** and click **Sign in** **(2)**.
+   ![](./Images/fabric-image2.png)
 
-     ![](./Images/L1T1S2.png)
-  
-    - When **Stay signed in?** prompted, click on **Yes**.
-  
-      ![](./Images/fabric-image4.png)
+1. On the **Enter Temporary Access Pass** screen, enter the following password and click on **Sign in (2)**.
    
-      > **Note**: If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
+   - **Password: (1)** <inject key="AzureAdUserPassword"></inject> 
 
-      ![](./Images/fabric-image5.png)
+   ![](./Images/L1T1S2.png)
+  
+1. When **Stay signed in?** prompted, click on **Yes**.
+  
+   ![](./Images/fabric-image4.png)
+   
+   > **Note**: If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
+
+   ![](./Images/fabric-image5.png)
 
 1. On the **Fabric** home page, click the **Fabric** icon from the left pane to open the Fabric experience.
 
@@ -111,7 +115,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 Now that you have a workspace, it's time to switch to the Data engineering experience in the portal and create a data lakehouse for your data files.
 
-1. Ensure the **Power BI** **(1)** icon is visible in the left pane. If available, click it, then click **+ New item** **(2)** at the top of the workspace.
+1. Ensure the **Power BI** **(1)** icon is visible in the left pane. Click on **+ New item** **(2)** at the top of the workspace.
 
    ![](./Images/fabric-image15.png)
 
@@ -147,11 +151,11 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 1. On the **Lakehouse explorer** pane, click the ellipses **(1)** next to the **Files** folder, then select **New subfolder** **(2)**.
 
-   ![](<./Images/L1T3S2.png>)
+   ![](./Images/L1T3S2-1.png)
 
 1. On the **New subfolder** pane, enter **data** **(1)** in the **Folder name** field, then click **Create** **(2)** to add the subfolder.
 
-   ![](<./Images/fb_g2_1_5.png>)
+   ![](./Images/fb_g2_1_5.png)
 
 1. On the **Lakehouse explorer** pane, click the ellipses **(1)** next to the **data** folder, hover over **Upload** **(2)**, then select **Upload files** **(3)**.
 
@@ -203,19 +207,19 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    ![](./Images/fb_cor_1_2.png)
 
-1. In the **Load file to new table** dialog box, set the table name to **sales (1)**, select file type as **csv (2)** and confirm the load operation by selecting **Load (3)**. Then wait for the table to be created and loaded.
+1. In the **Load file to new table** dialog box, set the table name to **sales (1)** and confirm the load operation by selecting **Load (2)**. Then wait for the table to be created and loaded.
 
    > **Tip**: If the **sales** table does not automatically appear, in the **ellipses** menu for the **Tables** folder, select **Refresh**.
 
-   ![](./Images/L1T5S4.png)
+   ![](./Images/L1T5S4-1.png)
 
 1. In the **Lakehouse explorer** pane, expand **Lakehouse** **(1)**, then expand **Tables** and select **sales** **(2)**. Confirm that the data from the **sales.csv** file is now loaded and displayed in table format **(3)**.
 
    ![Screenshot of a table preview.](./Images/L1T5S5.png)
 
-1. In the **ellipses (1)** menu for the **sales** table, select **View files (2)** to see the underlying files for this table
+1. In the **ellipses (1)** menu for the **sales** table, select **View files (2)** to see the underlying files for this table.
 
-   ![Screenshot of a table preview.](./Images/L1T5S6.png)
+   ![Screenshot of a table preview.](./Images/L1T5S6-1.png)
 
 1. In the **File view** for the **sales** table, observe that it contains Delta Lake log files and Parquet data files. These represent the physical storage format of the table.
 
@@ -297,7 +301,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
 1. Enter **Custom semantic model** **(1)** in the name field and select the table **sales** **(2)**, than click on **Confirm** **(3)** to proceed.
 
-   ![](./Images/task8-2.jpg)
+   ![](./Images/task8-2.1.png)
 
 1. In the hub menu bar on the left, click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
