@@ -513,13 +513,15 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
     This code queries the **IotDeviceData** table again, which should now include the additional data that was added to the streaming source.
 
-1. In a new code cell, add and run the following code:
+1. Select **+ Code (1)** to add a new cell, enter the **code (2)**, and then select **Run (3)** to execute it.
 
     ```python
    deltastream.stop()
     ```
 
-    This code stops the stream.
+    ![](./Images/fab-ms-ex1-g35.png)
+
+    **Note:** This code stops the stream.
 
 ## Summary
 
