@@ -75,9 +75,9 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![Start-trial](<./Images/fb_ex1_5.png>)
 
-1. Once your trial capacity is ready, you receive a confirmation message. Select **Stay on current page** to begin working in Fabric.
+1. Once your trial capacity is ready, you receive a confirmation message. Select **OK** to begin working in Fabric.
 
-   ![](./Images/staycurrentonstage.png)
+   ![](./Images/L1T1S9.png)
 
 1. Click the **Account manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Trial Status (2)** shows the number of days remaining.
 
