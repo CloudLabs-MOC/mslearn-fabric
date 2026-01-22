@@ -224,9 +224,9 @@ In this task, you’ll configure a data destination for a dataflow to enable sea
 
       >![Query with a lakehouse destination.](./Images/visual_query.png)
 
-1. From the **Home** tab, select **Save & run (1)** dropdown and click **Save (2)** to save the dataflow.
+1. Click **Publish** from the bottom-right corner to save and publish the dataflow.
 
-    ![New lakehouse.](./Images/save1.png)
+    ![New lakehouse.](./Images/new/4.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -288,7 +288,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
 In this exercise, you have learned how to use Dataflows (Gen2) to ingest, transform, and standardize data within Microsoft Fabric. You successfully set up data ingestion processes, applied necessary transformations, and created standardized datasets for analysis. By completing these tasks, you gained practical experience in preparing and managing data using Dataflows (Gen2) efficiently.
 
-### You have successfully completed the exercise. Click on Next >> to proceed with the next exercise.
+### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
 ![](./Images/nextpage2.png)
 
