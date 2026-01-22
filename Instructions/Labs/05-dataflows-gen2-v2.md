@@ -16,21 +16,23 @@ In this exercise, you will use Dataflows (Gen2) to ingest, transform, and standa
 
 In this task, you’ll create a dedicated workspace in Microsoft Fabric with the trial features enabled. This workspace will serve as the foundation for building and managing data solutions, including lakehouses, dataflows, and pipelines.
 
-1. On the LabVM desktop, click to open **Microsoft Edge**.
+1. On the **Lab VM** desktop, click to open **Microsoft Edge**.
 
       ![](./Images/p2t1p1.png)
 
 1. Open **Microsoft Fabric** by entering `https://app.fabric.microsoft.com` in your browser.
 
-1. On the **"Enter your email, we'll check if you need to create a new account."** screen, enter your email **(1)** and click **Submit (2)** to proceed with signing in. 
+1. On the **"Enter your email, we'll check if you need to create a new account."** screen, enter your email and click **Submit (2)** to proceed with signing in. 
 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject> 
+   * Email/Username: <inject key="AzureAdUserEmail"></inject> **(1)**
 
       ![](./Images/p2t1p2.png)
 
-   * Password: <inject key="AzureAdUserPassword"></inject> and then click **Sign in**.
+1. Enter the following temporary password and click on **Sign in (2)**.
 
-     ![](./Images/p2t1p3.png)
+   * Temporary Access Pass: <inject key="AzureAdUserPassword"></inject> **(1)**
+
+     ![](./Images/new/pass.png)
 
 1. On the **Stay signed in?** pop-up, click **No**.
 
@@ -44,39 +46,39 @@ In this task, you’ll create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p6.png)
 
-2. Once signed in, click on **Fabric (1)** in the bottom-left corner and then select **Power BI (2)** from the menu.
+1. Once signed in, click on **Fabric (1)** in the bottom-left corner and then select **Power BI (2)** from the menu.
 
       ![](./Images/p2t1p7.png)
 
       ![](./Images/p2t1p8.png)
 
-4. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Free trial (2)**.
+1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Free trial (2)**.
     
    ![](./Images/p2t1p9.png)
      
-5. On the **Activate your 60-day free Fabric trial capacity** pop-up window, click **Activate**. 
+1. On the **Activate your 60-day free Fabric trial capacity** pop-up window, click **Activate**. 
 
    ![](./Images/p2t1p10.png)
    
-6. On the **Successfully upgraded to Microsoft Fabric** pop-up, click **Stay on current page**.
+1. On the **Successfully upgraded to Microsoft Fabric** pop-up, click **OK**.
 
-   ![](./Images/Update-2.png)
+   ![](./Images/new/1.png)
 
       >**Note:** If **Invite teammates to try Fabric to extend your trial** window appears, **X** close it.
 
       ![](./Images/p2t1p12.png)
    
-7. On the dashboard, on the top menu you can see **Trial: 59 days left**.
+1. On the dashboard, on the top menu you can see **Trial activated: 59 days left**.
 
-      ![](./Images/p2t1p13.png)
+      ![](./Images/new/2.png)
 
       >**Note**: You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
 
-8. In the left menu bar, click on **Workspaces (1)**, then select **+ New Workspace (2)**.
+1. In the left menu bar, click on **Workspaces (1)**, then select **+ New Workspace (2)**.
 
       ![](./Images/p2t1p14.png)
 
-9. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, select **Trial (2)** as the licensing mode under **Advanced**, and click **Apply (3)** to proceed.
+1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, select **Trial (2)** as the licensing mode under **Advanced**, and click **Apply (3)** to proceed.
 
       ![](./Images/p2t1p15.png)
 
@@ -84,7 +86,7 @@ In this task, you’ll create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p16.png)
 
-10. When your new workspace opens, it should be empty, as shown here:
+1. When your new workspace opens, it should be empty, as shown here:
 
     ![Screenshot of an empty workspace in Power BI.](./Images/p2t1p17.png)  
  
@@ -103,9 +105,9 @@ In this task, you’ll create a Lakehouse within your Fabric workspace to serve 
 
       ![New lakehouse.](./Images/p2t2p1.png)
 
-3. In the **New Lakehouse** pop-up, enter the Name as  **dp_lakehouse (1)** and click on **Create (2)**.
+3. In the **New Lakehouse** pop-up, enter the Name as  **dp_lakehouse (1)**, uncheck the **Lakehouse schemas (2)** options and then click on **Create (2)**.
 
-    ![New lakehouse.](./Images/Update-3.png)
+    ![New lakehouse.](./Images/new/3.png)
    
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -128,7 +130,8 @@ In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse us
 
       - **Name:** Keep as default **(1)**
       - **Enable Git integration, deployment pipelines, and Public API Scenarios:** Uncheck **(2)**
-       ![](./Images/p2t3p2.png)
+
+        ![](./Images/p2t3p2.png)
 
    After a few seconds, the Power Query editor for your new dataflow will open.
 
@@ -147,7 +150,7 @@ In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse us
 
       ![New lakehouse.](./Images/p2t3p5.png)
 
-6. On the *Preview file data*, click on **Create**.
+6. On the **Preview file data**, click on **Create**.
 
       ![New lakehouse.](./Images/createdataupd.png)
 
@@ -209,11 +212,11 @@ In this task, you’ll configure a data destination for a dataflow to enable sea
 
       ![](./Images/p2t4p3.png)
 
-6. On the **Choose destination settings** page, disable **Use automatic settings (1)**. Under the Update method section, select **Append (2)**, and then click **Save settings (3)** to apply the changes. 
+1. On the **Choose destination settings** page, disable **Use automatic settings (1)**. Under the Update method section, select **Append (2)**, and then click **Save settings (3)** to apply the changes. 
 
       ![New lakehouse.](./Images/p2t4p7.png)
 
-7. The **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
+1. The **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
    
       ![Query with a lakehouse destination.](./Images/p2t4p8.png)
 
@@ -221,7 +224,7 @@ In this task, you’ll configure a data destination for a dataflow to enable sea
 
       >![Query with a lakehouse destination.](./Images/visual_query.png)
 
-8. From the **Home** tab, select **Save & run (1)** dropdown and click **Save (2)** to save the dataflow.
+1. From the **Home** tab, select **Save & run (1)** dropdown and click **Save (2)** to save the dataflow.
 
     ![New lakehouse.](./Images/save1.png)
 
