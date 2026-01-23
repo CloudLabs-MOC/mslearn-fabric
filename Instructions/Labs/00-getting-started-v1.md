@@ -79,7 +79,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](./Images/inline-validationupd.png)
+   ![Inline Validation](./Images/validation.png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
@@ -92,11 +92,13 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on **Next** from the lower right corner to move on to the next page.
+Now, click on **Next >>** from the lower right corner to move on to the next page.
 
 ![Start Your Azure Journey](./Images/nextpage1.png)
 
 ### Happy Learning!!
+
+
 
 
 
