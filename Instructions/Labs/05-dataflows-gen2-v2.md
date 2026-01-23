@@ -133,7 +133,7 @@ In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse us
 
         ![](./Images/p2t3p2.png)
 
-   After a few seconds, the Power Query editor for your new dataflow will open.
+   >**Note**: After a few seconds, the Power Query editor for your new dataflow will open.
 
 1. From the center **Get data** pane, select **Import from a Text/CSV file**.
 
