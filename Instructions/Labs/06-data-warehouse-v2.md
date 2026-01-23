@@ -2,9 +2,13 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Overview
+
 In this exercise, you will analyze data within a relational data warehouse using Microsoft Fabric. Utilize SQL for querying and create detailed visualizations to derive actionable insights. 
 
-## Objectives:
+## Lab Objectives:
+
+You will be able to complete the following tasks:
 
 - Task 1: Create a Data Warehouse
 - Task 2: Create tables and insert data

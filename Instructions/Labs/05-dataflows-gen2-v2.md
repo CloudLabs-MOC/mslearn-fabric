@@ -2,9 +2,13 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Overview
+
 In this exercise, you will use Dataflows (Gen2) to ingest, transform, and standardize data. You will set up data ingestion processes, apply necessary transformations, and create standardized datasets for analysis. This exercise will help you understand how to efficiently prepare and manage data using Dataflows (Gen2).
 
-## Objectives:
+## Lab Objectives:
+
+You will be able to complete the following tasks:
 
 - Task 1: Create a workspace
 - Task 2: Create a lakehouse
