@@ -105,7 +105,7 @@ In this task, you’ll create a dedicated workspace in Microsoft Fabric with the
 
 In this task, you’ll create a Lakehouse within your Fabric workspace to serve as a centralized storage layer for structured and unstructured data, enabling scalable data ingestion and analytics.
 
-1. Select **+ New item (1)**, search for **Lakehouse (2)**, and then choose **Lakehouse (3)** from the results.
+1. From the top left corner, select **+ New item (1)**, search for **Lakehouse (2)**, and then choose **Lakehouse (3)** from the results.
 
       ![New lakehouse.](./Images/p2t2p1.png)
 
@@ -124,15 +124,15 @@ In this task, you’ll create a Lakehouse within your Fabric workspace to serve 
 
 In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse using an ETL process. This setup enables structured data transformation and prepares the dataset for efficient storage and analysis within the Fabric environment.
 
-1. From the left menu bar, select the workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, then click **+ New item (2)**. 
+1. From the left menu bar, select the workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, then click on **+ New item (2)**. 
    
-2. Search for **Dataflow Gen2 (3)** and select it **Dataflow Gen2 (4)** under Get data.  
+2. Search for **Dataflow Gen2 (3)** and select **Dataflow Gen2 (4)** from the results.  
 
       ![New dataflow.](./Images/p2t3p1.png)
 
 1. Enter the below-mentioned details to create the Dataflow and click on **Create (3)**.
 
-    - **Name:** Keep as default **(1)**
+    - **Name:** Keep the default name **(1)**
     - **Enable Git integration, deployment pipelines, and Public API Scenarios:** Uncheck **(2)**
 
       ![](./Images/p2t3p2.png)
@@ -162,11 +162,11 @@ In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse us
 
       ![Query in the Power Query editor.](./Images/p2t3p7.png)
 
-7. On the toolbar ribbon, select the **Add column (1)** tab. Then select **Custom column (2)**.
+7. On the toolbar ribbon, select the **Add column (1)** tab and click on **Custom column (2)**.
 
       ![New lakehouse.](./Images/p2t3p8.png)
    
-8. On the Custom column pane, create a new column with Name **MonthNo (1)** and enter the formula **Date.Month([OrderDate]) (2)** in the **Custom column formula** box and then click **OK (3)**.
+8. On the Custom column pane, create a new column with Name **MonthNo (1)**, enter the formula **Date.Month([OrderDate]) (2)** in the **Custom column formula** box and then click **OK (3)**.
 
       ![Custom column in Power Query editor.](./Images/p2t3p9.png)
 
@@ -204,7 +204,7 @@ In this task, you’ll configure a data destination for a dataflow to enable sea
 
       ![New lakehouse.](./Images/p2t4p5.png)
 
-5. Click on the **Add data destination (1)** and then select **Lakehouse (2)** under New destination.
+5. Within the Home tab, click on the **Add data destination (1)** and then select **Lakehouse (2)** under New destination.
 
       ![](./Images/p2t4p6.png)
 
