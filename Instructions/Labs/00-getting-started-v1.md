@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you'll explore key components of Microsoft Fabric's data solution. First, you'll create and use Dataflows (Gen2) to ingest, transform, and standardize data from various sources, preparing it for analysis and landing it in a Lakehouse. Next, you'll analyse the processed data within a relational data warehouse in Microsoft Fabric, leveraging its SQL capabilities for querying and visualization.
+In this lab, you'll explore key components of Microsoft Fabric's data solution. First, you'll create and use Dataflows (Gen2) to ingest, transform, and standardize data from various sources, preparing it for analysis and landing it in a Lakehouse. Next, you'll analyze the processed data within a relational data warehouse in Microsoft Fabric, leveraging its SQL capabilities for querying and visualization.
 
 ## Objective
 
@@ -97,6 +97,7 @@ Now, click on **Next >>** from the lower right corner to move on to the next pag
 ![Start Your Azure Journey](./Images/nextpage1.png)
 
 ### Happy Learning!!
+
 
 
 
