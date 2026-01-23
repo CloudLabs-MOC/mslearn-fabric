@@ -16,7 +16,7 @@ In this exercise, you will use Dataflows (Gen2) to ingest, transform, and standa
 
 In this task, you’ll create a dedicated workspace in Microsoft Fabric with the trial features enabled. This workspace will serve as the foundation for building and managing data solutions, including lakehouses, dataflows, and pipelines.
 
-1. On the **Lab VM** desktop, click to open **Microsoft Edge**.
+1. On the **Lab VM**, open **Microsoft Edge** from the desktop.
 
       ![](./Images/p2t1p1.png)
 
@@ -291,4 +291,5 @@ In this exercise, you have learned how to use Dataflows (Gen2) to ingest, transf
 ### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
 ![](./Images/nextpage2.png)
+
 
