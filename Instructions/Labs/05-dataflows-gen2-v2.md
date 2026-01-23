@@ -128,12 +128,12 @@ In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse us
 
 1. Enter the below-mentioned details to create the Dataflow and click on **Create (3)**.
 
-   * **Name:** Keep as default **(1)**
-   * **Enable Git integration, deployment pipelines, and Public API Scenarios:** Uncheck **(2)**
+    - **Name:** Keep as default **(1)**
+    - **Enable Git integration, deployment pipelines, and Public API Scenarios:** Uncheck **(2)**
 
       ![](./Images/p2t3p2.png)
 
-   >**Note**: After a few seconds, the Power Query editor for your new dataflow will open.
+      >**Note**: After a few seconds, the Power Query editor for your new dataflow will open.
 
 1. From the center **Get data** pane, select **Import from a Text/CSV file**.
 
