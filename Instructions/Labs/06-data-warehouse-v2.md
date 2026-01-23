@@ -372,7 +372,7 @@ In this task, you will visualize your data from a single query or your data ware
 
     ![03](./Images/p3t7p11.png)
 
-1. In the menu hub on the left pane, navigate back to your **workspace**. Notice that you now have three items saved in your workspace: your data warehouse, its semantic model (default), and the report you created.
+1. From the left navigation pane, navigate back to your **dp_fabric-<inject key="DeploymentID" enableCopy="false"/>**. Notice that you now have three items saved in your workspace: your *data warehouse*, its semantic model (default), and the report you created.
 
     ![03](./Images/p3t7p12.png)
 
