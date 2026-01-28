@@ -161,9 +161,11 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
    ![](<./Images/L1T3S4.png>)
 
-1. On the **Upload files** dialog, click the folder icon on the right to browse and select the **sales.csv** file from your local or lab machine.
+1. On the **Upload files** dialog, click the folder icon on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv** file from your local or lab machine.
 
    ![](<./Images/fb_g2_1_7.png>)
+   
+   ![](<./Images/L1T3S6A.png>)
 
 1. On the **Upload files** dialog, after selecting the **sales.csv** file, click **Upload** **(1)** to upload the file into the **data** folder.
 
