@@ -41,6 +41,14 @@ In this task, you’ll create a dedicated workspace in Microsoft Fabric with the
 1. On the **Stay signed in?** pop-up, click **No**.
 
       ![](./Images/p2t1p4.png)
+
+      >- If you encounter issues during sign-up, retry using the official Microsoft Fabric free trial page:  
+      https://go.microsoft.com/fwlink/?linkid=2310156&pbi_source=websignup_Fab_GetStarted&clcid=0x409&culture=en-us&country=us  
+      >- After opening the page, sign in with the provided lab credentials.  
+      > - When prompted, enter **Job Title** as: `Developer`.  
+      > - Provide any **10-digit phone number** (random is acceptable).  
+      > - Click **Get Started** to complete the free trial registration.
+
  
 1. On the **Welcome to the Fabric view** window, click on **Cancel**.
 
@@ -173,6 +181,10 @@ In this task, you’ll create a Dataflow Gen2 to ingest data into a Lakehouse us
 9. The step to add the custom column is added to the query, and the resulting column is displayed in the data pane:
 
       ![Query with a custom column step.](./Images/custom-column-added1upd.png)
+
+     > **Note:** If the data does not load correctly, sign out and sign back in.  
+      > Alternatively, open an Incognito/InPrivate browser window, sign in to the Fabric portal again, and verify the data.
+
 
 ## Task 4: Add data destination for Dataflow
 
