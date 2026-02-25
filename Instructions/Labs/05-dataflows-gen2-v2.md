@@ -90,9 +90,13 @@ In this task, you’ll create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p14.png)
 
-1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, select **Trial (2)** as the licensing mode under **Advanced**, and click **Apply (3)** to proceed.
+1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, select **Fabric Trial (2)** as Workspace type under **Advanced**. Under **Details**, keep the selected trial **(3)** and click **Apply (4)** to proceed.
 
-      ![](./Images/p2t1p15.png)
+      ![](./Images/E1T1S14-1.png)
+
+      ![](./Images/E1T1S14-2.png)
+
+      ![](./Images/E1T1S14-3.png)
 
 1. On the **Introducing task flows (preview)** pop-up, click **Got it**.
 
@@ -117,7 +121,7 @@ In this task, you’ll create a Lakehouse within your Fabric workspace to serve 
 
       ![New lakehouse.](./Images/p2t2p1.png)
 
-3. In the **New Lakehouse** pop-up, enter the Name as  **dp_lakehouse (1)**, uncheck the **Lakehouse schemas (2)** options and then click on **Create (2)**.
+3. In the **New Lakehouse** pop-up, enter the Name as  **dp_lakehouse (1)**, uncheck the **Lakehouse schemas (2)** options and then click on **Create (3)**.
 
     ![New lakehouse.](./Images/new/3.png)
    
@@ -267,11 +271,11 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
 3. Click on the **Pipeline activity (1)**, and select **Dataflow (2)** activity.
 
-      ![New lakehouse.](./Images/p7t3p4.png)
+      ![New lakehouse.](./Images/E1T5S3.png)
 
 4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in **Dataflow** drop-down list, select **Dataflow 1 (3)** (the dataflow you created previously).
 
-      ![Pipeline with a dataflow activity.](./Images/p2t5p4.png)
+      ![Pipeline with a dataflow activity.](./Images/E1T5S4.png)
 
 5. On the **Home** tab, save the pipeline by clicking the **&#128427; Save** icon.
 

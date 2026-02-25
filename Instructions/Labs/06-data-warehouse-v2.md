@@ -126,9 +126,9 @@ In this task, you will create a relational data warehouse consisting of fact and
 
     ![](./Images/p3t3p3.png)
 
-1. From the top menu bar, click on **Open semantic model**.
+1. From the top menu bar, click on **Open** to open the semantic model.
 
-    ![](./Images/p3t3p4.png)
+    ![](./Images/E2T3S4.png)
 
 1. Click on the **Viewing (1)** menu in the top right corner, select **Editing (2)** to enable edit mode.
 
@@ -315,9 +315,9 @@ In this task, you will visualize your data from a single query or your data ware
 
    ![Screenshot of the data warehouse model page.](./Images/p3t7p1.png)
 
-1. On the **Data Warehouse details** page, click **Open semantic model** to launch the semantic model editor.  
+1. On the **Data Warehouse details** page, click **Open** to launch the semantic model editor.  
 
-   ![](./Images/p3t7p2.png)
+   ![](./Images/E2T3S4.png)
 
 1. Click on the **Viewing (1)** menu in the top right corner, select **Editing (2)** to enable edit mode.
 
