@@ -111,7 +111,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
    ![](./Images/fab-image14.png)
 
-1. Select the lakehouse you created in a previous section named as **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** and select **Connect (2)**.
+1. Select the lakehouse you created in a previous section named as **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** and select **ADD (2)**.
 
    ![](./Images/fab-image15.png)
 
@@ -313,7 +313,7 @@ Microsoft Fabric will keep track of all your experiments and allow you to visual
 
     ![](./Images/E2T6S2-1.png)
 
-1. Review the **Run metrics** to explore how accurate your regression model is.
+1. Scroll down and Review the **Run metrics** to explore how accurate your regression model is.
 
     ![](./Images/L2T6S4-2611.png)
 
@@ -343,7 +343,7 @@ In this task, you will discover how to preserve your work by saving the Notebook
 
 Now that you've finished training and evaluating the models, you can save the notebook with a meaningful name and end the Spark session.
 
-1. Navigate to **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** workspace from the hub menu bar on the left and select **Notebook 1**.
+1. Navigate to **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)** workspace from the hub menu bar on the left and select **Notebook 1 (2)**.
 
     ![](./Images/50.png)
 
@@ -351,7 +351,7 @@ Now that you've finished training and evaluating the models, you can save the no
 
    ![](./Images/E2T8S2.png)
 
-1. On the **Run (1)** menu, select **Stop session (2)** to end the Spark session.
+1. On the menu bar, click **Run (1)** tab, then select **Stop session (2)** to end the Spark session.
 
     ![](./Images/E2T8S3.png)
 
