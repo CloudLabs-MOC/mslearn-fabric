@@ -33,7 +33,7 @@ The architecture of a Microsoft Fabric lab integrates Data Lake storage with Del
 
 ## Architecture Diagram
 
-![](./Images/arch-diag.png)
+![](./Images/arch-diag-2702.png)
 
 ## Explanation of Components
 

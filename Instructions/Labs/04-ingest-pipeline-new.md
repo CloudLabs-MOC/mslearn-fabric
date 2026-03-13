@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture Diagram
 
-![](./Images/lab2img.png)
+![](./Images/lab2-arch-2702.png)
 
 ## Use Data Factory pipelines in Microsoft Fabric
 
