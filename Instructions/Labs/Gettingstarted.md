@@ -96,13 +96,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
        ![Enter Your Password](./Images/GS8.png)
 
-       > **Note:** If you receive a window to register for MFA please proceed to register it. Steps to register for MFA are shown in the bottom of this page.
-
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
    ![](./Images/GS7.png)
 
-   >**Note:** In case if you see **You've selected Microsoft Fabric free, Lets get you started** page click on **Sign in (1)**. On the **create your account** page, **enter any role (2)** and **any random 10 digit number (3)** and click on **Get started (4)**. On the **Confirmation details** page, click on **Get started (5)**.
+   >**Note:** In case you see **You've selected Microsoft Fabric free, Let's get you started** page, click on **Sign in (1)**. On the **create your account** page, **enter any role (2)** and **any random 10-digit number (3)** and click on **Get started (4)**. On the **Confirmation details** page, click on **Get started (5)**.
 
       ![](./Images/fabricsignup1-2611.png)
 
@@ -136,21 +134,6 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![Enter Your Password](./Images/pg1S11-2611.png)
 
-## Steps to Proceed with MFA Setup 
-
-1. At the **"More information required"** prompt, select **Next**.
-1. On the **"Keep your account secure"** page, select **Next** twice.
-1. **Note**: If you don’t have the Microsoft Authenticator app installed on your mobile device:
-1. Open **Google Play Store** (Android) or **App Store** (iOS).
-1. Search for **Microsoft Authenticator** and tap **Install**.
-1. Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
-1. A **QR code** will be displayed on your computer screen.
-1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-1. After scanning, click **Next** to proceed.
-1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-1. If prompted to stay signed in, you can click "No."
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
-   
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
  
