@@ -114,7 +114,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
 
    ![](./Images/E1T4S1.png)
 
-   **>Note:** If you are unable to see the sales table, please zoom out a little in the browser window inside the labvm and check.
+   >**Note:** If you are unable to see the sales table, please zoom out a little in the browser window inside the labvm and check.
 
       ![](./Images/zoomout-2611.png)
 
