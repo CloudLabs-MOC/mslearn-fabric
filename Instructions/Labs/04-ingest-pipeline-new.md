@@ -28,19 +28,19 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 In this task, you will create a pipeline that ingests data from an external source into your lakehouse. You will use a Copy Data activity to copy the data, and then use a Spark notebook to transform the ingested data and load it into a table.
 
-1. Select your **Lakehouse (1)**, then open **Get data (2)** and choose **New pipeline (3)**.
+1. Select your **Lakehouse**, then open **Get data** and choose **New copy job**.
 
-    ![](./Images/L2T1S1-2302.png)
+    ![](./Images/new-copy-job.png)
 
-1. Create a new data pipeline named **Ingest Sales Data (1)** and click **Create (2)**.
+1. Create a new data pipeline named **Ingest Sales Data** and click **Create**.
 
-    ![](./Images/fab-ms-ex1-g37.png)
+    ![](./Images/ingest-sales-data.png)
 
 1. If the **Copy Data into Lakehouse** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
 
 1. In the **Copy Data into Lakehouse** wizard, on the **Choose a data source (1)** page, in the **New sources (2)** section, search **Http (3)** and select **Http (4)**.
 
-    ![](./Images/htpsrch.png)
+    ![](./Images/choose-data-source-1-1.png)
 
 1. You will be taken to the Connect to data source pane.
 
