@@ -89,11 +89,11 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/fabric-image13.png)
 
-1. Create a new workspace with a name **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**, and then click **Advanced**. Select a licensing mode that includes **Fabric capacity (2)**, then select **Capacity<inject key="DeploymentID" enableCopy="false"/> (3)** and click on **Apply (4)**.
+1. Create a new workspace with a name **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**, and then click **Advanced**. Select a Fabric and Power BI workspaces types that includes **Fabric (2)**, then select **Capacity<inject key="DeploymentID" enableCopy="false"/> (3)** and click on **Apply (4)**.
 
    ![](./Images/L1T1S9-1.png)
 
-   ![](./Images/L1T1S9-2.png)
+   ![](./Images/L1T1P12.png)
 
    > **Note**: If you receive the **Introducing task flows (preview)** pop-up, click **Got it** to continue.
 
@@ -225,7 +225,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
 1. In the **File view** for the **sales** table, observe that it contains Delta Lake log files and Parquet data files. These represent the physical storage format of the table.
 
-   ![Screenshot of a table preview.](./Images/L1T5S7.png)
+   ![Screenshot of a table preview.](./Images/L1T5P7.png)
 
    > **Note:** Files for a delta table are stored in Parquet format, and include a subfolder named **\_delta_log** in which details of transactions applied to the table are logged.
 
