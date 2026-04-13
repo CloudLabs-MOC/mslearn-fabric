@@ -28,75 +28,132 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 In this task, you will create a pipeline that ingests data from an external source into your lakehouse. You will use a Copy Data activity to copy the data, and then use a Spark notebook to transform the ingested data and load it into a table.
 
-1. Select your **Lakehouse**, then open **Get data** and choose **New copy job**.
+1. Navigate back to the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/>**. Click on **+ New item (1)**, in the search box, search for **Pipeline (2)** and select **Pipeline (3)** from the list.
 
-    ![](./Images/new-copy-job.png)
+    ![](./Images/l2T1S1.png)
 
-1. Create a new data pipeline named **Ingest Sales Data** and click **Create**.
+1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** make sure the location is set to **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and have the check box **(3)** enabled, then click on **Create (4)**. 
+    
+    ![](./Images/l2T1S2.png)
+   
+1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant**.
 
-    ![](./Images/ingest-sales-data.png)
+   ![03](./Images/l2T1S3.png)
 
-1. If the **Copy Data into Lakehouse** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
+1. In the **Copy data** wizard, on the **Choose data source** page, search for **Http (1)** and select the **Http (2)** source from the results.
 
-1. In the **Copy Data into Lakehouse** wizard, on the **Choose a data source (1)** page, in the **New sources (2)** section, search **Http (3)** and select **Http (4)**.
+   ![](./Images/E1T4S5.png)
 
-    ![](./Images/choose-data-source-1-1.png)
+1. In the **Connection settings** pane, enter the following settings for the connection to your data source:
+    
+    - URL: Enter the URL Below **(1)**
+        ```
+        https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
+        ```
+    - Connection: **Create new connection (2)**
+    - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (3)**
+    - Authentication kind: **Anonymous (4)**
+    - Leave everything else as default
+    - Click on **Next (5)**
+  
+      ![03](./Images/E1T4S6.png)
+    
+1. On the **Choose data** pane, keep the default settings and click **Next**.
+    
+    ![05](./Images/l2T1S6.png)
+   
+1. Wait for the data to be sampled, then verify the following settings:
 
-1. You will be taken to the Connect to data source pane.
+   - **File format:** DelimitedText **(1)**
+   - **Column delimiter:** Comma (,) **(2)**
+   - **Row delimiter:** Line feed (\n) **(3)**
+   - Click **Preview data (4)** to view a sample of the data.
+   - After reviewing, close the preview and click **Next (5)**.
 
-1. In the **Connect to data source** pane, provide the following details:
-    - **URL (1)**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
-    - **Connection (2)**: Create new connection
-    - **Connection name (3)**: *Specify a unique name*
-    - **Authentication kind (4)**: Basic
-    - **Username (5)**: *Enter a unique username and note it down*
-    - **Password**: *Enter a unique password and note it down*
-    - Select **Next (6)** to continue.
+        ![Account-manager-start](./Images/E1T4S8i.png)
 
-        ![](./Images/fab-ms-ex1-g38.png)
+1. On the **Choose data destination** page, click **OneLake catalog (1)** and select the lakehouse **fabric_lakehouse (2)**.
+    
+    ![](./Images/l2T1S9.png)
 
-1. Set the **Request method (1)** to **GET** and leave the remaining fields unchanged. Select **Next (2)** to continue.
+1. On the **Settings** page, select **Full copy (1)**, scroll down to set the destination root folder set to **Files (2)** and then click **Next (3)** to proceed.
 
-    ![](./Images/L2T1S7-2302.png)
+    ![](./Images/E1T2S10.png)
 
-1. After the data is sampled, verify the following settings:
-    - **File format (1)**: DelimitedText
-    - **Column delimiter (2)**: Comma (,)
-    - **Row delimiter (3)**: Default (\r, \n, or \r\n)
-    - **First row as header (4)**: Selected
-    - **Compression type (5)**: No compression  
-    - Then select **Next (6)**.
+1. On the **Map to destination** page, set **Folder path** to **new_data (1)** and **File name** to **sales.csv (1)**.
+    
+    ![08](./Images/E1T2S11.png)
 
-        ![](./Images/L2T1S8-2302.png)
+1. Set the following file format options and leave all other settings at their default values:
 
-1. Configure the data destination with the following settings:
-    - **Root folder (1)**: Files
-    - **Folder path (2)**: new_data
-    - **File name (3)**: sales.csv
-    - **Copy behavior**: None  
-    Then select **Next (4)** twice.
+   - File format: **DelimitedText (1)**
+   - Click **File format Settings (2)**
+   - Column delimiter: **Comma (,) (3)**
+   - Row delimiter: **Line feed (\n) (4)**
+   - Leave all other settings as default and Click **Next (5)**
+   
+        ![09](./Images/E1T4S12.png)
 
-        ![](./Images/fab-ms-ex1-g44.png)
+1. On the **Review + save** page, verify the source and destination details, then click **Save** to create and run the copy job.
 
-1. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+    ![09](./Images/l2T1S12.png)
 
-    ![](./Images/L2T1S12-2302.png)
+1. A new pipeline containing a **Copy data** activity is created, as shown here:
 
-1. A new pipeline containing a **Copy Data** activity is created:
-
-    ![](./Images/updt12cpdt.png)
+    ![](./Images/cpdta.png)
 
 1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
-    ![](./Images/fab-ms-ex1-g43.png)
+    > **Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
 
-1. In the menu bar on the left, select your **Lakehouse**.
+    ![](./Images/l2T1S14.png)
 
-    ![](./Images/L2T1S13-2302.png)
+1. If you don’t see any run status in the **Output** pane, click **Run** on the top menu to manually start the pipeline.
 
-1. Refresh and expand **Files (1)** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+    ![09](./Images/upfab-ric-ex1-g14.png)
 
-    ![](./Images/new_data1.png)
+1.  When prompted, click on **Save and run** to start the pipeline.
+
+    ![09](./Images/fab-ric-ex1-g15.png)
+
+    > **Note:** If any errors appear while running the pipeline, review the details in the notification panel, fix the issue, and run it again. If everything succeeds, you can skip below steps and proceed with **Step 18**.
+
+    - If the **Connection** field shows an error, select the **Copy job (1)** and switch to  **Settings (2)**, click on the dropdown **(3)** and select **Browse all (4)** to choose the correct connection manually.
+
+        ![09](./Images/manualcon.png)
+    
+    - From the **Get data** page, select **Copy job (1)** under the **New sources** section to continue.
+
+        ![09](./Images/fab-ric-cor-g3.png)
+    
+    - Set the following connection details:
+
+      - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (1)**
+      - Click **Sign in (2)** to authenticate if it shows You are not signed in.
+
+        ![09](./Images/upfab-ric-cor-g4.png)
+    
+    - When prompted to sign in, select your **ODL_User** account or sign in manually using:
+       - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+       - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
+
+        ![09](./Images/upfab-ric-cor-g5.png)
+    
+    - After the connection details are verified and you are signed in, click **Connect** to proceed.
+    
+    - Once the **Copy job (1)** is configured, click **Run (2)** at the top to execute the pipeline.
+
+       ![09](./Images/upfab-ric-cor-g7.png)
+    
+    - When prompted, click on **Save and run** to start the pipeline.
+
+      ![09](./Images/fab-ric-ex1-g15.png)
+
+1. From the Top bar navigate to your Lakehouse by clicking on the **fabric_lakehouse (1)**, expand **Files (2)** and select the **new_data (3)** folder, refresh the page and verify that the **sales.csv (4)** file has been copied.
+
+    ![Account-manager-start](./Images/new_data1.png)
+
+    >**Note:** You can also navigate to your Lakehouse by clicking your workspace and selecting the Lakehouse.
 
 ## Task 2: Create a notebook
 
@@ -222,7 +279,7 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
 1. Navigate to your **Lakehouse** from the left navigation menu. 
 
-    ![](./Images/L2T1S13-2302.png)
+    ![](./Images/l2T3S10.png)
 
 1. In the **Explorer** pane, refresh and expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
 

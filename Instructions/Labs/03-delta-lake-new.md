@@ -112,7 +112,7 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 
 1. In the newly created workspace, click the **+ New Item (1)** button and search for **Lakehouse (2)** and select **Lakehouse (3)**.
 
-   ![](./Images/slectlakehouse.png)
+   ![](./Images/l1T2S1.png)
  
 1. Create a new **Lakehouse** with the following details:
 
