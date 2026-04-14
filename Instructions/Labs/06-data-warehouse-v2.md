@@ -36,7 +36,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 ## Task 2: Create tables and insert data
 
-In this task, you will create database tables by defining their structure with appropriate columns and constraints. Afterwards, you'll insert data into the tables, ensuring it is ready for querying and further operations.
+In this task, you will create database tables by defining their structure with appropriate columns and constraints. Afterwards, you will insert data into the tables, ensuring it is ready for querying and further operations.
 
 1. In the Data warehouse, under the **Build a warehouse** select the **T-SQL**.
 
@@ -245,7 +245,7 @@ In this task, you will create a view in the data warehouse to encapsulate SQL lo
 
     ![](./Images/p3t5p2.png)
 
-3. Create a new SQL query and run the following SELECT statement:
+3. Create a new SQL query and run the following SELECT statement to view the aggregated sales data from the newly created view.
 
     ```SQL
    SELECT CalendarYear, MonthName, SalesRegion, SalesRevenue
@@ -275,15 +275,15 @@ In this task, you will create a visual query using the graphical query designer 
 
     ![](./Images/new/15.png)
 
-1. We now have two tables in our query.
+1. Now we have two tables in our query.
 
     ![](./Images/p3t6p2.png)
 
-1. Use the **(+) (1)** button on the **FactSalesOrder** table on the canvas to **Merge queries (2)**.
+1. Select the **FactSalesOrder** table and click on **(+) (1)** button on the canvas to **Merge queries (2)**.
 
     ![Screenshot of a new warehouse.](./Images/p3t6p4.png)
 
-    > **Note:** If the + option is not visible, click on the three dots (i.e., the Actions button) to view the required options. 
+    > **Note:** If the + option is not visible, click on the three dots (i.e., the Actions button) and select the Merge queries option.
 
 1. In the **Merge queries** window, select **DimProduct (1)** as the right table for merge. Select **ProductKey (2)** in both queries, leave the default **Left outer (3)** as Join kind, and click **OK (4)**.
 
@@ -305,11 +305,11 @@ In this task, you will create a visual query using the graphical query designer 
 
     >**Note:** If you can't find the cable lock, click on **Load More**. 
 
-1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
+1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Download Excel file**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
 
 ## Task 7: Visualize your data
 
-In this task, you will visualize your data from a single query or your data warehouse to gain insights and present findings effectively. Before creating visualizations, it's important to hide any columns or tables that may clutter the report and are not user-friendly for report designers.
+In this task, you will visualize your data from a single query or your data warehouse to gain insights and present findings effectively. Before creating visualizations, it is important to hide any columns or tables that may clutter the report and are not user-friendly for report designers.
 
 1. Navigate back to the fabric workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (2)** semantic model to open it.
 
@@ -350,7 +350,7 @@ In this task, you will visualize your data from a single query or your data ware
 
     ![03](./Images/p3t7p4.png)
 
-5. In the **Data** pane, expand **FactSalesOrder**. You’ll notice that the columns you previously hid are no longer displayed. 
+5. In the **Data** pane, expand **FactSalesOrder**. You will notice that the columns you previously hid are no longer displayed. 
 
     ![03](./Images/p3t7p5.png)
 
