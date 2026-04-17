@@ -24,7 +24,7 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p1.png)
 
-1. Open **Microsoft Fabric** by entering the below link in your browser.
+1. Open **Microsoft Fabric** by entering the link below in your browser.
 
       ```
       https://app.fabric.microsoft.com
@@ -53,7 +53,6 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
       > - Provide any **10-digit phone number** (random is acceptable).  
       > - Click **Get Started** to complete the free trial registration.
 
- 
 1. On the **Welcome to the Fabric view** window, click on **Cancel**.
 
       ![](./Images/p2t1p5.png)
@@ -84,7 +83,7 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p12.png)
    
-1. On the dashboard, on the top menu you can see **Trial activated: 59 days left**.
+1. On the dashboard, in the top menu, you can see **Trial activated: 59 days left**.
 
       ![](./Images/new/2.png)
 
@@ -191,7 +190,6 @@ In this task, you will create a Dataflow Gen2 to ingest data into a Lakehouse us
      > **Note:** If the data does not load correctly, sign out and sign back in.  
       > Alternatively, open an Incognito/InPrivate browser window, sign in to the Fabric portal again, and verify the data.
 
-
 ## Task 4: Add data destination for Dataflow
 
 In this task, you will configure a data destination for a dataflow to enable seamless integration with a Lakehouse. This setup ensures that transformed data is efficiently stored and accessible for downstream analytics and reporting.
@@ -204,7 +202,7 @@ In this task, you will configure a data destination for a dataflow to enable sea
 
       ![](./Images/p2t4p1(1).png)
 
-      > **Note:** If this option is grayed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
+      > **Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
 
 2. In the **Connect to data destination** dialog box, keep all the values as default and click **Next**.
 
@@ -249,13 +247,6 @@ In this task, you will configure a data destination for a dataflow to enable sea
 1. Click **Save & run (1)** from the top-left corner and select **Save (2)** to save the dataflow.
 
     ![New lakehouse.](./Images/p2t4p9-1.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-<validation step="0957818c-b310-4ba7-9c56-70042c49ede3" />
 
 ## Task 5: Add a dataflow to a pipeline
 
@@ -313,5 +304,3 @@ In this exercise, you have learned how to use Dataflows (Gen2) to ingest, transf
 ### You have successfully completed the exercise. Click on **Next >>** to proceed with the next exercise.
 
 ![](./Images/nextpage2.png)
-
-
