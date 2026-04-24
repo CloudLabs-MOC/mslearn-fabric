@@ -173,7 +173,7 @@ This task will guide you through visualizing and analyzing data effectively by c
 
 You can use your KQL Queryset as the basis for a Power BI report.
 
-1. On the **Revenue by Product** KQL Queryset select **More (1)** then **Create Power BI report (2)**. Wait for the report editor to open.
+1. On the **Revenue by Product** KQL Queryset select **More (1)** then **Power BI report (2)**. Wait for the report editor to open.
 
     ![](./Images/E1T5S2.png)
 
