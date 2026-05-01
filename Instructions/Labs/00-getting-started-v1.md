@@ -2,11 +2,11 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## Overview
+## Lab Overview
 
 In this lab, you will explore key components of Microsoft Fabric's data solution. First, you will create and use Dataflows (Gen2) to ingest, transform, and standardize data from various sources, preparing it for analysis and landing it in a Lakehouse. Next, you will analyze the processed data within a relational data warehouse in Microsoft Fabric, leveraging its SQL capabilities for querying and visualization.
 
-## Objective
+## Lab Objectives
 
 Explore dataflows, data warehousing, and reporting in Microsoft Fabric. By the end of this lab, you will gain insights on :
 
@@ -39,15 +39,15 @@ The architecture for this lab involves the following key components:
 - **Pipeline:** Orchestrates the movement and transformation of data, ensuring seamless integration and data flow between different components.
 - **Visual Query Tool:**  Enables the creation of visual queries and views, allowing participants to easily analyze and visualize data, and draw actionable insights from the lab's dataset.
 
-**Fabric trial provides access to most features, but excludes Copilot, private links, and trusted workspace access ([learn more](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity)).**
+The Fabric trial includes access to most platform features required for this lab. However, Copilot, Private Links, and Trusted Workspace Access are not available in the trial capacity. For more details, refer to the official Microsoft documentation here: [Overview of the Fabric Trial](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity).
 
-## Getting Started with Lab
+## Getting Started with the Lab
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
 ![](./Images/Update-0.png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
