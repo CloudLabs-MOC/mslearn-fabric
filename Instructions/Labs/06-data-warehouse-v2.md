@@ -6,7 +6,7 @@
 
 In this exercise, you will analyze data within a relational data warehouse using Microsoft Fabric. Utilize SQL for querying and create detailed visualizations to derive actionable insights. 
 
-## Lab Objectives:
+## Objectives:
 
 You will be able to complete the following tasks:
 
@@ -28,7 +28,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 2. From the left pane, select the workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"> (1)**. Within the selected workspace, click **+ New item (2)**. In the New item pane on the right, use the search bar to find **Warehouse (3)**, then select **Warehouse (4)** from the Store data section.
 
-   ![Screenshot of a new warehouse.](./Images/p3t1p2.png)
+   ![Screenshot of a new warehouse.](./Images/E2T1S2-0105.png)
 
 3. Name the Warehouse as **Data Warehouse-<inject key="Deployment ID" enableCopy="false"/> (1)** and click on **Create (2)**.
 
@@ -76,8 +76,7 @@ In this task, you will create database tables by defining their structure with a
     ```
 
     >**Note:** If you are unable to see **New SQL Query** option in the menu-bar, click on **expand (˅) (1)** next to **SQL** button and from the drop-down select **New SQL query (2)**.
-
-    ![](./Images/new/8.png)
+    > ![](./Images/new/8.png)
 
 5. **Run** the new query to insert three rows into the **DimProduct** table.
 
@@ -115,8 +114,7 @@ In this task, you will create a relational data warehouse consisting of fact and
     ![](./Images/p3t3p1.png)
 
     >**Note:** If you are unable to see **New semantic model** option in the menu-bar, click the **icon** shown in the image below.
-
-    ![](./Images/new/9.png)
+    > ![](./Images/new/9.png)
 
 1. Provide the **Direct Lake semantic model** name as **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (1)** and select **DimCustomer, DimDate, DimProduct, FactSalesOrder (2)** tables from the list. Then, click on **Confirm (3)**.
 
@@ -197,8 +195,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
     >**Note:** The attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
     >**Note:** If you are unable to see **New SQL Query** option in the menu-bar, click on **expand (˅) (1)** next to **SQL** button and from the drop-down select **New SQL query (2)**.
-
-    ![](./Images/new/8.png)
+    > ![](./Images/new/8.png)
 
 2. Modify the query as follows to add a second dimension to the aggregation.
 
@@ -264,8 +261,7 @@ In this task, you will create a visual query using the graphical query designer 
     ![](./Images/p3t6p1.png)
 
     >**Note:** If you are unable to see **New visual query** option in the menu-bar, click on **expand (˅) (1)** next to **SQL** button and from the drop-down select **New visual query (2)**.
-
-    ![](./Images/new/13.png)
+    > ![](./Images/new/13.png)
 
 1. From Tables, drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
@@ -293,7 +289,7 @@ In this task, you will create a visual query using the graphical query designer 
 
     ![Screenshot of a new warehouse.](./Images/new/17.png)
 
-1. Expand the column next to **DimProduct** by clicking the **double arrow (1)**. Select **ProductName (2)** and click **OK (3)**.
+1. Expand the column next to **DimProduct** by clicking the **double arrow (1)**. Select only **ProductName (2)** and click **OK (3)**.
 
     ![Screenshot of a new warehouse.](./Images/new/16.png)
 
@@ -325,12 +321,17 @@ In this task, you will visualize your data from a single query or your data ware
 
 1. Hide the unnecessary columns in your Fact and Dimension tables by **right-clicking (1)** on the column and selecting **Hide in report view (2)**. This action does not delete the columns from the model; it simply removes them from visibility on the report canvas.
    
+    ![03](./Images/p3t7p3.png)
+
+1. Hide the following columns:
+
     - From FactSalesOrder
+
         - **SalesOrderDateKey**
         - **CustomerKey**
         - **ProductKey**
 
-           ![03](./Images/p3t7p3.png)
+
    
     - From DimCustomer
         - **CustomerKey**
@@ -344,7 +345,7 @@ In this task, you will visualize your data from a single query or your data ware
         - **ProductKey**
         - **ProductAltKey** 
 
-      ![03](./Images/new/20.png)
+            ![03](./Images/new/20.png)
 
 4.  From the **File (1)** tab, select **Create new report (2)**. This will open a new window, where you can create a Power BI report.
 
@@ -384,6 +385,6 @@ In this task, you will visualize your data from a single query or your data ware
 
 In this exercise, you analyzed data in a Microsoft Fabric data warehouse. You created a data warehouse, defined tables, inserted data, and built relationships between fact and dimension tables. Using SQL, you queried and aggregated data for insights. You also created a view to streamline queries and used the visual query designer for no-code data exploration. Finally, you visualized the data in a Power BI report, learning how to effectively analyze and present warehouse data for decision-making.
 
-## You have successfully completed the Hands-on lab!
+### You have successfully completed the Hands-on lab!
 
 By completing this **Get Started With Data Warehouses And Ingesting Data With Dataflows Gen2 With Microsoft Fabric** hands-on lab, you have gained practical experience with core capabilities of Microsoft Fabric for enterprise data management and analytics. In **Exercise 1**, you learned how to ingest, transform, and standardize data using Dataflows Gen2, preparing it for analysis in a Lakehouse. In **Exercise 2**, you explored data warehousing by creating tables, building relationships, executing SQL queries, and visualizing insights through Power BI. Together, these exercises provided a comprehensive understanding of how to manage, analyze, and present data effectively within the Fabric ecosystem, empowering you to support data-driven decision-making in your organization.
