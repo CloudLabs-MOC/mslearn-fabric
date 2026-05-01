@@ -154,7 +154,7 @@ In this task, you will create a Dataflow Gen2 to ingest data into a Lakehouse us
 
       ![New dataflow.](./Images/create-dataflow-0105.png)
 
-1. Leave the name as default and click on **Create**.
+1. Leave the name as the default and click on **Create**.
 
       ![](./Images/p2t3p2-1.png)
 
@@ -231,7 +231,7 @@ In this task, you will configure a data destination for a dataflow to enable sea
 
       ![](./Images/p2t4p4.png)
 
-4. Go back to **MonthNo (1)** columns in Power Query online. Right-click on the column header and select **Change Type (2)** and then choose **Whole number (3)**.
+4. Go back to the **MonthNo (1)** columns in Power Query online. Right-click on the column header and select **Change Type (2)** and then choose **Whole number (3)**.
 
       ![New lakehouse.](./Images/p2t4p5.png)
 
@@ -285,7 +285,7 @@ In this task, you will add a dataflow to a pipeline to streamline the data proce
 
       ![New lakehouse.](./Images/E1T5S3.png)
 
-4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in **Dataflow** drop-down list, select **Dataflow 1 (3)** (the dataflow you created previously).
+4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in the **Dataflow** drop-down list, select **Dataflow 1 (3)** (the dataflow you created previously).
 
       ![Pipeline with a dataflow activity.](./Images/E1T5S4.png)
 
