@@ -22,7 +22,7 @@ Participants should have:
 
 ## Architecture
 
-This lab begins with setting up a workspace and a Lakehouse in the Data Engineering area. Next, Dataflows (Gen2) are created to import and configure data sources. These dataflows are then integrated into a pipeline for additional processing. Then  Data Warehouse is created, where tables are created and structured. Following this, data is queried and views are created for further analysis. Finally, visual queries are developed to enable data visualization and provide insights.
+This lab begins with setting up a workspace and a Lakehouse in the Data Engineering area. Next, Dataflows (Gen2) are created to import and configure data sources. These dataflows are then integrated into a pipeline for additional processing. Then  the Data Warehouse is created, with tables and their structure defined. Following this, data is queried, and views are created for further analysis. Finally, visual queries are developed to enable data visualization and provide insights.
 
 ## Architecture Diagram
 
@@ -53,7 +53,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 ## Exploring Your Lab Resources
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+To better understand your lab resources and credentials, navigate to the **Environment** tab.
  
 ![Explore Lab Resources](./Images/Update-1.png)
  
@@ -97,8 +97,3 @@ Now, click on **Next >>** from the lower right corner to move on to the next pag
 ![Start Your Azure Journey](./Images/nextpage1.png)
 
 ### Happy Learning!!
-
-
-
-
-
