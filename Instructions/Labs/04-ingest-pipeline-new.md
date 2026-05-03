@@ -2,11 +2,15 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Overview
+## 📘 Scenario
+
+As part of the same initiative, Contoso aims to automate its data ingestion and transformation processes to eliminate manual effort and improve efficiency. Using Microsoft Fabric, you will build a Data Factory pipeline that ingests data from external sources into the Lakehouse, transforms it using a Spark notebook, and integrates these steps into a unified workflow. This enables Contoso to establish a reliable, automated ETL process for delivering up-to-date data to business users.
+
+## 📖 Overview
 
 In this lab, you will learn how to use Data Factory pipelines in Microsoft Fabric to implement data ingestion solutions. You will create a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then use a Spark notebook to transform the ingested data and load it into a table. Finally, you will modify the pipeline to include the notebook as part of the workflow.
 
-## Objectives
+## 🎯 Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -14,7 +18,7 @@ In this lab, you will complete the following tasks:
  - Task 2: Create a notebook
  - Task 3: Modify the pipeline
 
-## Architecture Diagram
+## 🧩 Architecture Diagram
 
 ![](./Images/lab2img.png)
 
@@ -285,11 +289,11 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
    ![](./Images/newsalesdata1.png)
 
-## Summary
+## 🧾 Summary
 
 In this lab, you have gained hands-on experience with using Data Factory pipelines in Microsoft Fabric to implement data ingestion solutions. You created a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then used a Spark notebook to transform the ingested data and load it into a table. Finally, you modified the pipeline to include the notebook as part of the workflow, enabling you to automate the data transformation and loading process.
 
-### You have successfully completed the lab.
+### 🎉 You have successfully completed the lab
 
 By completing the **Work with Delta Lake and Data Factory pipelines in Microsoft Fabric** hands-on lab, you have gained practical experience in working with **Microsoft Fabric Lakehouses** and **Data Factory Pipelines** to manage and process data efficiently. You learned how to store and manage data using **Delta Lake tables**, enabling reliable, scalable, and versioned data processing through Apache Spark.
 
