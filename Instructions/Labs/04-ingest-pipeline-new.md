@@ -32,7 +32,7 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 In this task, you will create a pipeline that ingests data from an external source into your lakehouse. You will use a Copy Data activity to copy the data, and then use a Spark notebook to transform the ingested data and load it into a table.
 
-1. Navigate back to the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/>**. Click on **+ New item (1)**, in the search box, search for **Pipeline (2)** and select **Pipeline (3)** from the list.
+1. Navigate back to the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/>**. Click on **+ New item (1)** button in the top-left corner of your workspace, in the search box, search for **Pipeline (2)** and select **Pipeline (3)** from the list.
 
     ![](./Images/l2T1S1.png)
 
@@ -40,7 +40,7 @@ In this task, you will create a pipeline that ingests data from an external sour
     
     ![](./Images/l2T1S2.png)
    
-1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant**.
+1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant**. This helps you quickly set up a data ingestion pipeline in Microsoft Fabric using a guided, low-code experience.
 
    ![03](./Images/l2T1S3.png)
 
@@ -76,7 +76,7 @@ In this task, you will create a pipeline that ingests data from an external sour
 
         ![Account-manager-start](./Images/E1T4S8i.png)
 
-1. On the **Choose data destination** page, click **OneLake catalog (1)** and select the lakehouse **fabric_lakehouse (2)**.
+1. On the **Choose data destination** page, click **OneLake catalog (1)** and select the lakehouse **fabric_lakehouse (2)**. This step ensures the ingested data is stored in your Lakehouse within Microsoft Fabric, making it available for further processing and analysis.
     
     ![](./Images/l2T1S9.png)
 
@@ -108,7 +108,7 @@ In this task, you will create a pipeline that ingests data from an external sour
 
 1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
-    > **Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
+    > 📌**Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
 
     ![](./Images/l2T1S14.png)
 
@@ -120,7 +120,7 @@ In this task, you will create a pipeline that ingests data from an external sour
 
     ![09](./Images/fab-ric-ex1-g15.png)
 
-    > **Note:** If any errors appear while running the pipeline, review the details in the notification panel, fix the issue, and run it again. If everything succeeds, you can skip below steps and proceed with **Step 18**.
+    > 📌**Note:** If any errors appear while running the pipeline, review the details in the notification panel, fix the issue, and run it again. If everything succeeds, you can skip below steps and proceed with **Step 17**.
 
     - If the **Connection** field shows an error, select the **Copy job (1)** and switch to  **Settings (2)**, click on the dropdown **(3)** and select **Browse all (4)** to choose the correct connection manually.
 
@@ -157,7 +157,7 @@ In this task, you will create a pipeline that ingests data from an external sour
 
     ![Account-manager-start](./Images/new_data1.png)
 
-    >**Note:** You can also navigate to your Lakehouse by clicking your workspace and selecting the Lakehouse.
+    >📌**Note:** You can also navigate to your Lakehouse by clicking your workspace and selecting the Lakehouse.
 
 ## Task 2: Create a notebook
 
@@ -175,11 +175,11 @@ In this task, you will create a Spark notebook to transform the ingested data an
    table_name = "sales"
     ```
 
-1. Open the **ellipsis (1)** menu for the cell and select **Toggle parameter cell (2)** to mark this cell as a parameter cell for pipeline runs.
+1. Open the **ellipsis (1)** menu for the cell and select **Toggle parameter cell (2)** to mark this cell as a parameter cell for pipeline runs. This allows the value to be dynamically passed from a pipeline during execution, enabling parameterized and reusable workflows in Microsoft Fabric.
 
     ![](./Images/ns-fab-g3.png)
 
-1. Below the parameters cell, select **+ Code (1)** to insert a new code cell, then paste the transformation code into that cell (2).
+1. Below the parameters cell, select **+ Code (1)** to insert a new code cell, then paste the transformation code into that cell (2). This code reads new sales data from CSV files, enriches it by adding year/month and splitting customer names, filters and structures the columns, and then appends the transformed data into a Delta table for further analysis in Microsoft Fabric.
 
     ```python
    from pyspark.sql.functions import *
@@ -222,7 +222,7 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
 1. In the left navigation menu bar, select the **Ingest Sales Data** pipeline you created previously.
 
-1. Open the **Activities (1)** tab, select the **More activities (2)** menu, and choose **Delete data (3)**. Drag the new Delete data activity to the left of the Copy data activity and connect its **On completion** output to Copy data.
+1. Open the **Activities (1)** tab, select the **All activities (2)** menu, and choose **Delete data (3)**. Drag the new Delete data activity to the left of the Copy data activity and connect its **On completion** output to Copy data.
 
     ![](./Images/fab-ms-ex1-g51.png)
 
@@ -249,9 +249,9 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
     ![](./Images/fab-ms-ex1-g54.png)
 
-    >**Note:** These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
+    >📌**Note:** These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
 
-1. In the pipeline designer, select **Notebook** to add a **Notebook** activity to the pipeline.
+1. In the pipeline designer, select **Notebook** on the top command bar to add a **Notebook** activity to the pipeline.
 
     ![](./Images/fab-ms-ex1-g55.png)
 
@@ -291,7 +291,13 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
 ## 🧾 Summary
 
-In this lab, you have gained hands-on experience with using Data Factory pipelines in Microsoft Fabric to implement data ingestion solutions. You created a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then used a Spark notebook to transform the ingested data and load it into a table. Finally, you modified the pipeline to include the notebook as part of the workflow, enabling you to automate the data transformation and loading process.
+In this lab, you:
+
+- Created a Data Factory pipeline in Microsoft Fabric to orchestrate data ingestion workflows
+- Used a Copy Data activity to ingest data from an external source into a Lakehouse
+- Built a Spark notebook to transform the ingested data and load it into a table
+- Integrated the notebook into the pipeline to automate transformation and loading steps end-to-end
+- Enhanced the pipeline to support a complete, automated data ingestion and processing workflow
 
 ### 🎉 You have successfully completed the lab
 
