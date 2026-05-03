@@ -21,7 +21,7 @@ In this lab, you will complete the following tasks:
 - Task 5: Explore table versioning
 - Task 6: Use delta tables for streaming data
 
-## Architecture Diagram
+## 🧩 Architecture Diagram
 
    ![](./Images/lab1img.png)
 
