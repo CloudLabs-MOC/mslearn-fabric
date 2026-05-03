@@ -293,11 +293,11 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
 In this lab, you:
 
-- Created a Data Factory pipeline in Microsoft Fabric to orchestrate data ingestion workflows
-- Used a Copy Data activity to ingest data from an external source into a Lakehouse
-- Built a Spark notebook to transform the ingested data and load it into a table
-- Integrated the notebook into the pipeline to automate transformation and loading steps end-to-end
-- Enhanced the pipeline to support a complete, automated data ingestion and processing workflow
+- Created a Data Factory pipeline in Microsoft Fabric to orchestrate data ingestion workflows.
+- Used a Copy Data activity to ingest data from an external source into a Lakehouse.
+- Built a Spark notebook to transform the ingested data and load it into a table.
+- Integrated the notebook into the pipeline to automate transformation and loading steps end-to-end.
+- Enhanced the pipeline to support a complete, automated data ingestion and processing workflow.
 
 ### 🎉 You have successfully completed the lab
 
