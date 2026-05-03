@@ -39,7 +39,7 @@ Participants should have:
 
 The architecture of a Microsoft Fabric lab integrates Data Lake storage with Delta tables for reliable data storage, while Data Factory Pipelines automate ETL processes. Apache Spark powers distributed data processing on Delta tables, and notebooks enable interactive analytics. The environment supports data consistency, scalability, and integration with cloud services, ensuring secure and efficient data management and processing.
 
-## 🖼️ Architecture Diagram
+## 🧩 Architecture Diagram
 
 ![](./Images/arch-diag.png)
 
