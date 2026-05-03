@@ -115,7 +115,7 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
 In this task, you will create a new lakehouse in your workspace and upload a CSV file to it.
 
-1. In the newly created workspace, click the **+ New Item (1)** button in the top-left cornerof your workspace and search for **Lakehouse (2)** and select **Lakehouse (3)**. This step creates a centralized storage layer within Microsoft Fabric, where you can store, manage, and analyze data using Delta tables for the upcoming tasks.
+1. In the newly created workspace, click the **+ New Item (1)** button in the top-left corner of your workspace and search for **Lakehouse (2)** and select **Lakehouse (3)**. This step creates a centralized storage layer within Microsoft Fabric, where you can store, manage, and analyze data using Delta tables for the upcoming tasks.
 
    ![](./Images/l1T2S1.png)
  
