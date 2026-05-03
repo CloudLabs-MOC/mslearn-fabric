@@ -2,11 +2,15 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Overview
+## 📘 Scenario
+
+You are a data engineer at Contoso Retail Analytics, where raw sales and product data is collected daily from multiple sources. The data is stored in a Lakehouse within Microsoft Fabric, but it requires structuring and optimization for reliable analytics. In this lab, you will work with Apache Spark to explore the data, create Delta tables, and leverage features like versioning and streaming to ensure data consistency, scalability, and support for advanced analytical workloads.
+
+## 📖 Overview
 
 In this lab, you will learn how to use Delta tables in Apache Spark within Microsoft Fabric. Delta Lake is an open-source storage layer that adds relational database semantics to Spark-based data lake processing. Tables in Microsoft Fabric lakehouses are Delta tables, which is signified by the triangular Delta (▴) icon on tables in the lakehouse user interface. By using the enhanced capabilities of delta tables, you can create advanced analytics solutions.
 
-## Objectives
+## 🎯 Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -545,7 +549,7 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
     **Note:** This code stops the stream.
 
-## Summary
+## 🧾 Summary
 
 In this lab, you have gained hands-on experience with using delta tables in Apache Spark within Microsoft Fabric. You created a workspace and a lakehouse, uploaded data, and explored it using Spark DataFrames. You then created both managed and external delta tables, examined their differences, and utilized SQL to interact with them. You also explored the versioning capabilities of delta tables and implemented a streaming data pipeline using delta tables as a sink for streaming data.
 
