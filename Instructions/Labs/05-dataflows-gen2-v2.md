@@ -6,7 +6,7 @@
 
 In this exercise, you will use Dataflows (Gen2) to ingest, transform, and standardize data. You will set up data ingestion processes, apply necessary transformations, and create standardized datasets for analysis. This exercise will help you understand how to efficiently prepare and manage data using Dataflows (Gen2).
 
-## Lab Objectives:
+## Objectives
 
 You will be able to complete the following tasks:
 
@@ -32,13 +32,13 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
 1. On the **"Enter your email, we'll check if you need to create a new account."** screen, enter the below email and click **Submit (2)** to proceed with signing in. 
 
-   * Email/Username: <inject key="AzureAdUserEmail"></inject> **(1)**
+   * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
 
       ![](./Images/p2t1p2.png)
 
 1. Enter the following temporary password and click on **Sign in (2)**.
 
-   * Temporary Access Pass: <inject key="AzureAdUserPassword"></inject> **(1)**
+   * **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
      ![](./Images/new/pass.png)
 
@@ -46,12 +46,12 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p4.png)
 
-      >- If you encounter issues during sign-up, retry using the official Microsoft Fabric free trial page:  
-      https://go.microsoft.com/fwlink/?linkid=2310156&pbi_source=websignup_Fab_GetStarted&clcid=0x409&culture=en-us&country=us  
-      >- After opening the page, sign in with the provided lab credentials.  
-      > - When prompted, enter **Job Title** as: `Developer`.  
-      > - Provide any **10-digit phone number** (random is acceptable).  
-      > - Click **Get Started** to complete the free trial registration.
+      > **Note:** If you encounter any issues during the sign-up process, retry using the official Microsoft Fabric free trial registration page: 
+      > [Microsoft Fabric Sign Up](https://go.microsoft.com/fwlink/?linkid=2310156&pbi_source=websignup_Fab_GetStarted&clcid=0x409&culture=en-us&country=us) 
+      > * Open the Microsoft Fabric free trial page and sign in using the provided lab credentials.
+      > * When prompted, enter the **Job Title** as `Developer`.
+      > * Provide random 10-digit number for the **Phone number** field. 
+      > * Select **Get Started** to complete the trial registration process.
 
 1. On the **Welcome to the Fabric view** window, click on **Cancel**.
 
@@ -79,15 +79,15 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
    ![](./Images/new/1.png)
 
-      >**Note:** If **Invite teammates to try Fabric to extend your trial** window appears, **X** close it.
+1. If **Invite teammates to try Fabric to extend your trial** window appears, **X** close it.
 
-      ![](./Images/p2t1p12.png)
+   ![](./Images/p2t1p12.png)
    
 1. On the dashboard, in the top menu, you can see **Trial activated: 59 days left**.
 
       ![](./Images/new/2.png)
 
-      >**Note**: You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
+      >**Note**: You now have a **Fabric trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
 
 1. In the left menu bar, click on **Workspaces (1)**, then select **+ New Workspace (2)**.
 
@@ -118,16 +118,27 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
 ## Task 2: Create a lakehouse
 
-In this task, you will create a Lakehouse within your Fabric workspace to serve as a centralized storage layer for structured and unstructured data, enabling scalable data ingestion and analytics.
+In this task, you will create a Lakehouse within your Fabric workspace. 
+
+The Lakehouse will provide a unified data storage and management solution, allowing you to store and analyze large volumes of data in its native format. By creating a Lakehouse, you can leverage the power of Microsoft Fabric.
 
 1. From the top left corner, select **+ New item (1)**, search for **Lakehouse (2)**, and then choose **Lakehouse (3)** from the results.
 
-      ![New lakehouse.](./Images/p2t2p1.png)
+      ![New lakehouse.](./Images/E1T2S1-0105.png)
 
-3. In the **New Lakehouse** pop-up, enter the Name as  **dp_lakehouse (1)**, uncheck the **Lakehouse schemas (2)** options and then click on **Create (3)**.
+3. In the **New Lakehouse** pop-up, enter the following and click on **Create**. 
 
-    ![New lakehouse.](./Images/new/3.png)
-   
+      - Name: **dp_lakehouse (1)**
+      - Location: **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (2)** workspace
+      - Lakehouse schemas: **Unchecked (3)**
+        > **Note:** Make sure to uncheck the Lakehouse schemas option, as it is selected by default.
+
+        ![New lakehouse.](./Images/new/E1T2S2-0105.png)
+
+1. After a few moments, your new Lakehouse will be created and should open automatically, displaying the following screen:
+
+   ![New lakehouse created.](./Images/E1T2S3-0105.png)
+
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -139,13 +150,11 @@ In this task, you will create a Lakehouse within your Fabric workspace to serve 
 
 In this task, you will create a Dataflow Gen2 to ingest data into a Lakehouse using an ETL process. This setup enables structured data transformation and prepares the dataset for efficient storage and analysis within the Fabric environment.
 
-1. From the left menu bar, select the workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, then click on **+ New item (2)**. 
-   
-2. Search for **Dataflow Gen2 (3)** and select **Dataflow Gen2 (4)** from the results.  
+1. From the left menu bar, select the workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)** then click on + New item (2), search for **Dataflow Gen2 (3)**, and select **Dataflow Gen2 (4)** from the results.
 
-      ![New dataflow.](./Images/p2t3p1-1.png)
+      ![New dataflow.](./Images/create-dataflow-0105.png)
 
-1. Leave the name as default and click on **Create**.
+1. Leave the name as the default and click on **Create**.
 
       ![](./Images/p2t3p2-1.png)
 
@@ -153,7 +162,7 @@ In this task, you will create a Dataflow Gen2 to ingest data into a Lakehouse us
 
 1. From the center **Get data** pane, select **Import from a Text/CSV file**.
 
-    ![New lakehouse.](./Images/fab-image5upd.png)
+    ![New lakehouse.](./Images/E1T3S4-0105.png)
 
 5. Create a new data source with the following settings and click on **Next (8)** :
  
@@ -177,7 +186,7 @@ In this task, you will create a Dataflow Gen2 to ingest data into a Lakehouse us
 
 7. On the toolbar ribbon, select the **Add column (1)** tab and click on **Custom column (2)**.
 
-      ![New lakehouse.](./Images/p2t3p8-1.png)
+      ![New lakehouse.](./Images/E1T3S8-0105.png)
    
 8. On the Custom column pane, create a new column with Name **MonthNo (1)**, enter the formula **Date.Month([OrderDate]) (2)** in the **Custom column formula** box and then click **OK (3)**.
 
@@ -194,29 +203,35 @@ In this task, you will create a Dataflow Gen2 to ingest data into a Lakehouse us
 
 In this task, you will configure a data destination for a dataflow to enable seamless integration with a Lakehouse. This setup ensures that transformed data is efficiently stored and accessible for downstream analytics and reporting.
 
+1.  Click the **Expand the ribbon** icon to access the full menu.
+
+      ![](./Images/p2t4p1(1).png)
+
 1. On the toolbar ribbon, navigate to the **Home (1)** tab. Within the Home tab, open the **Query (2)** dropdown, then select the **Add data destination (3)** option, and choose **Lakehouse (4)** from the list.
 
       ![New lakehouse.](./Images/p2t4p1.png)
 
-      >**Note:** Click the **Expand the ribbon** icon to access the full menu.
+      > **Note:** You can also add a data destination by clicking on the **+ (1)** icon in the Queries pane next to **Data destinations** and selecting **Lakehouse (2)** from the dropdown menu.
 
-      ![](./Images/p2t4p1(1).png)
-
-      > **Note:** If this option is greyed out, you may already have a data destination set. Check the data destination at the bottom of the Query settings pane on the right side of the Power Query editor. If a destination is already set, you can change it using the gear.
+      ![New lakehouse.](./Images/E1T4S2note-0105.png)
 
 2. In the **Connect to data destination** dialog box, keep all the values as default and click **Next**.
 
       ![Data destination configuration page.](./Images/connect_data_destination-1upd.png)
 
-3. Select the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/>** Workspace. Choose the **dp_lakehouse (1)**, then specify the new table name as **orders (2)**, and then click **Next (3)**.
+3. On the **Choose destination target** page, select the following and click on **Next (4)**. 
 
-      ![Data destination configuration page.](./Images/p2t4p3.png)
+   - Expand the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace.
+   - Select the **dp_lakehouse (2)**
+   - Specify the new table name as **orders (3)**.
 
-1. On the Destination settings page, observe that **MonthNo (1)** is not selected in the Column mapping, and an informational message is displayed. Click **Cancel (2)**.
+      ![Data destination configuration page.](./Images/E1T4S3-0105.png)
+
+1. On the **Choose destination settings** page, observe that **MonthNo (1)** is not selected in the Column mapping, and an informational message is displayed. Click **Cancel (2)**.
 
       ![](./Images/p2t4p4.png)
 
-4. Go back to **MonthNo (1)** columns in Power Query online. Right-click on the column header and select **Change Type (2)** and then choose **Whole number (3)**.
+4. Go back to the **MonthNo (1)** columns in Power Query online. Right-click on the column header and select **Change Type (2)** and then choose **Whole number (3)**.
 
       ![New lakehouse.](./Images/p2t4p5.png)
 
@@ -228,9 +243,13 @@ In this task, you will configure a data destination for a dataflow to enable sea
 
       ![](./Images/connect_data_destination-1upd-1.png)
 
-1. Select the lakehouse created at the beginning of this exercise, **dp_lakehouse (1)**, along with the corresponding table **orders (2)**. Then, click **Next (3)** to proceed.
+1. On the **Choose destination target** page, select the following and click on **Next (4)**. 
 
-      ![](./Images/p2t4p3.png)
+   - Expand the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace.
+   - Select the **dp_lakehouse (2)**
+   - Specify the new table name as **orders (3)**.
+
+      ![Data destination configuration page.](./Images/E1T4S3-0105.png)
 
 1. On the **Choose destination settings** page, disable **Use automatic settings (1)**. Under the Update method section, select **Append (2)**, and then click **Save settings (3)** to apply the changes. 
 
@@ -238,15 +257,15 @@ In this task, you will configure a data destination for a dataflow to enable sea
 
 1. The **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
    
-      ![Query with a lakehouse destination.](./Images/p2t4p8-1.png)
+      ![Query with a lakehouse destination.](./Images/E1T4S11-0105.png)
 
       >**Note:** To view the visual query, click on **Diagram view** icon from the bottom right corner as shown below:
 
       >![Query with a lakehouse destination.](./Images/visual_query.png)
 
-1. Click **Save & run (1)** from the top-left corner and select **Save (2)** to save the dataflow.
+1. Click **Dataflow (1)** > **Save & run (2)** from the top-left corner and select **Save (3)** to save the dataflow.
 
-    ![New lakehouse.](./Images/p2t4p9-1.png)
+    ![New lakehouse.](./Images/E1T4S12-0105.png)
 
 ## Task 5: Add a dataflow to a pipeline
 
@@ -266,7 +285,7 @@ In this task, you will add a dataflow to a pipeline to streamline the data proce
 
       ![New lakehouse.](./Images/E1T5S3.png)
 
-4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in **Dataflow** drop-down list, select **Dataflow 1 (3)** (the dataflow you created previously).
+4. With the new **Dataflow1** activity selected, go to the **Settings (1)** tab in the bottom. In the **Workspace** drop-down list, choose **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and in the **Dataflow** drop-down list, select **Dataflow 1 (3)** (the dataflow you created previously).
 
       ![Pipeline with a dataflow activity.](./Images/E1T5S4.png)
 
