@@ -79,6 +79,8 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/L1T1S9.png)
 
+   > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
+
 1. Click the **Account manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Trial Status (2)** shows the number of days remaining.
 
    ![](./Images/fb_ex1_6.png)

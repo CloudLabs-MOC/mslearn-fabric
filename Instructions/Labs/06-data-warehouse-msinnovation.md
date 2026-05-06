@@ -369,6 +369,8 @@ If you've finished exploring your data warehouse, you can delete the workspace y
 
    ![](./Images/deleteworkspace.png)
 
+   > **Note:** If a confirmation slide appears asking whether you want to delete the workspace, click **Yes** to proceed.
+
 ## Summary
 
 In this exercise, you have accomplished the following:
