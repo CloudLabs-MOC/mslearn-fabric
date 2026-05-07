@@ -350,24 +350,7 @@ You can easily visualize the data in either a single query or in your data wareh
 1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 
     ![](./Images/L2T5S18.png)
-
-## Clean up resources
-
-In this exercise, you have created a data warehouse that contains multiple tables. You used SQL to insert data into the tables and query them. and also used the visual query tool. Finally, you enhanced the data model for the data warehouse's default dataset and used it as the source for a report.
-
-If you've finished exploring your data warehouse, you can delete the workspace you created for this exercise.
-
-1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-
-   ![](./Images/L2T3S3.png)
-
-2. In the **ellipses** menu on the toolbar, select **Workspace settings**.
-
-   ![](./Images/L2T5S21.png)
-
-3. In the **General (1)** Pane, Under the **Delete workspace** section, click **Remove this workspace (2)**.
-
-   ![](./Images/deleteworkspace.png)
+    
 
 ## Summary
 
