@@ -45,7 +45,7 @@ Participants should have:
 - **Microsoft Fabric Capacity:** Access to an active Microsoft Fabric capacity to create and run Fabric resources.
 - **Microsoft Fabric License:** A valid Microsoft Fabric license or an active Fabric Trial license enabled for the user account.
 
-## 🏗️ Architechture
+## 🏗️ Architecture
 
 The architecture of a Microsoft Fabric lab integrates Data Lake storage with Delta tables for reliable data storage, while Data Factory Pipelines automate ETL processes. Apache Spark powers distributed data processing on Delta tables, and notebooks enable interactive analytics. The environment supports data consistency, scalability, and integration with cloud services, ensuring secure and efficient data management and processing.
 

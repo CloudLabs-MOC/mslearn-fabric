@@ -69,9 +69,9 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
    ![](./Images/fab-ms-ex1-g4.png) 
 
-1. From the **Power BI** home page, select **Account Manager (1)** in the top-right corner, and then choose **Free trial (2)** to start the Microsoft Fabric trial.
+1. From the **Power BI** home page, select **Account Manager (1)** in the top-right corner, and then choose **Start trial (2)** to start the Microsoft Fabric trial.
 
-   ![](./Images/updtfreetrial.png)  
+   ![](./Images/2026-05-14_16-24-43.png)  
    
     >📌**Note:** Fabric trial provides access to most features, but excludes Copilot, private links, and trusted workspace access ([learn more](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity)).
 
@@ -188,9 +188,9 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 
 In this task, you'll use a Fabric notebook to load and view the data you uploaded into your lakehouse. By reading the CSV file into a Spark dataframe, you can explore the structure and contents of the data before transforming it in later steps. This helps verify that the file was uploaded correctly and lets you preview the dataset using Spark’s built-in display capabilities.
 
-1. On the **Home (1)** page, click the **3-dots (1)** on the top command bar, select the **Open notebook (3)** menu and select **New notebook (4)** while viewing the contents of the **products** folder.
+1. On the **Home** page, click the **Analyze data with (1)** on the top command bar, select the **Notebook (2)** menu and select **New notebook (3)** while viewing the contents of the **products** folder.
 
-    ![](./Images/L1T3S1-2302.png)
+    ![](./Images/2026-05-14_18-23-19.png)
 
     **Note:** After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
