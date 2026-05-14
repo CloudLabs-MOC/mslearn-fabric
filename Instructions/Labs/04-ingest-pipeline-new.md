@@ -4,11 +4,11 @@
 
 ## 📘 Scenario
 
-As part of the same initiative, Contoso aims to automate its data ingestion and transformation processes to eliminate manual effort and improve efficiency. Using Microsoft Fabric, you will build a Data Factory pipeline that ingests data from external sources into the Lakehouse, transforms it using a Spark notebook, and integrates these steps into a unified workflow. This enables Contoso to establish a reliable, automated ETL process for delivering up-to-date data to business users.
+As part of the same initiative, Contoso aims to automate its data ingestion and transformation processes to eliminate manual effort and improve efficiency. Using **Microsoft Fabric**, you will build a Data Factory pipeline that ingests data from external sources into the Lakehouse, transforms it using a Spark notebook, and integrates these steps into a unified workflow. This enables Contoso to establish a reliable, automated ETL process for delivering up-to-date data to business users.
 
 ## 📖 Overview
 
-In this lab, you will learn how to use Data Factory pipelines in Microsoft Fabric to implement data ingestion solutions. You will create a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then use a Spark notebook to transform the ingested data and load it into a table. Finally, you will modify the pipeline to include the notebook as part of the workflow.
+In this lab, you will learn how to use Data Factory pipelines in **Microsoft Fabric** to implement data ingestion solutions. You will create a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then use a Spark notebook to transform the ingested data and load it into a table. Finally, you will modify the pipeline to include the notebook as part of the workflow.
 
 ## 🎯 Objectives
 
@@ -179,7 +179,7 @@ In this task, you will create a Spark notebook to transform the ingested data an
 
     ![](./Images/ns-fab-g3.png)
 
-1. Below the parameters cell, select **+ Code (1)** to insert a new code cell, then paste the transformation code into that cell (2). This code reads new sales data from CSV files, enriches it by adding year/month and splitting customer names, filters and structures the columns, and then appends the transformed data into a Delta table for further analysis in Microsoft Fabric.
+1. Below the parameters cell, select **+ Code (1)** to insert a new code cell, then paste the transformation code into that cell (2). This code loads the data from the `sales.csv` file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
     ```python
    from pyspark.sql.functions import *
@@ -201,8 +201,6 @@ In this task, you will create a Spark notebook to transform the ingested data an
     ```
 
     ![](./Images/fab-ms-ex1-g46.png)
-
-    This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
 1. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
 
