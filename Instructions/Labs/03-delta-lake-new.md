@@ -2,11 +2,15 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Overview
+## 📘 Scenario
 
-In this lab, you will learn how to use Delta tables in Apache Spark within Microsoft Fabric. Delta Lake is an open-source storage layer that adds relational database semantics to Spark-based data lake processing. Tables in Microsoft Fabric lakehouses are Delta tables, which is signified by the triangular Delta (▴) icon on tables in the lakehouse user interface. By using the enhanced capabilities of delta tables, you can create advanced analytics solutions.
+You are a data engineer at Contoso Retail Analytics, where raw sales and product data is collected daily from multiple sources. The data is stored in a Lakehouse within **Microsoft Fabric**, but it requires structuring and optimization for reliable analytics. In this lab, you will work with Apache Spark to explore the data, create Delta tables, and leverage features like versioning and streaming to ensure data consistency, scalability, and support for advanced analytical workloads.
 
-## Objectives
+## 📖 Overview
+
+In this lab, you will learn how to use Delta tables in Apache Spark within **Microsoft Fabric**. Delta Lake is an open-source storage layer that adds relational database semantics to Spark-based data lake processing. Tables in Microsoft Fabric lakehouses are Delta tables, which is signified by the triangular Delta (▴) icon on tables in the lakehouse user interface. By using the enhanced capabilities of delta tables, you can create advanced analytics solutions.
+
+## 🎯 Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -17,18 +21,19 @@ In this lab, you will complete the following tasks:
 - Task 5: Explore table versioning
 - Task 6: Use delta tables for streaming data
 
-## Architecture Diagram
+## 🧩 Architecture Diagram
 
-   ![](./Images/lab1img.png)
+![](./Images/lab1img.png)
 
 ## Use delta tables in Apache Spark
+
 Tables in a Microsoft Fabric lakehouse are based on the open source Delta Lake format for Apache Spark. Delta Lake adds support for relational semantics for both batch and streaming data operations, and enables the creation of a Lakehouse architecture in which Apache Spark can be used to process and query data in tables that are based on underlying files in a data lake.
 
 ## Task 1: Create a workspace
 
 In this task, you will create a new workspace in Microsoft Fabric to use in this lab. By creating a workspace with the Fabric trial enabled, you can access the features of Microsoft Fabric needed to complete the tasks in this lab.
 
-1. From your LabVM desktop, open the **Microsoft Edge Browser** and navigate to the following URL to Sign in to **Microsoft Fabric** portal. 
+1. From your Lab-VM desktop, open the **Microsoft Edge Browser** and navigate to the following URL to sign in to **Microsoft Fabric** portal. 
     
     ```
     https://app.fabric.microsoft.com
@@ -68,17 +73,17 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
    ![](./Images/updtfreetrial.png)  
    
-    >**Note:** Fabric trial provides access to most features, but excludes Copilot, private links, and trusted workspace access ([learn more](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity)).
+    >📌**Note:** Fabric trial provides access to most features, but excludes Copilot, private links, and trusted workspace access ([learn more](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity)).
 
-1. A new prompt will appear asking you to **Activate your 60-day free Fabric trial capacity**, click on **Activate**.
+1. A new prompt will appear asking you to **Activate your 60-day free Fabric trial capacity**, click on **Activate**. This step enables the required Microsoft Fabric resources and compute capacity needed to perform the lab tasks, such as creating Lakehouses, running Spark notebooks, and building pipelines. Without activating the trial, these features and services will not be available for use.
 
    ![](./Images/activate.png)     
 
-1. Click **Ok** on the Successfully upgraded to Microsoft Fabric popup. 
+1. Click **OK** on the Successfully upgraded to Microsoft Fabric popup. 
 
    ![](./Images/L1T1S8-2302.png)
 
-1. Close the Invite teammates to try Fabric to extend your trail popup. 
+1. Close the **Invite teammates to try Fabric to extend your trail** pop-up.
 
    ![](./Images/L1T1S9-2302.png)
    
@@ -86,13 +91,15 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
     ![](./Images/L1T1S11-2302.png)
 
-      >**Note:** You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
+      >📌**Note:** You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
 
 1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;). Select **+ New Workspace (2)**.
 
    ![](./Images/fab-ms-ex1-g8.png)
 
-1. Create a new workspace with a name **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)**, scroll down to the **Advanced (2)** section to expand it, select **License mode** as **Fabric Trial (2)**, and click **Apply (4)**
+1. Create a new workspace with a name **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)**, scroll down to the **Advanced (2)** section to expand it, select **License mode** as **Fabric Trial (2)**, and click **Apply (4)**.
+
+   >📌 This ensures the workspace is backed by Microsoft Fabric trial capacity, enabling you to use features like Lakehouses, Spark, and Data Factory pipelines required for the lab.
 
     ![](./Images/L1T1S13.1-2302.png)
 
@@ -110,7 +117,9 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
 In this task, you will create a new lakehouse in your workspace and upload a CSV file to it.
 
-1. In the newly created workspace, click the **+ New Item (1)** button and search for **Lakehouse (2)** and select **Lakehouse (3)**.
+1. In the newly created workspace, click the **+ New Item (1)** button in the top-left corner of your workspace and search for **Lakehouse (2)** and select **Lakehouse (3)**.
+
+   >📌 This step creates a centralized storage layer within Microsoft Fabric, where you can store, manage, and analyze data using Delta tables for the upcoming tasks.
 
    ![](./Images/l1T2S1.png)
  
@@ -123,7 +132,7 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 
         ![](./Images/L1T2S2-2302.png)
    
-1. After a minute or so, a new empty lakehouse will appear. You will be ingesting some data into the lakehouse for analysis. There are multiple ways to do this, but in this lab, you'll upload a CSV file from the LabVM to your Lakhouse.
+1. After a minute or so, a new empty lakehouse will appear. You will be ingesting some data into the lakehouse for analysis. There are multiple ways to do this, but in this lab, you'll upload a CSV file from the Lab-VM to your Lakhouse.
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
     
@@ -145,13 +154,13 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 
    ![](./Images/L1T2S7-2302.png)
 
+1. On the **Upload files** window, select the **folder icon** to choose the file to upload. This step allows you to bring raw data into the Lakehouse in Microsoft Fabric, which will be used in later steps for exploration, transformation, and creating Delta tables.
+
+   ![](./Images/fab-ms-ex1-g16.png)
+
 1. Navigate to **C:\LabFiles\dp-data-main (1)** and select the **products.csv (2)** file to upload, then click **Open (3)**.
 
    ![](./Images/L1T2S9-2302.png)
-
-1. On the **Upload files** window, select the **folder icon** and choose the **products.csv** file to upload.
-
-   ![](./Images/fab-ms-ex1-g16.png)
 
 1. After selecting the file, verify that **products.csv (1)** is shown, then select **Upload (2)** to upload the file.
 
@@ -179,7 +188,7 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 
 In this task, you'll use a Fabric notebook to load and view the data you uploaded into your lakehouse. By reading the CSV file into a Spark dataframe, you can explore the structure and contents of the data before transforming it in later steps. This helps verify that the file was uploaded correctly and lets you preview the dataset using Spark’s built-in display capabilities.
 
-1. On the **Home (1)** page, click on the **3-dots (1)**, select the **Open notebook (3)** menu and select **New notebook (4)** while viewing the contents of the **products** folder.
+1. On the **Home (1)** page, click the **3-dots (1)** on the top command bar, select the **Open notebook (3)** menu and select **New notebook (4)** while viewing the contents of the **products** folder.
 
     ![](./Images/L1T3S1-2302.png)
 
@@ -197,11 +206,13 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
 
     ![](./Images/fab-ms-ex1-g20.png)
 
-    >**Note:** If you are not able to find **Lakehouse explorer**, under the **Explorer** pane, expand Items and expand the lakehouse, you will now see the lakehouse explorer.
+    >📌**Note:** If you are not able to find **Lakehouse explorer**, under the **Explorer** pane, expand Items and expand the lakehouse, you will now see the lakehouse explorer.
 
-1. In the **ellipsis (...)** menu for **products.csv (1)**, select **Load data (2)** > **Spark (3)**. A new code cell containing the following code should be added to the notebook:
+1. In the **ellipsis (...)** menu for **products.csv (1)**, select **Load data (2)** > **Spark (3)**. This action automatically generates a Spark code cell in the notebook, allowing you to quickly load and explore the data as a DataFrame in Microsoft Fabric without writing code from scratch. 
 
     ![](./Images/loaddata.png)
+
+   A new code cell containing the following code should be added to the notebook. This code reads the CSV file into a Spark DataFrame with column headers and displays it in the notebook for exploration in Microsoft Fabric.
 
     ```python
     df = spark.read.format("csv").option("header","true").load("Files/products/products.csv")
@@ -209,19 +220,19 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
     display(df)
     ```
 
-    > **Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
+    > 💡**Tip**: You can hide the pane containing the files on the left by using its **<<** icon. Doing so will help you focus on the notebook.
 
 1. Use the **&#9655;** (*Run cell*) button on the left of the cell to run it.
 
     ![](./Images/fab-ms-ex1-g21.png)
 
-    > **Note**: Since this is the first time you've run any Spark code in this notebook, a Spark session must be started. This means that the first run can take a minute or so to complete. Subsequent runs will be quicker.
+    > 📌**Note**: Since this is the first time you've run any Spark code in this notebook, a Spark session must be started. This means that the first run can take a minute or so to complete. Subsequent runs will be quicker.
 
 1. When the cell command has completed, review the output below the cell, which should look similar to this:
 
-     ![](./Images/L1T3S7-2302.png)
+     ![](./Images/lab01-task03-step07.png)
 
-    >**Note:** If you are getting errors here and also getting a table, then please ignore the errors and move on to further tasks.
+    >📌**Note:** If you are getting errors here and also getting a table, then please ignore the errors and move on to further tasks.
 
 ## Task 4: Create delta tables
 
@@ -235,9 +246,9 @@ In this task, you will create delta tables based on the data in the dataframe. Y
 
    ![](./Images/L1T4S1-2302.png)
 
-    > **Note:** If the **+ Code** button isn’t visible, hover your mouse in the empty notebook area; the option will appear.
+    > 📌**Note:** If the **+ Code** button isn’t visible, hover your mouse in the empty notebook area; the option will appear.
 
-1. Enter the following code in the new cell and select **Run** to execute it:
+1. Enter the following code in the new cell and select **Run** to execute it. This code writes the DataFrame to a managed Delta table named **managed_products**, storing it in the Lakehouse within Microsoft Fabric for scalable and reliable data processing.
 
     ```python
    df.write.format("delta").saveAsTable("managed_products")
@@ -261,9 +272,9 @@ You can also create *external* tables for which the schema metadata is defined i
 
    ![](./Images/fab-ms-ex1-g26.png)
 
-   > **Note:** If the **+ Code** button doesn’t appear, move your mouse around the empty notebook area; it will show up when you hover.
+   > 📌**Note:** If the **+ Code** button doesn’t appear, move your mouse around the empty notebook area; it will show up when you hover.
 
-1. And add the following code to it:
+1. And add the following code to it. This code writes the DataFrame as a Delta table named **external_products** at the specified ABFS (Azure Blob File System) path, creating an external table in Microsoft Fabric.
 
     ```python
    df.write.format("delta").saveAsTable("external_products", path="<abfs_path>/external_products")
@@ -297,7 +308,7 @@ You can also create *external* tables for which the schema metadata is defined i
 
 Let's explore the differences between managed and external tables.
 
-1. Add another code cell and run the following code:
+1. Add another code cell and run the following code. This SQL command displays detailed metadata about the **managed_products** table such as its schema, storage location, and properties within Microsoft Fabric.
 
     ```sql
    %%sql
@@ -311,7 +322,7 @@ Let's explore the differences between managed and external tables.
    
    In the results, view the **Location** property for the table, which should be a path to the OneLake storage for the lakehouse ending with **/Tables/managed_products** (you may need to widen the **Data type** column to see the full path).
 
-1. Modify the `DESCRIBE` command to show the details of the **external_products** table as shown here:
+1. Modify the `DESCRIBE` command to show the details of the **external_products** table as shown here. This SQL command displays detailed metadata for the **external_products** table such as its schema, storage location, and properties within Microsoft Fabric.
 
     ```sql
    %%sql
@@ -327,7 +338,7 @@ Let's explore the differences between managed and external tables.
 
     The files for the managed table are stored in the **Tables** folder in the OneLake storage for the lakehouse. In this case, a folder named **managed_products** has been created to store the Parquet files and the **_delta_log** folder for the table you created.
 
-1. Add another code cell and run the following code:
+1. Add another code cell and run the following code. This SQL command deletes the **managed_products** and **external_products** tables from Microsoft Fabric, removing their metadata (and for managed tables, the underlying data as well).
 
     ```sql
    %%sql
@@ -346,7 +357,7 @@ Let's explore the differences between managed and external tables.
 
 ### Use SQL to create a table
 
-1. Add another code cell and run the following code:
+1. Add another code cell and run the following code. This SQL command creates a Delta table named **products** using data stored at the specified location (`Files/external_products`), registering it in Microsoft Fabric as an external table.
 
     ```sql
    %%sql
@@ -360,7 +371,7 @@ Let's explore the differences between managed and external tables.
 
    ![](./Images/L1T4.4S2-2302.png)
 
-1. Add another code cell and run the following code:
+1. Add another code cell and run the following code. This SQL command retrieves and displays all records from the **products** table for exploration in Microsoft Fabric.
 
     ```sql
    %%sql
@@ -376,7 +387,7 @@ Let's explore the differences between managed and external tables.
 
 In this task, you will explore the versioning capabilities of delta tables. Transaction history for delta tables is stored in JSON files in the **delta_log** folder. You can use this transaction log to manage data versioning.
 
-1. Add a new code cell to the notebook and run the following code:
+1. Add a new code cell to the notebook and run the following code. This SQL command updates the **products** table by applying a 10% discount to the ListPrice of all records where the category is ***Mountain Bikes*** in Microsoft Fabric.
 
     ```sql
    %%sql
@@ -392,7 +403,7 @@ In this task, you will explore the versioning capabilities of delta tables. Tran
 
      ![](./Images/reduction.png)
 
-1. Add another code cell and run the following code:
+1. Add another code cell and run the following code. This SQL command displays the version history of the **products** Delta table including details of updates, timestamps, and operations within Microsoft Fabric.
 
     ```sql
    %%sql
@@ -406,7 +417,7 @@ In this task, you will explore the versioning capabilities of delta tables. Tran
 
      ![](./Images/history.png)
 
-1. Add another code cell and run the following code:
+1. Add another code cell and run the following code. This code reads and displays the current version of the Delta table, then loads and displays version 0 (original data) using time travel, allowing you to compare changes over time in Microsoft Fabric.
 
     ```python
    delta_table_path = 'Files/external_products'
@@ -436,7 +447,7 @@ In this task, you will explore how to use delta tables for streaming data.
 
 Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* for data streams created using the Spark Structured Streaming API. In this example, you'll use a delta table as a sink for some streaming data in a simulated Internet of Things (IoT) scenario.
 
-1. Add a new code cell in the notebook. Then, in the new cell, add the following code and run it:
+1. Add a new code cell in the notebook. Then, in the new cell, add the following code and run it. This code creates a folder, simulates streaming IoT data by writing JSON records to it, and sets up a Spark structured stream to read the data incrementally using a defined schema in Microsoft Fabric.
 
     ```python
    from notebookutils import mssparkutils
@@ -474,7 +485,7 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
      ![](./Images/sourcestream.png)
 
-1. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code. This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the folder is created under the **Tables** location, a table will automatically be created for it.
 
     ```python
    # Write the stream to a delta table
@@ -484,13 +495,11 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    print("Streaming to delta sink...")
     ```
 
-    This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the folder is created under the **Tables** location, a table will automatically be created for it.
-
     The output will look similar to this:
 
      ![](./Images/deltasink.png)
 
-1. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code. This code queries the **IotDeviceData** table, which contains the device data from the streaming source.
 
     ```sql
    %%sql
@@ -498,13 +507,11 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    SELECT * FROM IotDeviceData;
     ```
 
-    This code queries the **IotDeviceData** table, which contains the device data from the streaming source.
-
     The output will look similar to this:
 
      ![](./Images/iotstar.png)
 
-1. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code. This code adds more JSON records to the source folder, simulating new incoming streaming data that will be automatically picked up and processed by the active stream in Microsoft Fabric.
 
     ```python
    # Add more data to the source stream
@@ -535,7 +542,7 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
     This code queries the **IotDeviceData** table again, which should now include the additional data that was added to the streaming source.
 
-1. In a new code cell, add and run the following code:
+1. In a new code cell, add and run the following code. This command stops the active streaming query, halting further data ingestion into the Delta table in Microsoft Fabric.
 
     ```python
    deltastream.stop()
@@ -543,11 +550,17 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
     ![](./Images/L1T6S6-2302.png)
 
-    **Note:** This code stops the stream.
+## 🧾 Summary
 
-## Summary
+In this lab, you have successfully:
 
-In this lab, you have gained hands-on experience with using delta tables in Apache Spark within Microsoft Fabric. You created a workspace and a lakehouse, uploaded data, and explored it using Spark DataFrames. You then created both managed and external delta tables, examined their differences, and utilized SQL to interact with them. You also explored the versioning capabilities of delta tables and implemented a streaming data pipeline using delta tables as a sink for streaming data.
+- Created a workspace and configured it with Microsoft Fabric trial capacity.
+- Created a Lakehouse and uploaded raw data files for processing.
+- Loaded and explored data using Apache Spark DataFrames.
+- Created both managed and external Delta tables from the data.
+- Queried, updated, and analyzed data using SQL.
+- Explored Delta table versioning and used time travel to access previous data states.
+- Implemented streaming data ingestion and wrote real-time data to Delta tables.
 
 ### You have successfully completed Lab 1. Click **Next >>** to proceed to the next lab.
 

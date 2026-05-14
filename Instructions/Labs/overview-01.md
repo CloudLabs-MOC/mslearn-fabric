@@ -2,22 +2,38 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## Overview
+## 📘 Lab Scenario
 
-This lab provides hands-on experience in working with Microsoft Fabric Lakehouses and Data Factory Pipelines to store, manage, and process data within a unified analytics platform. You will learn how to organize and manage structured data using Delta Lake tables in a Lakehouse environment and perform data processing using Apache Spark through notebooks.
+You are part of the data engineering team at Contoso Retail Analytics, responsible for enabling data-driven insights across the organization. Contoso collects large volumes of data from multiple sources such as point-of-sale systems, e-commerce platforms, and inventory systems, stored in formats like CSV files and structured exports. However, data ingestion is manual, transformations are inconsistent, and there is no centralized platform for scalable data management.
+
+To overcome these challenges, Contoso is implementing a unified data platform using **Microsoft Fabric**. The goal is to centralize data storage using a Lakehouse architecture and automate data ingestion and transformation using Data Factory Pipelines, ensuring data is consistently processed and readily available for analysis.
+
+As part of this initiative, you will: 
+
+- Build an end-to-end data solution using **Microsoft Fabric**.
+- Ingest raw data into a **Lakehouse** for centralized storage.
+- Transform the ingested data into structured **Delta tables**.
+- Create and orchestrate automated **ETL workflows** using **Data Factory Pipelines**.
+- Ensure data is processed consistently and efficiently across the platform.
+- Enable business users to access reliable and up-to-date data for reporting and analytics.
+- Support better business insights and decision-making through centralized data management.
+  
+## 📖 Lab Overview
+
+This lab provides hands-on experience in working with **Microsoft Fabric** Lakehouses and Data Factory Pipelines to store, manage, and process data within a unified analytics platform. You will learn how to organize and manage structured data using Delta Lake tables in a Lakehouse environment and perform data processing using Apache Spark through notebooks.
 
 Throughout the lab, you will build automated data ingestion workflows using Fabric Data Factory Pipelines to extract, transform, and load (ETL) data from various sources into the Lakehouse. Using the graphical pipeline canvas, you will create and manage data workflows with minimal coding effort.
 
 By integrating data storage, processing, and orchestration capabilities, this lab helps you understand how Microsoft Fabric supports scalable data management and enables you to build efficient end-to-end data engineering solutions for analytics and reporting.
 
-## Objective
+## 🎯 Objectives
 
 The objective is to efficiently manage and analyze data by leveraging Data Lake for scalable storage and Data Factory Pipelines in Microsoft Fabric to automate ETL workflows and streamline data processing.
 
 - **Use Delta tables in Apache Spark:** Leverage Delta tables in Apache Spark to enable reliable, scalable, and performant data processing with ACID transactions and versioning for advanced analytics.
 - **Ingest data with a pipeline:** Automate data ingestion by building pipelines to efficiently extract, transform, and load (ETL) data from various sources into a data lake or warehouse in Microsoft Fabric.
 
-## Prerequisites
+## ⚙️ Prerequisites
 
 Participants should have:
 
@@ -26,16 +42,18 @@ Participants should have:
 - **SQL Proficiency:** Strong skills in SQL for querying and managing Delta tables.
 - **Understanding of Apache Spark:** Basic knowledge of Spark architecture, DataFrames, and Spark SQL for distributed data processing.
 - **Familiarity with Data Pipelines:** Understanding of ETL processes and experience in building and managing data pipelines.
+- **Microsoft Fabric Capacity:** Access to an active Microsoft Fabric capacity to create and run Fabric resources.
+- **Microsoft Fabric License:** A valid Microsoft Fabric license or an active Fabric Trial license enabled for the user account.
 
-## Architechture
+## 🏗️ Architechture
 
 The architecture of a Microsoft Fabric lab integrates Data Lake storage with Delta tables for reliable data storage, while Data Factory Pipelines automate ETL processes. Apache Spark powers distributed data processing on Delta tables, and notebooks enable interactive analytics. The environment supports data consistency, scalability, and integration with cloud services, ensuring secure and efficient data management and processing.
 
-## Architecture Diagram
+## 🧩 Architecture Diagram
 
-![](./Images/arch-diag.png)
+![](./Images/arch-diag-01.png)
 
-## Explanation of Components
+## 🔍 Explanation of Components
 
 The architecture for this lab involves the following key components:
 
@@ -47,7 +65,7 @@ The architecture for this lab involves the following key components:
 - **Apache Spark:** A distributed processing engine that enables scalable data analytics and transformation on large datasets within the Microsoft Fabric platform.
 - **Data Lake:** A centralized storage system that stores large volumes of raw, unstructured, and structured data for further processing and analysis.
 
-## Getting Started with the Lab
+## 🚀 Getting Started with the Lab
 
 Welcome to your Work with Data Lake and Data Factory Pipelines in Microsoft Fabric​ Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
@@ -85,7 +103,7 @@ To adjust the zoom level of the lab guide, select the **A↕ (1)** icon and choo
 
 ![](./Images/ns-fab-g5.png)
 
-## Support Contact
+## 📞 Support Contact
  
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
