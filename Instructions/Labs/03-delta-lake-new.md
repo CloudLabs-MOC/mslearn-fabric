@@ -4,11 +4,11 @@
 
 ## 📘 Scenario
 
-You are a data engineer at Contoso Retail Analytics, where raw sales and product data is collected daily from multiple sources. The data is stored in a Lakehouse within Microsoft Fabric, but it requires structuring and optimization for reliable analytics. In this lab, you will work with Apache Spark to explore the data, create Delta tables, and leverage features like versioning and streaming to ensure data consistency, scalability, and support for advanced analytical workloads.
+You are a data engineer at Contoso Retail Analytics, where raw sales and product data is collected daily from multiple sources. The data is stored in a Lakehouse within **Microsoft Fabric**, but it requires structuring and optimization for reliable analytics. In this lab, you will work with Apache Spark to explore the data, create Delta tables, and leverage features like versioning and streaming to ensure data consistency, scalability, and support for advanced analytical workloads.
 
 ## 📖 Overview
 
-In this lab, you will learn how to use Delta tables in Apache Spark within Microsoft Fabric. Delta Lake is an open-source storage layer that adds relational database semantics to Spark-based data lake processing. Tables in Microsoft Fabric lakehouses are Delta tables, which is signified by the triangular Delta (▴) icon on tables in the lakehouse user interface. By using the enhanced capabilities of delta tables, you can create advanced analytics solutions.
+In this lab, you will learn how to use Delta tables in Apache Spark within **Microsoft Fabric**. Delta Lake is an open-source storage layer that adds relational database semantics to Spark-based data lake processing. Tables in Microsoft Fabric lakehouses are Delta tables, which is signified by the triangular Delta (▴) icon on tables in the lakehouse user interface. By using the enhanced capabilities of delta tables, you can create advanced analytics solutions.
 
 ## 🎯 Objectives
 
@@ -23,7 +23,7 @@ In this lab, you will complete the following tasks:
 
 ## 🧩 Architecture Diagram
 
-   ![](./Images/lab1img.png)
+![](./Images/lab1img.png)
 
 ## Use delta tables in Apache Spark
 
@@ -83,7 +83,7 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
    ![](./Images/L1T1S8-2302.png)
 
-1. Close the **Invite teammates to try Fabric to extend your trail** pop-up. This ensures an uninterrupted setup process and allows you to focus on configuring your environment in Microsoft Fabric without distractions.
+1. Close the **Invite teammates to try Fabric to extend your trail** pop-up.
 
    ![](./Images/L1T1S9-2302.png)
    
@@ -97,7 +97,9 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
    ![](./Images/fab-ms-ex1-g8.png)
 
-1. Create a new workspace with a name **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)**, scroll down to the **Advanced (2)** section to expand it, select **License mode** as **Fabric Trial (2)**, and click **Apply (4)**. This ensures the workspace is backed by Microsoft Fabric trial capacity, enabling you to use features like Lakehouses, Spark, and Data Factory pipelines required for the lab.
+1. Create a new workspace with a name **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)**, scroll down to the **Advanced (2)** section to expand it, select **License mode** as **Fabric Trial (2)**, and click **Apply (4)**.
+
+   >📌 This ensures the workspace is backed by Microsoft Fabric trial capacity, enabling you to use features like Lakehouses, Spark, and Data Factory pipelines required for the lab.
 
     ![](./Images/L1T1S13.1-2302.png)
 
@@ -115,7 +117,9 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
 In this task, you will create a new lakehouse in your workspace and upload a CSV file to it.
 
-1. In the newly created workspace, click the **+ New Item (1)** button in the top-left corner of your workspace and search for **Lakehouse (2)** and select **Lakehouse (3)**. This step creates a centralized storage layer within Microsoft Fabric, where you can store, manage, and analyze data using Delta tables for the upcoming tasks.
+1. In the newly created workspace, click the **+ New Item (1)** button in the top-left corner of your workspace and search for **Lakehouse (2)** and select **Lakehouse (3)**.
+
+   >📌 This step creates a centralized storage layer within Microsoft Fabric, where you can store, manage, and analyze data using Delta tables for the upcoming tasks.
 
    ![](./Images/l1T2S1.png)
  
@@ -481,7 +485,7 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
      ![](./Images/sourcestream.png)
 
-1. In a new code cell, add and run the following code. This code writes the streaming data to a Delta table while maintaining a checkpoint for fault tolerance, enabling reliable and continuous data ingestion in Microsoft Fabric.
+1. In a new code cell, add and run the following code. This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the folder is created under the **Tables** location, a table will automatically be created for it.
 
     ```python
    # Write the stream to a delta table
@@ -491,21 +495,17 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    print("Streaming to delta sink...")
     ```
 
-    This code writes the streaming device data in delta format to a folder named **iotdevicedata**. Because the folder is created under the **Tables** location, a table will automatically be created for it.
-
     The output will look similar to this:
 
      ![](./Images/deltasink.png)
 
-1. In a new code cell, add and run the following code. This SQL command queries and displays all records from the **IotDeviceData** table, allowing you to view the streamed data being ingested in real time within Microsoft Fabric.
+1. In a new code cell, add and run the following code. This code queries the **IotDeviceData** table, which contains the device data from the streaming source.
 
     ```sql
    %%sql
 
    SELECT * FROM IotDeviceData;
     ```
-
-    This code queries the **IotDeviceData** table, which contains the device data from the streaming source.
 
     The output will look similar to this:
 
@@ -549,8 +549,6 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
     ```
 
     ![](./Images/L1T6S6-2302.png)
-
-    **Note:** This code stops the stream.
 
 ## 🧾 Summary
 
