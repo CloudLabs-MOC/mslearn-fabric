@@ -331,8 +331,6 @@ In this task, you will visualize your data from a single query or your data ware
         - **CustomerKey**
         - **ProductKey**
 
-
-   
     - From DimCustomer
         - **CustomerKey**
         - **CustomerAltKey**
