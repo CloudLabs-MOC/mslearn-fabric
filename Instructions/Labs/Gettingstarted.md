@@ -116,7 +116,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Images/GS9.png)
 
-1. After signing in, you will be directed to the **Fabric** Home page. click on the **Account manager** icon at the top-right corner **(1)** of the portal. In the profile pane that appears, click on **Free trial** **(2)** to begin activating your Microsoft Fabric trial.
+1. After signing in, you will be directed to the **Fabric** Home page. click on the **Account manager** icon at the top-right corner **(1)** of the portal. In the profile pane that appears, click on **Start trial** **(2)** to begin activating your Microsoft Fabric trial.
 
    ![](./Images/GS10.png)
 
