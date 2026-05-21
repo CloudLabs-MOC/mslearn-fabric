@@ -52,7 +52,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
  
-![Explore Lab Resources](./Images/GS1.png)
+![Explore Lab Resources](./Images/env.png)
  
 ## Utilizing the Split Window Feature
  
