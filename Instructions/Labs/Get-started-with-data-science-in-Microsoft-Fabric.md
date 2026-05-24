@@ -31,7 +31,9 @@ Now that you have a workspace, it's time to switch to the *Data science* experie
 
 1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Lakehouse (2)** and select **Lakehouse (3)**.
    
-   ![](./Images/fab-image11.png)
+   ![](./Images/L2T1S1i.png)
+
+   ![](./Images/L2T1S1ii.png)
 
 1. In the **New Lakehouse** window, enter **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** as the name, select the **Location** as your workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (2)** and click **Create (3)**. Keep the Lakehouse schemas unchecked.
 
@@ -73,7 +75,9 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Notebook (2)** and select **Notebook (3)**. Then click on **Create (4)**.
 
-     ![](./Images/fab-image12.png)
+     ![](./Images/L2T1S1i.png)
+
+     ![](./Images/L2T2S2ii.png)
 
      ![](./Images/L2T2S2n-2611.png)
 

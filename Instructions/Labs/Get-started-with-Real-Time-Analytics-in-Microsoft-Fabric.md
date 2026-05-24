@@ -112,7 +112,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
 
 1. Right-click on the **sales (1)** table, select the **Query with code (2)**, and then **Show any 100 records**.
 
-   ![](./Images/E1T4S1.png)
+   ![](./Images/L1T3S1.png)
 
    >**Note:** If you are unable to see the sales table, please zoom out a little in the browser window inside the labvm and check.
 
