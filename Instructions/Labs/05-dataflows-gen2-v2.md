@@ -67,9 +67,9 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p8.png)
 
-1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Free trial (2)**.
+1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Start trial (2)**.
     
-   ![](./Images/p2t1p9.png)
+   ![](./Images/E1T1S9i.png)
      
 1. On the **Activate your 60-day free Fabric trial capacity** pop-up window, click **Activate**. 
 
@@ -124,7 +124,7 @@ The Lakehouse will provide a unified data storage and management solution, allow
 
 1. From the top left corner, select **+ New item (1)**, search for **Lakehouse (2)**, and then choose **Lakehouse (3)** from the results.
 
-      ![New lakehouse.](./Images/E1T2S1-0105.png)
+      ![New lakehouse.](./Images/E1T2S1.png)
 
 3. In the **New Lakehouse** pop-up, enter the following and click on **Create**. 
 
@@ -137,7 +137,7 @@ The Lakehouse will provide a unified data storage and management solution, allow
 
 1. After a few moments, your new Lakehouse will be created and should open automatically, displaying the following screen:
 
-   ![New lakehouse created.](./Images/E1T2S3-0105.png)
+   ![New lakehouse created.](./Images/E1T2S3.png)
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -219,13 +219,14 @@ In this task, you will configure a data destination for a dataflow to enable sea
 
       ![Data destination configuration page.](./Images/connect_data_destination-1upd.png)
 
-3. On the **Choose destination target** page, select the following and click on **Next (4)**. 
+3. On the **Choose destination target** page, select the following and click on **Next (5)**. 
 
-   - Expand the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace.
-   - Select the **dp_lakehouse (2)**
-   - Specify the new table name as **orders (3)**.
+      - Expand the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace.
+      - Expand the **dp_lakehouse (2)**
+      - Select the **dbo (3)**
+      - Specify the new table name as **orders (4)**.
 
-      ![Data destination configuration page.](./Images/E1T4S3-0105.png)
+        ![Data destination configuration page.](./Images/E1T4S4.png)
 
 1. On the **Choose destination settings** page, observe that **MonthNo (1)** is not selected in the Column mapping, and an informational message is displayed. Click **Cancel (2)**.
 
@@ -243,17 +244,18 @@ In this task, you will configure a data destination for a dataflow to enable sea
 
       ![](./Images/connect_data_destination-1upd-1.png)
 
-1. On the **Choose destination target** page, select the following and click on **Next (4)**. 
+1. On the **Choose destination target** page, select the following and click on **Next (5)**. 
 
-   - Expand the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace.
-   - Select the **dp_lakehouse (2)**
-   - Specify the new table name as **orders (3)**.
+      - Expand the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace.
+      - Select the **dp_lakehouse (2)**
+      - Select **dbo (3)**
+      - Specify the new table name as **orders (4)**.
 
-      ![Data destination configuration page.](./Images/E1T4S3-0105.png)
+        ![Data destination configuration page.](./Images/E1T4S4.png)
 
-1. On the **Choose destination settings** page, disable **Use automatic settings (1)**. Under the Update method section, select **Append (2)**, and then click **Save settings (3)** to apply the changes. 
+1. On the **Choose destination settings** page, disable **Use automatic settings (1)** , and then click **Save settings (3)** to apply the changes. 
 
-      ![New lakehouse.](./Images/p2t4p7.png)
+      ![New lakehouse.](./Images/E1T4S10.png)
 
 1. The **Lakehouse** destination is indicated as an icon in the query in the Power Query editor.
    

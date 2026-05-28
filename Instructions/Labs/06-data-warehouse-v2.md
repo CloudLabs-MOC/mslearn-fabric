@@ -116,9 +116,9 @@ In this task, you will create a relational data warehouse consisting of fact and
     >**Note:** If you are unable to see **New semantic model** option in the menu-bar, click the **icon** shown in the image below.
     > ![](./Images/new/9.png)
 
-1. Provide the **Direct Lake semantic model** name as **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (1)** and select **DimCustomer, DimDate, DimProduct, FactSalesOrder (2)** tables from the list. Then, click on **Confirm (3)**.
+1. Provide the **Direct Lake semantic model** name as **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (1)** , Select storage mode as **Direct Lake on SQL (2)** and select **DimCustomer, DimDate, DimProduct, FactSalesOrder (3)** tables from the list. Then, click on **Confirm (4)**.
 
-    ![](./Images/new/10.png)
+    ![](./Images/E2T3S2.png)
 
 1. Go back to the **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the left navigation pane. Select the recently created semantic model named as **Data Warehouse-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
