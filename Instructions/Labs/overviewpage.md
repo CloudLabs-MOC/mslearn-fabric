@@ -63,7 +63,7 @@ Welcome to your Get started with Microsoft Fabric with Its Lakehouses workshop! 
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![](./Images/accesslabs-1.png)
+![](./Images/GS1.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -73,13 +73,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
  
-![Explore Lab Resources](./Images/environment-ss.png)
+![Explore Lab Resources](./Images/GS2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](./Images/environment-ss1.png)
+![Use the Split Window Feature](./Images/GS3.png)
  
 ## Managing Your Virtual Machine
  
