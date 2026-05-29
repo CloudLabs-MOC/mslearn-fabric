@@ -20,7 +20,7 @@ Imagine your company has been using a data warehouse to store structured data fr
 Here, we explore how a lakehouse in Microsoft Fabric can help address scenarios like this by providing a scalable and flexible data store for files and tables that you can query using
 SQL.
 
-## Architecture Diagram
+## 🏗️ Architecture Diagram
 
 ![](./Images/archlab1.jpg)
 
@@ -73,7 +73,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/fabric-image7.png)
 
-1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Free trial (2)** of Microsoft Fabric.
+1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Start trial (2)** of Microsoft Fabric.
 
    ![](./Images/fabric-image8.png)
 
