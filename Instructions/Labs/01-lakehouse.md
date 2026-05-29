@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 120 Minutes
 
+## 📘 Lab Scenario
+
+Contoso Retail wants to modernize its analytics platform and improve the way business data is stored, analyzed, and reported. The organization has chosen Microsoft Fabric to unify data ingestion, transformation, warehousing, and reporting in a single platform.
+
+As a Data Analyst, you will work with Microsoft Fabric to create a Lakehouse and Data Warehouse, ingest and transform data, perform analysis using SQL and Power Query, and build interactive reports with Power BI to generate business insights. 
+
 ## 📋 Overview
 
 The foundation of Microsoft Fabric is a Lakehouse, which is built on top of the OneLake scalable storage layer and uses Apache Spark and SQL compute engines for big data processing. A Lakehouse is a unified platform that combines:
@@ -43,13 +49,13 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    - **Email: (1)** <inject key="AzureAdUserEmail"></inject>
 
-   ![](./Images/fabric-image2.png)
+      ![](./Images/fabric-image2.png)
 
 1. On the **Enter Temporary Access Pass** screen, enter the following password and click on **Sign in (2)**.
    
    - **Password: (1)** <inject key="AzureAdUserPassword"></inject> 
 
-   ![](./Images/L1T1S2.png)
+      ![](./Images/L1T1S2.png)
   
 1. When **Stay signed in?** prompted, click on **Yes**.
   
@@ -57,7 +63,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
    
    > **Note**: If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
 
-   ![](./Images/fabric-image5.png)
+      ![](./Images/fabric-image5.png)
 
 1. On the **Fabric** home page, click the **Fabric** icon from the left pane to open the Fabric experience.
 
@@ -127,7 +133,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
 1. On the **New lakehouse** pane, enter **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** in the **Name** field, then click **Create** **(2)** to proceed.
 
-   ![](<./Images/L1T3S3.png>)
+   ![](<./Images/L1T3S3.png>)   
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
