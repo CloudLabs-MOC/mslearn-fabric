@@ -4,9 +4,9 @@
 
 ## 📘 Lab Scenario
 
-Contoso Retail wants to modernize its analytics platform and improve the way business data is stored, analyzed, and reported. The organization has chosen Microsoft Fabric to unify data ingestion, transformation, warehousing, and reporting in a single platform.
+Contoso Retail wants to improve its data analytics capabilities by bringing together data from multiple sources into a unified platform. The organization has chosen Microsoft Fabric Lakehouse to store, manage, and analyze both structured and unstructured data at scale.
 
-As a Data Analyst, you will work with Microsoft Fabric to create a Lakehouse and Data Warehouse, ingest and transform data, perform analysis using SQL and Power Query, and build interactive reports with Power BI to generate business insights. 
+As a Data Analyst, you will create a Fabric workspace and Lakehouse, ingest and transform data, query it using SQL and visual tools, and build interactive Power BI reports to generate actionable business insights.
 
 ## 📋 Overview
 
