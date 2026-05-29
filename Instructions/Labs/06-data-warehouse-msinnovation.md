@@ -45,7 +45,7 @@ In this task, you will provision a new data warehouse within Microsoft Fabric. A
 
 1. On the **New warehouse** pane, enter **myDataWarehouse** **(1)** in the Name field, then click **Create** **(2)** to provision the warehouse.
 
-   ![](<./Images/L2T1S3.png>)
+   ![](<./Images/E2T1S3.png>)
 
 ## Task 2: Create tables and insert data
 
