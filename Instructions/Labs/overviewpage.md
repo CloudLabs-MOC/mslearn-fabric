@@ -2,10 +2,10 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## Overview
+## 📖 Overview
 This lab provides hands-on exercises in using Microsoft Fabric Lakehouse and Data Warehouse. Participants will set up a Microsoft Fabric workspace, configure a Lakehouse, ingest data, convert files into tables, and perform data analysis using SQL queries and Power Query. You will also create a Data Warehouse, define a data model, query tables, and create views. These exercises will enhance your skills in data management, analysis, and reporting using Power BI for visualization.
 
-## Objective
+## 🎯 Objective
 
 By the end of this lab, you will learn:
 
@@ -13,7 +13,7 @@ By the end of this lab, you will learn:
 
 - **Analyze data in a Data Warehouse**: This hands-on exercise involves creating a workspace and setting up a Data Warehouse. You will create tables and insert data, then define a data model for structured analysis. You will learn to query the Data Warehouse tables and create views for efficient data retrieval and reporting. Participants will enhance their skills in managing and analyzing data within a Data Warehouse environment.
 
-## Prerequisites 
+## ⚙️ Prerequisites 
 
 Participants should have:
 
@@ -21,15 +21,15 @@ Participants should have:
 - **SQL Knowledge:** Ability to write and understand basic SQL queries.
 - **Data Analysis:** Basic experience with data analysis and reporting.
 
-## Architecture
+## 🏗️ Architecture
 
 This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that combines the flexibility and scalability of a data lake with the structured querying capabilities of a data warehouse. Key components include OneLake, a scalable storage layer built on Azure Data Lake Store Gen2, and Apache Spark, which provides high-performance in-memory computation for big data processing. SQL compute engines enable complex queries on large datasets, while Delta Lake ensures ACID transactions and efficient metadata handling. Additionally, Power BI and Power Query are integrated for advanced data visualization, reporting, and manipulation.
 
-## Architecture diagram
+## 🖼️ Architecture diagram
 
 ![](./Images/archoverview.jpg)
 
-## Explanation of Components
+## 🔍 Explanation of Components
 
 - **Microsoft Fabric Workspace:** A centralized environment within Microsoft Fabric where users can manage their data projects. This workspace provides access to various tools and services needed to create and analyze data in a unified platform.
 
@@ -49,11 +49,11 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 - **Report Building:** The creation of interactive reports using Power BI, based on the data stored in the Lakehouse. This involves designing report layouts, selecting visualizations, and configuring report elements to effectively display data insights.
 
-# Getting Started with the lab
+# 🚀 Getting Started with the lab
 
 Welcome to your Get started with Microsoft Fabric with Its Lakehouses workshop! We've prepared a seamless environment for you to explore and learn Microsoft Fabric and lakehouse. Let's begin by making the most of this experience:
 
-## Accessing Your Lab Environment
+## 💻 Accessing Your Lab Environment
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
@@ -89,7 +89,7 @@ To adjust the zoom level for the environment page, click the **A↕** icon locat
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
-### Support Contact
+### 📞 Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
