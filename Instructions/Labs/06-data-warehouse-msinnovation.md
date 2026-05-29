@@ -2,7 +2,13 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Overview
+## 📘 Lab Scenario
+
+Contoso Retail wants to improve its reporting and decision-making capabilities by centralizing business data in a modern analytics platform. The organization has chosen Microsoft Fabric Data Warehouse to store, organize, and analyze data from multiple sources in a structured and scalable way.
+
+As a Data Analyst, you will create a Data Warehouse, load and manage data, build a data model, run SQL queries, create views, and develop Power BI reports to generate meaningful business insights.
+
+## 📋 Overview
 
 Data warehouses are analytical stores built on a relational schema to support SQL queries. Microsoft Fabric enables you to create a relational data warehouse in your workspace and integrate it easily with other elements of your end-to-end analytics solution.
 
@@ -11,11 +17,11 @@ just data engineers.
 
 Here, you'll learn about data warehouses in Fabric, create a data warehouse, load, query, and visualize data, and describe datasets.
 
-## Architecture Diagram
+## 🏗️ Architecture Diagram
 
 ![New lakehouse.](./Images/archlab2.png)
 
-## Lab objectives
+## 🎯 Lab objectives
 
 In this lab, you will complete the following tasks:
 
