@@ -77,7 +77,7 @@ Feel free to **Start**, **Stop**, or **Restart (2)** your virtual machine as nee
 
 ## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![](./Images/zoomintab.png)
 
