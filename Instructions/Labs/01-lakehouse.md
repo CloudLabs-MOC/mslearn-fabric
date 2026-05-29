@@ -75,7 +75,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Start trial (2)** of Microsoft Fabric.
 
-   ![](./Images/fabric-image8.png)
+   ![](./Images/E1T1S7.png)
 
 1. On the **Activate your 60-day free Fabric trial capacity** window, click **Activate** to continue with the default region.
 
@@ -125,7 +125,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
 1. Ensure the **Power BI** **(1)** icon is visible in the left pane. Click on **+ New item** **(2)** at the top of the workspace.
 
-   ![](./Images/fabric-image15.png)
+   ![](./Images/E1T2S1.png)
 
 1. Search for **Lakehouse (1)** and select the option labeled **Lakehouse (2)** from the results.
 
@@ -133,7 +133,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
 1. On the **New lakehouse** pane, enter **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** in the **Name** field, then click **Create** **(2)** to proceed.
 
-   ![](<./Images/L1T3S3.png>)   
+   ![](<./Images/E1T2S3.png>)   
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
