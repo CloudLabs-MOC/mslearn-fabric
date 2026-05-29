@@ -2,6 +2,12 @@
 
 ### Overall Estimated Duration: 4 Hours
 
+## 📘 Lab Scenario
+
+Contoso Retail wants to modernize its analytics platform and improve the way business data is stored, analyzed, and reported. The organization has chosen Microsoft Fabric to unify data ingestion, transformation, warehousing, and reporting in a single platform.
+
+As a Data Analyst, you will work with Microsoft Fabric to create a Lakehouse and Data Warehouse, ingest and transform data, perform analysis using SQL and Power Query, and build interactive reports with Power BI to generate business insights.
+
 ## 📖 Overview
 This lab provides hands-on exercises in using Microsoft Fabric Lakehouse and Data Warehouse. Participants will set up a Microsoft Fabric workspace, configure a Lakehouse, ingest data, convert files into tables, and perform data analysis using SQL queries and Power Query. You will also create a Data Warehouse, define a data model, query tables, and create views. These exercises will enhance your skills in data management, analysis, and reporting using Power BI for visualization.
 
