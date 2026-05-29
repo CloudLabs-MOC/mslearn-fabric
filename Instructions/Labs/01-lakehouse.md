@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Overview
+## 📋 Overview
 
 The foundation of Microsoft Fabric is a Lakehouse, which is built on top of the OneLake scalable storage layer and uses Apache Spark and SQL compute engines for big data processing. A Lakehouse is a unified platform that combines:
 
@@ -18,7 +18,7 @@ SQL.
 
 ![](./Images/archlab1.jpg)
 
-## Lab objectives
+## 🎯 Lab objectives
 
 In this lab, you will complete the following tasks:
 
