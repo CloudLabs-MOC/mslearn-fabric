@@ -73,13 +73,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
  
-![Explore Lab Resources](./Images/GS2.png)
+![Explore Lab Resources](./Images/GS2-new.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](./Images/GS3.png)
+![Use the Split Window Feature](./Images/GS3-new.png)
  
 ## Managing Your Virtual Machine
  
