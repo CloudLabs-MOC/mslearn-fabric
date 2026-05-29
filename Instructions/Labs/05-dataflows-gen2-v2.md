@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Scenario
+
+Contoso collects sales and operational data from multiple systems, resulting in inconsistent and unstructured datasets.
+
+In this exercise, you will create a Fabric workspace and Lakehouse, use Dataflows (Gen2) to ingest and transform data, standardize datasets, and load the processed data into the Lakehouse. You will also automate the workflow by adding the Dataflow to a pipeline.
+
 ## Overview
 
 In this exercise, you will use Dataflows (Gen2) to ingest, transform, and standardize data. You will set up data ingestion processes, apply necessary transformations, and create standardized datasets for analysis. This exercise will help you understand how to efficiently prepare and manage data using Dataflows (Gen2).

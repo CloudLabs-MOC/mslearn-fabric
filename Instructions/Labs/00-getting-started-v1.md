@@ -2,6 +2,12 @@
 
 ### Overall Estimated Duration: 4 Hours
 
+## Lab Scenario
+
+Contoso is modernizing its analytics platform using Microsoft Fabric to improve data ingestion, transformation, storage, and reporting.
+
+As part of the data engineering and analytics team, you will use Dataflows (Gen2), Lakehouse, and Data Warehouse capabilities in Microsoft Fabric to ingest, standardize, analyze, and visualize business data for better decision-making.
+
 ## Lab Overview
 
 In this lab, you will explore key components of Microsoft Fabric's data solution. First, you will create and use Dataflows (Gen2) to ingest, transform, and standardize data from various sources, preparing it for analysis and landing it in a Lakehouse. Next, you will analyze the processed data within a relational data warehouse in Microsoft Fabric, leveraging its SQL capabilities for querying and visualization.

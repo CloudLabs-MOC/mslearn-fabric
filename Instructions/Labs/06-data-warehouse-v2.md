@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Scenario
+
+After preparing the data, Contoso wants to analyze business data using a relational Data Warehouse in Microsoft Fabric.
+
+In this exercise, you will create a Data Warehouse, design tables and data models, run SQL queries, create views, and build visualizations to generate business insights and support reporting requirements.
+
 ## Overview
 
 In this exercise, you will analyze data within a relational data warehouse using Microsoft Fabric. Utilize SQL for querying and create detailed visualizations to derive actionable insights. 
