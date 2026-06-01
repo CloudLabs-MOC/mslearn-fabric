@@ -79,7 +79,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/L2T2S4.png>)
 
-1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor
+1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
    ![](<./Images/L1T62.png>)
 
@@ -100,19 +100,21 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/L2T2S7.png>)
 
-1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor
+1. Open each of the following links in a **browser tab**, copy the Transact-SQL code from each file, and paste the contents into the **same query editor** in the **same order** listed below. After all the code has been added to the query editor, click **Run** to execute the script.
 
-   ![](<./Images/L1T62.png>)
+   - [Dimensions Script](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/Dimensions.txt)
+   - [FactSalesOrder Script - Part 1](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-1.txt)
+   - [FactSalesOrder Script - Part 2](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-2.txt)
 
-1. On the **Home** menu tab, use the **New SQL Query** button to create a new query. Then copy and paste the Transact-SQL code from [https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt) into the new query pane.
+   > **Note:** Ensure that the contents of all three files are pasted into the **same query editor** and in the **same order** before running the script.
 
-1. For copy pasting inside the VM:
+1. For copy-pasting inside the VM:
 
-   - You need to set Clipboard access to Allow. 
+   - Set **Clipboard access** to **Allow**.
 
       ![](<./Images/nov2025-ms-fabric-2.png>)
 
-   - Then, you can enable VM native clipboard, to copy paste inside virtual machine.
+   - Then enable the VM native clipboard to copy and paste inside the virtual machine.
 
       ![](<./Images/nov2025-ms-fabric-1.png>)
 
@@ -120,16 +122,16 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/cor_e2_fz_2.png>)
 
-1. Use the **Refresh (1)** button on the toolbar to refresh the view. Then in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four **tables (2)**:
+1. Use the **Refresh (1)** button on the toolbar to refresh the view. Then, in the **Explorer** pane, verify that the **dbo** schema in the data warehouse now contains the following four **tables (2)**:
 
    - **DimCustomer**
    - **DimDate**
    - **DimProduct**
    - **FactSalesOrder**
 
-      ![](<./Images/L2T2S11.png>)
+   ![](<./Images/L2T2S11.png>)
 
-      > **Tip**: If the schema takes a while to load, just refresh the browser page.
+   > **Tip:** If the schema takes a while to load, refresh the browser page.
 
 ## Task 3: Define a Data Model
 
