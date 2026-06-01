@@ -23,17 +23,25 @@ This task will guide you through creating a workspace in Microsoft Fabric.
 
    ![](./Images/fab-image2.png)
 
-1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**. Expand **Advanced (2)**, then under **License mode**,
-   
-   ![](./Images/fab-image3.png)
+1. On the **Create a workspace** page, enter the following details:
 
-1. Select **Fabric Trial (1)** and click **Apply (2)** to create and open the workspace.
+    - **Name:** Enter **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**
 
-   ![](./Images/fab-image4.png)
+    - Expand the **Advanced (2)** section.
 
-   >**Note:** If you see a pop-up saying **"Introducing task flows (preview)**, click on **Got it** to proceed with the trial.
+      ![](./Images/fab-image3.png)
 
-    ![](./Images/fab-image5.png)
+    - Select **License mode** as **Fabric (3)**.
+    
+    - From the dropdown list, select the available **Capacity (4)**.
+    
+    - Click **Apply (5)** to create and open the workspace.
+ 
+      ![advanced-and-apply](./Images/01062026(3).png)
+
+        >**Note:** If you see a pop-up saying **"Introducing task flows (preview)**, click on **Got it** to proceed with the trial.
+
+        ![](./Images/fab-image5.png)
 
 1. When your new workspace opens, it should be empty, as shown here:
 
