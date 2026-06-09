@@ -4,7 +4,7 @@
 
 ## 📘 Lab Scenario
 
-Contoso Retail has established a Lakehouse and a Data Warehouse in Microsoft Fabric. Now, the data engineering team needs to automate the data movement between these assets. Instead of manually uploading files and running scripts, you will use **Data Pipelines** to ingest data into the Lakehouse, transform it into Delta tables, and load curated data from the Lakehouse into the Data Warehouse using **cross-database queries** — all orchestrated end-to-end through pipelines.
+Contoso Retail has established a Lakehouse and a Data Warehouse in Microsoft Fabric. Now, the data engineering team needs to automate the data movement between these assets. Instead of manually uploading files and running scripts, you will use **Data Pipelines** to ingest data into the Lakehouse, transform it into Delta tables, and load curated data from the Lakehouse into the Data Warehouse using **cross-database queries** all orchestrated end-to-end through pipelines.
 
 As a Data Engineer, you will build a production-style data pipeline that mirrors real-world ETL patterns: ingest raw data, transform it using notebooks, and load refined data into the warehouse for reporting.
 
@@ -127,7 +127,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
     ![](<./Images/img11.png>)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   >> - If you receive a success message, you can proceed to the next task.
+   > - If you receive a success message, you can proceed to the next task.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -345,9 +345,9 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. The **Output** tab opens at the bottom, showing the pipeline run progress. Monitor each activity status:
 
-   - **Copy Products CSV** — should show **Succeeded** (&#10004;)
-   - **Transform to Delta** — should show **Succeeded** (&#10004;)
-   - **Load to Warehouse** — should show **Succeeded** (&#10004;)
+   - **Copy Products CSV** - should show **Succeeded** (&#10004;)
+   - **Transform to Delta** - should show **Succeeded** (&#10004;)
+   - **Load to Warehouse** - should show **Succeeded** (&#10004;)
 
         ![](<./Images/img41.png>)
 
@@ -393,7 +393,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
         ![](<./Images/img46.png>)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
->> - If you receive a success message, you can proceed to the next task.
+> - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
