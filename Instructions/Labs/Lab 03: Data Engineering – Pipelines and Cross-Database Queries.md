@@ -19,25 +19,6 @@ In this lab, you will:
 - Use cross-database queries to load data from the Lakehouse into the Data Warehouse
 - Orchestrate all steps in a single pipeline with proper sequencing
 
-## 🏗️ Architecture Diagram
-
-The following diagram illustrates the end-to-end data flow you will build in this lab:
-
-```
-External Source (CSV)
-        │
-        ▼
- ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
- │  Copy Activity│     │  Notebook    │     │  Script      │
- │  (Ingest raw  │────▶│  Activity    │────▶│  Activity    │
- │   CSV to      │     │  (Transform  │     │  (Cross-DB   │
- │   Lakehouse   │     │   to Delta)  │     │   query to   │
- │   Files)      │     │              │     │   Warehouse) │
- └──────────────┘     └──────────────┘     └──────────────┘
-        │                     │                     │
-        └─────────── Data Pipeline ─────────────────┘
-```
-
 ## 🎯 Lab objectives
 
 In this lab, you will complete the following tasks:
@@ -67,7 +48,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
     ![](<./Images/img2.png>)
 
-1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, Click on **From OneLake catalog**
+1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click on **From OneLake catalog**
     
     ![](<./Images/img3.png>)
 
@@ -81,7 +62,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
     ![](<./Images/img6.png>)
 
-1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**. Download the file from [this link](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv), then upload the downloaded **products.csv** file and click **Upload**. Once the status shows **Completed**, Close the upload dialog.
+1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**. Download the file from [this link](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv), then upload the downloaded **products.csv** file and click **Upload**. Once the status shows **Completed**, close the upload dialog.
 
     ![](<./Images/img7.png>)
 
@@ -145,7 +126,6 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
     ![](<./Images/img11.png>)
 
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    >> - If you receive a success message, you can proceed to the next task.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -175,7 +155,6 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
    ![](<./Images/img15.png>)
 
-
 ## Task 3: Add a Copy Activity to ingest data into the Lakehouse
 
 In this task, you will add a **Copy Data** activity to the pipeline. This activity will download a sample products CSV file from an external HTTP source and land it in the Lakehouse **Files** folder.
@@ -192,7 +171,6 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
    ![](<./Images/img18.png>)
 
-
 1. In the **Choose a data source to get started** dialog:
 
    - Search **HTTP** **(1)** as the data source type and select **HTTP (2)**
@@ -204,6 +182,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
      ```
      https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv
      ```
+     
      ![](<./Images/img20.png>)
 
    - Set **Authentication kind** to **Anonymous** **(3)**.
@@ -211,11 +190,9 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
         ![](<./Images/img22.png>)
 
-
 1. Back on the **Source** tab, under **File format**, confirm the format is set to **DelimitedText**.
 
    ![](<./Images/img21.png>)
-
   
 1. Click the **Destination** tab:
 
@@ -239,7 +216,6 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 1. On the pipeline canvas, from the **Activities** toolbar, select **Notebook** **(1)** to add a Notebook activity.
 
    ![](<./Images/img26.png>)
-
 
 1. Select the **Notebook (1)** activity on the canvas and click the **General (2)** tab. Set the **Name** to **Transform to Delta** **(3)**.
 
@@ -271,7 +247,6 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
    ![](<./Images/L1T62.png>)
 
-
 1. Paste the following SQL and click **Run** to create the target table:
 
    ```sql
@@ -288,7 +263,6 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
    ![](<./Images/img30.png>)
 
-
 1. Verify that the table **DimProductStaging** appears in the **Explorer** pane under **dbo > Tables**. Click **Refresh** if needed.
 
     ![](<./Images/img31.png>)
@@ -303,7 +277,6 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
    ![](<./Images/img32.png>)
 
-
    > **Note**: Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
 
 1. Switch back to the browser tab with your **pl_ingest_and_load** pipeline.
@@ -315,7 +288,6 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 1. Select the **Script (1)** activity on the canvas and click the **General** tab. Set the **Name** to **Load to Warehouse** **(2)**.
 
    ![](<./Images/img34.png>)
-
 
 1. Click the **Settings** **(1)** tab:
 
@@ -336,6 +308,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
        LoadTimestamp
    FROM Lakehouse_.dbo.stg_products;
    ```
+   
     >**Note:** Please replace the **Lakehouse_** with the actual value . 
     
     >Example: **Lakehouse_2263770.dbo.stg_products**
@@ -354,15 +327,13 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
    ![](<./Images/img37.png>)
 
-
 ## Task 6: Run and monitor the pipeline
 
 In this task, you will validate, run, and monitor the pipeline to ensure all three activities complete successfully.
 
-1. Switch to **Home (1)** On the pipeline toolbar, click on **Validate** **(2)**. You can check for configuration errors or validation error on the **Pipeline Validation Pane (3)**.
+1. Switch to **Home (1)** On the pipeline toolbar, click on **Validate** **(2)**. You can check for configuration errors or validation errors on the **Pipeline Validation Pane (3)**.
 
    ![](<./Images/img38.png>)
-
 
 1. Once validation passes, click **Run** to execute the pipeline.
 
@@ -411,7 +382,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
         ![](<./Images/img44.png>)
    
-   - On the next screen click on **+ Add schedule**.
+   - On the next screen, click on **+ Add schedule**.
 
         ![](<./Images/img45.png>)
 
@@ -441,4 +412,3 @@ In this exercise, you have accomplished the following:
 - Learned how to schedule the pipeline for recurring automated runs
 
 ### You have successfully completed the lab. Click on Next >>.
-
