@@ -66,15 +66,13 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
     ![](<./Images/img7.png>)
 
-   > **Note**: Alternatively, you can paste and run the following code in a cell to download the file directly, then delete the cell afterwards:
-   > ```python
-   > import urllib.request, os
-   > dest = "/lakehouse/default/Files/raw/products.csv"
-   > os.makedirs(os.path.dirname(dest), exist_ok=True)
-   > urllib.request.urlretrieve("https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv", dest)
-   > print("Download complete.")
-   > ```
+    ![](<./Images/img111.png>)
 
+
+   >**Note:** To download the file, open a new tab in the browser and paste it into the URL.
+
+   >Right-click anywhere on the page containing the data and select Save as to save the page as a CSV file.
+   - Or if you are using the lab virtual machine (lab VM) provided to you, you can get the file from the C:\LabFiles\dp-data-main directory.
 1. In the first cell, paste the following PySpark code and click the **&#9655; Run (1)** button to execute it:
 
    ```python
@@ -256,7 +254,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
        ProductName VARCHAR(100),
        Category VARCHAR(50),
        ListPrice DECIMAL(10,2),
-       LoadTimestamp DATETIME2
+       LoadTimestamp DATETIME2(4)
    );
    GO
    ```
@@ -271,9 +269,12 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
    ```sql
    SELECT TOP 10 *
-   FROM Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products;
+   FROM Lakehouse_.dbo.stg_products;
    GO
    ```
+   >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse.
+
+   >Example: Lakehouse_123456.dbo.stg_products
 
    ![](<./Images/img32.png>)
 
@@ -309,9 +310,9 @@ In this task, you will add a **Script** activity that uses a cross-database quer
    FROM Lakehouse_.dbo.stg_products;
    ```
    
-    >**Note:** Please replace the **Lakehouse_** with the actual value . 
+    >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse. 
     
-    >Example: **Lakehouse_2263770.dbo.stg_products**
+    >Example: **Lakehouse_123456.dbo.stg_products**
 
    ![](<./Images/img35.png>)
 
