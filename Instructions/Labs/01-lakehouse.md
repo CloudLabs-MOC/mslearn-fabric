@@ -241,7 +241,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse (1)** to **SQL analytics endpoint (2)**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query
+1. At the top-right of the Lakehouse page, switch from **Analyze data with (1)** to **SQL analytics endpoint (2)**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query
    It's tables, as shown here:
 
    ![Screenshot of the SQL endpoint page.](./Images/L1T6S1.png)

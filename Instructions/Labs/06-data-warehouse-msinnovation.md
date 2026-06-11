@@ -83,6 +83,8 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/L1T62.png>)
 
+   ![](<./Images/11ed.png>)
+
 1. After inserting the query, click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
 
    ```sql
