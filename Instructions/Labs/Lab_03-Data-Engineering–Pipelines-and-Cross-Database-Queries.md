@@ -61,8 +61,8 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
 1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**. Download the file from [this link](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv).
 
-    ![](<./Images/img7.png>)
-
+   ![](<./Images/img7.png>)
+   ![](<./Images/img111.png>)
    >**Note:** To download the file, open a new tab in the browser and paste it into the URL.
 
    > Right-click anywhere on the page containing the data and select Save as to save the page as a CSV file.
@@ -133,13 +133,6 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
     ![](<./Images/img12.png>)
 
     ![](<./Images/img11.png>)
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - If you receive a success message, you can proceed to the next task.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="a1b2c3d4-e5f6-7890-abcd-ef1234567890" />
 
 ## Task 2: Create a Data Pipeline
 
@@ -402,13 +395,6 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
         ![](<./Images/img46.png>)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="b2c3d4e5-f6a7-8901-bcde-f12345678901" /><validation step="c3d4e5f6-a7b8-9012-cdef-123456789012" />
-
 ## Summary
 
 In this exercise, you have accomplished the following:
@@ -420,8 +406,7 @@ In this exercise, you have accomplished the following:
 - Leveraged cross-database queries (three-part naming) to load data from the Lakehouse into the Data Warehouse without data duplication
 - Executed and monitored the end-to-end pipeline run
 - Learned how to schedule the pipeline for recurring automated runs
-
 ## Conclusion 
  In this lab, you explored the core data analytics and engineering capabilities of Microsoft Fabric. You learned how to create and work with Lakehouses and Data Warehouses, ingest and organize data from multiple sources, query and analyze data using SQL, and build interactive reports for business insights. You also gained experience in automating data movement and transformation processes using Data Pipelines and Notebooks, enabling end-to-end data workflows. Through these exercises, you developed practical skills in managing, transforming, analyzing, and visualizing data within Microsoft Fabric's unified analytics platform.
 
-### You have successfully completed the lab. Click on Next >>.
+### Congratulations! You have successfully completed the Hands-on lab. Click on Next >>.
