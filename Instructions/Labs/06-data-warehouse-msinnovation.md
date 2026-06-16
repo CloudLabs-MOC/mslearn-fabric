@@ -370,3 +370,5 @@ In this exercise, you have accomplished the following:
 - Defined a Data Model to support reporting.
 - Queried data from the Data Warehouse tables.
 - Created a View, performed Visual Queries, and visualized the data.
+
+### You have successfully completed the lab. Click on Next >>.
