@@ -15,7 +15,11 @@
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/06-data-warehouse-msinnovation.md",
         "Order": 3
-      }
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/Lab_03-Data-Engineering%E2%80%93Pipelines-and-Cross-Database-Queries.md",
+        "Order": 4
+      },
     ]
   }
 ]
