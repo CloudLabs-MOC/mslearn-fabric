@@ -361,7 +361,6 @@ You can easily visualize the data in either a single query or in your data wareh
 
     ![](./Images/L2T5S18.png)
     
-
 ## Summary
 
 In this exercise, you have accomplished the following:
@@ -371,5 +370,3 @@ In this exercise, you have accomplished the following:
 - Defined a Data Model to support reporting.
 - Queried data from the Data Warehouse tables.
 - Created a View, performed Visual Queries, and visualized the data.
-
-## Congratulations! You have successfully completed the Hands-on lab.
