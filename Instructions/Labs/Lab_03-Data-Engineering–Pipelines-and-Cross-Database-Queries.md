@@ -397,4 +397,4 @@ In this exercise, you have accomplished the following:
 - Executed and monitored the end-to-end pipeline run
 - Learned how to schedule the pipeline for recurring automated runs
 
-### You have successfully completed the lab. Click on Next >>.
+### Congratulations! You have successfully completed the Hands-on lab.
