@@ -68,7 +68,6 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
     ![](<./Images/img111.png>)
 
-
    >**Note:** To download the file, open a new tab in the browser and paste it into the URL.
 
    >Right-click anywhere on the page containing the data and select Save as to save the page as a CSV file.
@@ -123,13 +122,6 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
     ![](<./Images/img12.png>)
 
     ![](<./Images/img11.png>)
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - If you receive a success message, you can proceed to the next task.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="a1b2c3d4-e5f6-7890-abcd-ef1234567890" />
 
 ## Task 2: Create a Data Pipeline
 
@@ -392,13 +384,6 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
    - Click **Save**.
 
         ![](<./Images/img46.png>)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="b2c3d4e5-f6a7-8901-bcde-f12345678901" /><validation step="c3d4e5f6-a7b8-9012-cdef-123456789012" />
 
 ## Summary
 
