@@ -1,6 +1,6 @@
 # Lab 02: Analyze data in a Data Warehouse
 
-### Estimated Duration: 120 Minutes
+### Estimated Duration: 90 Minutes
 
 ## 📘 Lab Scenario
 
@@ -46,6 +46,8 @@ In this task, you will provision a new data warehouse within Microsoft Fabric. A
 1. On the **New warehouse** pane, enter **myDataWarehouse** **(1)** in the Name field, then click **Create** **(2)** to provision the warehouse.
 
    ![](<./Images/E2T1S3.png>)
+
+   >**Note:** A Data Warehouse is used to store and organize business data in one place so that it can be easily analyzed and used for creating reports and dashboards.
 
 ## Task 2: Create tables and insert data
 
@@ -102,11 +104,15 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/L2T2S7.png>)
 
-1. Open each of the following links in a **browser tab**, copy the Transact-SQL code from each file, and paste the contents into the **same query editor** in the **same order** listed below. After all the code has been added to the query editor, click **Run** to execute the script.
+1. Open each script link in a separate browser tab. Copy the complete Transact-SQL code from the **Dimensions Script**, **FactSalesOrder Script - Part 1**, and **FactSalesOrder Script - Part 2**. Paste all three scripts into the same SQL query editor in the exact order listed, then click Run to execute the complete script.
 
    - [Dimensions Script](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/Dimensions.txt)
    - [FactSalesOrder Script - Part 1](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-1.txt)
    - [FactSalesOrder Script - Part 2](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-2.txt)
+
+   > **For Windows users**: To copy the entire file content, press **Ctrl + A** to select all the text, and then press **Ctrl + C** to copy it and **Ctrl + V** to paste it.
+
+   > **For Mac users:** To copy the entire file content, press **⌘ Command + A** to select all the text, and then press **⌘ Command + C** to copy it and **⌘ Command + V** to paste it.
 
    > **Note:** Ensure that the contents of all three files are pasted into the **same query editor** and in the **same order** before running the script.
 
@@ -224,6 +230,8 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](<./Images/L2T4S3.png>)
 
+   > This SQL query calculates the total sales revenue for each month and year by joining sales data with date information, then displays the results in chronological order.
+
    > **Note:** The attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
 1. Modify the query as follows to add a second dimension to the aggregation.
@@ -240,6 +248,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
    ```
+   >  This SQL query calculates the total sales revenue for each month, year, and sales region (country) by joining the sales, date, and customer tables, then displays the results in chronological order grouped by region.
 
 1. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.
 

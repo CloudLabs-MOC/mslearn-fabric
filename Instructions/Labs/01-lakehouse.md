@@ -1,6 +1,6 @@
 # Lab 01: Create and Ingest Data with a Microsoft Fabric Lakehouse
 
-### Estimated Duration: 120 Minutes
+### Estimated Duration: 90 Minutes
 
 ## 📘 Lab Scenario
 
@@ -76,6 +76,8 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Start trial (2)** of Microsoft Fabric.
 
    ![](./Images/E1T1S7.png)
+
+   >**Note:** The Fabric trial is enabled to ensure that your account has access to Microsoft Fabric features and experiences. However, the hands-on lab resources and workloads in this guide are configured to use the F2 Fabric capacity provided for the lab environment. The trial activation is only to enable Fabric access for your user account and does not replace the dedicated F2 capacity used throughout the lab.
 
 1. On the **Activate your 60-day free Fabric trial capacity** window, click **Activate** to continue with the default region.
 
@@ -329,6 +331,8 @@ In this task, we will create a new semantic model and add a table to the dataset
 
       ![](./Images/L1T8S5.png)
 
+      > **Note**: This table report presents aggregated sales data for each item, allowing users to monitor product performance, identify high-demand products, and validate that the sales data has been loaded correctly into the semantic model.
+
 1. In the **Visualizations** pane, follow these steps to convert the table into a clustered bar chart:
 
    - Click the **Build visual (1)** icon to ensure you're in visual editing mode.
@@ -336,6 +340,8 @@ In this task, we will create a new semantic model and add a table to the dataset
    - The report canvas updates to display the item-wise total quantity in a bar chart **(3)**.
 
       ![](./Images/L1T8S6.png)
+
+      > **Note:** This bar chart visualizes the total quantity sold for each item, making it easier to compare product sales performance and quickly identify the highest-selling products based on sales volume.
 
 1. To save the report, click **File** **(1)** in the top menu, then select **Save** **(2)**.
 
@@ -345,12 +351,12 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![](./Images/L1T8S8.png)
 
-1. Then, in the hub menu bar on the left, select your workspace to verify that it contains the following items:
+1. Then, in the hub menu bar on the left, select your **workspace (1)** to verify that it contains the following items:
 
    - Your lakehouse.
    - The SQL analytics endpoint for your lakehouse.
    - A default dataset for the tables in your lakehouse.
-   - The **Item Sales Report** report.
+   - The **Item Sales Report** report. **(2)**
 
       ![](./Images/L1T8S9.png)
 
