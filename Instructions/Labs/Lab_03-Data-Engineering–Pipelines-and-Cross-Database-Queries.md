@@ -59,15 +59,13 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
     ![](<./Images/img111.png>)
 
-1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**. Download the file from [this link](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv).
+1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**
 
    ![](<./Images/img7.png>)
-   ![](<./Images/img111.png>)
-   >**Note:** To download the file, open a new tab in the browser and paste it into the URL.
-
-   > Right-click anywhere on the page containing the data and select Save as to save the page as a CSV file.
 
 1. On the Upload files dialog, click the folder icon on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **prodcuts.csv (1)** file from your local or lab machine and click on **Open (2)**
+
+   ![](<./Images/imgupload.png>)
 
       ![](<./Images/img999.png>)
 
@@ -78,8 +76,6 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 1. Once the upload is complete and the status shows **Completed**, click the **Close** icon at the top right to exit the **Upload files** dialog.
 
       ![](<./Images/img1111.png>)
-
-   - if you are using the lab virtual machine (lab VM) provided to you, you can get the file from the **C:\LabFiles\dp-data-main**  directory.
 
 1. In the first cell, paste the following PySpark code and click the **&#9655; Run (1)** button to execute it:
 

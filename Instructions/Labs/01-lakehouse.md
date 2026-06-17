@@ -148,16 +148,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
 ## Task 3: Upload a file
 
-Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However, one of the simplest ways to ingest small amounts of data is to upload files or folders from your local computer (or lab VM if applicable).
-
-1. Download the **sales.csv** file from [here](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv), saving it as
-   **sales.csv** on your local computer (or lab VM if applicable).
-
-   > **Note**: To download the file, open a new tab in the browser and paste it into the URL.
-
-   > Right-click anywhere on the page containing the data and select **Save as** to save the page as a CSV file.
-
-   - Or if you are using the lab virtual machine (lab VM) provided to you, you can get the file from the **C:\LabFiles\dp-data-main** directory.
+Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However, one of the simplest ways to ingest small amounts of data is to upload files or folders from your lab VM.
 
 1. On the **Lakehouse explorer** pane, click the ellipses **(1)** next to the **Files** folder, then select **New subfolder** **(2)**.
 
@@ -171,7 +162,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
    ![](<./Images/L1T3S4.png>)
 
-1. On the **Upload files** dialog, click the folder icon on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv** file from your local or lab machine.
+1. On the **Upload files** dialog, click the folder icon on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv** file from your lab machine.
 
    ![](<./Images/fb_g2_1_7.png>)
    
