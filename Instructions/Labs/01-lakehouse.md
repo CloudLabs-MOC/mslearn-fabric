@@ -342,6 +342,10 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![](./Images/L1T8S8.png)
 
+1. To share your report with your team or external users, click the Share button located in the top-right corner of the report. Enter the recipient's name or email address, configure the required access permissions, and then click Grant Access to share the report.
+
+   ![](./Images/share_button.png)
+
 1. Then, in the hub menu bar on the left, select your **workspace (1)** to verify that it contains the following items:
 
    - Your lakehouse.
