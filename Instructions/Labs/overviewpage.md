@@ -4,28 +4,35 @@
 
 ## 📘 Lab Scenario
 
-Contoso Retail wants to modernize its analytics platform and improve the way business data is stored, analyzed, and reported. The organization has chosen Microsoft Fabric to unify data ingestion, transformation, warehousing, and reporting in a single platform.
+Contoso Retail wants to modernize its analytics platform and improve the way business data is stored, transformed, analyzed, and reported. The organization has chosen Microsoft Fabric to unify data ingestion, storage, warehousing, orchestration, and reporting within a single analytics platform.
 
-As a Data Analyst, you will work with Microsoft Fabric to create a Lakehouse and Data Warehouse, ingest and transform data, perform analysis using SQL and Power Query, and build interactive reports with Power BI to generate business insights.
+As a Data Analyst, you will work with Microsoft Fabric to create and manage a Lakehouse and Data Warehouse, ingest and transform data from multiple sources, analyze data using SQL and visual tools, and build interactive Power BI reports to generate business insights. You will also automate data movement and transformation processes using Data Pipelines and Notebooks, creating an end-to-end analytics solution that supports efficient reporting and data-driven decision-making.
 
 ## 📖 Overview
-This lab provides hands-on exercises in using Microsoft Fabric Lakehouse and Data Warehouse. Participants will set up a Microsoft Fabric workspace, configure a Lakehouse, ingest data, convert files into tables, and perform data analysis using SQL queries and Power Query. You will also create a Data Warehouse, define a data model, query tables, and create views. These exercises will enhance your skills in data management, analysis, and reporting using Power BI for visualization.
+This lab provides hands-on experience with the core data analytics and engineering capabilities of Microsoft Fabric. Participants will create and configure a Microsoft Fabric workspace, work with a Lakehouse to ingest and manage data, and use SQL and visual tools to analyze datasets. You will also create and manage a Data Warehouse, define data models, query data, and create views for analytical workloads. Additionally, you will build and orchestrate Data Pipelines and Notebooks to automate data ingestion, transformation, and loading processes. Throughout the lab, you will create reports and visualizations using Power BI, gaining practical experience in building end-to-end analytics solutions within Microsoft Fabric.
 
 ## 🎯 Objective
 
 By the end of this lab, you will learn:
 
-- **Creating and Ingesting Data with a Microsoft Fabric Lakehouse**: This hands-on exercise guides you through setting up a Microsoft Fabric workspace and configuring a Lakehouse for scalable storage. You will ingest data from various sources, convert files into structured tables, and apply SQL queries for data manipulation and analysis. Participants will also use Power Query for advanced data transformations and create insightful reports with Power BI to effectively visualize and share their findings.
+- **Creating and Ingesting Data with a Microsoft Fabric Lakehouse:** This hands-on exercise guides you through setting up a Microsoft Fabric workspace and configuring a Lakehouse for scalable storage. You will ingest data from various sources, convert files into structured tables, perform data analysis using SQL and visual query tools, and create reports to visualize business insights.
 
-- **Analyze data in a Data Warehouse**: This hands-on exercise involves creating a workspace and setting up a Data Warehouse. You will create tables and insert data, then define a data model for structured analysis. You will learn to query the Data Warehouse tables and create views for efficient data retrieval and reporting. Participants will enhance their skills in managing and analyzing data within a Data Warehouse environment.
+- **Analyzing Data in a Data Warehouse:** This hands-on exercise involves creating and configuring a Data Warehouse, creating tables and data models, querying data using SQL, and creating views to support reporting and analytical workloads. You will gain experience in managing and analyzing structured data within Microsoft Fabric.
+
+- **Automating Data Integration with Data Pipelines:** This hands-on exercise introduces Microsoft Fabric Data Pipelines and Notebooks for automating data movement and transformation. You will ingest data into a Lakehouse, transform raw data into curated Delta tables, load data into a Data Warehouse using cross-database queries, and orchestrate an end-to-end ETL workflow through a single pipeline.
 
 ## ⚙️ Prerequisites 
 
 Participants should have:
 
 - **Basic Understanding of Data Warehousing and Data Lakes:** Familiarity with the concepts of structured and unstructured data storage.
+
 - **SQL Knowledge:** Ability to write and understand basic SQL queries.
 - **Data Analysis:** Basic experience with data analysis and reporting.
+- **Microsoft Fabric Fundamentals:** Familiarity with Microsoft Fabric workspaces, navigation, and core analytics concepts.
+- **Basic ETL Concepts:** Understanding of data ingestion, transformation, and loading processes.
+- **Notebook and Data Pipeline Awareness:** Basic knowledge of notebooks and workflow orchestration concepts is beneficial but not required.
+- **Power BI Fundamentals:** Familiarity with creating reports and visualizations using Power BI.
 
 ## 🏗️ Architecture
 
@@ -33,7 +40,7 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 ## 🖼️ Architecture diagram
 
-![](./Images/archoverview.jpg)
+![](./Images/archoverview.png)
 
 ## 🔍 Explanation of Components
 
@@ -54,6 +61,23 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 - **Data Transformation:** The process of converting raw data into a structured format that can be used for analysis. This includes operations such as grouping, filtering, and summarizing data to prepare it for querying and reporting.
 
 - **Report Building:** The creation of interactive reports using Power BI, based on the data stored in the Lakehouse. This involves designing report layouts, selecting visualizations, and configuring report elements to effectively display data insights.
+
+- **Microsoft Fabric Data Pipeline:** A visual orchestration service within Microsoft Fabric that enables users to automate data movement and processing workflows. Data Pipelines allow multiple activities to be connected and executed in a defined sequence, simplifying end-to-end data integration and ETL processes.
+
+- **Notebook Activity:** A pipeline activity that executes a Microsoft Fabric Notebook. It is commonly used to perform data transformations, cleansing, and enrichment operations using Apache Spark before loading data into downstream analytical systems.
+
+- **Copy Activity:** A pipeline activity used to move data between different sources and destinations. In this lab, the Copy Activity ingests external data files into the Lakehouse, ensuring that data is available for further processing and analysis.
+
+- **Delta Tables:** Structured tables stored in the Delta Lake format within the Lakehouse. Delta tables provide reliable and efficient storage with support for ACID transactions, schema enforcement, and optimized query performance.
+
+- **Cross-Database Queries:** A feature in Microsoft Fabric that enables users to query data across different Fabric items. In this lab, cross-database queries are used to access Lakehouse Delta tables through the Warehouse SQL endpoint, allowing data to be loaded into the Data Warehouse without creating redundant copies.
+
+- **Data Warehouse:** A relational analytics store within Microsoft Fabric designed for structured data analysis and reporting. The Data Warehouse provides full SQL capabilities and serves as the destination for curated data prepared through the pipeline workflow.
+
+- **Pipeline Orchestration:** The process of coordinating multiple activities within a Data Pipeline to ensure that data ingestion, transformation, and loading operations execute in the correct order. This enables automated and repeatable end-to-end data workflows.
+
+- **Pipeline Monitoring:** A feature that allows users to track pipeline execution, review activity status, troubleshoot failures, and validate successful completion of data integration processes.
+
 
 # 🚀 Getting Started with the lab
 
@@ -92,6 +116,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![](./Images/fb_g_1_2.png)
+
+## Copy Paste Functionality
+To copy the SQL script or any code snippet, click the **Copy button (1)** located at the top-right corner of the code block (as highlighted in the image). The copied content can then be pasted directly into your SQL editor or workspace.
+
+![](./Images/Copy_section.png)
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
