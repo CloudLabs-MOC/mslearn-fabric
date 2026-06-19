@@ -10,10 +10,7 @@ As a Data Analyst, you will create a Data Warehouse, load and manage data, build
 
 ## 📋 Overview
 
-Data warehouses are analytical stores built on a relational schema to support SQL queries. Microsoft Fabric enables you to create a relational data warehouse in your workspace and integrate it easily with other elements of your end-to-end analytics solution.
-
-Microsoft Fabric's data warehouse is a modern version of the traditional data warehouse. It centralizes and organizes data from different departments, systems, and databases into a single, unified view for analysis and reporting purposes. Fabric's data warehouse provides full SQL semantics, including the ability to insert, update, and delete data in the tables. Fabric's data warehouse is unique because it's built on the Lakehouse, which is stored in Delta format and can be queried using SQL. It's designed for use by the whole data team, not
-just data engineers.
+Fabric Data Warehouse is not a traditional enterprise data warehouse, it's a lake warehouse that supports two distinct warehousing items: the Fabric warehouse item and the SQL analytics endpoint item. Both are purpose-built to meet customers' business needs while providing best in class performance, minimizing costs, and reduced administrative overhead.
 
 Here, you'll learn about data warehouses in Fabric, create a data warehouse, load, query, and visualize data, and describe datasets.
 
@@ -215,7 +212,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](<./Images/L1T62.png>)
 
-1. Copy and paste the following code and click on **Run**:
+1. Copy and paste the following code and click on **Run**: This query calculates **monthly sales revenue** by combining **sales and date data**, and displays the results in chronological order.
 
    ```sql
    SELECT  d.[Year] AS CalendarYear,
@@ -229,8 +226,6 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
    ```
 
    ![](<./Images/L2T4S3.png>)
-
-   > This SQL query calculates the total sales revenue for each month and year by joining sales data with date information, then displays the results in chronological order.
 
    > **Note:** The attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
@@ -248,9 +243,10 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
    ```
-   >  This SQL query calculates the total sales revenue for each month, year, and sales region (country) by joining the sales, date, and customer tables, then displays the results in chronological order grouped by region.
 
 1. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.
+
+    This query calculates total sales revenue by month, year, and sales region, and displays the results in chronological order.
 
    ![](<./Images/L2T4S5.png>)
 
@@ -278,7 +274,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 1. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view is listed in the **Explorer** pane.
 
-1. Create a new SQL query and run the following SELECT statement:
+1. Create a new SQL query and run the following SELECT statement. This query displays sales revenue by year, month, and sales region using the vSalesByRegion view, with results sorted chronologically.
 
    ```SQL
    SELECT CalendarYear, MonthName, SalesRegion, SalesRevenue
@@ -358,6 +354,8 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![](<./Images/L2T5S15.png>)
 
+   > The visualization displays total sales revenue by product category, allowing you to compare sales performance across different product categories.
+
 1. To save the report, click **File** **(1)** in the top menu, then select **Save** **(2)**.
 
    ![](./Images/L1T8S7.png)
@@ -365,6 +363,10 @@ You can easily visualize the data in either a single query or in your data wareh
 1. In the **Save report** dialog box, enter the name **Sales Report (1)** in the text field (1), then click **Save** **(2)** to store the report.
 
    ![](./Images/L2T5S17.png)
+
+1. To share your report with your team or external users, click the Share button located in the top-right corner of the report. Enter the recipient's name or email address, configure the required access permissions, and then click Grant Access to share the report.
+ 
+   ![](./Images/share_button.png)
 
 1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
 

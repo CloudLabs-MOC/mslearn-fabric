@@ -94,11 +94,9 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    > **Note**: The code loads the products.csv file into a Spark DataFrame, displays the total number of rows in the dataset, and shows the first 5 records for validation. You should see **295 rows** and the columns **ProductID, ProductName, Category, and ListPrice.(2)**.
 
-1. Click **+ Code** below the first cell to add a new code cell. Paste the following transformation code and **&#9655; Run** button:
+1. Click **+ Code** below the first cell to add a new code cell. Paste the following transformation code and **&#9655; Run** button. This code cleans and transforms the raw data, adds a load timestamp, and saves the results as a Delta table named **stg_products** in the Lakehouse.
 
     ![](<./Images/img10.png>)
-
-    ![](<./Images/img9.png>)
 
    ```python
    from pyspark.sql import functions as F
@@ -122,7 +120,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    df_clean.show(5)
    ```
 
-   >**Note:** This code cleans the raw dataset by removing null values, standardizing column formats, adding a load timestamp, and saving the transformed data as a **Delta table** named **stg_products** in the Lakehouse.
+   ![](<./Images/img9.png>)
 
 1. In the **Explorer** pane, Click it on the **(...) (1)** of the onelake and click on  the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
 
@@ -204,7 +202,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
         ![](<./Images/img24.png>)
 
-        > **Note**: The file will be stored at Files/raw/products.csv in the Lakehouse, which is the location expected by the notebook. If you manually uploaded the file in Task 1, the Copy activity will replace the existing file each time the pipeline runs. This is expected behavior and ensures that the pipeline always uses the latest copy of the source file without requiring manual uploads.
+        > **Note**: The pipeline stores the file in Files/raw/products.csv within the Lakehouse and replaces any existing file during each run, ensuring the latest source data is always used.
 
 ## Task 4: Add a Notebook Activity to transform data
 
@@ -402,7 +400,9 @@ In this exercise, you have accomplished the following:
 - Leveraged cross-database queries (three-part naming) to load data from the Lakehouse into the Data Warehouse without data duplication
 - Executed and monitored the end-to-end pipeline run
 - Learned how to schedule the pipeline for recurring automated runs
+
 ## Conclusion 
+
  In this lab, you explored the core data analytics and engineering capabilities of Microsoft Fabric. You learned how to create and work with Lakehouses and Data Warehouses, ingest and organize data from multiple sources, query and analyze data using SQL, and build interactive reports for business insights. You also gained experience in automating data movement and transformation processes using Data Pipelines and Notebooks, enabling end-to-end data workflows. Through these exercises, you developed practical skills in managing, transforming, analyzing, and visualizing data within Microsoft Fabric's unified analytics platform.
 
 ### Congratulations! You have successfully completed the Hands-on lab. Click on Next >>.
