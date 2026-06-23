@@ -1,4 +1,4 @@
-# Get started with Microsoft Fabric with Its Lakehouses
+# Get Started with Microsoft Fabric Analytics
 
 ### Overall Estimated Duration: 4 Hours
 
