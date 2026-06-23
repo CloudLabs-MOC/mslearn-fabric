@@ -128,6 +128,14 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
     ![](<./Images/img11.png>)
 
+<validation step="e2e302bd-e8e0-45c5-9a8d-4c1d5f332079" />
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+
 ## Task 2: Create a Data Pipeline
 
 In this task, you will create a new Data Pipeline that will orchestrate the entire data flow - from ingestion to transformation to loading.
