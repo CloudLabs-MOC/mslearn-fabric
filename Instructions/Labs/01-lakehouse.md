@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 90 Minutes
 
-## 📘 Lab Scenario
+## 📘 Scenario
 
 Contoso Retail wants to improve its data analytics capabilities by bringing together data from multiple sources into a unified platform. The organization has chosen Microsoft Fabric Lakehouse to store, manage, and analyze both structured and unstructured data at scale.
 
@@ -24,7 +24,7 @@ SQL.
 
 ![](./Images/archlab1.jpg)
 
-## 🎯 Lab objectives
+## 🎯 Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -378,6 +378,6 @@ In this exercise, you have accomplished the following:
 - Designed a visual query for easier insights
 - Created a report to visualize and share your findings
 
-### You have successfully completed the lab. Click on Next >>.
+### You have successfully completed the lab. Click on **Next >>**.
 
-![](./Images/bar_g_g_1.png)
+![](./Images/GS-02-next.png)
