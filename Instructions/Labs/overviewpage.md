@@ -88,7 +88,7 @@ Welcome to your **Get Started with Microsoft Fabric Analytics** workshop! We've 
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![](./Images/GS1.png)
+![](./Images/GS-02.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -98,13 +98,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
  
-![Explore Lab Resources](./Images/GS2-new.png)
+![Explore Lab Resources](./Images/GS-02-env.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](./Images/GS3-new.png)
+![Use the Split Window Feature](./Images/GS-02-split.png)
  
 ## Managing Your Virtual Machine
  
@@ -136,6 +136,6 @@ Learner Support Contacts:
 
 Now, click on Next from the lower right corner to move on to the next page.
 
-![](./Images/bar_g_g_1.png)
+![](./Images/GS-02-next.png)
 
 ### Happy Learning!!
