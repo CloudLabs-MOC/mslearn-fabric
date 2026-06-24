@@ -372,7 +372,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
     ![](./Images/L2T5S18.png)
     
-## Summary
+## 📝 Summary
 
 In this exercise, you have accomplished the following:
 
