@@ -2,6 +2,10 @@
 
 ### Overall Estimated Duration: 4 Hours
 
+## Scenario
+
+At Contoso, the data analytics team is implementing a modern data solution to process real-time sensor data and generate actionable business insights. This lab provides hands-on experience with Microsoft Fabric's Real-Time Analytics and Data capabilities, including KQL queries, Power BI reporting and workflows. By completing this lab, you will learn how to analyze streaming data and leverage Microsoft Fabric to create scalable analytics solutions that support informed decision making across the organization.
+
 ## Overview
 
 In this lab, we will use Microsoft Fabric to perform real-time data analytics and data science. Fabric provides an end-to-end platform for data solutions, including Synapse Real-Time Analytics, which leverages a KQL Database and Kusto Query Language (KQL) to analyze structured and unstructured data efficiently. Real-time analytics enables organizations to process log files, streaming data, and time-series information at scale. Additionally, data science techniques, including machine learning with scikit-learn in Python, help identify complex patterns and train AI models. This integration empowers organizations to extract meaningful insights and democratize data access for informed decision-making.
