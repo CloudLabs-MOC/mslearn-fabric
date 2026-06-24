@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 90 Minutes
 
-## 📘 Lab Scenario
+## 📘 Scenario
 
 Contoso Retail wants to improve its reporting and decision-making capabilities by centralizing business data in a modern analytics platform. The organization has chosen Microsoft Fabric Data Warehouse to store, organize, and analyze data from multiple sources in a structured and scalable way.
 
@@ -18,7 +18,7 @@ Here, you'll learn about data warehouses in Fabric, create a data warehouse, loa
 
 ![New lakehouse.](./Images/archlab2.png)
 
-## 🎯 Lab objectives
+## 🎯 Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -382,4 +382,6 @@ In this exercise, you have accomplished the following:
 - Queried data from the Data Warehouse tables.
 - Created a View, performed Visual Queries, and visualized the data.
 
-### You have successfully completed the lab. Click on Next >>.
+### You have successfully completed the lab. Click on **Next >>**.
+
+![](./Images/GS-02-next.png)
