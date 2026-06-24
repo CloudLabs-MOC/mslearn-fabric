@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Scenario
+
+At Contoso, the data analytics team is building a modern data platform to analyze real-time business data and generate valuable insights. The team needs to process large volumes of structured and time series data efficiently to support faster decision making. In this lab, you will explore Microsoft Fabric Real-Time Analytics capabilities by creating a workspace, working with databases, analyzing data using Kusto Query Language (KQL), and creating Power BI reports. By completing this lab, you will understand how Microsoft Fabric enables organizations to perform real-time data analysis and transform data into actionable insights.
+
 ## Overview
 
 Microsoft Fabric provides an end-to-end platform for data solutions, including real-time data analytics. Synapse Real-Time Analytics in Fabric uses a KQL Database to provide table storage and Kusto Query Language (KQL), which is a powerful tool for analyzing data. This structure provides an efficient way to find insights and patterns from textual or structured data. Moreover, KQL is optimized for data that includes a time series component, such as real-time data from log files or streaming services. With Real-Time Analytics, you can focus and scale up your analytics solution while democratizing data for the needs of your entire data organization.
@@ -56,8 +60,6 @@ Now that you have a workspace, download the data file for analysis. Using *Kusto
 1. Inside the provided LabVM, locate the **sales.csv (2)** file for this exercise by navigating to **C:\LabFiles\dp-data-main (1)**.
 
    ![Screenshot of an empty workspace in Power BI.](./Images/files.png)
-
-   >**Note:** Alternatively, if you are using your own machine, you can download and save the file from **[Sales.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv)** and save it.
 
 1. Return to the browser window with the **Microsoft Fabric** experience.
 
@@ -230,4 +232,4 @@ You have completed the following tasks:
 
 Now, click on **Next >>** from the lower right corner to move on to the next page.
 
-![](./Images/next.png)
+![](./Images/next_01.png)

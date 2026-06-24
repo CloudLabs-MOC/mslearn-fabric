@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Scenario
+
+At Contoso, the data analytics team is building a machine learning solution to predict customer churn and help the business take proactive retention actions. This lab provides hands-on experience with the end-to-end data analytics workflow in Microsoft Fabric, covering data ingestion into a Lakehouse, model training using scikit learn, and experiment tracking with MLflow. By completing this lab, you will learn how to prepare data, train and compare machine learning models, and manage model outputs within Microsoft Fabric to support smarter, data driven business decisions.
+
 ## Overview
 
 In this lab, you will work through a complete end-to-end data science workflow in Microsoft Fabric, from raw data ingestion to model training, experiment tracking, and model preservation. Across eight sequential tasks, you will develop practical skills in data preparation, experiment creation, machine-learning model training, and managing outputs.
@@ -41,10 +45,6 @@ Now that you have a workspace, it's time to switch to the *Data science* experie
 
     >**Note:** After a minute or so, a new lakehouse with no **Tables** or **Files** will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this task, you will simply download and extract a folder of text files from your local computer (or lab VM if applicable) and then upload them to your lakehouse.
 
-1. Inside the provided LabVM, locate the **churn.csv** file for this exercise by navigating to **C:\LabFiles\dp-data-main**.
-
-    >**Note:** Alternatively, if you are using your own machine, you can download and save the file from **[churn.csv](https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/churn.csv)**
-
 1. Return to the web browser tab containing your lakehouse, and under **Get data in your lakehouse**  select **Upload files**.
 
     ![](./Images/E2T1S5.png)
@@ -81,7 +81,7 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
      ![](./Images/L2T2S2n-2611.png)
 
-1. On the pop-up **Enhance your notebook experience with AI tools** select **Skip tour**.
+1. On the pop-up **Notebook Copilot Updates and Git Intergration Supporting Resources** select **Skip for now**.
 
     ![](./Images/fab-image13.png)
 
@@ -303,11 +303,7 @@ Learn how to analyze performance metrics and gain insights from your machine lea
 
 Microsoft Fabric will keep track of all your experiments and allow you to visually explore them.
 
-1. In the left panel, first click on **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**,
-
-   ![](./Images/49.png)
-
-1. Select the `experiment-churn` experiment to open it.
+1. In the left panel, first click on **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**, Select the `experiment-churn`**(2)** experiment to open it.
 
     ![](./Images/52.png)
 
