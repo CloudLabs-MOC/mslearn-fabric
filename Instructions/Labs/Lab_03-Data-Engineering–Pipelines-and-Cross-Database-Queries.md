@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 60 Minutes
 
-## 📘 Lab Scenario
+## 📘 Scenario
 
 Contoso Retail has established a Lakehouse and a Data Warehouse in Microsoft Fabric. Now, the data engineering team needs to automate the data movement between these assets. Instead of manually uploading files and running scripts, you will use **Data Pipelines** to ingest data into the Lakehouse, transform it into Delta tables, and load curated data from the Lakehouse into the Data Warehouse using **cross-database queries** all orchestrated end-to-end through pipelines.
 
@@ -16,7 +16,7 @@ Microsoft Fabric Data Pipelines provide a visual orchestration engine that enabl
 
    ![](<./Images/archlab03.png>)
 
-## 🎯 Lab objectives
+## 🎯 Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -397,7 +397,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
         ![](<./Images/img46.png>)
 
-## Summary
+## 📝 Summary
 
 In this exercise, you have accomplished the following:
 
@@ -409,8 +409,8 @@ In this exercise, you have accomplished the following:
 - Executed and monitored the end-to-end pipeline run
 - Learned how to schedule the pipeline for recurring automated runs
 
-## Conclusion 
+## ✅ Conclusion 
 
- In this lab, you explored the core data analytics and engineering capabilities of Microsoft Fabric. You learned how to create and work with Lakehouses and Data Warehouses, ingest and organize data from multiple sources, query and analyze data using SQL, and build interactive reports for business insights. You also gained experience in automating data movement and transformation processes using Data Pipelines and Notebooks, enabling end-to-end data workflows. Through these exercises, you developed practical skills in managing, transforming, analyzing, and visualizing data within Microsoft Fabric's unified analytics platform.
+In this lab, you explored the core data analytics and engineering capabilities of Microsoft Fabric. You learned how to create and work with Lakehouses and Data Warehouses, ingest and organize data from multiple sources, query and analyze data using SQL, and build interactive reports for business insights. You also gained experience in automating data movement and transformation processes using Data Pipelines and Notebooks, enabling end-to-end data workflows. Through these exercises, you developed practical skills in managing, transforming, analyzing, and visualizing data within Microsoft Fabric's unified analytics platform.
 
-### Congratulations! You have successfully completed the Hands-on lab. Click on Next >>.
+### 🎉 Congratulations! You have successfully completed the Hands-on lab.
