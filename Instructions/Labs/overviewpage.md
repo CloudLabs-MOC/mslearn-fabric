@@ -8,10 +8,11 @@ Contoso Retail wants to modernize its analytics platform and improve the way bus
 
 As a Data Analyst, you will work with Microsoft Fabric to create and manage a Lakehouse and Data Warehouse, ingest and transform data from multiple sources, analyze data using SQL and visual tools, and build interactive Power BI reports to generate business insights. You will also automate data movement and transformation processes using Data Pipelines and Notebooks, creating an end-to-end analytics solution that supports efficient reporting and data-driven decision-making.
 
-## 📖 Overview
+## 📖 Lab Overview
+
 This lab provides hands-on experience with the core data analytics and engineering capabilities of Microsoft Fabric. Participants will create and configure a Microsoft Fabric workspace, work with a Lakehouse to ingest and manage data, and use SQL and visual tools to analyze datasets. You will also create and manage a Data Warehouse, define data models, query data, and create views for analytical workloads. Additionally, you will build and orchestrate Data Pipelines and Notebooks to automate data ingestion, transformation, and loading processes. Throughout the lab, you will create reports and visualizations using Power BI, gaining practical experience in building end-to-end analytics solutions within Microsoft Fabric.
 
-## 🎯 Objective
+## 🎯 Lab Objectives
 
 By the end of this lab, you will learn:
 
@@ -81,9 +82,9 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 # 🚀 Getting Started with the lab
 
-Welcome to your Get started with Microsoft Fabric with Its Lakehouses workshop! We've prepared a seamless environment for you to explore and learn Microsoft Fabric and lakehouse. Let's begin by making the most of this experience:
+Welcome to your **Get Started with Microsoft Fabric Analytics** workshop! We've prepared a seamless environment for you to explore Microsoft Fabric's end-to-end analytics capabilities. Throughout this workshop, you'll work with Lakehouses and Data Warehouses, automate data workflows using Pipelines and Notebooks, analyze data with SQL, and create insightful Power BI reports. Let's get started!
 
-## 💻 Accessing Your Lab Environment
+## Accessing Your Lab Environment
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
@@ -118,13 +119,14 @@ To adjust the zoom level for the environment page, click the **A↕** icon locat
 ![](./Images/fb_g_1_2.png)
 
 ## Copy Paste Functionality
+
 To copy the SQL script or any code snippet, click the **Copy button (1)** located at the top-right corner of the code block (as highlighted in the image). The copied content can then be pasted directly into your SQL editor or workspace.
 
 ![](./Images/Copy_section.png)
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
-### 📞 Support Contact
+## 📞 Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
