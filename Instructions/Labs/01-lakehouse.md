@@ -365,7 +365,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
 <validation step="d75ef970-6298-404c-aeeb-8dafe17b3ac2" />
 
-## Summary
+## 📝 Summary
 
 In this exercise, you have accomplished the following:
 
