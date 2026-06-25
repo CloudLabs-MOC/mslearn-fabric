@@ -44,7 +44,7 @@ The architecture for this lab involves several key components:
 
 ## Getting Started with the Lab
 
-We've prepared a seamless environment for you to explore and learn about fabric services. Let's begin by making the most of this experience.
+Welcome to the **Get Started with Real-Time Analytics and Data Science with Microsoft Fabric** lab. This hands-on workshop provides an opportunity to explore Microsoft Fabric capabilities, including real-time analytics, data science, and reporting solutions. Follow the guided steps to work with Fabric services and gain practical experience in building modern data solutions.
 
 ## Accessing Your Lab Environment
 
@@ -72,9 +72,15 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 ## Lab Guide Zoom In/Zoom Out
  
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
   ![OpenAI](./Images/GS4.png)
+
+## Resize the Virtual Machine View
+ 
+Use the **slider (three vertical dots)** located between the **Virtual Machine** and the **Lab Guide** panes to adjust the display size, allowing you to customize the layout based on your preference.
+
+   ![Resize](resize-view.png)
 
 ## Let's Get Started with Fabric Portal
 
