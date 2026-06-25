@@ -2,9 +2,9 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## 📘 Lab Scenario
+## 📘 Workshop Scenario
 
-You are part of the data engineering team at Contoso Retail Analytics, responsible for enabling data-driven insights across the organization. Contoso collects large volumes of data from multiple sources such as point-of-sale systems, e-commerce platforms, and inventory systems, stored in formats like CSV files and structured exports. However, data ingestion is manual, transformations are inconsistent, and there is no centralized platform for scalable data management.
+You are part of the data engineering team at Contoso Retail Analytics, responsible for enabling data-driven insights across the organization. Contoso collects large volumes of data from multiple sources, such as point-of-sale systems, e-commerce platforms, and inventory systems, stored in formats like CSV files and structured exports. However, data ingestion is manual, transformations are inconsistent, and there is no centralized platform for scalable data management.
 
 To overcome these challenges, Contoso is implementing a unified data platform using **Microsoft Fabric**. The goal is to centralize data storage using a Lakehouse architecture and automate data ingestion and transformation using Data Factory Pipelines, ensuring data is consistently processed and readily available for analysis.
 
