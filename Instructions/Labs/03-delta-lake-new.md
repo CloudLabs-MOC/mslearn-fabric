@@ -89,6 +89,22 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
     ![](./Images/L1T1S9-2506.png)
 
+1. In the workspace, click on **Manage access** from the top right corner. 
+
+    ![](./Images/L1T1S10-2506.png)
+
+1. In the **Manage access** pane, click on **+ Add people and groups**.
+
+    ![](./Images/L1T1S11-2506.png)
+
+1. In the Add people pane, provide the service principal below (1), select **Admin (2)** role, and click on **Add (3)**.
+
+    ```
+    https://aec-svc/
+    ```
+
+   ![](./Images/L1T1S12-2506.png)
+
 ## Task 2: Create a lakehouse and upload data
 
 In this task, you will create a new lakehouse in your workspace and upload a CSV file to it.
