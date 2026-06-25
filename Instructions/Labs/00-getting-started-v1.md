@@ -49,6 +49,10 @@ The Fabric trial includes access to most platform features required for this lab
 
 ## Getting Started with the Lab
 
+Welcome to the **Get Started with Data Warehouses and Ingesting Data with Dataflows Gen2 with Microsoft Fabric** lab. This hands-on workshop provides an opportunity to explore Microsoft Fabric capabilities for data ingestion, transformation, storage, and analytics. Follow the guided steps to work with Dataflows (Gen2), Lakehouse, and Data Warehouse components to build modern data solutions and gain practical experience with data engineering workflows.
+
+## Accessing Your Lab Environment
+
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
 ![](./Images/Update-0.png)
@@ -80,6 +84,12 @@ Feel free to **Start**, **Stop**, or **Restart (2)** your virtual machine as nee
 To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![](./Images/zoomintab.png)
+
+## Resize the Virtual Machine View
+ 
+Use the **slider (three vertical dots)** located between the **Virtual Machine** and the **Lab Guide** panes to adjust the display size, allowing you to customize the layout based on your preference.
+
+![](./Images/resize-view.png)
 
 ## Lab Validation
 

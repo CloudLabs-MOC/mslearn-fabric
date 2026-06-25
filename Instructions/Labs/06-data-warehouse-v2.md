@@ -12,7 +12,7 @@ In this exercise, you will create a Data Warehouse, design tables and data model
 
 In this exercise, you will analyze data within a relational data warehouse using Microsoft Fabric. Utilize SQL for querying and create detailed visualizations to derive actionable insights. 
 
-## Objectives:
+## Objectives
 
 You will be able to complete the following tasks:
 
