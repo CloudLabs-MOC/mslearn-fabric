@@ -130,9 +130,19 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    >**Note:** The trial capacity region may differ from the one shown in the screenshot. No need to worry – simply use the default selected region, activate it, and continue to the next step.
 
+   > **Note:** If the **Activate your 60-day free Fabric trial capacity** does not appear, click the **"Start trial"** option from the **"Start 60-day free Pro trial"** dialog box to activate the trial.
+   >
+   > ![](Images/trial.png)
+   >
+
 1. If you see a pop-up message saying **Successfully upgraded to Microsoft Fabric**, click on **OK**.
 
    ![Enter Your Password](./Images/pg1S10-2611.png)
+
+   > **Note:** If the **Successfully upgraded to Microsoft Fabric** does not appear, click the **Got it** option from the **All paid features of Power BI are yours for 60 days** dialog box to activate the trial.
+   >
+   > ![](Images/feature.png)
+   >
 
 1. On the **Invite teammates to try Fabric to extend your trial** pop-up, click on **Close**.
 
