@@ -33,7 +33,7 @@ Tables in a **Microsoft Fabric lakehouse** are based on the open source Delta La
 
 In this task, you will create a new workspace in Microsoft Fabric to use in this lab. By creating a workspace with the Fabric trial enabled, you can access the features of Microsoft Fabric needed to complete the tasks in this lab.
 
-1. From your Lab-VM desktop, open the **Microsoft Edge Browser** and navigate to the following URL to sign in to **Microsoft Fabric** portal. 
+1. From your Lab-VM desktop, open the **Microsoft Edge Browser** and navigate to the following URL to sign in to the **Microsoft Fabric** portal. 
     
     ```
     https://app.fabric.microsoft.com
@@ -69,7 +69,7 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
    ![](./Images/L1T1S6c-2506.png)
 
-1. In the Create a workspace window which opens on the right side, senter the following details:
+1. In the Create a workspace window, which opens on the right side, enter the following details:
 
     - Name: **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)** 
     - Scroll down and expand the **Advanced (2)** section
@@ -103,7 +103,7 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 
     - Name: **fabric_lakehouse (1)**
     - Location: Select your workspace. **(2)**
-    - Lakehouse Scehme: Uncheck the box. **(3)**
+    - Lakehouse Scheme: Uncheck the box. **(3)**
     - Click **Create (4)** to create the lakehouse.
 
         ![](./Images/L1T2S2-2302.png)
@@ -284,7 +284,7 @@ You can also create *external* tables for which the schema metadata is defined i
 
 Let's explore the differences between managed and external tables.
 
-1. Add another code cell and **run** the following code. This SQL command displays detailed metadata about the **managed_products** table such as its schema, storage location, and properties within Microsoft Fabric.
+1. Add another code cell and **run** the following code. This SQL command displays detailed metadata about the **managed_products** table, such as its schema, storage location, and properties within Microsoft Fabric.
 
     ```sql
    %%sql
@@ -298,7 +298,7 @@ Let's explore the differences between managed and external tables.
    
    In the results, view the **Location** property for the table, which should be a path to the OneLake storage for the lakehouse ending with **/Tables/managed_products** (you may need to widen the **Data type** column to see the full path).
 
-1. Modify the `DESCRIBE` command and **run** it to show the details of the **external_products** table as shown here. This SQL command displays detailed metadata for the **external_products** table such as its schema, storage location, and properties within Microsoft Fabric.
+1. Modify the `DESCRIBE` command and **run** it to show the details of the **external_products** table as shown here. This SQL command displays detailed metadata for the **external_products** table, such as its schema, storage location, and properties within Microsoft Fabric.
 
     ```sql
    %%sql
