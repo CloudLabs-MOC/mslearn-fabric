@@ -32,7 +32,7 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 In this task, you will create a pipeline that ingests data from an external source into your lakehouse. You will use a Copy Data activity to copy the data, and then use a Spark notebook to transform the ingested data and load it into a table.
 
-1. From the left navigation menu click on the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and select it **(2)**. 
+1. From the left navigation menu, click on the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and select it **(2)**. 
 
     ![](./Images/L2T1S1-2506.png)
 
@@ -102,7 +102,7 @@ In this task, you will create a pipeline that ingests data from an external sour
    - Click **File format Settings (2)**
    - Column delimiter: **Comma (,) (3)**
    - Row delimiter: **Line feed (\n) (4)**
-   - Leave all other settings as default and Click **Next (5)**
+   - Leave all other settings as default and click **Next (5)**
    
         ![09](./Images/E1T4S12.png)
 
@@ -122,7 +122,7 @@ In this task, you will create a pipeline that ingests data from an external sour
 
     ![09](./Images/fab-ric-ex1-g15.png)
 
-    > 📌**Note:** If you get an error `Copy job connection is required` then perform the below mentioned steps, otherwise you can skip below steps and proceed with **Step 17**.
+    > 📌**Note:** If you get an error `Copy job connection is required`, then perform the below-mentioned steps; otherwise, you can skip the below steps and proceed with **Step 17**.
     >
     > ![09](./Images/L2T1S16-error-2506.png)
 
@@ -164,7 +164,7 @@ In this task, you will create a pipeline that ingests data from an external sour
     ![](./Images/l2T1S14.png)
 
 
-1. From the Top bar navigate to your Lakehouse by clicking on the **fabric_lakehouse (1)**, expand **Files (2)** and select the **new_data (3)** folder, refresh the page and verify that the **sales.csv (4)** file has been copied.
+1. From the Top bar, navigate to your Lakehouse by clicking on the **fabric_lakehouse (1)**, expand **Files (2)** and select the **new_data (3)** folder, refresh the page, and verify that the **sales.csv (4)** file has been copied.
 
     ![Account-manager-start](./Images/new_data1.png)
 
