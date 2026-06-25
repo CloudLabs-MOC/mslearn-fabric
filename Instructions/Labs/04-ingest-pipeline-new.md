@@ -4,11 +4,11 @@
 
 ## 📘 Scenario
 
-As part of the same initiative, Contoso aims to automate its data ingestion and transformation processes to eliminate manual effort and improve efficiency. Using **Microsoft Fabric**, you will build a Data Factory pipeline that ingests data from external sources into the Lakehouse, transforms it using a Spark notebook, and integrates these steps into a unified workflow. This enables Contoso to establish a reliable, automated ETL process for delivering up-to-date data to business users.
+As part of the same initiative, Contoso aims to **automate its data ingestion and transformation processes** to eliminate manual effort and improve efficiency. Using **Microsoft Fabric**, you will build a **Data Factory pipeline** that ingests data from external sources into the Lakehouse, transforms it using a Spark notebook, and integrates these steps into a unified workflow. This enables Contoso to establish a reliable, automated ETL process for delivering up-to-date data to business users.
 
 ## 📖 Overview
 
-In this lab, you will learn how to use Data Factory pipelines in **Microsoft Fabric** to implement data ingestion solutions. You will create a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then use a Spark notebook to transform the ingested data and load it into a table. Finally, you will modify the pipeline to include the notebook as part of the workflow.
+In this lab, you will learn how to use **Data Factory pipelines** in **Microsoft Fabric** to implement data ingestion solutions. You will create a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then use a Spark notebook to transform the ingested data and load it into a table. Finally, you will modify the pipeline to include the notebook as part of the workflow.
 
 ## 🎯 Objectives
 
@@ -32,19 +32,25 @@ Fabric also supports Apache Spark, enabling you to write and run code to process
 
 In this task, you will create a pipeline that ingests data from an external source into your lakehouse. You will use a Copy Data activity to copy the data, and then use a Spark notebook to transform the ingested data and load it into a table.
 
-1. Navigate back to the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**. Click on **+ New item (2)** button in the top-left corner of your workspace, in the search box, search for **Pipeline (3)** and select **Pipeline (4)** from the list.
+1. From the left navigation menu, click on the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and select it **(2)**. 
 
-    ![](./Images/2026-05-14_17-29-14.png)
+    ![](./Images/L2T1S1-2506.png)
 
-    ![](./Images/2026-05-14_17-41-03.png)
+1. Click on **+ New item (1)** button in the top-left corner of your workspace, in the search box, search for **Pipeline (2)** and select **Pipeline (3)** from the list.
 
-1. Create a new pipeline named **Ingest Sales Data Pipeline (1)** make sure the location is set to **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**, and click on **Create (3)**. 
+    ![](./Images/L2T1S1a-2506.png)
+
+1. On the New Pipeline window, enter the following details: 
+
+    - Name: **Ingest Sales Data Pipeline (1)** 
+    - Location: **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**,
+    -  Click on **Create (3)**. 
     
-    ![](./Images/2026-05-14_17-42-04.png)
+        ![](./Images/L2T1S3-2506.png)
    
 1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant**. This helps you quickly set up a data ingestion pipeline in Microsoft Fabric using a guided, low-code experience.
 
-   ![03](./Images/2026-05-14_17-42-41.png)
+   ![03](./Images/L2T1S4-2506.png)
 
 1. In the **Copy data** wizard, on the **Choose data source** page, search for **Http (1)** and select the **Http (2)** source from the results.
 
@@ -96,7 +102,7 @@ In this task, you will create a pipeline that ingests data from an external sour
    - Click **File format Settings (2)**
    - Column delimiter: **Comma (,) (3)**
    - Row delimiter: **Line feed (\n) (4)**
-   - Leave all other settings as default and Click **Next (5)**
+   - Leave all other settings as default and click **Next (5)**
    
         ![09](./Images/E1T4S12.png)
 
@@ -108,13 +114,7 @@ In this task, you will create a pipeline that ingests data from an external sour
 
     ![](./Images/cpdta.png)
 
-1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
-
-    > 📌**Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
-
-    ![](./Images/l2T1S14.png)
-
-1. If you don’t see any run status in the **Output** pane, click **Run** on the top menu to manually start the pipeline.
+1. Click **Run** on the top menu to manually start the pipeline.
 
     ![09](./Images/upfab-ric-ex1-g14.png)
 
@@ -122,7 +122,9 @@ In this task, you will create a pipeline that ingests data from an external sour
 
     ![09](./Images/fab-ric-ex1-g15.png)
 
-    > 📌**Note:** If any errors appear while running the pipeline, review the details in the notification panel, fix the issue, and run it again. If everything succeeds, you can skip below steps and proceed with **Step 17**.
+    > 📌**Note:** If you get an error `Copy job connection is required`, then perform the below-mentioned steps; otherwise, you can skip the below steps and proceed with **Step 17**.
+    >
+    > ![09](./Images/L2T1S16-error-2506.png)
 
     - If the **Connection** field shows an error, select the **Copy job (1)** and switch to  **Settings (2)**, click on the dropdown **(3)** and select **Browse all (4)** to choose the correct connection manually.
 
@@ -143,7 +145,7 @@ In this task, you will create a pipeline that ingests data from an external sour
        - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
        - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
-        ![09](./Images/upfab-ric-cor-g5.png)
+            ![09](./Images/upfab-ric-cor-g5.png)
     
     - After the connection details are verified and you are signed in, click **Connect** to proceed.
     
@@ -155,7 +157,14 @@ In this task, you will create a pipeline that ingests data from an external sour
 
       ![09](./Images/fab-ric-ex1-g15.png)
 
-1. From the Top bar navigate to your Lakehouse by clicking on the **fabric_lakehouse (1)**, expand **Files (2)** and select the **new_data (3)** folder, refresh the page and verify that the **sales.csv (4)** file has been copied.
+1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+
+    > 📌**Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
+
+    ![](./Images/l2T1S14.png)
+
+
+1. From the Top bar, navigate to your Lakehouse by clicking on the **fabric_lakehouse (1)**, expand **Files (2)** and select the **new_data (3)** folder, refresh the page, and verify that the **sales.csv (4)** file has been copied.
 
     ![Account-manager-start](./Images/new_data1.png)
 
@@ -167,7 +176,7 @@ In this task, you will create a Spark notebook to transform the ingested data an
 
 1. On the **Home** page for your lakehouse, click on the **Analyze data with (1)** and select the **Notebook (2)** menu, then click on **New notebook (3)**.
 
-   ![](./Images/2026-05-14_18-23-19.png)
+   ![](./Images/L1T3S1-2506.png)
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -220,17 +229,19 @@ In this task, you will create a Spark notebook to transform the ingested data an
 
 In this task, you will modify the pipeline you created in Task 1 to include the notebook you created in Task 2. This will allow you to run the notebook as part of the pipeline workflow, enabling you to automate the data transformation and loading process.
 
-1. In the left navigation menu bar, select the **Ingest Sales Data** pipeline you created previously.
+1. In the top navigation menu bar, select the **Ingest Sales Data** pipeline you created previously.
+
+    ![](./Images/L2T3S1-2506.png)
 
 1. Open the **Activities (1)** tab, select the **ellipsis (...) (2)** menu, and choose **Delete data (3)**. Drag the new Delete data activity to the left of the Copy data activity and connect its **On completion** output to Copy data.
 
-    ![](./Images/fab-ms-ex1-g51.png)
+    ![](./Images/L2T3S2-2506.png)
 
-    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/L2T3S2.2-2302.png)
+    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/L2T3S2a-2506.png)
 
 1. Select the **Delete data** activity and, in the pane below the canvas, set **General (1)** → **Name (2)** to **Delete old files**.
 
-    ![](./Images/fab-ms-ex1-g52.png)
+    ![](./Images/L2T3S3-2506.png)
 
 1. In the **Source** section, configure the following:
     - **Connection**: Click on the dropdown menu **(1)** and select **Browse all (2)**. On the Choose a data source to get started, select your **Lakehouse (3)**.  
@@ -251,13 +262,13 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
     >📌**Note:** These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
 
-1. In the pipeline designer, select **Notebook** on the top command bar to add a **Notebook** activity to the pipeline.
+1. In the pipeline designer, from **Home (1)** tab select **Notebook (2)** on the top command bar to add a **Notebook** activity to the pipeline.
 
-    ![](./Images/fab-ms-ex1-g55.png)
+    ![](./Images/L2T3S6-2506.png)
 
 1. Select the **Copy data** activity and then connect its **On completion** output to the **Notebook** activity as shown here:
 
-    ![](./Images/notebookpline1.png)
+    ![](./Images/L2T3S7-2506.png)
 
 1. Select the **Notebook** activity, and then in the pane below the design canvas, set the following properties:
     - **General**:
@@ -273,17 +284,17 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
             | -- | -- | -- |
             | table_name | String | new_sales |
 
-            ![](./Images/L2T3S8.2-2302.png)
+            ![](./Images/L2T3S8b-2506.png)
 
     The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
 
 1. On the **Home (1)** tab, use the **&#128427;(2)** (*Save*) icon to save the pipeline. Then use the **&#9655; Run (3)** button to run the pipeline, and wait for all of the activities to complete.
 
-    ![](./Images/L2T3S9-2302.png)
+    ![](./Images/L2T3S9-2506.png)
 
-1. Navigate to your **Lakehouse** from the left navigation menu. 
+1. Navigate to your **fabric_lakehouse** from the top navigation menu. 
 
-    ![](./Images/l2T3S10.png)
+    ![](./Images/L2T3S10-2506.png)
 
 1. In the **Explorer** pane, refresh and expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
 

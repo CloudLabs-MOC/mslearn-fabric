@@ -2,9 +2,9 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## 📘 Lab Scenario
+## 📘 Workshop Scenario
 
-You are part of the data engineering team at Contoso Retail Analytics, responsible for enabling data-driven insights across the organization. Contoso collects large volumes of data from multiple sources such as point-of-sale systems, e-commerce platforms, and inventory systems, stored in formats like CSV files and structured exports. However, data ingestion is manual, transformations are inconsistent, and there is no centralized platform for scalable data management.
+You are part of the data engineering team at Contoso Retail Analytics, responsible for enabling data-driven insights across the organization. Contoso collects large volumes of data from multiple sources, such as point-of-sale systems, e-commerce platforms, and inventory systems, stored in formats like CSV files and structured exports. However, data ingestion is manual, transformations are inconsistent, and there is no centralized platform for scalable data management.
 
 To overcome these challenges, Contoso is implementing a unified data platform using **Microsoft Fabric**. The goal is to centralize data storage using a Lakehouse architecture and automate data ingestion and transformation using Data Factory Pipelines, ensuring data is consistently processed and readily available for analysis.
 
@@ -67,13 +67,13 @@ The architecture for this lab involves the following key components:
 
 ## 🚀 Getting Started with the Lab
 
-Welcome to your Work with Data Lake and Data Factory Pipelines in Microsoft Fabric​ Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](./Images/fab-gs-ms1-g1.png)
+![](./Images/guide-2506.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -83,13 +83,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./Images/exp-res-2302.png)
+![Explore Lab Resources](./Images/env-2506.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](./Images/split-2302.png)
+![Use the Split Window Feature](./Images/split-2506.png)
  
 ## Managing Your Virtual Machine
  
@@ -102,6 +102,12 @@ You can **Start, Stop, Restart (2)** your virtual machine from the **Resources (
 To adjust the zoom level of the lab guide, select the **A↕ (1)** icon and choose your preferred zoom **percentage (2)**.
 
 ![](./Images/ns-fab-g5.png)
+
+## Resize the Virtual Machine View
+
+Use the **slider (three vertical dots)** located between the **Virtual Machine** and the **Lab Guide** panes to adjust the display size, allowing you to customize the layout based on your preference.
+
+![](./Images/vmsize-2506.png)
 
 ## 📞 Support Contact
  
