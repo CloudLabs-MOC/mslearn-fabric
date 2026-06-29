@@ -170,6 +170,13 @@ In this task, you will create a pipeline that ingests data from an external sour
 
     >📌**Note:** You can also navigate to your Lakehouse by clicking your workspace and selecting the Lakehouse.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="2abc605f-e05f-487d-9bd5-5016c4047d65" />
+
 ## Task 2: Create a notebook
 
 In this task, you will create a Spark notebook to transform the ingested data and load it into a table. You will then run the notebook to verify that the data is correctly transformed and loaded.
