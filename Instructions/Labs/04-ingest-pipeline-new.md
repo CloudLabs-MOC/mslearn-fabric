@@ -46,7 +46,7 @@ In this task, you will create a pipeline that ingests data from an external sour
     - Location: **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**,
     - Click on **Create (3)**. 
     
-       ![](./Images/L2T1S3-2506.png)
+      ![](./Images/L2T1S3-2506.png)
    
 1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant**. This helps you quickly set up a data ingestion pipeline in Microsoft Fabric using a guided, low-code experience.
 
