@@ -34,19 +34,19 @@ In this task, you will create a pipeline that ingests data from an external sour
 
 1. From the left navigation menu, click on the workspace **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and select it **(2)**. 
 
-    ![](./Images/L2T1S1-2506.png)
+   ![](./Images/L2T1S1-2506.png)
 
 1. Click on **+ New item (1)** button in the top-left corner of your workspace, in the search box, search for **Pipeline (2)** and select **Pipeline (3)** from the list.
 
-    ![](./Images/L2T1S1a-2506.png)
+   ![](./Images/L2T1S1a-2506.png)
 
 1. On the New Pipeline window, enter the following details: 
 
-    - Name: **Ingest Sales Data Pipeline (1)** 
-    - Location: **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**,
-    - Click on **Create (3)**. 
+   - Name: **Ingest Sales Data Pipeline (1)** 
+   - Location: **dp_fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**,
+   - Click on **Create (3)**. 
     
-      ![](./Images/L2T1S3-2506.png)
+     ![](./Images/L2T1S3-2506.png)
    
 1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant**. This helps you quickly set up a data ingestion pipeline in Microsoft Fabric using a guided, low-code experience.
 
@@ -58,21 +58,21 @@ In this task, you will create a pipeline that ingests data from an external sour
 
 1. In the **Connection settings** pane, enter the following settings for the connection to your data source:
     
-    - URL: Enter the URL Below **(1)**
-        ```
-        https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
-        ```
-    - Connection: **Create new connection (2)**
-    - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (3)**
-    - Authentication kind: **Anonymous (4)**
-    - Leave everything else as default
-    - Click on **Next (5)**
+   - URL: Enter the URL Below **(1)**
+     ```
+     https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv
+     ```
+   - Connection: **Create new connection (2)**
+   - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (3)**
+   - Authentication kind: **Anonymous (4)**
+   - Leave everything else as default
+   - Click on **Next (5)**
   
-      ![03](./Images/E1T4S6.png)
+     ![03](./Images/E1T4S6.png)
     
 1. On the **Choose data** pane, keep the default settings and click **Next**.
     
-    ![05](./Images/l2T1S6.png)
+   ![05](./Images/l2T1S6.png)
    
 1. Wait for the data to be sampled, then verify the following settings:
 
@@ -82,19 +82,19 @@ In this task, you will create a pipeline that ingests data from an external sour
    - Click **Preview data (4)** to view a sample of the data.
    - After reviewing, close the preview and click **Next (5)**.
 
-        ![Account-manager-start](./Images/E1T4S8i.png)
+     ![Account-manager-start](./Images/E1T4S8i.png)
 
 1. On the **Choose data destination** page, click **OneLake catalog (1)** and select the lakehouse **fabric_lakehouse (2)**. This step ensures the ingested data is stored in your Lakehouse within Microsoft Fabric, making it available for further processing and analysis.
     
-    ![](./Images/l2T1S9.png)
+   ![](./Images/l2T1S9.png)
 
 1. On the **Settings** page, select **Full copy (1)**, scroll down to set the destination root folder set to **Files (2)** and then click **Next (3)** to proceed.
 
-    ![](./Images/E1T2S10.png)
+   ![](./Images/E1T2S10.png)
 
 1. On the **Map to destination** page, set **Folder path** to **new_data (1)** and **File name** to **sales.csv (2)**.
     
-    ![08](./Images/E1T2S11.png)
+   ![08](./Images/E1T2S11.png)
 
 1. Set the following file format options and leave all other settings at their default values:
 
@@ -104,71 +104,70 @@ In this task, you will create a pipeline that ingests data from an external sour
    - Row delimiter: **Line feed (\n) (4)**
    - Leave all other settings as default and click **Next (5)**
    
-        ![09](./Images/E1T4S12.png)
+     ![09](./Images/E1T4S12.png)
 
 1. On the **Review + save** page, verify the source and destination details, then click **Save** to create and run the copy job.
 
-    ![09](./Images/l2T1S12.png)
+   ![09](./Images/l2T1S12.png)
 
 1. A new pipeline containing a **Copy job** activity is created, as shown here:
 
-    ![](./Images/cpdta.png)
+   ![](./Images/cpdta.png)
 
 1. Click **Run** on the top menu to manually start the pipeline.
 
-    ![09](./Images/upfab-ric-ex1-g14.png)
+   ![09](./Images/upfab-ric-ex1-g14.png)
 
-1.  When prompted, click on **Save and run** to start the pipeline.
+1. When prompted, click on **Save and run** to start the pipeline.
 
-    ![09](./Images/fab-ric-ex1-g15.png)
+   ![09](./Images/fab-ric-ex1-g15.png)
 
-    > 📌**Note:** If you get an error `Copy job connection is required`, then perform the below-mentioned steps; otherwise, you can skip the below steps and proceed with **Step 17**.
-    >
-    > ![09](./Images/L2T1S16-error-2506.png)
+   > 📌**Note:** If you get an error `Copy job connection is required`, then perform the below-mentioned steps; otherwise, you can skip the below steps and proceed with **Step 17**.
+   >
+   > ![09](./Images/L2T1S16-error-2506.png)
 
-    - If the **Connection** field shows an error, select the **Copy job (1)** and switch to  **Settings (2)**, click on the dropdown **(3)** and select **Browse all (4)** to choose the correct connection manually.
+   - If the **Connection** field shows an error, select the **Copy job (1)** and switch to  **Settings (2)**, click on the dropdown **(3)** and select **Browse all (4)** to choose the correct connection manually.
 
-        ![09](./Images/manualcon.png)
+     ![09](./Images/manualcon.png)
     
-    - From the **Get data** page, select **Copy job (1)** under the **New sources** section to continue.
+   - From the **Get data** page, select **Copy job (1)** under the **New sources** section to continue.
 
-        ![09](./Images/fab-ric-cor-g3.png)
+     ![09](./Images/fab-ric-cor-g3.png)
     
-    - Set the following connection details:
+   - Set the following connection details:
 
-      - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (1)**
-      - Click **Sign in (2)** to authenticate if it shows You are not signed in.
+     - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (1)**
+     - Click **Sign in (2)** to authenticate if it shows You are not signed in.
 
-        ![09](./Images/upfab-ric-cor-g4.png)
+       ![09](./Images/upfab-ric-cor-g4.png)
     
-    - When prompted to sign in, select your **ODL_User** account or sign in manually using:
-       - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-       - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
+   - When prompted to sign in, select your **ODL_User** account or sign in manually using:
+      - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+      - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
 
-            ![09](./Images/upfab-ric-cor-g5.png)
+        ![09](./Images/upfab-ric-cor-g5.png)
     
-    - After the connection details are verified and you are signed in, click **Connect** to proceed.
+   - After the connection details are verified and you are signed in, click **Connect** to proceed.
     
-    - Once the **Copy job (1)** is configured, click **Run (2)** at the top to execute the pipeline.
+   - Once the **Copy job (1)** is configured, click **Run (2)** at the top to execute the pipeline.
 
-       ![09](./Images/upfab-ric-cor-g7.png)
+     ![09](./Images/upfab-ric-cor-g7.png)
     
-    - When prompted, click on **Save and run** to start the pipeline.
+   - When prompted, click on **Save and run** to start the pipeline.
 
-      ![09](./Images/fab-ric-ex1-g15.png)
+     ![09](./Images/fab-ric-ex1-g15.png)
 
 1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
 
-    > 📌**Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
+   > 📌**Note:** If you don't see any Output status, click on **View run status** on the top menu or check the notifications for a successful output.
 
-    ![](./Images/l2T1S14.png)
-
+   ![](./Images/l2T1S14.png)
 
 1. From the Top bar, navigate to your Lakehouse by clicking on the **fabric_lakehouse (1)**, expand **Files (2)** and select the **new_data (3)** folder, refresh the page, and verify that the **sales.csv (4)** file has been copied.
 
-    ![Account-manager-start](./Images/new_data1.png)
+   ![Account-manager-start](./Images/new_data1.png)
 
-    >📌**Note:** You can also navigate to your Lakehouse by clicking your workspace and selecting the Lakehouse.
+   >📌**Note:** You can also navigate to your Lakehouse by clicking your workspace and selecting the Lakehouse.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task.
@@ -185,17 +184,17 @@ In this task, you will create a Spark notebook to transform the ingested data an
 
    ![](./Images/L1T3S1-2506.png)
 
-    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
+   After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
 1. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration.
 
-    ```python
+   ```python
    table_name = "sales"
-    ```
+   ```
 
 1. Open the **ellipsis (...) (1)** menu for the cell and select **Toggle parameter cell (2)** to mark this cell as a parameter cell for pipeline runs. This allows the value to be dynamically passed from a pipeline during execution, enabling parameterized and reusable workflows in Microsoft Fabric.
 
-    ![](./Images/ns-fab-g3.png)
+   ![](./Images/ns-fab-g3.png)
 
 1. Below the parameters cell, select **+ Code (1)** to insert a new code cell, then paste the transformation code into that cell (2). This code loads the data from the `sales.csv` file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a table - appending the data if the table already exists.
 
