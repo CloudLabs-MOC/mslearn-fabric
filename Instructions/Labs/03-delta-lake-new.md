@@ -105,6 +105,14 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
    ![](./Images/L1T1S12-2506.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="adb66a68-6dc1-467d-8e9b-479d658c9f81" />
+
+
 ## Task 2: Create a lakehouse and upload data
 
 In this task, you will create a new lakehouse in your workspace and upload a CSV file to it.
@@ -161,6 +169,13 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 1. After the file has been uploaded, select the **products** folder, and verify that the **products.csv** file has been uploaded, as shown here:
 
     ![](./Images/fileuploddone.png)
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="3c41f157-c3f1-4d85-b905-d0cb1af35254" />
 
 <!--
 1. Download the data file for this exercise from [https://github.com/MicrosoftLearning/dp-data/raw/main/products.csv](https://github.com/MicrosoftLearning/dp-data/raw/main/products.csv), saving it as **products.csv** on your local computer (or lab VM if applicable).
