@@ -60,24 +60,20 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 1. When **Stay signed in?** prompted, click on **Yes**.
   
    ![](./Images/fabric-image4.png)
-   
-   > **Note**: If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
-   >
-   >   ![](./Images/fabric-image5.png)
 
-1. On the **Fabric** home page, click the **Fabric** icon from the left pane to open the Fabric experience.
-
-   ![](./Images/fabric-image6.png)
-
-1. In the **Power BI** view, select **Power BI** from the dropdown.
+1. After signing in, confirm you land on the **Power BI Home** page with the **Power BI** icon highlighted in the left navigation pane.
 
    ![](./Images/fabric-image7.png)
+
+   > **Note**: When you sign in to the Microsoft Fabric portal for the first time, a **Microsoft Fabric (Free)** license is automatically assigned to your account for personal use.
+   >
+   >![](./Images/note.png)
 
 1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Start trial (2)** of Microsoft Fabric.
 
    ![](./Images/E1T1S7.png)
 
-   >**Note:** The Fabric trial is enabled to ensure that your account has access to Microsoft Fabric features and experiences. However, the hands-on lab resources and workloads in this guide are configured to use the F2 Fabric capacity provided for the lab environment. The trial activation is only to enable Fabric access for your user account and does not replace the dedicated F2 capacity used throughout the lab.
+   >**Note:** For this lab, we use a pre-created Fabric (F2) capacity as the backend engine that runs all workloads — lakehouses, pipelines, and reports. However, F2 capacity alone doesn't grant a user permission to create or share Power BI content, since it's below the threshold for free-license access. To enable this, each user is assigned a Power BI Pro trial license, which unlocks the ability to create and share reports within the workspace
 
 1. On the **Start 60-day free Pro trial** window, click **Start trial** to activate your free 60-day Pro trial.
 
@@ -93,8 +89,6 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/fb_ex1_6.png)
 
-   > **Note:** You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
-
 1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;). Select **+ New workspace (2)**
 
    ![](./Images/fabric-image13.png)
@@ -106,8 +100,8 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
    ![](./Images/L1T1P12.png)
 
    > **Note**: If you receive the **Introducing task flows (preview)** pop-up, click **Got it** to continue.
-
-   ![](<./Images/fb_ex1_8.png>)
+   >
+   >![](<./Images/fb_ex1_8.png>)
 
 1. When your new workspace opens, it should be empty.
 
@@ -115,6 +109,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. In the workspace, click the **Manage access** option from the upper-right corner to open the **Manage access** pane and click on **+ Add people or groups**.
 
+   ![Manage Access](<./Images/L1T1S11-i.png>)
    ![Manage Access](<./Images/L1T1S11.png>)
 
 1. In the **Add people** pane, enter **https://aec-svc/** **(1)**, ensure the permission is set to **Admin (2)** by using dropdown, and then click **Add (3)**.
@@ -135,7 +130,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
 1. Ensure the **Power BI** **(1)** icon is visible in the left pane. Click on **+ New item** **(2)** at the top of the workspace.
 
-   ![](./Images/E1T2S1.png)
+   ![](./Images/E1T2S1-1.png)
 
 1. Search for **Lakehouse (1)** and select the option labeled **Lakehouse (2)** from the results.
 

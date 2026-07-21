@@ -33,7 +33,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
 1. In the Microsoft Fabric portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**, then click **Power BI** **(1)** on the left navigation bar, and click **+ New item** **(2)**.
 
-   ![](<./Images/L2T1S1.png>)
+   ![](<./Images/L2T1S1-2.png>)
 
 1. On the **New item** page, search for **notebook** **(1)** in the search bar and select **Notebook** **(2)**.
 
@@ -63,13 +63,13 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
 1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**
 
-   ![](<./Images/img7.png>)
+    ![](<./Images/img7.png>)
 
-1. On the Upload files dialog, click the folder icon on the right to **browse**, go to path **C:\LabFiles\dp-data-main** and select the **prodcuts.csv (1)** file from your local or lab machine and click on **Open (2)**
+1. On the Upload files dialog, click the folder icon on the right to **browse**, go to path **C:\LabFiles\dp-data-main** and select the **prodcuts.csv (1)** file from your local or lab machine and click on **Open (2)**.
 
-   ![](<./Images/imgupload.png>)
+    ![](<./Images/imgupload.png>)
 
-   ![](<./Images/img999.png>)
+    ![](<./Images/img999.png>)
 
 1. On the Upload files dialog, after selecting the **prodcuts.csv** file, click **Upload (1)** to upload the file into the raw folder.
 
@@ -121,13 +121,13 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    print(f"Staged row count: {df_clean.count()}")
    df_clean.show(5)
    ```
-   ![](<./Images/img9.png>)
+    ![](<./Images/img9.png>)
 
 1. In the **Explorer** pane, Click it on the **(...) (1)** of the onelake and click on  the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
 
-   ![](<./Images/img12.png>)
+    ![](<./Images/img12.png>)
 
-   ![](<./Images/img11.png>)
+    ![](<./Images/img11.png>)
 
 <validation step="e2e302bd-e8e0-45c5-9a8d-4c1d5f332079" />
 
@@ -144,7 +144,7 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
 1. Click **+ New item** **(2)** at the top of the workspace.
 
-   ![](<./Images/E1T2S1.png>)
+    ![](<./Images/E1T2S1.png>)
 
 1. On the **New item** page, search for **Pipeline** **(1)** in the search bar and select **Pipeline** **(2)**.
 
@@ -152,11 +152,11 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
 1. In the **New pipeline** popup, enter **pl_ingest_and_load** **(1)** as the pipeline name, then click **Create** **(2)**.
 
-   ![](<./Images/img14.png>)
+    ![](<./Images/img14.png>)
 
 1. The pipeline canvas opens with an empty design surface. You will add activities in the next tasks.
 
-   ![](<./Images/img15.png>)
+    ![](<./Images/img15.png>)
 
 ## Task 3: Add a Copy Activity to ingest data into the Lakehouse
 
@@ -164,15 +164,15 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
 1. On the pipeline canvas, click **Activity (1)** and click on **Copy data** **(2)** from the **Activities** toolbar and select **Add copy data activity (3)**.
 
-   ![](<./Images/img16.png>)
+    ![](<./Images/img16.png>)
 
 1. Select the **Copy data (1)** activity on the canvas and click the **General** tab at the bottom. Set the **Name** to **Products CSV** **(2)**.
 
-   ![](<./Images/img17.png>)
+    ![](<./Images/img17.png>)
 
 1. Click the **Source** **(1)** tab. Under **Fabric item connections**, click **Browse all** **(2)** to create a new connection.
 
-   ![](<./Images/img18.png>)
+    ![](<./Images/img18.png>)
 
 1. In the **Choose a data source to get started** dialog:
 
@@ -180,22 +180,19 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
       ![](<./Images/img19.png>)
 
-   - Under the connection settings in the **URL field** **(1)**, enter the following and click on **Connect (2)**:
+   - Under the connection settings in the **URL field** **(1)**, enter the Connection name as **Connection (2)**:
 
      ```
      https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv
      ```
-     ![](<./Images/img20.png>)
-
    - Set **Authentication kind** to **Anonymous** **(3)**.
-     
-   - Click **Create** **(4)**.
-     
-      ![](<./Images/img22.png>)
+   - Click **Connect** **(4)**.
+   
+        ![](<./Images/img22.png>)
 
 1. Back on the **Source** tab, under **File format**, confirm the format is set to **DelimitedText**.
 
-   ![](<./Images/img21.png>)
+    ![](<./Images/img21.png>)
   
 1. Click the **Destination** tab:
 
@@ -218,11 +215,11 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
 1. On the pipeline canvas, from the **Activities** toolbar, select **Notebook** **(1)** to add a Notebook activity.
 
-   ![](<./Images/img26.png>)
+    ![](<./Images/img26.png>)
 
 1. Select the **Notebook (1)** activity on the canvas and click the **General (2)** tab. Set the **Name** to **Transform to Delta** **(3)**.
 
-   ![](<./Images/img27.png>)
+    ![](<./Images/img27.png>)
 
 1. Click the **Settings** **(1)** tab:
 
@@ -232,7 +229,7 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
 1. Now connect the two activities. Hover over the right edge of the **Copy Products CSV** activity until the green checkmark (&#10004;) connector appears. Drag it to the **Transform to Delta** activity.
 
-   ![](<./Images/img29.png>)
+    ![](<./Images/img29.png>)
 
    > **Note**: The green connector means the Notebook activity will only run **on success** of the Copy activity. This ensures transformation only occurs after data is successfully ingested.
 
@@ -244,11 +241,11 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. Select the **myDataWarehouse** **(2)** warehouse to open it.
 
-   ![](<./Images/L2T4S1.png>)
+    ![](<./Images/L2T4S1.png>)
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)**.
 
-   ![](<./Images/L1T62.png>)
+    ![](<./Images/L1T62.png>)
 
 1. Paste the following SQL and click **Run (2)** to create the target table:
 
@@ -263,7 +260,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
    );
    GO
    ```
-   ![](<./Images/img30.png>)
+    ![](<./Images/img30.png>)
 
 1. Verify that the table **DimProductStaging** appears in the **Explorer** pane under **dbo > Tables**. Click **Refresh** if needed.
 
@@ -277,7 +274,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
    ```
    >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e. Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products
 
-   ![](<./Images/img32.png>)
+    ![](<./Images/img32.png>)
 
    > **Note**: Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
 
@@ -285,11 +282,11 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. From the **Activities (1)** toolbar, select **Script** **(2)** to add a Script activity to the pipeline canvas.
 
-   ![](<./Images/img33.png>)
+    ![](<./Images/img33.png>)
 
 1. Select the **Script (1)** activity on the canvas and click the **General** tab. Set the **Name** to **Load to Warehouse** **(2)**.
 
-   ![](<./Images/img34.png>)
+    ![](<./Images/img34.png>)
 
 1. Click the **Settings** **(1)** tab:
 
@@ -317,13 +314,13 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. Connect the **Transform to Delta** activity to the **Load to Warehouse** activity using the green (on success) connector, just as you did in Task 4.
 
-   ![](<./Images/img36.png>)
+    ![](<./Images/img36.png>)
 
 1. Your completed pipeline should now look like this, with three activities connected in sequence:
 
    > Products CSV ──▶ Transform to Delta ──▶ Load to Warehouse
 
-   ![](<./Images/img37.png>)
+    ![](<./Images/img37.png>)
 
 ## Task 6: Run and monitor the pipeline
 
@@ -335,7 +332,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. Once validation passes, click **Run** to execute the pipeline.
 
-   ![](<./Images/img39.png>)
+    ![](<./Images/img39.png>)
 
 1. If prompted to save, click **Save and run**.
 

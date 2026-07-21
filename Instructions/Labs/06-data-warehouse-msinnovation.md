@@ -113,6 +113,8 @@ A warehouse is a relational database in which you can define tables and other ob
 
    > **Note:** Ensure that the contents of all three files are pasted into the **same query editor** and in the **same order** before running the script.
 
+   > **Note:** If running all three scripts together doesn't work, run each script separately in different queries and wait for it to complete before running the next. If a pop-up appears saying **Power BI page is unresponsive**, select **Wait** and continue waiting until the script executes successfully.
+
 1. For copy-pasting inside the VM:
 
    - Set **Clipboard access** to **Allow**.
@@ -256,7 +258,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 ### Create a View
 
-1. Modify the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).
+1. Modify the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view) and **run** the query to create the view.
 
    ```sql
    CREATE VIEW vSalesByRegion
@@ -271,8 +273,11 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
    JOIN DimCustomer AS c ON so.CustomerKey = c.CustomerKey
    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion;
    ```
+   ![](<./Images/p3t5s1.png>)
 
-1. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view is listed in the **Explorer** pane.
+1. Then **refresh** the data warehouse schema and verify that the new view is listed in the **Explorer** pane.
+
+   ![](<./Images/p3t5s2.png>)
 
 1. Create a new SQL query and run the following SELECT statement. This query displays sales revenue by year, month, and sales region using the vSalesByRegion view, with results sorted chronologically.
 
@@ -281,6 +286,9 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
    FROM vSalesByRegion
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
    ```
+   ![](<./Images/p3t5s3.png>)
+
+   ![](<./Images/p3t5s4.png>)
 
 ### Create a visual query
 
