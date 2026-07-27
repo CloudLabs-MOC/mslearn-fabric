@@ -73,23 +73,19 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/fabric-image7.png)
 
-1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Start trial (2)** of Microsoft Fabric.
+1. From the PowerBI home page, select **Account Manager `(1)`** from the top-right corner to start the **Trial_Section_Button_S `(2)`** of Microsoft Fabric.
 
    ![](./Images/E1T1S7.png)
 
    >**Note:** The Fabric trial is enabled to ensure that your account has access to Microsoft Fabric features and experiences. However, the hands-on lab resources and workloads in this guide are configured to use the F2 Fabric capacity provided for the lab environment. The trial activation is only to enable Fabric access for your user account and does not replace the dedicated F2 capacity used throughout the lab.
 
-1. On the **Start 60-day free Pro trial** window, click **Start trial** to activate your free 60-day Pro trial.
-
-   ![Start-trial](<./Images/fb_ex1_5.png>)
-
-1. On the **All paid features of Power BI are yours for 60 days** confirmation window, click **Got it** to continue.
+1. On the **Your Power BI trial is active** confirmation window, click **Got it** to continue.
 
    ![](./Images/L1T1S9.png)
 
    > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
 
-1. Click the **Account manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Trial Status (2)** shows the number of days remaining.
+1. Click the **Account manager `(1)`** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status `(2)`** shows the number of days remaining.
 
    ![](./Images/fb_ex1_6.png)
 
@@ -113,13 +109,14 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![Screenshot of an empty workspace in Power BI.](<./Images/L1T1S10.png>)
 
-1. In the workspace, click the **Manage access** option from the upper-right corner to open the **Manage access** pane and click on **+ Add people or groups**.
+1. In the workspace, click the **Manage access `(1)`** option from the upper-right corner to open the **Manage access** pane and click on **+ Add people or groups**.
 
+   ![](<./Images/fb_ex1_5.png>)
    ![Manage Access](<./Images/L1T1S11.png>)
 
 1. In the **Add people** pane, enter **https://aec-svc/** **(1)**, ensure the permission is set to **Admin (2)** by using dropdown, and then click **Add (3)**.
 
-   ![Add Service Principal](<./Images/L1T1S12.png>)
+   ![](<./Images/L1T1S12.png>)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
@@ -292,7 +289,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 1. On the **Group by** dialog, configure the following **Basic** **(1)** settings:
 
-   - **Group by**: SalesOrderNumber **(2)**
+   - **Group by**: SalesOrderLineNumber **(2)**
    - **New column name**: LineItems **(3)**
    - **Operation**: Count distinct values **(4)**
    - **Column**: SalesOrderLineNumber **(5)**

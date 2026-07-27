@@ -206,7 +206,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
      ![](<./Images/img23.png>)
     
    - Set **Root folder** to **Files (1)**.
-   - In the **File path** field, enter the folder path **raw** **(2)** and file name **products.csv** **(2)**.
+   - In the **File path** field, enter the folder path **raw** **(2)** and file name **products.csv** **(2)**. Save the file from Home menu.
      
      ![](<./Images/img24.png>)
 
