@@ -231,7 +231,7 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
 
 1. Use the **&#9655;** (*Run cell*) button on the left of the cell to run it.
 
-    ![](./Images/fab-ms-ex1-g21.png)
+    ![](./Images/E1T3S6.png)
 
     > 📌**Note**: Since this is the first time you've run any Spark code in this notebook, a Spark session must be started. This means that the first run can take a minute or so to complete. Subsequent runs will be quicker.
 
@@ -251,7 +251,7 @@ In this task, you will create delta tables based on the data in the dataframe. Y
 
 1. Under the results returned by the first code cell, use the **+ Code** button to add a new code cell
 
-   ![](./Images/L1T4S1-2302.png)
+   ![](./Images/E1T4S1.png)
 
     > 📌**Note:** If the **+ Code** button isn’t visible, hover your mouse in the empty notebook area; the option will appear.
 
@@ -261,7 +261,7 @@ In this task, you will create delta tables based on the data in the dataframe. Y
    df.write.format("delta").saveAsTable("managed_products")
     ```
 
-   ![](./Images/fab-ms-ex1-g23.png)
+   ![](./Images/E1T4S2.png)
 
 1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Tables** folder and select **Refresh (2)**.
 
@@ -277,7 +277,7 @@ You can also create *external* tables for which the schema metadata is defined i
 
 1. Select **+ Code** to add a new code cell.
 
-   ![](./Images/fab-ms-ex1-g26.png)
+   ![](./Images/E1T4-1S1.png)
 
    > 📌**Note:** If the **+ Code** button doesn’t appear, move your mouse around the empty notebook area; it will show up when you hover.
 
@@ -301,7 +301,7 @@ You can also create *external* tables for which the schema metadata is defined i
 
 1. After replacing **<abfs_path>** with the correct ABFS path, select **Run** to execute the cell.
 
-   ![](./Images/fab-ms-ex1-g27.png)
+   ![](./Images/E1T4-1S5.png)
 
 1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Tables** folder and select **Refresh (2)**. Then expand **Tables** and verify that the **external_products (3)** table has been created.
 
@@ -325,7 +325,7 @@ Let's explore the differences between managed and external tables.
    
    The output will look similar to this:
 
-    ![](./Images/L1T4.3S1-2302.png)
+    ![](./Images/E1T4-2S1.png)
    
    In the results, view the **Location** property for the table, which should be a path to the OneLake storage for the lakehouse ending with **/Tables/managed_products** (you may need to widen the **Data type** column to see the full path).
 
@@ -339,7 +339,7 @@ Let's explore the differences between managed and external tables.
 
    The output will look similar to this:
 
-    ![](./Images/descext.png)
+    ![](./Images/E1T4-2S2.png)
 
    In the results, view the **Location** property for the table, which should be a path to the OneLake storage for the lakehouse ending with **/Files/external_products** (you may need to widen the **Data type** column to see the full path).
 
@@ -388,7 +388,7 @@ Let's explore the differences between managed and external tables.
 
    The output will look similar to this:
    
-    ![](./Images/starselect.png)
+    ![](./Images/E1T4-2S3.png)
 
 ## Task 5: Explore table versioning
 
@@ -555,7 +555,7 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
    deltastream.stop()
     ```
 
-    ![](./Images/L1T6S6-2302.png)
+    ![](./Images/E1T6S6.png)
 
 ## 🧾 Summary
 
