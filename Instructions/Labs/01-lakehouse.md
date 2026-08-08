@@ -4,7 +4,7 @@
 
 ## 📘 Scenario
 
-Contoso Retail wants to improve its data analytics capabilities by bringing together data from multiple sources into a unified platform. The organization has chosen Microsoft Fabric Lakehouse to store, manage, and analyze both structured and unstructured data at scale.
+Contoso Retail wants to improve its data analytics capabilities by bringing together data from multiple sources into a unified platform. The organization has chosen **Microsoft Fabric Lakehouse** to store, manage, and analyze both **structured** and **unstructured** data at scale.
 
 As a Data Analyst, you will create a Fabric workspace and Lakehouse, ingest and transform data, query it using SQL and visual tools, and build interactive Power BI reports to generate actionable business insights.
 
@@ -43,7 +43,13 @@ In this task, you will create a new workspace that serves as a collaborative env
 
 Before working with data in Fabric, create a workspace with the Fabric trial enabled.
 
-1. Open the Edge browser and sign in to [Microsoft Fabric](https://app.fabric.microsoft.com).
+1. Open the **Microsoft Edge** browser and sign in to **Microsoft Fabric** Portal using following link.
+
+   ```
+   https://app.fabric.microsoft.com
+   ```
+
+   ![](./Images/edge.png)   
 
 1. On the **Microsoft Fabric** page, enter the following email and click on **Submit** **(2)**.
 
@@ -65,17 +71,17 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
    >
    >   ![](./Images/fabric-image5.png)
 
-1. On the **Fabric** home page, click the **Fabric** icon from the left pane to open the Fabric experience.
+1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to PowerBI experience.
 
    ![](./Images/fabric-image6.png)
 
-1. In the **Power BI** view, select **Power BI** from the dropdown.
+1. Select **Power BI** from the dropdown to change to **PowerBI** view
 
    ![](./Images/fabric-image7.png)
 
-1. From the PowerBI home page, select **Account Manager `(1)`** from the top-right corner to start the **Trial_Section_Button_S `(2)`** of Microsoft Fabric.
+1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Trial_Section_Button_S (2)** of Microsoft Fabric.
 
-   ![](./Images/E1T1S7.png)
+   ![](./Images/ETS117.png)
 
    >**Note:** The Fabric trial is enabled to ensure that your account has access to Microsoft Fabric features and experiences. However, the hands-on lab resources and workloads in this guide are configured to use the F2 Fabric capacity provided for the lab environment. The trial activation is only to enable Fabric access for your user account and does not replace the dedicated F2 capacity used throughout the lab.
 
@@ -85,7 +91,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
 
-1. Click the **Account manager `(1)`** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status `(2)`** shows the number of days remaining.
+1. Click the **Account manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status (2)** shows the number of days remaining.
 
    ![](./Images/fb_ex1_6.png)
 
@@ -109,7 +115,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![Screenshot of an empty workspace in Power BI.](<./Images/L1T1S10.png>)
 
-1. In the workspace, click the **Manage access `(1)`** option from the upper-right corner to open the **Manage access** pane and click on **+ Add people or groups**.
+1. In the workspace, click the **Manage access (1)** option from the upper-right corner to open the **Manage access** pane and click on **+ Add people or groups (2)**.
 
    ![](<./Images/fb_ex1_5.png>)
    ![Manage Access](<./Images/L1T1S11.png>)
@@ -118,9 +124,13 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](<./Images/L1T1S12.png>)
 
+1. Close the **Add people** pane, once it is added.
+
+   ![](<./Images/ETS1114.png>)
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
-> - If you receive a success message, you can proceed to the next task.
+> - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
@@ -132,7 +142,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
 1. Ensure the **Power BI** **(1)** icon is visible in the left pane. Click on **+ New item** **(2)** at the top of the workspace.
 
-   ![](./Images/E1T2S1.png)
+   ![](<./Images/ETS121.png>)
 
 1. Search for **Lakehouse (1)** and select the option labeled **Lakehouse (2)** from the results.
 
@@ -157,17 +167,17 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 1. On the **Lakehouse explorer** pane, click the ellipses **(1)** next to the **Files** folder, then select **New subfolder** **(2)**.
 
-   ![](./Images/L1T3S2-1.png)
+   ![](./Images/ETS122.png)
 
 1. On the **New subfolder** pane, enter **data** **(1)** in the **Folder name** field, then click **Create** **(2)** to add the subfolder.
 
    ![](./Images/fb_g2_1_5.png)
 
-1. On the **Lakehouse explorer** pane, click the ellipses **(1)** next to the **data** folder, hover over **Upload** **(2)**, then select **Upload files** **(3)**.
+1. On the **Lakehouse explorer** pane, click the **ellipses (1)** next to the **data** folder, hover over **Upload** **(2)**, then select **Upload files** **(3)**.
 
    ![](<./Images/L1T3S4.png>)
 
-1. On the **Upload files** dialog, click the folder icon on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv** file from your lab machine.
+1. On the **Upload files** dialog, click the **folder icon** on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv (1)** file from your lab machine and click on **Open (2)**.
 
    ![](<./Images/fb_g2_1_7.png>)
    
@@ -193,7 +203,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
 
-1. In the **ellipses (1)** menu for the **Files** folder, select **New shortcut (2)**.
+1. In the **Explorer** menu, click on **ellipses (1)** next to the **Files** folder, select **New shortcut (2)**.
 
    ![](./Images/L1T4S1.png)
 
@@ -209,7 +219,9 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    ![](<./Images/fb_g2_1_11-1.png>)
 
-1. In the **data** folder, click the ellipses next to the **sales.csv** file to open the context menu.
+   > **Note**: If the **sales** table does not automatically appear, in the **ellipses** menu for the **Tables** folder, select **Refresh**.
+
+1. In the **data** folder, click the **ellipses** next to the **sales.csv** file to open the context menu.
 
    ![](<./Images/fb_g2_1_12.png>)
 
@@ -219,13 +231,13 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
 1. In the **Load file to new table** dialog box, set the table name to **sales (1)** and confirm the load operation by selecting **Load (2)**. Then wait for the table to be created and loaded.
 
-   > **Tip**: If the **sales** table does not automatically appear, in the **ellipses** menu for the **Tables** folder, select **Refresh**.
-
    ![](./Images/L1T5S4-1.png)
 
 1. In the **Lakehouse explorer** pane, expand **Lakehouse** **(1)**, then expand **Tables** and select **sales** **(2)**. Confirm that the data from the **sales.csv** file is now loaded and displayed in table format **(3)**.
 
    ![Screenshot of a table preview.](./Images/L1T5S5.png)
+
+   > **Note**: If the **sales** table does not automatically appear, in the **explorer** menu, click on the **ellipses** next to **Tables** folder then select **Refresh**.
 
 1. In the **ellipses (1)** menu for the **sales** table, select **View files (2)** to see the underlying files for this table.
 
@@ -241,14 +253,15 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from **Analyze data with (1)** to **SQL analytics endpoint (2)**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query
-   It's tables, as shown here:
+1. At the top-right of the Lakehouse page, switch from **Analyze data with (1)** to **SQL analytics endpoint (2)**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query the tables.
 
    ![Screenshot of the SQL endpoint page.](./Images/L1T6S1.png)
 
 1. On the **Home** tab, click the dropdown arrow next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
-   ![Screenshot of the SQL endpoint page.](./Images/L1T62.png)
+   ![Screenshot of the SQL endpoint page.](./Images/ETS171.png)
+
+   ![](./Images/ETS172.png)
 
 1. In the new query editor, enter the following SQL query to calculate the total revenue by item:
 
@@ -269,9 +282,9 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 1. On the **Home** tab, click the dropdown arrow next to **New SQL query** **(1)**, then select **New visual query** **(2)** to open the visual query editor.
 
-   ![Screenshot of a Visual query.](./Images/L1T7S1.png)
+   ![Screenshot of a Visual query.](./Images/ETS173.png)
 
-1. Drag the **sales (1)** table to the new visual query editor pane that opens to create a **Power Query (2)** as shown here:
+1. In the Explorer pane, expand **Lakehouse → Schemas → dbo → Tables**. Drag the **sales (1)** table to the new visual query editor pane that opens to create a **Power Query (2)** as shown here:
 
    ![Screenshot of a Visual query.](./Images/L1T7S2.png)
 
@@ -303,7 +316,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
 In this task, we will create a new semantic model and add a table to the dataset, which will define the data model to be used for reporting in Power BI.
 
-1. Under the **Home** tab, click on **New semantic model** **(1)** to create the semantic model.
+1. Under the **Home** tab, click on **New semantic model** to create the semantic model.
 
    ![Screenshot of a data model.](./Images/L1T8S1.png)
 
@@ -313,11 +326,11 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![](./Images/task8-2.1.png)
 
-1. In the hub menu bar on the left, click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**.
+1. In the hub menu bar on the left, click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**.
 
    ![](./Images/L1T8S3.png)
 
-1. Select the **Custom semantic model** and click on **Create report** option to begin creating a report using the semantic model.
+1. Click on **ellipses** next to the **Custom semantic model** and click on **Create report** option to begin creating a report using the semantic model.
 
    ![](./Images/L1T8S4.png)
 
@@ -349,7 +362,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![](./Images/L1T8S8.png)
 
-1. To share your report with your team or external users, click the Share button located in the top-right corner of the report. Enter the recipient's name or email address, configure the required access permissions, and then click Grant Access to share the report.
+1. To share your report with your team or external users, click the **Share** button located in the top-right corner of the report. Enter the recipient's name or email address, configure the required access permissions, and then click Grant Access to share the report.
 
    ![](./Images/share_button.png)
 
@@ -364,7 +377,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 >
-> - If you receive a success message, you can proceed to the next task.
+> - Hit the Inline Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 

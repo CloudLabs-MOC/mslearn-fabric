@@ -4,7 +4,7 @@
 
 ## 📘 Scenario
 
-Contoso Retail wants to improve its reporting and decision-making capabilities by centralizing business data in a modern analytics platform. The organization has chosen Microsoft Fabric Data Warehouse to store, organize, and analyze data from multiple sources in a structured and scalable way.
+Contoso Retail wants to improve its reporting and decision-making capabilities by centralizing business data in a modern analytics platform. The organization has chosen **Microsoft Fabric Data Warehouse** to store, organize, and analyze data from multiple sources in a **structured** and **scalable** way.
 
 As a Data Analyst, you will create a Data Warehouse, load and manage data, build a data model, run SQL queries, create views, and develop Power BI reports to generate meaningful business insights.
 
@@ -32,7 +32,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will provision a new data warehouse within Microsoft Fabric. A data warehouse in Fabric offers a fully managed relational database designed for large-scale analytics. Unlike the default read-only SQL endpoint provided for lakehouse tables, a data warehouse supports complete SQL capabilities, including inserting, updating, and deleting data. This enables you to design and manage structured schemas, load data efficiently, and prepare it for advanced querying and reporting.
 
-1. In the Power BI portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**, then click **Power BI** **(1)** on the left navigation bar, and click **+ New item** **(2)** to create a new workspace item.
+1. In the **Power BI (1)** portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**. click **+ New item** **(2)** to create a new workspace item.
 
    ![](<./Images/L2T1S1.png>)
 
@@ -40,7 +40,7 @@ In this task, you will provision a new data warehouse within Microsoft Fabric. A
 
    ![](<./Images/L2T1S2.png>)
 
-1. On the **New warehouse** pane, enter **myDataWarehouse** **(1)** in the Name field, then click **Create** **(2)** to provision the warehouse.
+1. On the **New warehouse** dialog box, enter **myDataWarehouse** **(1)** in the Name field, then click **Create** **(2)** to provision the warehouse.
 
    ![](<./Images/E2T1S3.png>)
 
@@ -80,35 +80,40 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
+   ![](<./Images/ETS171.png>)
+
+   ![](<./Images/ETS172.png>)
+
+1.  Insert the below query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
+
+      ```sql
+      INSERT INTO dbo.DimProduct
+      VALUES
+      (1, 'RING1', 'Bicycle bell', 'Accessories', 5.99),
+      (2, 'BRITE1', 'Front light', 'Accessories', 15.49),
+      (3, 'BRITE2', 'Rear light', 'Accessories', 15.49);
+      GO
+      ```
+
+      ![](<./Images/L2T2S6.png>)
+
+1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand **Schemas** **(2)**, **dbo** **(3)**, and **Tables** **(4)**, then select the **DimProduct** table **(5)** and click on **Data Preview (6)** to verify the three inserted rows
+
+   ![](<./Images/L2T2S7-1.png>)
+
+1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
+
    ![](<./Images/L1T62.png>)
-
-   ![](<./Images/11ed.png>)
-
-1. After inserting the query, click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
-
-   ```sql
-   INSERT INTO dbo.DimProduct
-   VALUES
-   (1, 'RING1', 'Bicycle bell', 'Accessories', 5.99),
-   (2, 'BRITE1', 'Front light', 'Accessories', 15.49),
-   (3, 'BRITE2', 'Rear light', 'Accessories', 15.49);
-   GO
-   ```
-
-   ![](<./Images/L2T2S6.png>)
-
-1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand **Schemas** **(2)**, **dbo** **(3)**, and **Tables** **(4)**, then select the **DimProduct** table **(5)** and verify that the three inserted rows are displayed in the data preview.
-
-   ![](<./Images/L2T2S7.png>)
 
 1. Open each script link in a separate browser tab. Copy the complete Transact-SQL code from the **Dimensions Script**, **FactSalesOrder Script - Part 1**, and **FactSalesOrder Script - Part 2**. Paste all three scripts into the same SQL query editor in the exact order listed, then click Run to execute the complete script.
 
    - [Dimensions Script](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/Dimensions.txt)
    - [FactSalesOrder Script - Part 1](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-1.txt)
-   - **Note:** After pasting into the SQL Query editor, please type **GO** at the of the line then Run the query.
+
+   - **Note:** After pasting into the SQL Query editor, please type **GO** at the end of the line then Run the query.
 
       ![](<./Images/editquery.png>)
-      
+
    - [FactSalesOrder Script - Part 2](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-2.txt)
 
    > **For Windows users**: To copy the entire file content, press **Ctrl + A** to select all the text, and then press **Ctrl + C** to copy it and **Ctrl + V** to paste it.
@@ -154,15 +159,15 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![](./Images/L2T3S2-1.png)
 
-1. In the hub menu bar on the left, Click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**
+1. In the hub menu bar on the left, Click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**
 
    ![](<./Images/L2T3S3.png>)
 
-1. Select the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
+1. Click on **ellipses** next to the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
 
    ![](<./Images/L2T3S4.png>)
 
-1. At the top right corner, Click on **Viewing (1)** to change it to **Editing** **2** permission settings. 
+1. At the top right corner, Click on **Viewing (1)** to change it to **Editing** **(2)** permission settings. 
 
    ![](<./Images/L2T3S5.png>)
 
@@ -214,7 +219,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor
 
-   ![](<./Images/L1T62.png>)
+   ![](<./Images/ETS171.png>)
 
 1. Copy and paste the following code and click on **Run**: This query calculates **monthly sales revenue** by combining **sales and date data**, and displays the results in chronological order.
 
@@ -248,9 +253,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
    ```
 
-1. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region.
-
-    This query calculates total sales revenue by month, year, and sales region, and displays the results in chronological order.
+1. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region. This query calculates total sales revenue by month, year, and sales region, and displays the results in chronological order.
 
    ![](<./Images/L2T4S5.png>)
 
@@ -278,6 +281,8 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
 1. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view is listed in the **Explorer** pane.
 
+   ![](<./Images/ETS211.png>)
+
 1. Create a new SQL query and run the following SELECT statement. This query displays sales revenue by year, month, and sales region using the vSalesByRegion view, with results sorted chronologically.
 
    ```SQL
@@ -286,13 +291,15 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
    ```
 
+   ![](<./Images/ETS212.png>)
+
 ### Create a visual query
 
 Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
 
 1. On the **Home** tab, click the dropdown arrow next to **New SQL query** **(1)**, then select **New visual query** **(2)** to open the visual query editor.
 
-   ![Screenshot of a Visual query.](./Images/L1T7S1.png)
+   ![Screenshot of a Visual query.](./Images/ETS173.png)
 
 1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
@@ -306,7 +313,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
    ![Screenshot of a Visual query.](./Images/cor_e2_fz_4.png)
 
-1. In the **Preview**, note that the new **DimProduct (1)** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName (2)** and click **OK (3)**.
+1. In the **Preview**, note that the new **DimProduct (1)** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName (2)** only and click **OK (3)**.
 
    ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview1.png)
 
@@ -352,7 +359,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
 1. On the **File** tab **(1)**, click on **Create new report** **(2)** to begin creating a new Power BI report.
 
-   ![](<./Images/L2T5S14.png>)
+   ![](<./Images/ETS213.png>)
 
 1. In the report canvas, expand the **DimProduct (1)** and **FactSalesOrder (2)** tables from the **Data** pane, then select the **Clustered bar chart** visual **(3)**. Add **Category** to the Y-axis and **SalesTotal** to the X-axis to create a bar chart visual **(4)**.
 

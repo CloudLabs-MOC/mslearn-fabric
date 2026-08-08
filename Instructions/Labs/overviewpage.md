@@ -4,9 +4,9 @@
 
 ## 📘 Lab Scenario
 
-Contoso Retail wants to modernize its analytics platform and improve the way business data is stored, transformed, analyzed, and reported. The organization has chosen Microsoft Fabric to unify data ingestion, storage, warehousing, orchestration, and reporting within a single analytics platform.
+Contoso Retail wants to modernize its analytics platform and improve the way business data is stored, transformed, analyzed, and reported. The organization has chosen **Microsoft Fabric** to unify **data ingestion**, **Lakehouse**, **Data Warehouse**, **Data Pipelines**, and **Power BI reporting** within a single analytics platform.
 
-As a Data Analyst, you will work with Microsoft Fabric to create and manage a Lakehouse and Data Warehouse, ingest and transform data from multiple sources, analyze data using SQL and visual tools, and build interactive Power BI reports to generate business insights. You will also automate data movement and transformation processes using Data Pipelines and Notebooks, creating an end-to-end analytics solution that supports efficient reporting and data-driven decision-making.
+As a Data Analyst, you will work with **Microsoft Fabric** to create and manage a **Lakehouse** and **Data Warehouse**, ingest and transform data from multiple sources, analyze data using SQL and visual tools, and build interactive **Power BI reports** to generate business insights. You will also automate data movement and transformation processes using **Data Pipelines** and **Notebooks**, creating an end-to-end analytics solution that supports efficient reporting and data-driven decision-making.
 
 ## 📖 Lab Overview
 
@@ -37,7 +37,7 @@ Participants should have:
 
 ## 🏗️ Architecture
 
-This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that combines the flexibility and scalability of a data lake with the structured querying capabilities of a data warehouse. Key components include OneLake, a scalable storage layer built on Azure Data Lake Store Gen2, and Apache Spark, which provides high-performance in-memory computation for big data processing. SQL compute engines enable complex queries on large datasets, while Delta Lake ensures ACID transactions and efficient metadata handling. Additionally, Power BI and Power Query are integrated for advanced data visualization, reporting, and manipulation.
+This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that combines the flexibility and scalability of a data lake with the structured querying capabilities of a data warehouse. Key components include OneLake, a scalable storage layer built on Azure Data Lake Storage Gen2, and Apache Spark, which provides high-performance in-memory computation for big data processing. SQL compute engines enable complex queries on large datasets, while Delta Lake ensures ACID transactions and efficient metadata handling. Additionally, Power BI and Power Query are integrated for advanced data visualization, reporting, and manipulation.
 
 ## 🖼️ Architecture diagram
 
@@ -49,7 +49,7 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 - **Lakehouse:** A scalable and flexible data store within Microsoft Fabric that combines the features of a data lake and a data warehouse. It allows for the storage and querying of both structured and unstructured data using SQL and Apache Spark compute engines.
 
-- **OneLake Storage Layer:** The underlying scalable storage layer used by the Lakehouse, built on Azure Data Lake Store Gen2. It provides robust, scalable storage for large volumes of data in various formats.
+- **OneLake Storage Layer:** The underlying scalable storage layer used by the Lakehouse, built on Azure Data Lake Storage Gen2. It provides robust, scalable storage for large volumes of data in various formats.
 
 - **Data Files and Tables:** Ingested data files that are uploaded into the Lakehouse. These files can be transformed into structured tables that allow for efficient querying and analysis. Tables in Microsoft Fabric Lakehouse are based on the open-source Delta Lake file format.
 
@@ -140,7 +140,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on Next from the lower right corner to move on to the next page.
+Now, click on **Next >>** from the lower right corner to move on to the next page.
 
 ![](./Images/GS-02-next.png)
 
