@@ -105,12 +105,12 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/L1T62.png>)
 
-1. Open each script link in a separate browser tab. Copy the complete Transact-SQL code from the **Dimensions Script**, **FactSalesOrder Script - Part 1**, and **FactSalesOrder Script - Part 2**. Paste all three scripts into the same SQL query editor in the exact order listed, then click Run to execute the complete script.
+1. Open each script link in a separate browser tab. Copy the complete Transact-SQL code from the **Dimensions Script**, **FactSalesOrder Script - Part 1**, and **FactSalesOrder Script - Part 2**. Paste all three scripts one by one into the same SQL query editor in the exact order listed, then click Run to execute the complete script.
 
    - [Dimensions Script](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/Dimensions.txt)
    - [FactSalesOrder Script - Part 1](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-1.txt)
 
-   - **Note:** After pasting into the SQL Query editor, please type **GO** at the end of the line then Run the query.
+   - **Note:** After pasting the **Part 1** script into the SQL Query editor, please type **GO** at the end of the line then paste the **Part 2** in the next line and **Run** the query.
 
       ![](<./Images/editquery.png>)
 
