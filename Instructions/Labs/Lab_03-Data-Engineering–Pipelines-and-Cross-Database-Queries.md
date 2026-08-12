@@ -43,23 +43,23 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
 1. On the New Notebook pop-up rename it to **nb_transform_products** **(1)** and click on **Create (2)**.
 
-    ![](<./Images/img2.png>)
+   ![](<./Images/img2.png>)
 
 1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click on **From OneLake catalog (2)**
     
-    ![](<./Images/img3.png>)
+   ![](<./Images/img3.png>)
 
 1. On the other window choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** **(1)**, and click **Add(2)**.
     
-    ![](<./Images/img4.png>)
+   ![](<./Images/img4.png>)
 
     > **Note**: Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the lakehouse icon
 
 1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipses **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**. Name it **raw (3)** and click **Create (4)** .
    
-    ![](<./Images/img5.png>)
+   ![](<./Images/img5.png>)
 
-    ![](<./Images/img111.png>)
+   ![](<./Images/img111.png>)
 
 1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**
 
@@ -73,7 +73,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
 1. On the Upload files dialog, after selecting the **prodcuts.csv** file, click **Upload (1)** to upload the file into the raw folder.
 
-    ![](<./Images/images11.png>)
+   ![](<./Images/images11.png>)
 
 1. Once the upload is complete and the status shows **Completed**, click the **Close** icon at the top right to exit the **Upload files** dialog.
 
@@ -92,13 +92,13 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    print(f"Raw row count: {df_raw.count()}")
    df_raw.show(5)
    ```
-    ![](<./Images/img8.png>)
+   ![](<./Images/img8.png>)
 
    > **Note**: The code loads the products.csv file into a Spark DataFrame, displays the total number of rows in the dataset, and shows the first 5 records for validation. You should see **295 rows** and the columns **ProductID, ProductName, Category, and ListPrice.(2)**.
 
 1. Click **+ Code** below the first cell to add a new code cell. Paste the following transformation code and **&#9655; Run** button. This code cleans and transforms the raw data, adds a load timestamp, and saves the results as a Delta table named **stg_products** in the Lakehouse.
 
-    ![](<./Images/img10.png>)
+   ![](<./Images/img10.png>)
 
    ```python
    from pyspark.sql import functions as F
@@ -229,7 +229,7 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
 1. Click the **Settings** **(1)** tab. Under **Notebook**, click the dropdown and select **nb_transform_products** **(2)**.
 
-     ![](<./Images/img28.png>)
+   ![](<./Images/img28.png>)
 
 1. Now connect the two activities. Hover over the right edge of the **Copy Products CSV** activity until the green checkmark (&#10004;) connector appears. Drag it to the **Transform to Delta** activity. Then save the file from Home menu.
 
