@@ -14,7 +14,7 @@ Microsoft Fabric Data Pipelines provide a visual orchestration engine that enabl
 
 ## 🏗️ Architecture Diagram
 
-   ![](<./Images/archlab03.png>)
+![](<./Images/archlab03.png>)
 
 ## 🎯 Objectives
 
@@ -53,7 +53,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
     
    ![](<./Images/img4.png>)
 
-    > **Note**: Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the lakehouse icon
+   > **Note**: Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the lakehouse icon
 
 1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipses **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**. Name it **raw (3)** and click **Create (4)** .
    
@@ -92,6 +92,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    print(f"Raw row count: {df_raw.count()}")
    df_raw.show(5)
    ```
+   
    ![](<./Images/img8.png>)
 
    > **Note**: The code loads the products.csv file into a Spark DataFrame, displays the total number of rows in the dataset, and shows the first 5 records for validation. You should see **295 rows** and the columns **ProductID, ProductName, Category, and ListPrice.(2)**.
@@ -121,6 +122,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    print(f"Staged row count: {df_clean.count()}")
    df_clean.show(5)
    ```
+   
    ![](<./Images/img9.png>)
 
 1. In the **Explorer** pane, Click it on the ellipses **(...) (1)** of the onelake and click on  the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
@@ -180,7 +182,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
    - Search **http** **(1)** as the data source type and select **HTTP (2)**
 
-      ![](<./Images/img19.png>)
+     ![](<./Images/img19.png>)
 
    - Under the connection settings in the **URL field** **(1)**, enter the following URL:
 
@@ -188,13 +190,13 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
      https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv
      ```
 
-      ![](<./Images/ETS313.png>)
+     ![](<./Images/ETS313.png>)
 
    - Set **Authentication kind** to **Anonymous** **(2)**.
      
    - Click **Create** **(3)**.
      
-      ![](<./Images/ETS314.png>)
+     ![](<./Images/ETS314.png>)
 
 1. Back on the **Source** tab, under **File format**, confirm the format is set to **DelimitedText**.
 
@@ -264,11 +266,12 @@ In this task, you will add a **Script** activity that uses a cross-database quer
    );
    GO
    ```
+   
    ![](<./Images/img30.png>)
 
 1. Verify that the table **DimProductStaging** appears in the **Explorer** pane under **dbo > Tables**. Click **Refresh** if needed.
 
-    ![](<./Images/img31.png>)
+   ![](<./Images/img31.png>)
 
 1. Now, test the **cross-database query**. In a new SQL query, run the following to verify you can read Lakehouse data from the Warehouse:
 
@@ -276,6 +279,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
    SELECT TOP 10 *
    FROM Lakehouse_.dbo.stg_products;
    ```
+   
    >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e. Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products
 
    ![](<./Images/img32.png>)
@@ -340,7 +344,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. If prompted to save, click **Save and run**.
 
-    ![](<./Images/img40.png>)
+   ![](<./Images/img40.png>)
 
 1. The **Output** tab opens at the bottom, showing the pipeline run progress. Monitor each activity status:
 
