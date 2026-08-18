@@ -298,6 +298,8 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
     ![](./Images/L2T3S9-2506.png)
 
+    > **Note:** If the pipeline run is stuck in `In Progress` for 15-20 minutes, please navigate to the Monitor tab in the fabric portal from the left navigation pane, stop the Spark jobs, and then rerun the pipeline. 
+
 1. Navigate to your **fabric_lakehouse** from the top navigation menu. 
 
     ![](./Images/L2T3S10-2506.png)
