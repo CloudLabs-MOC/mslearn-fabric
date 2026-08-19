@@ -223,21 +223,21 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
 1. On the pipeline canvas, from the **Activities** toolbar, select **Notebook** to add a Notebook activity.
 
-   ![](<./Images/img26.png>)
+      ![](<./Images/img26.png>)
 
 1. Select the **Notebook (1)** activity on the canvas and click the **General (2)** tab. Set the **Name** to **Transform to Delta** **(3)**.
 
-   ![](<./Images/img27.png>)
+      ![](<./Images/img27.png>)
 
 1. Click the **Settings** **(1)** tab. Under **Notebook**, click the dropdown and select **nb_transform_products** **(2)**.
 
-   ![](<./Images/img28.png>)
+      ![](<./Images/img28.png>)
 
 1. Now connect the two activities. Hover over the right edge of the **Copy Products CSV** activity until the green checkmark (&#10004;) connector appears. Drag it to the **Transform to Delta** activity. Then save the file from Home menu.
 
-   ![](<./Images/img29.png>)
+      ![](<./Images/img29.png>)
 
-   > **Note**: The green connector means the Notebook activity will only run **on success** of the Copy activity. This ensures transformation only occurs after data is successfully ingested.
+      > **Note**: The green connector means the Notebook activity will only run **on success** of the Copy activity. This ensures transformation only occurs after data is successfully ingested.
 
 ## Task 5: Use cross-database query to load data into the Warehouse
 
@@ -247,88 +247,88 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. Select the **myDataWarehouse** **(2)** warehouse to open it.
 
-   ![](<./Images/L2T4S1.png>)
+      ![](<./Images/L2T4S1.png>)
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)**.
 
-   ![](<./Images/ETS171.png>)
+      ![](<./Images/ETS171.png>)
 
 1. Paste the following SQL **(1)** and click **Run (2)** to create the target table:
 
-   ```sql
-   CREATE TABLE dbo.DimProductStaging
-   (
-       ProductID INT,
-       ProductName VARCHAR(100),
-       Category VARCHAR(50),
-       ListPrice DECIMAL(10,2),
-       LoadTimestamp DATETIME2(4)
-   );
-   GO
-   ```
+      ```sql
+      CREATE TABLE dbo.DimProductStaging
+      (
+          ProductID INT,
+          ProductName VARCHAR(100),
+          Category VARCHAR(50),
+          ListPrice DECIMAL(10,2),
+          LoadTimestamp DATETIME2(4)
+      );
+      GO
+      ```
    
-   ![](<./Images/img30.png>)
+      ![](<./Images/img30.png>)
 
 1. Verify that the table **DimProductStaging** appears in the **Explorer** pane under **dbo > Tables**. Click **Refresh** if needed.
 
-   ![](<./Images/img31.png>)
+      ![](<./Images/img31.png>)
 
 1. Now, test the **cross-database query**. In a new SQL query, run the following to verify you can read Lakehouse data from the Warehouse:
 
-   ```sql
-   SELECT TOP 10 *
-   FROM Lakehouse_.dbo.stg_products;
-   ```
+      ```sql
+      SELECT TOP 10 *
+      FROM Lakehouse_.dbo.stg_products;
+      ```
    
-   >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e. Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products
+      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e. Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products
 
-   ![](<./Images/img32.png>)
+      ![](<./Images/img32.png>)
 
-   > **Note**: Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
+      > **Note**: Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
 
 1. Switch back to the browser tab with your **pl_ingest_and_load** pipeline.
 
 1. From the **Activities (1)** toolbar, select **Script** **(2)** to add a Script activity to the pipeline canvas.
 
-   ![](<./Images/img33.png>)
+      ![](<./Images/img33.png>)
 
 1. Select the **Script (1)** activity on the canvas and click the **General** tab. Set the **Name** to **Load to Warehouse** **(2)**.
 
-   ![](<./Images/img34.png>)
+      ![](<./Images/img34.png>)
 
 1. Click the **Settings** **(1)** tab:
 
-   - Under **Connection**, select your **myDataWarehouse** **(2)** warehouse connection.
-   - Set **Script type** to **NonQuery** **(3)**.
-   - In the **Script** field, paste the following SQL **(4)**:
+      - Under **Connection**, select your **myDataWarehouse** **(2)** warehouse connection.
+      - Set **Script type** to **NonQuery** **(3)**.
+      - In the **Script** field, paste the following SQL **(4)**:
 
-   ```sql
-   -- Truncate and reload the staging table using cross-database query
-   TRUNCATE TABLE dbo.DimProductStaging;
+      ```sql
+      -- Truncate and reload the staging table using cross-database query
+      TRUNCATE TABLE dbo.DimProductStaging;
 
-   INSERT INTO dbo.DimProductStaging (ProductID, ProductName, Category, ListPrice, LoadTimestamp)
-   SELECT
-       ProductID,
-       ProductName,
-       Category,
-       ListPrice,
-       LoadTimestamp
-   FROM Lakehouse_.dbo.stg_products;
-   ```
+      INSERT INTO dbo.DimProductStaging (ProductID, ProductName, Category, ListPrice, LoadTimestamp)
+      SELECT
+          ProductID,
+          ProductName,
+          Category,
+          ListPrice,
+          LoadTimestamp
+      FROM Lakehouse_.dbo.stg_products;
+      ```
    
-   >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**
+      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**
     
-   ![](<./Images/img35.png>)
+      ![](<./Images/img35.png>)
 
 1. Connect the **Transform to Delta** activity to the **Load to Warehouse** activity using the green (on success) connector, just as you did in Task 4.
 
-   ![](<./Images/img36.png>)
+      ![](<./Images/img36.png>)
 
 1. Your completed pipeline should now look like this, with three activities connected in sequence:
 
-   > Products CSV ──▶ Transform to Delta ──▶ Load to Warehouse
+      > Products CSV ──▶ Transform to Delta ──▶ Load to Warehouse
 
-   ![](<./Images/img37.png>)
+      ![](<./Images/img37.png>)
 
 ## Task 6: Run and monitor the pipeline
 
@@ -336,66 +336,67 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. Switch to **Home (1)** On the pipeline toolbar, click on **Validate** **(2)**. You can check for configuration errors or validation errors on the **Pipeline Validation Pane (3)**.
    
-   ![](<./Images/img38.png>)
+      ![](<./Images/img38.png>)
 
 1. Once validation passes, click **Run** to execute the pipeline.
 
-   ![](<./Images/img39.png>)
+      ![](<./Images/img39.png>)
 
 1. If prompted to save, click **Save and run**.
 
-   ![](<./Images/img40.png>)
+      ![](<./Images/img40.png>)
 
 1. The **Output** tab opens at the bottom, showing the pipeline run progress. Monitor each activity status:
 
-   - **Copy Products CSV** - should show **Succeeded** (&#10004;)
-   - **Transform to Delta** - should show **Succeeded** (&#10004;)
-   - **Load to Warehouse** - should show **Succeeded** (&#10004;)
+      - **Copy Products CSV** - should show **Succeeded** (&#10004;)
+      - **Transform to Delta** - should show **Succeeded** (&#10004;)
+      - **Load to Warehouse** - should show **Succeeded** (&#10004;)
 
-     ![](<./Images/img41.png>)
+        ![](<./Images/img41.png>)
 
-   > **Note**: The pipeline run typically completes in 2-4 minutes. If an activity fails, click on it to see the error details and troubleshoot.
+      > **Note**: The pipeline run typically completes in 2-4 minutes. If an activity fails, click on it to see the error details and troubleshoot.
 
 1. To verify the data landed in the Warehouse, switch to the browser tab with **myDataWarehouse**.
 
 1. Open a **New SQL query** and **Run(2)** the following **Query(1)**. Also you can validate the **Result(3)**:
 
-   ```sql
-   SELECT COUNT(*) AS TotalProducts FROM dbo.DimProductStaging;
-   GO
-   ```
-   ![](<./Images/img42.png>)
+      ```sql
+      SELECT COUNT(*) AS TotalProducts FROM dbo.DimProductStaging;
+      GO
+      ```
+      
+      ![](<./Images/img42.png>)
 
-   >**Note:** You should see the Total products number that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
+      >**Note:** You should see the Total products number that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
 1. **Run** the following **Query**. You should see the **top 10 product rows** that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
-   ```sql
-   SELECT TOP 10 * FROM dbo.DimProductStaging ORDER BY Category, ProductName;
-   GO
-   ```
+      ```sql
+      SELECT TOP 10 * FROM dbo.DimProductStaging ORDER BY Category, ProductName;
+      GO
+      ```
    
-   ![](<./Images/img43.png>)
+      ![](<./Images/img43.png>)
 
 1. **(Optional)** To schedule the pipeline for recurring runs:
 
-   - Go back to the pipeline **pl_ingest_and_load**.
+      - Go back to the pipeline **pl_ingest_and_load**.
 
-     ![](<./Images/imgpipe.png>)
+        ![](<./Images/imgpipe.png>)
 
-   - Click **Schedule** under the Home menu.
+      - Click **Schedule** under the Home menu.
 
-     ![](<./Images/img44.png>)
+        ![](<./Images/img44.png>)
    
-   - On the next screen, click on **+ Add schedule**.
+      - On the next screen, click on **+ Add schedule**.
 
-     ![](<./Images/img45.png>)
+        ![](<./Images/img45.png>)
 
-   - Set the **Repeat** to **Daily** and choose a **Start date & time and End date & time.**
+      - Set the **Repeat** to **Daily** and choose a **Start date & time and End date & time.**
 
-   - Click **Save**.
+      - Click **Save**.
 
-     ![](<./Images/img46.png>)
+        ![](<./Images/img46.png>)
 
 ## 📝 Summary
 
