@@ -144,19 +144,19 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
 1. In the hub menu bar on the left, click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**. Click **+ New item** **(2)** at the top of the workspace.
 
-   ![](<./Images/E1T2S1.png>)
+      ![](<./Images/E1T2S1.png>)
 
 1. On the **New item** page, search for **Pipeline** **(1)** in the search bar and select **Pipeline** **(2)**.
 
-   ![](<./Images/img13.png>)
+      ![](<./Images/img13.png>)
 
 1. In the **New pipeline** popup, enter **pl_ingest_and_load** **(1)** as the pipeline name, then click **Create** **(2)**.
 
-   ![](<./Images/img14.png>)
+      ![](<./Images/img14.png>)
 
 1. The pipeline canvas opens with an empty design surface. You will add activities in the next tasks.
 
-   ![](<./Images/img15.png>)
+      ![](<./Images/img15.png>)
 
 ## Task 3: Add a Copy Activity to ingest data into the Lakehouse
 
@@ -164,58 +164,58 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
 1. On the pipeline canvas, click **Activity (1)** and click on **Copy data** **(2)** from the **Activities** toolbar and select **Add copy data activity (3)**.
 
-   ![](<./Images/img16.png>)
+      ![](<./Images/img16.png>)
 
 1. Select the **Copy data (1)** activity on the canvas and click the **General** tab at the bottom. Set the **Name** to **Products CSV** **(2)**.
 
-   ![](<./Images/img17.png>)
+      ![](<./Images/img17.png>)
 
-   > **Note:** Drag the horizontal splitter bar upward to display the General tab options.
+      > **Note:** Drag the horizontal splitter bar upward to display the General tab options.
 
-   ![](<./Images/ETS312.png>)
+      ![](<./Images/ETS312.png>)
 
 1. Click the **Source** **(1)** tab. Under **Fabric item connections**, click **Browse all** **(2)** to create a new connection.
 
-   ![](<./Images/img18.png>)
+      ![](<./Images/img18.png>)
 
 1. In the **Choose a data source to get started** dialog:
 
-   - Search **http** **(1)** as the data source type and select **HTTP (2)**
+      - Search **http** **(1)** as the data source type and select **HTTP (2)**
 
-     ![](<./Images/img19.png>)
+        ![](<./Images/img19.png>)
 
-   - Under the connection settings in the **URL field** **(1)**, enter the following URL:
+      - Under the connection settings in the **URL field** **(1)**, enter the following URL:
 
-     ```
-     https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv
-     ```
+        ```
+        https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv
+        ```
 
-     ![](<./Images/ETS313.png>)
+        ![](<./Images/ETS313.png>)
 
-   - Set **Authentication kind** to **Anonymous** **(2)**.
+      - Set **Authentication kind** to **Anonymous** **(2)**.
      
-   - Click **Create** **(3)**.
+      - Click **Create** **(3)**.
      
-     ![](<./Images/ETS314.png>)
+        ![](<./Images/ETS314.png>)
 
 1. Back on the **Source** tab, under **File format**, confirm the format is set to **DelimitedText**.
 
-   ![](<./Images/img21.png>)
+      ![](<./Images/img21.png>)
   
 1. Click the **Destination** tab:
 
-   - Under **Connection** dropdown click on **Browse all**.
-   - On the next screen scroll down to **OneLake Catalog**, select **Lakehouse**.
-   - Select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** as the Lakehouse.
+      - Under **Connection** dropdown click on **Browse all**.
+      - On the next screen scroll down to **OneLake Catalog**, select **Lakehouse**.
+      - Select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** as the Lakehouse.
 
-     ![](<./Images/img23.png>)
+        ![](<./Images/img23.png>)
     
-   - Set **Root folder** to **Files (1)**.
-   - In the **File path** field, enter the folder path **raw** **(2)** and file name **products.csv** **(2)**. Save the file from Home menu.
+      - Set **Root folder** to **Files (1)**.
+      - In the **File path** field, enter the folder path **raw** **(2)** and file name **products.csv** **(2)**. Save the file from Home menu.
      
-     ![](<./Images/img24.png>)
+        ![](<./Images/img24.png>)
 
-     > **Note**: The pipeline stores the file in Files/raw/products.csv within the Lakehouse and replaces any existing file during each run, ensuring the latest source data is always used.
+        > **Note**: The pipeline stores the file in Files/raw/products.csv within the Lakehouse and replaces any existing file during each run, ensuring the latest source data is always used.
 
 ## Task 4: Add a Notebook Activity to transform data
 
