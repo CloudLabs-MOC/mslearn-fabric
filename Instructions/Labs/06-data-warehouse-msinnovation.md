@@ -68,11 +68,11 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
 
-   ![](./Images/L2T2S2-1.png)
+   ![](./Images/E2T2S2.png)
 
 1. To refresh the Explorer pane and view the latest changes, click the **Refresh** icon in the top left menu bar.
 
-   ![](<./Images/L2T2S3.png>)
+   ![](<./Images/E2T2S3.png>)
 
 1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand the **Schemas** section **(2)** to view the available schema objects, including `dbo`, `INFORMATION_SCHEMA`, `queryinsights`, and `sys`.
 
@@ -80,9 +80,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
-   ![](<./Images/ETS171.png>)
-
-   ![](<./Images/ETS172.png>)
+   ![](<./Images/E2T5S1i.png>)
 
 1.  Insert the below query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
 
@@ -95,7 +93,7 @@ A warehouse is a relational database in which you can define tables and other ob
       GO
       ```
 
-      ![](<./Images/L2T2S6.png>)
+      ![](<./Images/E2T2S6.png>)
 
 1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand **Schemas** **(2)**, **dbo** **(3)**, and **Tables** **(4)**, then select the **DimProduct** table **(5)** and click on **Data Preview (6)** to verify the three inserted rows
 
@@ -103,7 +101,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
-   ![](<./Images/L1T62.png>)
+   ![](<./Images/E2T2S8.png>)
 
 1. Open each script link in a separate browser tab. Copy the complete Transact-SQL code from the **Dimensions Script**, **FactSalesOrder Script - Part 1**, and **FactSalesOrder Script - Part 2**. Paste all three scripts one by one into the same SQL query editor in the exact order listed, then click Run to execute the complete script.
 
@@ -112,7 +110,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
    - **Note:** After pasting the **Part 1** script into the SQL Query editor, please type **GO** at the end of the line then paste the **Part 2** in the next line and **Run** the query.
 
-      ![](<./Images/editquery.png>)
+      ![](<./Images/E2T2S9.png>)
 
    - [FactSalesOrder Script - Part 2](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-2.txt)
 
@@ -122,15 +120,13 @@ A warehouse is a relational database in which you can define tables and other ob
 
    > **Note:** Ensure that the contents of all three files are pasted into the **same query editor** and in the **same order** before running the script.
 
-1. For copy-pasting inside the VM:
-
-   - Set **Clipboard access** to **Allow**.
-
-      ![](<./Images/nov2025-ms-fabric-2.png>)
-
-   - Then enable the VM native clipboard to copy and paste inside the virtual machine.
-
-      ![](<./Images/nov2025-ms-fabric-1.png>)
+   > **!IMPORTANT:** If you encounter any copy paste issues inside the VM do follow the below steps to resolve the issue:
+   >
+   > - Set **Clipboard access** to **Allow**.
+   > ![](<./Images/nov2025-ms-fabric-2.png>)
+   >
+   > - Then enable the **VM Native Clipboard** to copy and paste inside the virtual machine.
+   >   ![](<./Images/nov2025-ms-fabric-1.png>)
 
 1. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
@@ -143,7 +139,7 @@ A warehouse is a relational database in which you can define tables and other ob
    - **DimProduct**
    - **FactSalesOrder**
 
-   ![](<./Images/L2T2S11.png>)
+   ![](<./Images/E2T2S11.png>)
 
    > **Tip:** If the schema takes a while to load, refresh the browser page.
 
@@ -165,11 +161,11 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
 1. Click on **ellipses** next to the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
 
-   ![](<./Images/L2T3S4.png>)
+   ![](<./Images/E2T3S4.png>)
 
 1. At the top right corner, Click on **Viewing (1)** to change it to **Editing** **(2)** permission settings. 
 
-   ![](<./Images/L2T3S5.png>)
+   ![](<./Images/E2T3S5.png>)
 
 1. In the model pane, rearrange the tables in your data warehouse so that the **FactSalesOrder** table is in the middle, like this:
 
@@ -177,7 +173,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
 1. In the **Home** tab, click on **Manage relationships**.
 
-   ![](./Images/select-managerelationship.png)
+   ![](./Images/E2T3S7.png)
 
 1. In the Manage relationships window, select **+ New relationship**.
 
@@ -219,7 +215,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor
 
-   ![](<./Images/ETS171.png>)
+   ![](<./Images/E2T2S8.png>)
 
 1. Copy and paste the following code and click on **Run**: This query calculates **monthly sales revenue** by combining **sales and date data**, and displays the results in chronological order.
 
@@ -234,7 +230,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
    ORDER BY CalendarYear, MonthOfYear;
    ```
 
-   ![](<./Images/L2T4S3.png>)
+   ![](<./Images/E2T4S3.png>)
 
    > **Note:** The attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
 
@@ -255,7 +251,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 1. Run the modified query and review the results, which now include sales revenue aggregated by year, month, and sales region. This query calculates total sales revenue by month, year, and sales region, and displays the results in chronological order.
 
-   ![](<./Images/L2T4S5.png>)
+   ![](<./Images/E2T4S5.png>)
 
 ## Task 5: Create a View, Visual Query and Visualizing data
 
@@ -299,7 +295,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. On the **Home** tab, click the dropdown arrow next to **New SQL query** **(1)**, then select **New visual query** **(2)** to open the visual query editor.
 
-   ![Screenshot of a Visual query.](./Images/ETS173.png)
+   ![Screenshot of a Visual query.](./Images/E2T5S1i.png)
 
 1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
@@ -315,7 +311,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. In the **Preview**, note that the new **DimProduct (1)** column has been added to the FactSalesOrder table. Expand the column by clicking the arrow to the right of the column name. Select **ProductName (2)** only and click **OK (3)**.
 
-   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/visual-query-preview1.png)
+   ![Screenshot of the preview pane with the DimProduct column expanded, with ProductName selected.](./Images/E2T5S6i.png)
 
 1. If you're interested in looking at data for a single product, per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
 
@@ -363,13 +359,13 @@ You can easily visualize the data in either a single query or in your data wareh
 
 1. In the report canvas, expand the **DimProduct (1)** and **FactSalesOrder (2)** tables from the **Data** pane, then select the **Clustered bar chart** visual **(3)**. Add **Category** to the Y-axis and **SalesTotal** to the X-axis to create a bar chart visual **(4)**.
 
-   ![](<./Images/L2T5S15.png>)
+   ![](<./Images/E2T5S7ii.png>)
 
    > The visualization displays total sales revenue by product category, allowing you to compare sales performance across different product categories.
 
 1. To save the report, click **File** **(1)** in the top menu, then select **Save** **(2)**.
 
-   ![](./Images/L1T8S7.png)
+   ![](./Images/E2T5S8ii.png)
 
 1. In the **Save report** dialog box, enter the name **Sales Report (1)** in the text field (1), then click **Save** **(2)** to store the report.
 

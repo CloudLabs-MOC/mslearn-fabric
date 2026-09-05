@@ -79,15 +79,15 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/fabric-image7.png)
 
-1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the **Trial_Section_Button_S (2)** of Microsoft Fabric.
+1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the trail of Power BI click on the dropdwon of **Start Trial (1)** and select only **Power BI only (2)**.
 
-   ![](./Images/ETS117.png)
+   ![](./Images/E1T1S7.png)
 
    >**Note:** The Fabric trial is enabled to ensure that your account has access to Microsoft Fabric features and experiences. However, the hands-on lab resources and workloads in this guide are configured to use the F2 Fabric capacity provided for the lab environment. The trial activation is only to enable Fabric access for your user account and does not replace the dedicated F2 capacity used throughout the lab.
 
 1. On the **Your Power BI trial is active** confirmation window, click **Got it** to continue.
 
-   ![](./Images/L1T1S9.png)
+   ![](./Images/E1T1S9.png)
 
    > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
 
@@ -105,7 +105,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/L1T1S9-1.png)
 
-   ![](./Images/L1T1P12.png)
+   ![](./Images/E1T1S11ii.png)
 
    > **Note**: If you receive the **Introducing task flows (preview)** pop-up, click **Got it** to continue.
 
@@ -113,11 +113,12 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. When your new workspace opens, it should be empty.
 
-   ![Screenshot of an empty workspace in Power BI.](<./Images/L1T1S10.png>)
+   ![Screenshot of an empty workspace in Power BI.](<./Images/E1T1S12.png>)
 
 1. In the workspace, click the **Manage access (1)** option from the upper-right corner to open the **Manage access** pane and click on **+ Add people or groups (2)**.
 
    ![](<./Images/fb_ex1_5.png>)
+   
    ![Manage Access](<./Images/L1T1S11.png>)
 
 1. In the **Add people** pane, enter **https://aec-svc/** **(1)**, ensure the permission is set to **Admin (2)** by using dropdown, and then click **Add (3)**.
@@ -159,7 +160,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
      stored externally.
    - Currently, there are no tables or files in the lakehouse.
 
-     ![](./Images/L1T2S4.png)
+     ![](./Images/E1T2S4.png)
 
 ## Task 3: Upload a file
 
@@ -175,7 +176,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
 1. On the **Lakehouse explorer** pane, click the **ellipses (1)** next to the **data** folder, hover over **Upload** **(2)**, then select **Upload files** **(3)**.
 
-   ![](<./Images/L1T3S4.png>)
+   ![](<./Images/E1T3S3.png>)
 
 1. On the **Upload files** dialog, click the **folder icon** on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv (1)** file from your lab machine and click on **Open (2)**.
 
@@ -217,7 +218,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
 1. In the **Lakehouse explorer** pane, expand **Lakehouse** **(1)**, then expand **Files** **(2)** and select the **data** folder **(3)**. Confirm that the **sales.csv** file appears in the folder **(4)**.
 
-   ![](<./Images/fb_g2_1_11-1.png>)
+   ![](<./Images/E1T5S1.png>)
 
    > **Note**: If the **sales** table does not automatically appear, in the **ellipses** menu for the **Tables** folder, select **Refresh**.
 
@@ -241,7 +242,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
 1. In the **ellipses (1)** menu for the **sales** table, select **View files (2)** to see the underlying files for this table.
 
-   ![Screenshot of a table preview.](./Images/L1T5S6-1.png)
+   ![Screenshot of a table preview.](./Images/E1T5S6.png)
 
 1. In the **File view** for the **sales** table, observe that it contains Delta Lake log files and Parquet data files. These represent the physical storage format of the table.
 
@@ -261,8 +262,6 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
    ![Screenshot of the SQL endpoint page.](./Images/ETS171.png)
 
-   ![](./Images/ETS172.png)
-
 1. In the new query editor, enter the following SQL query to calculate the total revenue by item:
 
    ```sql
@@ -274,7 +273,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
 1. Use the **&#9655; Run** button to run the query and view the results, which should show the total revenue for each product.
 
-   ![Screenshot of a SQL query with results.](./Images/L1T6S4.png)
+   ![Screenshot of a SQL query with results.](./Images/E1T6S4.png)
 
 ## Task 7: Create a visual query
 
@@ -318,7 +317,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
 1. Under the **Home** tab, click on **New semantic model** to create the semantic model.
 
-   ![Screenshot of a data model.](./Images/L1T8S1.png)
+   ![Screenshot of a data model.](./Images/E1T8S1.png)
 
    > **Note**: In this exercise, the data model consists of a single table. In a real-world scenario, you would likely create multiple tables in your lakehouse, each of which would be included in the model. You could then define relationships between these tables in the model.
 
@@ -356,7 +355,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
 1. To save the report, click **File** **(1)** in the top menu, then select **Save** **(2)**.
 
-   ![](./Images/L1T8S7.png)
+   ![](./Images/E2T5S8ii.png)
 
 1. On the **Save your report** screen, enter **Item Sales Report** **(1)** as the name, then click **Save** **(2)** to save it to the selected workspace.
 

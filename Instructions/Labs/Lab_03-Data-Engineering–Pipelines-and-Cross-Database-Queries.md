@@ -156,7 +156,7 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
 1. The pipeline canvas opens with an empty design surface. You will add activities in the next tasks.
 
-      ![](<./Images/img15.png>)
+      ![](<./Images/E3T2S4.png>)
 
 ## Task 3: Add a Copy Activity to ingest data into the Lakehouse
 
@@ -176,7 +176,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
 1. Click the **Source** **(1)** tab. Under **Fabric item connections**, click **Browse all** **(2)** to create a new connection.
 
-      ![](<./Images/img18.png>)
+      ![](<./Images/E3T3S3.png>)
 
 1. In the **Choose a data source to get started** dialog:
 
@@ -211,9 +211,9 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
         ![](<./Images/img23.png>)
     
       - Set **Root folder** to **Files (1)**.
-      - In the **File path** field, enter the folder path **raw** **(2)** and file name **products.csv** **(2)**. Save the file from Home menu.
+      - In the **File path** field, enter the folder path as **raw** and file name as **products.csv** **(2)**. Save the file from Home menu.
      
-        ![](<./Images/img24.png>)
+        ![](<./Images/E3T3S6ii.png>)
 
         > **Note**: The pipeline stores the file in Files/raw/products.csv within the Lakehouse and replaces any existing file during each run, ensuring the latest source data is always used.
 
@@ -231,7 +231,7 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
 1. Click the **Settings** **(1)** tab. Under **Notebook**, click the dropdown and select **nb_transform_products** **(2)**.
 
-      ![](<./Images/img28.png>)
+      ![](<./Images/E3T4S3.png>)
 
 1. Now connect the two activities. Hover over the right edge of the **Copy Products CSV** activity until the green checkmark (&#10004;) connector appears. Drag it to the **Transform to Delta** activity. Then save the file from Home menu.
 
@@ -251,7 +251,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)**.
 
-      ![](<./Images/ETS171.png>)
+      ![](<./Images/E2T2S8.png>)
 
 1. Paste the following SQL **(1)** and click **Run (2)** to create the target table:
 
@@ -275,12 +275,14 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. Now, test the **cross-database query**. In a new SQL query, run the following to verify you can read Lakehouse data from the Warehouse:
 
+      >**Note:** Please replace the **Lakehouse_** with the actual value of your Lakehouse i.e. **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
+
       ```sql
       SELECT TOP 10 *
       FROM Lakehouse_.dbo.stg_products;
       ```
    
-      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e. Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products
+      
 
       ![](<./Images/img32.png>)
 
@@ -365,7 +367,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
       GO
       ```
       
-      ![](<./Images/img42.png>)
+      ![](<./Images/E3T6S6.png>)
 
       >**Note:** You should see the Total products number that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
@@ -376,7 +378,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
       GO
       ```
    
-      ![](<./Images/img43.png>)
+      ![](<./Images/E3T6S7.png>)
 
 1. **(Optional)** To schedule the pipeline for recurring runs:
 
