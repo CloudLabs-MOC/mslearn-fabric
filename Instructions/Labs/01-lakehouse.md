@@ -87,13 +87,13 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. On the **Your Power BI trial is active** confirmation window, click **Got it** to continue.
 
-   ![](./Images/E1T1S9.png)
+   ![](./Images/L1T1S9.png)
 
    > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
 
 1. Click the **Account manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status (2)** shows the number of days remaining.
 
-   ![](./Images/fb_ex1_6.png)
+   ![](./Images/E1T1S9.png)
 
    > **Note:** You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
 
