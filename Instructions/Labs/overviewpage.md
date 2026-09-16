@@ -79,7 +79,6 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 - **Pipeline Monitoring:** A feature that allows users to track pipeline execution, review activity status, troubleshoot failures, and validate successful completion of data integration processes.
 
-
 # 🚀 Getting Started with the lab
 
 Welcome to your **Get Started with Microsoft Fabric Analytics** workshop! We've prepared a seamless environment for you to explore Microsoft Fabric's end-to-end analytics capabilities. Throughout this workshop, you'll work with Lakehouses and Data Warehouses, automate data workflows using Pipelines and Notebooks, analyze data with SQL, and create insightful Power BI reports. Let's get started!
@@ -98,11 +97,11 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
  
-![Explore Lab Resources](./Images/GS-02-env.png)
+![Explore Lab Resources](./Images/new-env.png)
  
 ## Utilizing the Split Window Feature
  
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top-right corner.
  
 ![Use the Split Window Feature](./Images/GS-02-split.png)
  

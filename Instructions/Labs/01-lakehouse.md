@@ -71,7 +71,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
    >
    >   ![](./Images/fabric-image5.png)
 
-1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to PowerBI experience.
+1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to **Power BI** experience.
 
    ![](./Images/fabric-image6.png)
 
@@ -91,7 +91,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
 
-1. Click the **Account manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status (2)** shows the number of days remaining.
+1. Click the **Account Manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status (2)** shows the number of days remaining.
 
    ![](./Images/E1T1S9.png)
 
@@ -369,7 +369,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    - Your lakehouse.
    - The SQL analytics endpoint for your lakehouse.
-   - A default dataset for the tables in your lakehouse.
+   - Semantic model .
    - The **Item Sales Report** report. **(2)**
 
       ![](./Images/L1T8S9.png)
@@ -386,7 +386,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
 ## 📝 Summary
 
-In this exercise, you have accomplished the following:
+In this Lab, you have accomplished the following:
 
 - Created a workspace to organize and manage your resources
 - Built a Lakehouse for storing and processing data
