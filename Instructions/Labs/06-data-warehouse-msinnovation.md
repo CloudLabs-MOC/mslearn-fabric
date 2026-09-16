@@ -377,7 +377,7 @@ You can easily visualize the data in either a single query or in your data wareh
  
    ![](./Images/share_button-1.png)
 
-1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
+1. In the menu hub on the left, navigate back to the workspace. Notice that you now have items saved in your workspace: your data warehouse, semantic model and the report you created.
 
     ![](./Images/L2T5S18.png)
     
