@@ -71,7 +71,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
    >
    >   ![](./Images/fabric-image5.png)
 
-1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to PowerBI experience.
+1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to **Power BI** experience.
 
    ![](./Images/fabric-image6.png)
 
@@ -79,7 +79,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/fabric-image7.png)
 
-1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the trail of Power BI click on the dropdwon of **Start Trial (1)** and select only **Power BI only (2)**.
+1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the trial of Power BI click on the dropdown of **Start Trial (1)** and select only **Power BI only (2)**.
 
    ![](./Images/E1T1S7.png)
 
@@ -91,7 +91,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
 
-1. Click the **Account manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status (2)** shows the number of days remaining.
+1. Click the **Account Manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status (2)** shows the number of days remaining.
 
    ![](./Images/E1T1S9.png)
 
@@ -321,7 +321,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    > **Note**: In this exercise, the data model consists of a single table. In a real-world scenario, you would likely create multiple tables in your lakehouse, each of which would be included in the model. You could then define relationships between these tables in the model.
 
-1. Enter **Custom semantic model** **(1)** in the name field and select the table **sales** **(2)**, than click on **Confirm** **(3)** to proceed.
+1. Enter **Custom semantic model** **(1)** in the name field and select the table **sales** **(2)**, then click on **Confirm** **(3)** to proceed.
 
    ![](./Images/task8-2.1.png)
 
@@ -369,7 +369,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    - Your lakehouse.
    - The SQL analytics endpoint for your lakehouse.
-   - A default dataset for the tables in your lakehouse.
+   - The Semantic model.
    - The **Item Sales Report** report. **(2)**
 
       ![](./Images/L1T8S9.png)
@@ -386,7 +386,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
 ## 📝 Summary
 
-In this exercise, you have accomplished the following:
+In this Lab, you have accomplished the following:
 
 - Created a workspace to organize and manage your resources
 - Built a Lakehouse for storing and processing data

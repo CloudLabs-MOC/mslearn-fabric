@@ -50,7 +50,7 @@ In this task, you will provision a new data warehouse within Microsoft Fabric. A
 
 A warehouse is a relational database in which you can define tables and other objects.
 
-1. In your new warehouse, select the **Create tables** with **T-SQL** tile, and replace the default SQL code with the following CREATE TABLE statement:
+1. On the **myDataWarehouse** home page, under **Start developing**, select the **T-SQL** tile to open a new SQL query editor. Enter the following `CREATE TABLE` statement:
 
    ![Screenshot of a new warehouse.](./Images/L2T2S2.png)
 
@@ -80,7 +80,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
-   ![](<./Images/E2T5S1i.png>)
+   ![](<./Images/l6-new-query.png>)
 
 1.  Insert the below query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
 
@@ -113,6 +113,8 @@ A warehouse is a relational database in which you can define tables and other ob
       ![](<./Images/E2T2S9.png>)
 
    - [FactSalesOrder Script - Part 2](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-2.txt)
+
+   > **Note:** To add the next query below the existing one, press **Enter** twice to create a blank line. Avoid using **Shift + Enter** here in the SQL query editor it runs the query instead of inserting a new line.
 
    > **For Windows users**: To copy the entire file content, press **Ctrl + A** to select all the text, and then press **Ctrl + C** to copy it and **Ctrl + V** to paste it.
 
@@ -151,7 +153,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![](<./Images/L2T3S1.png>)
 
-1. Enter **dw semantic model** **(1)** in the name field and select the tables **DimCustomer**,**DimDate**,**DimProduct**,**FactSalesOrder** **(2)**, than click on **Confirm** **(3)** to proceed.
+1. Enter **dw semantic model** **(1)** in the name field and select the tables **DimCustomer**,**DimDate**,**DimProduct**, **FactSalesOrder** **(2)**, than click on **Confirm** **(3)** to proceed.
 
    ![](./Images/L2T3S2-1.png)
 
@@ -367,7 +369,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![](./Images/E2T5S8ii.png)
 
-1. In the **Save report** dialog box, enter the name **Sales Report (1)** in the text field (1), then click **Save** **(2)** to store the report.
+1. In the **Save report** dialog box, enter the name **Sales Report (1)** in the text field, then click **Save** **(2)** to store the report.
 
    ![](./Images/L2T5S17.png)
 
@@ -375,7 +377,7 @@ You can easily visualize the data in either a single query or in your data wareh
  
    ![](./Images/share_button-1.png)
 
-1. In the menu hub on the left, navigate back to the workspace. Notice that you now have three items saved in your workspace: your data warehouse, its default dataset, and the report you created.
+1. In the menu hub on the left, navigate back to the workspace. Notice that you now have items saved in your workspace: your data warehouse, semantic model and the report you created.
 
     ![](./Images/L2T5S18.png)
     
