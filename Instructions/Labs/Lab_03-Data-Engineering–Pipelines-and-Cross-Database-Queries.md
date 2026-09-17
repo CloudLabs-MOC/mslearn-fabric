@@ -79,7 +79,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    ![](<./Images/img1111.png>)
 
-1. In the first cell, paste the following PySpark code and click the **&#9655; Run (1)** button to execute it:
+1. In the first cell, paste the following PySpark code and click the **&#9655; Run (1)** button to execute and check the **results (2)**.
 
    ```python
    # Read the raw CSV file from the Lakehouse Files area
@@ -194,7 +194,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
       - Set **Authentication kind** to **Anonymous** **(2)**.
      
-      - Click **Create** **(3)**.
+      - Click **Connect** **(3)**.
      
         ![](<./Images/ETS314.png>)
 
@@ -273,7 +273,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
       ![](<./Images/img31.png>)
 
-1. Now, test the **cross-database query**. In a new SQL query, run the following to verify you can read Lakehouse data from the Warehouse:
+1. Now, test the **cross-database query**. In a new SQL query editor, **run (1)** the following below query which read **Lakehouse data (2)** from the Warehouse:
 
       >**Note:** Please replace the **Lakehouse_** with the actual value of your Lakehouse i.e. **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
 
@@ -282,9 +282,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
       FROM Lakehouse_.dbo.stg_products;
       ```
    
-      
-
-      ![](<./Images/img32.png>)
+      ![](<./Images/lab3-t5-s6.png>)
 
       > **Note**: Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
 
@@ -371,14 +369,14 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
       >**Note:** You should see the Total products number that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
-1. **Run** the following **Query**. You should see the **top 10 product rows** that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
+1. **Run** the following **Query (1)**. You should see the **top 10 product rows (2)** that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
       ```sql
       SELECT TOP 10 * FROM dbo.DimProductStaging ORDER BY Category, ProductName;
       GO
       ```
    
-      ![](<./Images/E3T6S7.png>)
+      ![](<./Images/lab3-sql-1.png>)
 
 1. **(Optional)** To schedule the pipeline for recurring runs:
 
