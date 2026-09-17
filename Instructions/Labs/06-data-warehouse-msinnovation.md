@@ -125,10 +125,12 @@ A warehouse is a relational database in which you can define tables and other ob
    > **!IMPORTANT:** If you encounter any copy paste issues inside the VM do follow the below steps to resolve the issue:
    >
    > - Set **Clipboard access** to **Allow**.
-   > ![](<./Images/nov2025-ms-fabric-2.png>)
+   >
+   >     ![](<./Images/nov2025-ms-fabric-2.png>)
    >
    > - Then enable the **VM Native Clipboard** to copy and paste inside the virtual machine.
-   >   ![](<./Images/nov2025-ms-fabric-1.png>)
+   >
+   >     ![](<./Images/nov2025-ms-fabric-1.png>)
 
 1. Run the query, which creates a simple data warehouse schema and loads some data. The script should take around 30 seconds to run.
 
