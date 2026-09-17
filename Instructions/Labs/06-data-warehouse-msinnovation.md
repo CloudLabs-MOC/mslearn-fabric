@@ -143,9 +143,9 @@ A warehouse is a relational database in which you can define tables and other ob
    - **DimProduct**
    - **FactSalesOrder**
 
-   ![](<./Images/E2T2S11.png>)
+      ![](<./Images/E2T2S11.png>)
 
-   > **Tip:** If the schema takes a while to load, refresh the browser page.
+      > **Tip:** If the schema takes a while to load, refresh the browser page.
 
 ## Task 3: Define a Data Model
 
@@ -165,7 +165,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
 1. Click on **ellipses** next to the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
 
-   ![](<./Images/E2T3S4.png>)
+   ![](<./Images/lab2-t3-s4.png>)
 
 1. At the top right corner, Click on **Viewing (1)** to change it to **Editing** **(2)** permission settings. 
 
@@ -279,11 +279,11 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion;
    ```
 
-1. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view is listed in the **Explorer** pane.
+1. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view **vSalesByRegion** is listed in the **Explorer** pane.
 
    ![](<./Images/ETS211.png>)
 
-1. Create a new SQL query and run the following SELECT statement. This query displays sales revenue by year, month, and sales region using the vSalesByRegion view, with results sorted chronologically.
+1. Create a new SQL query and **Run (1)** the following SELECT statement. This query **displays (2)** sales revenue by year, month, and sales region using the vSalesByRegion view, with results sorted chronologically.
 
    ```SQL
    SELECT CalendarYear, MonthName, SalesRegion, SalesRevenue
@@ -291,7 +291,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
    ORDER BY CalendarYear, MonthOfYear, SalesRegion;
    ```
 
-   ![](<./Images/ETS212.png>)
+   ![](<./Images/lab2-sql-1.png>)
 
 ### Create a visual query
 
@@ -329,11 +329,11 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![](<./Images/L2T3S3.png>)
 
-1. Select the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
+1. Select the **dw semantic model** click on ellipse **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
 
    ![](<./Images/L2T3S4.png>)
 
-1. At the top right corner, Click on **Viewing** **1** to change it to **Editing** **2** permission settings. 
+1. At the top right corner, Click on **Viewing** **(1)** to change it to **Editing** **(2)** permission settings. 
 
    ![](<./Images/L2T5S11.png>)
 
@@ -361,7 +361,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![](<./Images/ETS213.png>)
 
-1. In the report canvas, expand the **DimProduct (1)** and **FactSalesOrder (2)** tables from the **Data** pane, then select the **Clustered bar chart** visual **(3)**. Add **Category** to the Y-axis and **SalesTotal** to the X-axis to create a bar chart visual **(4)**.
+1. In the report canvas, expand the **DimProduct (1)** and **FactSalesOrder (2)** tables from the **Data** pane, then select the **Clustered bar chart** visual **(3)**. Add **Category** to the Y-axis and **SalesTotal** to the X-axis to create a bar **chart visual (4)**.
 
    ![](<./Images/E2T5S7ii.png>)
 

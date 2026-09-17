@@ -59,7 +59,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. On the **Enter Temporary Access Pass** screen, enter the following password and click on **Sign in (2)**.
    
-   - **Password: (1)** <inject key="AzureAdUserPassword"></inject> 
+   - **Temporary Access Pass: (1)** <inject key="AzureAdUserPassword"></inject> 
 
       ![](./Images/L1T1S2.png)
   
@@ -206,7 +206,7 @@ In many scenarios, the data you need to work with in your lakehouse may be store
 
 1. In the **Explorer** menu, click on **ellipses (1)** next to the **Files** folder, select **New shortcut (2)**.
 
-   ![](./Images/L1T4S1.png)
+   ![](./Images/lab1-files.png)
 
 1. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
 
@@ -240,13 +240,13 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    > **Note**: If the **sales** table does not automatically appear, in the **explorer** menu, click on the **ellipses** next to **Tables** folder then select **Refresh**.
 
-1. In the **ellipses (1)** menu for the **sales** table, select **View files (2)** to see the underlying files for this table.
+1. In the **Explorer** pane, expand **Tables** > **dbo**, hover over the **sales** table **(1)**, select the ellipsis **(...)** **(2)**, and then select **View files** **(3)**.
 
-   ![Screenshot of a table preview.](./Images/E1T5S6.png)
+   ![Screenshot of a table preview.](./Images/lab1-sales-ellipse.png)
 
 1. In the **File view** for the **sales** table, observe that it contains Delta Lake log files and Parquet data files. These represent the physical storage format of the table.
 
-   ![Screenshot of a table preview.](./Images/L1T5P7.png)
+   ![Screenshot of a table preview.](./Images/lab1-t5-valuehide.png)
 
    > **Note:** Files for a delta table are stored in Parquet format, and include a subfolder named **\_delta_log** in which details of transactions applied to the table are logged.
 
@@ -329,9 +329,9 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![](./Images/L1T8S3.png)
 
-1. Click on **ellipses** next to the **Custom semantic model** and click on **Create report** option to begin creating a report using the semantic model.
+1. Click on **ellipses ... (1)** next to the **Custom semantic model** and click on **Create report (2)** option to begin creating a report using the semantic model.
 
-   ![](./Images/L1T8S4.png)
+   ![](./Images/lab1-report.png)
 
 1. In the **Data** pane, expand the **sales** table **(1)**, then:
 
