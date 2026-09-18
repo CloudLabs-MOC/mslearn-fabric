@@ -55,11 +55,9 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
     ![](./Images/staysignin.png)   
 
-1. By deafult, the **Power BI (1)** home page will open. Click on Power BI option and select **Fabric (2)**.
+1. You will be now landed to the Microsoft Fabric home page.
 
-    ![](./Images/L1T1S4-2506.png)  
-
-    ![](./Images/L1T1S4a-2506.png)  
+    ![](./Images/fabrichome.png) 
 
 1. Select **Cancel** on the **Welcome to the Fabric view** popup.
 
@@ -91,7 +89,7 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
 1. In the workspace, click on **Manage access** from the top right corner. 
 
-    ![](./Images/L1T1S10-2506.png)
+    ![](./Images/L1T1S10-1709.png)
 
 1. In the **Manage access** pane, click on **+ Add people and groups**.
 
@@ -197,7 +195,7 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
 
 1. On the **Home** page, click the **Analyze data with (1)** on the top command bar, select the **Notebook (2)** menu and select **New notebook (3)** while viewing the contents of the **products** folder.
 
-    ![](./Images/L1T3S1-2506.png)
+    ![](./Images/L1T3S1-1709.png)
 
     **Note:** After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -243,7 +241,7 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
 
 ## Task 4: Create delta tables
 
-In this task, you will create delta tables based on the data in the dataframe. You can save the dataframe as a delta table by using the `saveAsTable` method. Delta Lake supports the creation of both *managed* and *external* tables.
+In this task, you will create delta tables based on the data in the dataframe, by using the `saveAsTable` method. Delta Lake supports the creation of both **managed** and **external** tables.
 
 ### Create a *managed* table
 
@@ -265,7 +263,7 @@ In this task, you will create delta tables based on the data in the dataframe. Y
 
 1. In the **Lakehouse explorer**, open the **ellipsis (...) menu (1)** for the **Tables** folder and select **Refresh (2)**.
 
-   ![](./Images/L1T4S3-2302.png)
+   ![](./Images/L1T4S3-1709.png)
 
 1. Expand the **Tables** folder and verify that the **managed_products** table has been created.
 
@@ -309,7 +307,7 @@ You can also create *external* tables for which the schema metadata is defined i
 
 1. In the **Lakehouse explorer**, right click on **Files** folder and select **Refresh (1)**. Then expand **Files** and verify that the **external_products (2)** folder has been created.
 
-   ![](./Images/L1T4.2S7-2302.png)
+   ![](./Images/L1T4.2S7-1709.png)
 
 ### Compare *managed* and *external* tables
 

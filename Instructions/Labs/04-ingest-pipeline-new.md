@@ -112,11 +112,11 @@ In this task, you will create a pipeline that ingests data from an external sour
 
 1. A new pipeline containing a **Copy job** activity is created, as shown here:
 
-   ![](./Images/cpdta.png)
+   ![](./Images/L2T1S14-1709.png)
 
 1. Click **Run** on the top menu to manually start the pipeline.
 
-   ![09](./Images/upfab-ric-ex1-g14.png)
+   ![09](./Images/L2T1S15-1709.png)
 
 1. When prompted, click on **Save and run** to start the pipeline.
 
@@ -182,7 +182,7 @@ In this task, you will create a Spark notebook to transform the ingested data an
 
 1. On the **Home** page for your lakehouse, click on the **Analyze data with (1)** and select the **Notebook (2)** menu, then click on **New notebook (3)**.
 
-   ![](./Images/L1T3S1-2506.png)
+   ![](./Images/L1T3S1-1709.png)
 
    After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -227,7 +227,7 @@ In this task, you will create a Spark notebook to transform the ingested data an
 
     ![](./Images/fab-ms-ex1-g50.png)
 
-1. In the **Explorer** pane of your Lakehouse, from the eplipses menu **(1)** of Tables, click on **Refresh (2)**.  Then expand **Tables**, and select the **sales (3)** table to see a preview of the data it contains.
+1. In the **Explorer** pane of your Lakehouse, from the ellipses menu **(1)** of Tables, click on **Refresh (2)**.  Then expand **Tables**, and select the **sales (3)** table to see a preview of the data it contains.
 
    ![](./Images/L2T2S7-2302.png)
 
@@ -270,7 +270,7 @@ In this task, you will modify the pipeline you created in Task 1 to include the 
 
 1. In the pipeline designer, from **Home (1)** tab select **Notebook (2)** on the top command bar to add a **Notebook** activity to the pipeline.
 
-    ![](./Images/L2T3S6-2506.png)
+    ![](./Images/L2T3S6-1709.png)
 
 1. Select the **Copy data** activity and then connect its **On completion** output to the **Notebook** activity as shown here:
 
