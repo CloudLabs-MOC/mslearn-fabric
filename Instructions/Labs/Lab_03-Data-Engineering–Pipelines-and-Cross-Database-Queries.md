@@ -45,6 +45,10 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    ![](<./Images/img2.png>)
 
+   > **Note:** If the **Notebook Copilot Updates and Git Integration Supporting Resources** pop-up appears, click **Skip for now** to continue.
+
+   ![](<./Images/task03.png>)
+   
 1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click on **From OneLake catalog (2)**
     
    ![](<./Images/img3.png>)
