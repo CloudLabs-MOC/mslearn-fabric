@@ -54,6 +54,10 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![Screenshot of a new warehouse.](./Images/L2T2S2.png)
 
+   > **Note:** If the **Welcome to your warehouse** pop-up appears, click **Try later** to continue.
+
+   ![](./Images/task2.png)
+   
    ```sql
    CREATE TABLE dbo.DimProduct
    (
@@ -65,6 +69,8 @@ A warehouse is a relational database in which you can define tables and other ob
    );
    GO
    ```
+
+   
 
 1. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
 
