@@ -71,6 +71,10 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
    >
    >   ![](./Images/fabric-image5.png)
 
+   > **Note:** If the **Microsoft Fabric (Free) license assigned** pop-up appears, click **OK** to continue.
+   >
+   >   ![](./Images/task1.png)
+
 1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to **Power BI** experience.
 
    ![](./Images/fabric-image6.png)
