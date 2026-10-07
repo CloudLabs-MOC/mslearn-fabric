@@ -338,7 +338,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 In this task, you will validate, run, and monitor the pipeline to ensure all three activities complete successfully.
 
-1. Switch to **Home (1)** On the pipeline toolbar, click on **Validate** **(2)**. You can check for configuration errors or validation errors on the **Pipeline Validation Pane (3)**.
+1. Switch to **Home (1)** on the pipeline toolbar, click on **Validate** **(2)**. You can check for configuration errors or validation errors on the **Pipeline Validation Output (3)**.
    
       ![](<./Images/img38.png>)
 
@@ -362,7 +362,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. To verify the data landed in the Warehouse, switch to the browser tab with **myDataWarehouse**.
 
-1. Open a **New SQL query** and **Run(2)** the following **Query(1)**. Also you can validate the **Result(3)**:
+1. Open a **New SQL query** and **Run (2)** the following **Query(1)**. Also you can validate the **Result(3)**:
 
       ```sql
       SELECT COUNT(*) AS TotalProducts FROM dbo.DimProductStaging;
@@ -371,7 +371,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
       
       ![](<./Images/E3T6S6.png>)
 
-      >**Note:** You should see the Total products number that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
+      >**Note:** You should see the Totalproducts  number that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
 1. **Run** the following **Query (1)**. You should see the **top 10 product rows (2)** that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
