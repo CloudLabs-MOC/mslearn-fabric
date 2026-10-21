@@ -401,4 +401,4 @@ In this exercise, you have accomplished the following:
 
 ### You have successfully completed the lab. Click on **Next >>**.
 
-![](./Images/GS-02-next.png)
+![](./Images/page_03.png)

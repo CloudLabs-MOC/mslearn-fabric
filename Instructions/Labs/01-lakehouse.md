@@ -403,4 +403,4 @@ In this Lab, you have accomplished the following:
 
 ### You have successfully completed the lab. Click on **Next >>**.
 
-![](./Images/GS-02-next.png)
+![](./Images/page_02.png)
