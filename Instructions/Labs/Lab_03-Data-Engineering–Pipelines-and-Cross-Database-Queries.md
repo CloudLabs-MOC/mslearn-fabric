@@ -39,7 +39,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    ![](<./Images/Img1.png>)
 
-   > **Note**: If prompted to select a Lakehouse, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** and click **Add**.
+   > **Note:** If prompted to select a Lakehouse, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** and click **Add**.
 
 1. On the New Notebook pop-up rename it to **nb_transform_products** **(1)** and click on **Create (2)**.
 
@@ -57,7 +57,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
     
    ![](<./Images/img4.png>)
 
-   > **Note**: Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the lakehouse icon
+   > **Note:** Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the lakehouse icon
 
 1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipses **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**. Name it **raw (3)** and click **Create (4)** .
    
@@ -99,7 +99,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    
    ![](<./Images/img8.png>)
 
-   > **Note**: The code loads the products.csv file into a Spark DataFrame, displays the total number of rows in the dataset, and shows the first 5 records for validation. You should see **295 rows** and the columns **ProductID, ProductName, Category, and ListPrice.(2)**.
+   > **Note:** The code loads the products.csv file into a Spark DataFrame, displays the total number of rows in the dataset, and shows the first 5 records for validation. You should see **295 rows** and the columns **ProductID, ProductName, Category, and ListPrice.(2)**.
 
 1. Click **+ Code** below the first cell to add a new code cell. Paste the following transformation code and **&#9655; Run** button. This code cleans and transforms the raw data, adds a load timestamp, and saves the results as a Delta table named **stg_products** in the Lakehouse.
 
@@ -241,7 +241,7 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
       ![](<./Images/img29.png>)
 
-      > **Note**: The green connector means the Notebook activity will only run **on success** of the Copy activity. This ensures transformation only occurs after data is successfully ingested.
+      > **Note:** The green connector means the Notebook activity will only run **on success** of the Copy activity. This ensures transformation only occurs after data is successfully ingested.
 
 ## Task 5: Use cross-database query to load data into the Warehouse
 
@@ -288,7 +288,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
    
       ![](<./Images/lab3-t5-s6.png>)
 
-      > **Note**: Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
+      > **Note:** Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
 
 1. Switch back to the browser tab with your **pl_ingest_and_load** pipeline.
 
@@ -358,7 +358,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
         ![](<./Images/img41.png>)
 
-      > **Note**: The pipeline run typically completes in 2-4 minutes. If an activity fails, click on it to see the error details and troubleshoot.
+      > **Note:** The pipeline run typically completes in 2-4 minutes. If an activity fails, click on it to see the error details and troubleshoot.
 
 1. To verify the data landed in the Warehouse, switch to the browser tab with **myDataWarehouse**.
 

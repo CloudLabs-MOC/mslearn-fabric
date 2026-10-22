@@ -131,6 +131,40 @@ To copy the SQL script or any code snippet, click the **Copy button (1)** locate
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
+## Let's Get Started with Microsoft Fabric Portal
+
+1. Open the **Microsoft Edge** browser and sign in to **Microsoft Fabric** Portal using following link.
+
+   ```
+   https://app.fabric.microsoft.com
+   ```
+
+   ![](./Images/edge.png)   
+
+1. On the **Microsoft Fabric** page, enter the following email and click on **Submit** **(2)**.
+
+   - **Email: (1)** <inject key="AzureAdUserEmail"></inject>
+
+      ![](./Images/fabric-image2.png)
+
+1. On the **Enter Temporary Access Pass** screen, enter the following password and click on **Sign in (2)**.
+   
+   - **Temporary Access Pass: (1)** <inject key="AzureAdUserPassword"></inject> 
+
+      ![](./Images/L1T1S2.png)
+  
+1. When **Stay signed in?** prompted, click on **Yes**.
+  
+   ![](./Images/fabric-image4.png)
+   
+1. If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
+   
+   ![](./Images/fabric-image5.png)
+
+1. If the **Microsoft Fabric (Free) license assigned** pop-up appears, click **OK** to continue.
+   
+   ![](./Images/task1.png)
+
 ## 📞 Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.

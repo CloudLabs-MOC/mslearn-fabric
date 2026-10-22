@@ -31,49 +31,16 @@ In this lab, you will complete the following tasks:
 - Task 1: Create a workspace
 - Task 2: Create a Lakehouse
 - Task 3: Upload a file
-- Task 4: Explore shortcuts
-- Task 5: Load file data into a table
-- Task 6: Use SQL to query tables
-- Task 7: Create a visual query
-- Task 8: Create a Report
+- Task 4: Load file data into a table
+- Task 5: Use SQL to query tables
+- Task 6: Create a visual query
+- Task 7: Create a Report
 
 ## Task 1: Create a workspace
 
 In this task, you will create a new workspace that serves as a collaborative environment for managing datasets, reports, dashboards, and other related resources. The workspace will act as a centralized location where you and your team can securely store, organize, and share content, enabling better collaboration and streamlined access for reporting and analytics.
 
 Before working with data in Fabric, create a workspace with the Fabric trial enabled.
-
-1. Open the **Microsoft Edge** browser and sign in to **Microsoft Fabric** Portal using following link.
-
-   ```
-   https://app.fabric.microsoft.com
-   ```
-
-   ![](./Images/edge.png)   
-
-1. On the **Microsoft Fabric** page, enter the following email and click on **Submit** **(2)**.
-
-   - **Email: (1)** <inject key="AzureAdUserEmail"></inject>
-
-      ![](./Images/fabric-image2.png)
-
-1. On the **Enter Temporary Access Pass** screen, enter the following password and click on **Sign in (2)**.
-   
-   - **Temporary Access Pass: (1)** <inject key="AzureAdUserPassword"></inject> 
-
-      ![](./Images/L1T1S2.png)
-  
-1. When **Stay signed in?** prompted, click on **Yes**.
-  
-   ![](./Images/fabric-image4.png)
-   
-   > **Note**: If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
-   >
-   >   ![](./Images/fabric-image5.png)
-
-   > **Note:** If the **Microsoft Fabric (Free) license assigned** pop-up appears, click **OK** to continue.
-   >
-   >   ![](./Images/task1.png)
 
 1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to **Power BI** experience.
 
@@ -111,7 +78,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/E1T1S11ii.png)
 
-   > **Note**: If you receive the **Introducing task flows (preview)** pop-up, click **Got it** to continue.
+   > **Note:** If you receive the **Introducing task flows (preview)** pop-up, click **Got it** to continue.
 
    ![](<./Images/fb_ex1_8.png>)
 
@@ -204,19 +171,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
    ![](<./Images/fb_cor_1_1.png>)
 
-## Task 4: Explore shortcuts
-
-In many scenarios, the data you need to work with in your lakehouse may be stored in some other location. While there are many ways to ingest data into the OneLake storage for your lakehouse, another option is to instead create a shortcut. Shortcuts enable you to include externally sourced data in your analytics solution without the overhead and risk of data inconsistency associated with copying it.
-
-1. In the **Explorer** menu, click on **ellipses (1)** next to the **Files** folder, select **New shortcut (2)**.
-
-   ![](./Images/lab1-files.png)
-
-1. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
-
-   ![](./Images/L1T4S2.png)
-
-## Task 5: Load file data into a table
+## Task 4: Load file data into a table
 
 The sales data you uploaded is in a file that data analysts and engineers can work with directly by using Apache Spark code. However, in many scenarios, you may want to load the data from the file into a table so that you can query it using SQL.
 
@@ -224,7 +179,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    ![](<./Images/E1T5S1.png>)
 
-   > **Note**: If the **sales** table does not automatically appear, in the **ellipses** menu for the **Tables** folder, select **Refresh**.
+   > **Note:** If the **sales** table does not automatically appear, in the **ellipses** menu for the **Tables** folder, select **Refresh**.
 
 1. In the **data** folder, click the **ellipses** next to the **sales.csv** file to open the context menu.
 
@@ -242,7 +197,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    ![Screenshot of a table preview.](./Images/L1T5S5.png)
 
-   > **Note**: If the **sales** table does not automatically appear, in the **explorer** menu, click on the **ellipses** next to **Tables** folder then select **Refresh**.
+   > **Note:** If the **sales** table does not automatically appear, in the **explorer** menu, click on the **ellipses** next to **Tables** folder then select **Refresh**.
 
 1. In the **Explorer** pane, expand **Tables** > **dbo**, hover over the **sales** table **(1)**, select the ellipsis **(...)** **(2)**, and then select **View files** **(3)**.
 
@@ -254,7 +209,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    > **Note:** Files for a delta table are stored in Parquet format, and include a subfolder named **\_delta_log** in which details of transactions applied to the table are logged.
 
-## Task 6: Use SQL to query tables
+## Task 5: Use SQL to query tables
 
 When you create a lakehouse and define tables in it, a SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
@@ -279,7 +234,7 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
    ![Screenshot of a SQL query with results.](./Images/E1T6S4.png)
 
-## Task 7: Create a visual query
+## Task 6: Create a visual query
 
 While many data professionals are familiar with SQL, data analysts with Power BI experience can apply their Power Query skills to create visual queries.
 
@@ -315,7 +270,7 @@ While many data professionals are familiar with SQL, data analysts with Power BI
 
       ![](<./Images/L1T7S6.png>)
 
-## Task 8: Create a Report
+## Task 7: Create a Report
 
 In this task, we will create a new semantic model and add a table to the dataset, which will define the data model to be used for reporting in Power BI.
 
@@ -323,7 +278,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![Screenshot of a data model.](./Images/E1T8S1.png)
 
-   > **Note**: In this exercise, the data model consists of a single table. In a real-world scenario, you would likely create multiple tables in your lakehouse, each of which would be included in the model. You could then define relationships between these tables in the model.
+   > **Note:** In this exercise, the data model consists of a single table. In a real-world scenario, you would likely create multiple tables in your lakehouse, each of which would be included in the model. You could then define relationships between these tables in the model.
 
 1. Enter **Custom semantic model** **(1)** in the name field and select the table **sales** **(2)**, then click on **Confirm** **(3)** to proceed.
 
@@ -345,7 +300,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
       ![](./Images/L1T8S5.png)
 
-      > **Note**: This table report presents aggregated sales data for each item, allowing users to monitor product performance, identify high-demand products, and validate that the sales data has been loaded correctly into the semantic model.
+      > **Note:** This table report presents aggregated sales data for each item, allowing users to monitor product performance, identify high-demand products, and validate that the sales data has been loaded correctly into the semantic model.
 
 1. In the **Visualizations** pane, follow these steps to convert the table into a clustered bar chart:
 

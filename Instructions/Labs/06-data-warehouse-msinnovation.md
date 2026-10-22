@@ -70,8 +70,6 @@ A warehouse is a relational database in which you can define tables and other ob
    GO
    ```
 
-   
-
 1. Use the **&#9655; Run** button to run the SQL script, which creates a new table named **DimProduct** in the **dbo** schema of the data warehouse.
 
    ![](./Images/E2T2S2.png)
@@ -88,7 +86,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/l6-new-query.png>)
 
-1.  Insert the below query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
+1. Insert the below query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
 
       ```sql
       INSERT INTO dbo.DimProduct
@@ -122,7 +120,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
    > **Note:** To add the next query below the existing one, press **Enter** twice to create a blank line. Avoid using **Shift + Enter** here in the SQL query editor it runs the query instead of inserting a new line.
 
-   > **For Windows users**: To copy the entire file content, press **Ctrl + A** to select all the text, and then press **Ctrl + C** to copy it and **Ctrl + V** to paste it.
+   > **For Windows users:** To copy the entire file content, press **Ctrl + A** to select all the text, and then press **Ctrl + C** to copy it and **Ctrl + V** to paste it.
 
    > **For Mac users:** To copy the entire file content, press **⌘ Command + A** to select all the text, and then press **⌘ Command + C** to copy it and **⌘ Command + V** to paste it.
 
@@ -209,7 +207,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
       ![](./Images/L2T3S8.png)
 
-      > **Note**: When all of the relationships have been defined, the model should look like this.
+      > **Note:** When all of the relationships have been defined, the model should look like this.
 
 ## Task 4: Query data Warehouse tables
 
