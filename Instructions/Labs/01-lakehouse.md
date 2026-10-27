@@ -42,31 +42,33 @@ In this task, you will create a new workspace that serves as a collaborative env
 
 Before working with data in Fabric, create a workspace with the Fabric trial enabled.
 
-1. On the **Fabric** home page, click the **Fabric** icon from the left pane to change to **Power BI** experience.
+1. After signing in, you'll be redirected to the **Welcome to Fabric** home page. Verify that **Fabric** is selected as the experience at the bottom of the left navigation pane.
 
    ![](./Images/fabric-image6.png)
 
-1. Select **Power BI** from the dropdown to change to **PowerBI** view
-
-   ![](./Images/fabric-image7.png)
-
-1. From the PowerBI home page, select **Account Manager (1)** from the top-right corner to start the trial of Power BI click on the dropdown of **Start Trial (1)** and select only **Power BI only (2)**.
+1. To start a free Microsoft Fabric trial, select the **Profile** icon **(1)** in the top-right corner, select the **Start trial** drop-down **(2)** under **Free trial**, and then select **Fabric and Power BI (3)**.
 
    ![](./Images/E1T1S7.png)
 
    >**Note:** The Fabric trial is enabled to ensure that your account has access to Microsoft Fabric features and experiences. However, the hands-on lab resources and workloads in this guide are configured to use the F2 Fabric capacity provided for the lab environment. The trial activation is only to enable Fabric access for your user account and does not replace the dedicated F2 capacity used throughout the lab.
 
-1. On the **Your Power BI trial is active** confirmation window, click **Got it** to continue.
+1. In the **Activate your 60-day free Fabric and Power BI trial** dialog, keep the default **Trial capacity region**, and then select **Activate**.
 
-   ![](./Images/L1T1S9.png)
+   ![](./Images/activiate_trial.png)
 
    > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
 
-1. Click the **Account Manager (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Power BI Trial Status (2)** shows the number of days remaining.
+1. In the **Successfully upgraded to a free Microsoft Fabric trial** dialog, select **OK** to continue.
+
+   ![](./Images/Img_010.png)
+
+1. In the **Invite teammates to try Fabric to extend your trial** dialog, select the **X** (Close) icon in the top-right corner to dismiss it.
+
+   ![](./Images/img_011.png)
+
+1. Click the **Profile (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Fabric and Power BI Trial Status (2)** shows the number of days remaining.
 
    ![](./Images/E1T1S9.png)
-
-   > **Note:** You now have a **Fabric (Preview) trial** that includes a **Power BI trial** and a **Fabric (Preview) trial capacity**.
 
 1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;). Select **+ New workspace (2)**
 
@@ -96,7 +98,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](<./Images/L1T1S12.png>)
 
-1. Close the **Add people** pane, once it is added.
+1. Close the **Add people** pane, once it is added. Once it is added, close the Add people pane.
 
    ![](<./Images/ETS1114.png>)
 
@@ -112,7 +114,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 Now that you have a workspace, it's time to switch to the Data engineering experience in the portal and create a data lakehouse for your data files.
 
-1. Ensure the **Power BI** **(1)** icon is visible in the left pane. Click on **+ New item** **(2)** at the top of the workspace.
+1. Ensure the **Fabric** **(1)** icon is visible in the left pane. Click on **+ New item** **(2)** at the top of the workspace.
 
    ![](<./Images/ETS121.png>)
 
@@ -124,7 +126,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
    ![](<./Images/E1T2S3.png>)   
 
-1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
+1. View the new lakehouse and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
 
    - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source Delta Lake file format, commonly used in Apache Spark.
    - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create shortcuts in this folder to reference data that is
@@ -221,6 +223,10 @@ When you create a lakehouse and define tables in it, a SQL endpoint is automatic
 
    ![Screenshot of the SQL endpoint page.](./Images/ETS171.png)
 
+   > **Note:** Depending on your screen size or browser zoom level, the **New SQL query** option may appear as an icon only, without the text label. If so, select the **drop-down arrow (1)** next to the **SQL** icon on the **Home** ribbon, and then select **New SQL query (2)**.
+   >
+   >  ![](./Images/img_012.png)
+
 1. In the new query editor, enter the following SQL query to calculate the total revenue by item:
 
    ```sql
@@ -284,7 +290,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![](./Images/task8-2.1.png)
 
-1. In the hub menu bar on the left, click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**.
+1. From the left navigation pane, select **Workspaces (1)**, and then select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
    ![](./Images/L1T8S3.png)
 

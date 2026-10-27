@@ -22,7 +22,7 @@ By the end of this lab, you will learn:
 
 - **Automating Data Integration with Data Pipelines:** This hands-on exercise introduces Microsoft Fabric Data Pipelines and Notebooks for automating data movement and transformation. You will ingest data into a Lakehouse, transform raw data into curated Delta tables, load data into a Data Warehouse using cross-database queries, and orchestrate an end-to-end ETL workflow through a single pipeline.
 
-## ⚙️ Prerequisites 
+## ⚙️ Prerequisites
 
 Participants should have:
 
@@ -39,7 +39,7 @@ Participants should have:
 
 This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that combines the flexibility and scalability of a data lake with the structured querying capabilities of a data warehouse. Key components include OneLake, a scalable storage layer built on Azure Data Lake Storage Gen2, and Apache Spark, which provides high-performance in-memory computation for big data processing. SQL compute engines enable complex queries on large datasets, while Delta Lake ensures ACID transactions and efficient metadata handling. Additionally, Power BI and Power Query are integrated for advanced data visualization, reporting, and manipulation.
 
-## 🖼️ Architecture diagram
+## 🖼️ Architecture Diagram
 
 ![](./Images/archoverview.png)
 
@@ -79,7 +79,7 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 - **Pipeline Monitoring:** A feature that allows users to track pipeline execution, review activity status, troubleshoot failures, and validate successful completion of data integration processes.
 
-## 🚀 Getting Started with the lab
+## 🚀 Getting Started with the Lab
 
 Welcome to your **Get Started with Microsoft Fabric Analytics** workshop! We've prepared a seamless environment for you to explore Microsoft Fabric's end-to-end analytics capabilities. Throughout this workshop, you'll work with Lakehouses and Data Warehouses, automate data workflows using Pipelines and Notebooks, analyze data with SQL, and create insightful Power BI reports. Let's get started!
 
@@ -131,15 +131,15 @@ To copy the SQL script or any code snippet, click the **Copy button (1)** locate
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
-## Let's Get Started with Microsoft Fabric Portal
+## Let's Get Started with the Microsoft Fabric Portal
 
-1. Open the **Microsoft Edge** browser and sign in to **Microsoft Fabric** Portal using following link.
+1. Open the **Microsoft Edge** browser and sign in to **Microsoft Fabric** Portal using the following link.
 
    ```
    https://app.fabric.microsoft.com
    ```
 
-   ![](./Images/edge.png)   
+   ![](./Images/edge.png)
 
 1. On the **Microsoft Fabric** page, enter the following email and click on **Submit** **(2)**.
 
@@ -157,13 +157,9 @@ Now you're all set to explore the powerful world of technology. Feel free to rea
   
    ![](./Images/fabric-image4.png)
    
-1. If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
-   
-   ![](./Images/fabric-image5.png)
-
-1. If the **Microsoft Fabric (Free) license assigned** pop-up appears, click **OK** to continue.
-   
-   ![](./Images/task1.png)
+    >**Note:** If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
+    >
+    >   ![](./Images/fabric-image5.png)
 
 ## 📞 Support Contact
 
@@ -177,4 +173,4 @@ Now, click on **Next >>** from the lower right corner to move on to the next pag
 
 ![](./Images/GS-02-next.png)
 
-### Happy Learning!!
+## Happy Learning!!

@@ -31,15 +31,15 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a Spark notebook that transforms the raw CSV data (ingested into the Lakehouse Files area) into a cleansed Delta table. This notebook will later be called from the pipeline.
 
-1. In the **Power BI (1)** portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**. click **+ New item** **(2)** to create a new workspace item.
+1. From the left navigation pane, select **Workspaces (1)**, and then select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
-   ![](<./Images/ETS311.png>)
+   ![](./Images/L1T8S3.png)
 
-1. On the **New item** page, search for **notebook** **(1)** in the search bar and select **Notebook** **(2)**.
+1. In your workspace, select **+ New item (1)**. In the **New item** pane, search for **Notebook (2)** in the search box, and then select **Notebook (3)** from the results.
 
-   ![](<./Images/Img1.png>)
+      ![](./Images/img_014.png)
 
-   > **Note:** If prompted to select a Lakehouse, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** and click **Add**.
+      > **Note:** If prompted to select a Lakehouse, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** and click **Add**.
 
 1. On the New Notebook pop-up rename it to **nb_transform_products** **(1)** and click on **Create (2)**.
 
@@ -49,7 +49,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    ![](<./Images/task03.png>)
    
-1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click on **From OneLake catalog (2)**
+1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click on **From OneLake catalog (2)**.
     
    ![](<./Images/img3.png>)
 
@@ -57,19 +57,19 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
     
    ![](<./Images/img4.png>)
 
-   > **Note:** Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the lakehouse icon
+   > **Note:** Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the **lakehouse icon**.
 
-1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipses **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**. Name it **raw (3)** and click **Create (4)** .
+1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipses **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**. Name it **raw (3)** and click **Create (4)**.
    
    ![](<./Images/img5.png>)
 
    ![](<./Images/img111.png>)
 
-1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**
+1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**.
 
    ![](<./Images/img7.png>)
 
-1. On the Upload files dialog, click the **folder icon** on the right to **browse**, go to path **C:\LabFiles\dp-data-main** and select the **prodcuts.csv (1)** file from your local or lab machine and click on **Open (2)**
+1. On the Upload files dialog, click the **folder icon** on the right to **browse**, go to path **C:\LabFiles\dp-data-main** and select the **prodcuts.csv (1)** file from your local or lab machine and click on **Open (2)**.
 
    ![](<./Images/imgupload.png>)
 
@@ -129,7 +129,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    
    ![](<./Images/img9.png>)
 
-1. In the **Explorer** pane, Click it on the ellipses **(...) (1)** of the onelake and click on  the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
+1. In the **Explorer** pane, Click it on the ellipses **(...) (1)** of the onelake and click on the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
 
    ![](<./Images/img12.png>)
 
@@ -146,13 +146,13 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
 In this task, you will create a new Data Pipeline that will orchestrate the entire data flow - from ingestion to transformation to loading.
 
-1. In the hub menu bar on the left, click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**. Click **+ New item** **(2)** at the top of the workspace.
+1. From the left navigation pane, select **Workspaces (1)**, and then select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
-      ![](<./Images/E1T2S1.png>)
+   ![](./Images/L1T8S3.png)
 
-1. On the **New item** page, search for **Pipeline** **(1)** in the search bar and select **Pipeline** **(2)**.
+1. In your workspace, select **+ New item (1)**. In the **New item** pane, search for **Pipeline (2)** in the search box, and then select **Pipeline (3)** from the results.
 
-      ![](<./Images/img13.png>)
+      ![](./Images/img_015.png)
 
 1. In the **New pipeline** popup, enter **pl_ingest_and_load** **(1)** as the pipeline name, then click **Create** **(2)**.
 
@@ -209,6 +209,9 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 1. Click the **Destination** tab:
 
       - Under **Connection** dropdown click on **Browse all**.
+
+        ![](./Images/img_016.png)
+
       - On the next screen scroll down to **OneLake Catalog**, select **Lakehouse**.
       - Select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** as the Lakehouse.
 
@@ -219,7 +222,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
      
         ![](<./Images/E3T3S6ii.png>)
 
-        > **Note**: The pipeline stores the file in Files/raw/products.csv within the Lakehouse and replaces any existing file during each run, ensuring the latest source data is always used.
+        > **Note:** The pipeline stores the file in Files/raw/products.csv within the Lakehouse and replaces any existing file during each run, ensuring the latest source data is always used.
 
 ## Task 4: Add a Notebook Activity to transform data
 
@@ -277,7 +280,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
       ![](<./Images/img31.png>)
 
-1. Now, test the **cross-database query**. In a new SQL query editor, **run (1)** the following below query which read **Lakehouse data (2)** from the Warehouse:
+1. Now, test the **cross-database query**. In a new SQL query editor, **run (1)** the following below query which read **Lakehouse data (2)** from the Warehouse.
 
       >**Note:** Please replace the **Lakehouse_** with the actual value of your Lakehouse i.e. **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
 
@@ -302,9 +305,16 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. Click the **Settings** **(1)** tab:
 
-      - Under **Connection**, select your **myDataWarehouse** **(2)** warehouse connection.
-      - Set **Script type** to **NonQuery** **(3)**.
-      - In the **Script** field, paste the following SQL **(4)**:
+      - Under **Connection** dropdown click **Browse all (2)**.
+
+        ![](./Images/img_017.png)
+
+      - In the **Choose a data source to get started** window, under **OneLake catalog**, select **myDataWarehouse (3)**.
+
+        ![](./Images/img_018.png)
+
+      - Set **Script type** to **NonQuery** **(4)**.
+      - In the **Script** field, paste the following SQL **(5)**.
 
       ```sql
       -- Truncate and reload the staging table using cross-database query
@@ -320,15 +330,15 @@ In this task, you will add a **Script** activity that uses a cross-database quer
       FROM Lakehouse_.dbo.stg_products;
       ```
    
-      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**
+      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
     
-      ![](<./Images/img35.png>)
+      ![](./Images/img_019.png)
 
 1. Connect the **Transform to Delta** activity to the **Load to Warehouse** activity using the green (on success) connector, just as you did in Task 4.
 
       ![](<./Images/img36.png>)
 
-1. Your completed pipeline should now look like this, with three activities connected in sequence:
+1. Your completed pipeline should now look like this, with three activities connected in sequence.
 
       > Products CSV ──▶ Transform to Delta ──▶ Load to Warehouse
 
@@ -362,7 +372,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. To verify the data landed in the Warehouse, switch to the browser tab with **myDataWarehouse**.
 
-1. Open a **New SQL query** and **Run (2)** the following **Query(1)**. Also you can validate the **Result(3)**:
+1. Open a **New SQL query** and **Run (2)** the following **Query(1)**. Also you can validate the **Result(3)**.
 
       ```sql
       SELECT COUNT(*) AS TotalProducts FROM dbo.DimProductStaging;
@@ -384,7 +394,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. **(Optional)** To schedule the pipeline for recurring runs:
 
-      - Go back to the pipeline **pl_ingest_and_load**.
+      - From the left navigation pane, select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**, and then select **pl_ingest_and_load (2)** to open the pipeline.
 
         ![](<./Images/imgpipe.png>)
 
