@@ -32,7 +32,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will provision a new data warehouse within Microsoft Fabric. A data warehouse in Fabric offers a fully managed relational database designed for large-scale analytics. Unlike the default read-only SQL endpoint provided for lakehouse tables, a data warehouse supports complete SQL capabilities, including inserting, updating, and deleting data. This enables you to design and manage structured schemas, load data efficiently, and prepare it for advanced querying and reporting.
 
-1. In the **Power BI (1)** portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**. click **+ New item** **(2)** to create a new workspace item.
+1. In the **Fabric (1)** portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**. click **+ New item** **(2)** to create a new workspace item.
 
    ![](<./Images/L2T1S1.png>)
 
@@ -81,6 +81,8 @@ A warehouse is a relational database in which you can define tables and other ob
 1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand the **Schemas** section **(2)** to view the available schema objects, including `dbo`, `INFORMATION_SCHEMA`, `queryinsights`, and `sys`.
 
    ![](<./Images/L2T2S4.png>)
+
+   > **Note:** It may take **5–10 minutes** for all the resources to load. Please wait until the schemas appear as shown in the screenshot before proceeding to the next step.
 
 1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
@@ -163,9 +165,9 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![](./Images/L2T3S2-1.png)
 
-1. In the hub menu bar on the left, Click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**
+1. From the left navigation pane, select **Workspaces (1)**, and then select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
-   ![](<./Images/L2T3S3.png>)
+   ![](./Images/L1T8S3.png)
 
 1. Click on **ellipses** next to the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
 
@@ -213,7 +215,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
 Since the data warehouse is a relational database, you can use SQL to query its tables.
 
-### Query fact and dimension tables
+### Task 4.1: Query fact and dimension tables
 
 Most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).
 
@@ -265,7 +267,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
 A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like views and stored procedures to encapsulate SQL logic.
 
-### Create a View
+### Task 5.1: Create a View
 
 1. Modify the query you created previously as follows to create a view (note that you need to remove the ORDER BY clause to create a view).
 
@@ -297,7 +299,7 @@ A data warehouse in Microsoft Fabric has many of the same capabilities you may b
 
    ![](<./Images/lab2-sql-1.png>)
 
-### Create a visual query
+### Task 5.2: Create a visual query
 
 Instead of writing SQL code, you can use the graphical query designer to query the tables in your data warehouse. This experience is similar to Power Query online, where you can create data transformation steps with no code. For more complex tasks, you can use Power Query's M (Mashup) language.
 
@@ -325,17 +327,13 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
 
-### Visualize your data
+### Task 5.3: Visualize your data
 
 You can easily visualize the data in either a single query or in your data warehouse. Before you visualize, hide columns and/or tables that aren't friendly to report designers.
 
-1. In the hub menu bar on the left, click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**.
+1. From the left navigation pane, select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)**, and then select **dw semantic model (2)** to open it.
 
-   ![](<./Images/L2T3S3.png>)
-
-1. Select the **dw semantic model** click on ellipse **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
-
-   ![](<./Images/L2T3S4.png>)
+   ![](./Images/img_013.png)
 
 1. At the top right corner, Click on **Viewing** **(1)** to change it to **Editing** **(2)** permission settings. 
 
