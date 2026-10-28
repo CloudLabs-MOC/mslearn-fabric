@@ -66,7 +66,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](./Images/img_011.png)
 
-1. Click the **Profile (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Fabric and Power BI Trial Status (2)** shows the number of days remaining.
+1. Click the **Profile (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Fabric and Power BI trial status (2)** shows the number of days remaining.
 
    ![](./Images/E1T1S9.png)
 
@@ -98,7 +98,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
    ![](<./Images/L1T1S12.png>)
 
-1. Close the **Add people** pane, once it is added. Once it is added, close the Add people pane.
+1. Once it is added, **close (X)** the Add people pane.
 
    ![](<./Images/ETS1114.png>)
 
@@ -139,7 +139,7 @@ Now that you have a workspace, it's time to switch to the Data engineering exper
 
 Fabric provides multiple ways to load data into the lakehouse, including built-in support for pipelines that copy data from external sources and data flows (Gen 2) that you can define using visual tools based on Power Query. However, one of the simplest ways to ingest small amounts of data is to upload files or folders from your lab VM.
 
-1. On the **Lakehouse explorer** pane, click the ellipses **(1)** next to the **Files** folder, then select **New subfolder** **(2)**.
+1. On the **Lakehouse explorer** pane, click the **ellipsis (...) (1)** next to the **Files** folder, then select **New subfolder** **(2)**.
 
    ![](./Images/ETS122.png)
 
@@ -147,11 +147,11 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
    ![](./Images/fb_g2_1_5.png)
 
-1. On the **Lakehouse explorer** pane, click the **ellipses (1)** next to the **data** folder, hover over **Upload** **(2)**, then select **Upload files** **(3)**.
+1. On the **Lakehouse explorer** pane, click the **ellipsis (...) (1)** next to the **data** folder, hover over **Upload** **(2)**, then select **Upload files** **(3)**.
 
    ![](<./Images/E1T3S3.png>)
 
-1. On the **Upload files** dialog, click the **folder icon** on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv (1)** file from your lab machine and click on **Open (2)**.
+1. On the **Upload files** dialog, click the **folder icon** on the right to browse, go to path **C:\LabFiles\dp-data-main** and select the **sales.csv (1)** file from your lab virtual machine and click on **Open (2)**.
 
    ![](<./Images/fb_g2_1_7.png>)
    
@@ -165,7 +165,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
    ![](<./Images/fb_g2_1_10.png>)
 
-1. In the **Lakehouse explorer** pane, expand **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>(1)**, then expand **Files** **(2)** and select the **data** **(3)** folder. Verify that the **sales.csv** **(4)** file has been uploaded successfully.
+1. In the **Lakehouse explorer** pane, expand **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**, then expand **Files** **(2)** and select the **data** **(3)** folder. Verify that the **sales.csv** **(4)** file has been uploaded successfully.
 
    ![Screenshot of uploaded sales.csv file in a lakehouse.](./Images/L1T3S8.png)
 
@@ -183,7 +183,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    > **Note:** If the **sales** table does not automatically appear, in the **ellipses** menu for the **Tables** folder, select **Refresh**.
 
-1. In the **data** folder, click the **ellipses** next to the **sales.csv** file to open the context menu.
+1. In the **data** folder, click the **ellipsis (...)** next to the **sales.csv** file to open the context menu.
 
    ![](<./Images/fb_g2_1_12.png>)
 
@@ -294,7 +294,7 @@ In this task, we will create a new semantic model and add a table to the dataset
 
    ![](./Images/L1T8S3.png)
 
-1. Click on **ellipses ... (1)** next to the **Custom semantic model** and click on **Create report (2)** option to begin creating a report using the semantic model.
+1. Click on **ellipsis (...) (1)** next to the **Custom semantic model** and click on **Create report (2)** option to begin creating a report using the semantic model.
 
    ![](./Images/lab1-report.png)
 

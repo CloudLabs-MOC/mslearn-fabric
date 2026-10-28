@@ -34,7 +34,7 @@ In this task, you will provision a new data warehouse within Microsoft Fabric. A
 
 1. In the **Fabric (1)** portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**. click **+ New item** **(2)** to create a new workspace item.
 
-   ![](<./Images/L2T1S1.png>)
+   ![](./Images/l2T1S1.png)
 
 1. On the **New item** page, search for **Warehouse** in the search bar **(1)**, then select the **Warehouse** tile **(2)** to create a new warehouse.
 
@@ -101,7 +101,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
       ![](<./Images/E2T2S6.png>)
 
-1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand **Schemas** **(2)**, **dbo** **(3)**, and **Tables** **(4)**, then select the **DimProduct** table **(5)** and click on **Data Preview (6)** to verify the three inserted rows
+1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand **Schemas** **(2)**, **dbo** **(3)**, and **Tables** **(4)**, then select the **DimProduct** table **(5)** and click on **Data preview (6)** to verify the three inserted rows
 
    ![](<./Images/L2T2S7-1.png>)
 
@@ -161,7 +161,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![](<./Images/L2T3S1.png>)
 
-1. Enter **dw semantic model** **(1)** in the name field and select the tables **DimCustomer**,**DimDate**,**DimProduct**, **FactSalesOrder** **(2)**, than click on **Confirm** **(3)** to proceed.
+1. Enter **dw semantic model** **(1)** in the name field and select the tables **DimCustomer**, **DimDate**, **DimProduct** and **FactSalesOrder** **(2)**, than click on **Confirm** **(3)** to proceed.
 
    ![](./Images/L2T3S2-1.png)
 
@@ -169,7 +169,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![](./Images/L1T8S3.png)
 
-1. Click on **ellipses** next to the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
+1. Click on **ellipsis (...)** next to the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
 
    ![](<./Images/lab2-t3-s4.png>)
 
@@ -227,7 +227,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](<./Images/E2T2S8.png>)
 
-1. Copy and paste the following code and click on **Run**: This query calculates **monthly sales revenue** by combining **sales and date data**, and displays the results in chronological order.
+1. Copy and paste the following code and click on **Run** This query calculates **monthly sales revenue** by combining **sales and date data**, and displays the results in chronological order.
 
    ```sql
    SELECT  d.[Year] AS CalendarYear,
@@ -363,7 +363,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![](<./Images/ETS213.png>)
 
-1. In the report canvas, expand the **DimProduct (1)** and **FactSalesOrder (2)** tables from the **Data** pane, then select the **Clustered bar chart** visual **(3)**. Add **Category** to the Y-axis and **SalesTotal** to the X-axis to create a bar **chart visual (4)**.
+1. In the report canvas, expand the **DimProduct (1)** and **FactSalesOrder (2)** tables from the **Data** pane, then select the **Clustered bar chart** visual **(3)**, and then resize the chart on the report canvas so that all categories are clearly visible **(4)**.
 
    ![](<./Images/E2T5S7ii.png>)
 
@@ -380,10 +380,6 @@ You can easily visualize the data in either a single query or in your data wareh
 1. To share your report with your team or external users, click the **Share** button located in the top-right corner of the report. Enter the recipient's name or email address, configure the required access permissions, and then click Grant Access to share the report.
  
    ![](./Images/share_button-1.png)
-
-1. In the menu hub on the left, navigate back to the workspace. Notice that you now have items saved in your workspace: your data warehouse, semantic model and the report you created.
-
-    ![](./Images/L2T5S18.png)
     
 ## 📝 Summary
 
