@@ -53,29 +53,31 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
     
    ![](<./Images/img3.png>)
 
-1. On the other window choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** **(1)**, and click **Add(2)**.
+1. In the OneLake catalog window, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** **(1)**, and click **Add(2)**.
     
    ![](<./Images/img4.png>)
 
    > **Note:** Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the **lakehouse icon**.
 
-1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipses **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**. Name it **raw (3)** and click **Create (4)**.
+1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipsis **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**
    
    ![](<./Images/img5.png>)
 
+1. In the **New subfolder** dialog, enter **raw** as the **Folder name (1)**, and then select **Create (2)**.
+
    ![](<./Images/img111.png>)
 
-1. Click the ellipses **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**.
+1. Click the ellipsis **(...) (1)** next to the **raw** folder, hover over **Upload (2)**, then select **Upload files (3)**.
 
    ![](<./Images/img7.png>)
 
-1. On the Upload files dialog, click the **folder icon** on the right to **browse**, go to path **C:\LabFiles\dp-data-main** and select the **prodcuts.csv (1)** file from your local or lab machine and click on **Open (2)**.
+1. On the Upload files dialog, click the **folder icon** on the right to **browse**, go to path **C:\LabFiles\dp-data-main** and select the **products.csv (1)** file from your lab virtual machine and click on **Open (2)**.
 
    ![](<./Images/imgupload.png>)
 
    ![](<./Images/img999.png>)
 
-1. On the Upload files dialog, after selecting the **prodcuts.csv** file, click **Upload (1)** to upload the file into the raw folder.
+1. On the Upload files dialog, after selecting the **products.csv** file, click **Upload (1)** to upload the file into the raw folder.
 
    ![](<./Images/images11.png>)
 
@@ -129,7 +131,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    
    ![](<./Images/img9.png>)
 
-1. In the **Explorer** pane, Click it on the ellipses **(...) (1)** of the onelake and click on the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
+1. In the **Explorer** pane, Click it on the ellipsis **(...) (1)** of the onelake and click on the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
 
    ![](<./Images/img12.png>)
 
@@ -148,7 +150,7 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
 1. From the left navigation pane, select **Workspaces (1)**, and then select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
-   ![](./Images/L1T8S3.png)
+      ![](./Images/L1T8S3.png)
 
 1. In your workspace, select **+ New item (1)**. In the **New item** pane, search for **Pipeline (2)** in the search box, and then select **Pipeline (3)** from the results.
 
@@ -166,7 +168,7 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
 In this task, you will add a **Copy Data** activity to the pipeline. This activity will download a sample products CSV file from an external HTTP source and land it in the Lakehouse **Files** folder.
 
-1. On the pipeline canvas, click **Activity (1)** and click on **Copy data** **(2)** from the **Activities** toolbar and select **Add copy data activity (3)**.
+1. On the pipeline canvas, select the **Activities (1)** tab, select the **Copy data (2)** drop-down, and then click on **Add copy data activity (3)**.
 
       ![](<./Images/img16.png>)
 
@@ -191,7 +193,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
       - Under the connection settings in the **URL field** **(1)**, enter the following URL:
 
         ```
-        https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/products.csv
+        https://experienceazure.blob.core.windows.net/templates/get-started-with-fabric-with-Its-lakehouses/products.csv
         ```
 
         ![](<./Images/ETS313.png>)
@@ -212,8 +214,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
         ![](./Images/img_016.png)
 
-      - On the next screen scroll down to **OneLake Catalog**, select **Lakehouse**.
-      - Select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** as the Lakehouse.
+      - On the next screen scroll down to **OneLake Catalog**, select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
         ![](<./Images/img23.png>)
     
