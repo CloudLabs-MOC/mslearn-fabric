@@ -161,7 +161,7 @@ Fabric provides multiple ways to load data into the lakehouse, including built-i
 
    ![](<./Images/fb_g2_1_9.png>)
 
-1. Once the upload is complete and the status shows **Completed**, click the **Close** icon at the top right to exit the **Upload files** dialog.
+1. Once the upload is complete and the status shows **Completed**, click the **Close (X)** icon at the top right to exit the **Upload files** dialog.
 
    ![](<./Images/fb_g2_1_10.png>)
 
@@ -195,7 +195,7 @@ The sales data you uploaded is in a file that data analysts and engineers can wo
 
    ![](./Images/L1T5S4-1.png)
 
-1. In the **Lakehouse explorer** pane, expand **Lakehouse** **(1)**, then expand **Tables** and select **sales** **(2)**. Confirm that the data from the **sales.csv** file is now loaded and displayed in table format **(3)**.
+1. In the **Explorer** pane, expand **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**, then expand **Tables** > **dbo** and select the **sales (2)** table to preview its data **(3)**.
 
    ![Screenshot of a table preview.](./Images/L1T5S5.png)
 

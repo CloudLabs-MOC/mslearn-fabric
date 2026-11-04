@@ -81,7 +81,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    ![](<./Images/images11.png>)
 
-1. Once the upload is complete and the status shows **Completed**, click the **Close** icon at the top right to exit the **Upload files** dialog.
+1. Once the upload is complete and the status shows **Completed**, click the **Close (X)** icon at the top right to exit the **Upload files** dialog.
 
    ![](<./Images/img1111.png>)
 
