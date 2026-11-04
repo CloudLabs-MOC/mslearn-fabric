@@ -27,7 +27,6 @@ By the end of this lab, you will learn:
 Participants should have:
 
 - **Basic Understanding of Data Warehousing and Data Lakes:** Familiarity with the concepts of structured and unstructured data storage.
-
 - **SQL Knowledge:** Ability to write and understand basic SQL queries.
 - **Data Analysis:** Basic experience with data analysis and reporting.
 - **Microsoft Fabric Fundamentals:** Familiarity with Microsoft Fabric workspaces, navigation, and core analytics concepts.
@@ -41,7 +40,7 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 ## 🖼️ Architecture Diagram
 
-![](./Images/archoverview.png)
+![](./Images/arcdiagram.png)
 
 ## 🔍 Explanation of Components
 
@@ -51,9 +50,7 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 - **OneLake Storage Layer:** The underlying scalable storage layer used by the Lakehouse, built on Azure Data Lake Storage Gen2. It provides robust, scalable storage for large volumes of data in various formats.
 
-- **Data Files and Tables:** Ingested data files that are uploaded into the Lakehouse. These files can be transformed into structured tables that allow for efficient querying and analysis. Tables in Microsoft Fabric Lakehouse are based on the open-source Delta Lake file format.
-
-- **SQL Endpoint:** A feature within Microsoft Fabric that enables users to perform SQL queries on the Lakehouse tables. It provides a familiar SQL interface for data analysts and engineers to query and analyze data efficiently.
+- **Data Files and Tables:** Ingested data files that are uploaded into the Lakehouse. These files can be transformed into structured tables that allow for efficient querying and analysis. Tables in the Microsoft Fabric Lakehouse are based on the open-source Delta Lake file format.
 
 - **Power Query:** A data connection technology that enables users to discover, connect, combine, and refine data across a wide variety of sources. In the context of Microsoft Fabric, Power Query allows for visual query creation and data transformation.
 
@@ -61,13 +58,9 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 - **Data Transformation:** The process of converting raw data into a structured format that can be used for analysis. This includes operations such as grouping, filtering, and summarizing data to prepare it for querying and reporting.
 
-- **Report Building:** The creation of interactive reports using Power BI, based on the data stored in the Lakehouse. This involves designing report layouts, selecting visualizations, and configuring report elements to effectively display data insights.
-
 - **Microsoft Fabric Data Pipeline:** A visual orchestration service within Microsoft Fabric that enables users to automate data movement and processing workflows. Data Pipelines allow multiple activities to be connected and executed in a defined sequence, simplifying end-to-end data integration and ETL processes.
 
 - **Notebook Activity:** A pipeline activity that executes a Microsoft Fabric Notebook. It is commonly used to perform data transformations, cleansing, and enrichment operations using Apache Spark before loading data into downstream analytical systems.
-
-- **Copy Activity:** A pipeline activity used to move data between different sources and destinations. In this lab, the Copy Activity ingests external data files into the Lakehouse, ensuring that data is available for further processing and analysis.
 
 - **Delta Tables:** Structured tables stored in the Delta Lake format within the Lakehouse. Delta tables provide reliable and efficient storage with support for ACID transactions, schema enforcement, and optimized query performance.
 
@@ -81,34 +74,34 @@ This lab introduces the Microsoft Fabric Lakehouse, a unified data platform that
 
 ## 🚀 Getting Started with the Lab
 
-Welcome to your **Get Started with Microsoft Fabric Analytics** workshop! We've prepared a seamless environment for you to explore Microsoft Fabric's end-to-end analytics capabilities. Throughout this workshop, you'll work with Lakehouses and Data Warehouses, automate data workflows using Pipelines and Notebooks, analyze data with SQL, and create insightful Power BI reports. Let's get started!
+Welcome to your **Get Started with Microsoft Fabric Analytics** workshop! We've prepared a seamless environment for you to explore the end-to-end analytics capabilities of Microsoft Fabric. Throughout this workshop, you'll work with Lakehouses and Data Warehouses, automate data workflows using Pipelines and Notebooks, analyze data with SQL, and create insightful Power BI reports. Let's get started!
 
 ## Accessing Your Lab Environment
 
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
- 
+
 ![](./Images/GS-02.png)
 
 ## Virtual Machine & Lab Guide
- 
+
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
- 
+
 ## Exploring Your Lab Resources
- 
+
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** details tab.
- 
+
 ![Explore Lab Resources](./Images/new-env01.png)
- 
+
 ## Utilizing the Split Window Feature
- 
+
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top-right corner.
- 
+
 ![Use the Split Window Feature](./Images/GS-02-split.png)
- 
+
 ## Managing Your Virtual Machine
- 
+
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
- 
+
 ![Manage Your Virtual Machine](./Images/fb_g_1_5.png)
 
 ## Lab Guide Zoom In/Zoom Out
@@ -129,11 +122,11 @@ To copy the SQL script or any code snippet, click the **Copy button (1)** locate
 
 ![](./Images/Copy_section.png)
 
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way.
 
 ## Let's Get Started with the Microsoft Fabric Portal
 
-1. Open the **Microsoft Edge** browser and sign in to **Microsoft Fabric** Portal using the following link.
+1. Open the **Microsoft Edge** browser and sign in to the **Microsoft Fabric** portal using the following link.
 
    ```
    https://app.fabric.microsoft.com
@@ -141,22 +134,22 @@ Now you're all set to explore the powerful world of technology. Feel free to rea
 
    ![](./Images/edge.png)
 
-1. On the **Microsoft Fabric** page, enter the following email and click on **Submit** **(2)**.
+1. On the **Microsoft Fabric** page, enter the following email and click **Submit** **(2)**.
 
    - **Email: (1)** <inject key="AzureAdUserEmail"></inject>
 
       ![](./Images/fabric-image2.png)
 
-1. On the **Enter Temporary Access Pass** screen, enter the following password and click on **Sign in (2)**.
-   
-   - **Temporary Access Pass: (1)** <inject key="AzureAdUserPassword"></inject> 
+1. On the **Enter Temporary Access Pass** screen, enter the following password and click **Sign in (2)**.
+
+   - **Temporary Access Pass: (1)** <inject key="AzureAdUserPassword"></inject>
 
       ![](./Images/L1T1S2.png)
-  
-1. When **Stay signed in?** prompted, click on **Yes**.
-  
+
+1. When the **Stay signed in?** prompt appears, click **Yes**.
+
    ![](./Images/fabric-image4.png)
-   
+
     >**Note:** If you receive the **Welcome to the Fabric view** pop-up, click **Cancel** to skip the tour.
     >
     >   ![](./Images/fabric-image5.png)
@@ -169,7 +162,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on **Next >>** from the lower right corner to move on to the next page.
+Now, click **Next >>** from the lower right corner to move on to the next page.
 
 ![](./Images/GS-02-next.png)
 
