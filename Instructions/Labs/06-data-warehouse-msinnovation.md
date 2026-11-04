@@ -10,13 +10,9 @@ As a Data Analyst, you will create a Data Warehouse, load and manage data, build
 
 ## 📋 Overview
 
-Fabric Data Warehouse is not a traditional enterprise data warehouse, it's a lake warehouse that supports two distinct warehousing items: the Fabric warehouse item and the SQL analytics endpoint item. Both are purpose-built to meet customers' business needs while providing best in class performance, minimizing costs, and reduced administrative overhead.
+Fabric Data Warehouse is not a traditional enterprise data warehouse. It is a lake warehouse that supports two distinct warehousing items: the Fabric warehouse item and the SQL analytics endpoint item. Both are purpose-built to meet customers' business needs while providing best-in-class performance, minimizing costs, and reducing administrative overhead.
 
 Here, you'll learn about data warehouses in Fabric, create a data warehouse, load, query, and visualize data, and describe datasets.
-
-## 🏗️ Architecture Diagram
-
-![New lakehouse.](./Images/archlab2.png)
 
 ## 🎯 Objectives
 
@@ -32,7 +28,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will provision a new data warehouse within Microsoft Fabric. A data warehouse in Fabric offers a fully managed relational database designed for large-scale analytics. Unlike the default read-only SQL endpoint provided for lakehouse tables, a data warehouse supports complete SQL capabilities, including inserting, updating, and deleting data. This enables you to design and manage structured schemas, load data efficiently, and prepare it for advanced querying and reporting.
 
-1. In the **Fabric (1)** portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**. click **+ New item** **(2)** to create a new workspace item.
+1. In the **Fabric (1)** portal, make sure you are in workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>**, and then click **+ New item** **(2)** to create a new workspace item.
 
    ![](./Images/l2T1S1.png)
 
@@ -50,6 +46,8 @@ In this task, you will provision a new data warehouse within Microsoft Fabric. A
 
 A warehouse is a relational database in which you can define tables and other objects.
 
+In this task, you will create the **DimProduct** table and insert sample rows into it by using T-SQL. You will then run the provided scripts to create the remaining dimension and fact tables for the lab.
+
 1. On the **myDataWarehouse** home page, under **Start developing**, select the **T-SQL** tile to open a new SQL query editor. Enter the following `CREATE TABLE` statement:
 
    ![Screenshot of a new warehouse.](./Images/L2T2S2.png)
@@ -57,7 +55,7 @@ A warehouse is a relational database in which you can define tables and other ob
    > **Note:** If the **Welcome to your warehouse** pop-up appears, click **Try later** to continue.
 
    ![](./Images/task2.png)
-   
+
    ```sql
    CREATE TABLE dbo.DimProduct
    (
@@ -74,7 +72,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](./Images/E2T2S2.png)
 
-1. To refresh the Explorer pane and view the latest changes, click the **Refresh** icon in the top left menu bar.
+1. To refresh the Explorer pane and view the latest changes, click the **Refresh** icon in the top-left menu bar.
 
    ![](<./Images/E2T2S3.png>)
 
@@ -88,7 +86,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/l6-new-query.png>)
 
-1. Insert the below query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
+1. Insert the following query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
 
       ```sql
       INSERT INTO dbo.DimProduct
@@ -101,7 +99,7 @@ A warehouse is a relational database in which you can define tables and other ob
 
       ![](<./Images/E2T2S6.png>)
 
-1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand **Schemas** **(2)**, **dbo** **(3)**, and **Tables** **(4)**, then select the **DimProduct** table **(5)** and click on **Data preview (6)** to verify the three inserted rows
+1. In the **Explorer** pane, expand **myDataWarehouse** **(1)**, then expand **Schemas** **(2)**, **dbo** **(3)**, and **Tables** **(4)**, then select the **DimProduct** table **(5)** and click **Data preview (6)** to verify the three inserted rows.
 
    ![](<./Images/L2T2S7-1.png>)
 
@@ -109,26 +107,26 @@ A warehouse is a relational database in which you can define tables and other ob
 
    ![](<./Images/E2T2S8.png>)
 
-1. Open each script link in a separate browser tab. Copy the complete Transact-SQL code from the **Dimensions Script**, **FactSalesOrder Script - Part 1**, and **FactSalesOrder Script - Part 2**. Paste all three scripts one by one into the same SQL query editor in the exact order listed, then click Run to execute the complete script.
+1. Open each script link in a separate browser tab. Copy the complete Transact-SQL code from the **Dimensions Script**, **FactSalesOrder Script - Part 1**, and **FactSalesOrder Script - Part 2**. Paste all three scripts one by one into the same SQL query editor in the exact order listed, then click **Run** to execute the complete script.
 
    - [Dimensions Script](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/Dimensions.txt)
    - [FactSalesOrder Script - Part 1](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-1.txt)
 
-   - **Note:** After pasting the **Part 1** script into the SQL Query editor, please type **GO** at the end of the line then paste the **Part 2** in the next line and **Run** the query.
+   - **Note:** After pasting the **Part 1** script into the SQL query editor, please type **GO** at the end of the line, then paste **Part 2** on the next line and **Run** the query.
 
       ![](<./Images/E2T2S9.png>)
 
    - [FactSalesOrder Script - Part 2](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-2.txt)
 
-   > **Note:** To add the next query below the existing one, press **Enter** twice to create a blank line. Avoid using **Shift + Enter** here in the SQL query editor it runs the query instead of inserting a new line.
+   > **Note:** To add the next query below the existing one, press **Enter** twice to create a blank line. Avoid using **Shift + Enter** here in the SQL query editor, as it runs the query instead of inserting a new line.
 
-   > **For Windows users:** To copy the entire file content, press **Ctrl + A** to select all the text, and then press **Ctrl + C** to copy it and **Ctrl + V** to paste it.
+   > **For Windows users:** To copy the entire file content, press **Ctrl + A** to select all the text, then press **Ctrl + C** to copy it and **Ctrl + V** to paste it.
 
-   > **For Mac users:** To copy the entire file content, press **⌘ Command + A** to select all the text, and then press **⌘ Command + C** to copy it and **⌘ Command + V** to paste it.
+   > **For Mac users:** To copy the entire file content, press **⌘ Command + A** to select all the text, then press **⌘ Command + C** to copy it and **⌘ Command + V** to paste it.
 
    > **Note:** Ensure that the contents of all three files are pasted into the **same query editor** and in the **same order** before running the script.
 
-   > **!IMPORTANT:** If you encounter any copy paste issues inside the VM do follow the below steps to resolve the issue:
+   > **!IMPORTANT:** If you encounter any copy-paste issues inside the VM, follow the steps below to resolve the issue:
    >
    > - Set **Clipboard access** to **Allow**.
    >
@@ -157,11 +155,13 @@ A warehouse is a relational database in which you can define tables and other ob
 
 A relational data warehouse typically consists of fact and dimension tables. The fact tables contain numeric measures you can aggregate to analyze business performance (for example, sales revenue), and the dimension tables contain attributes of the entities by which you can aggregate the data (for example, product, customer, or time). In a Microsoft Fabric data warehouse, you can use these keys to define a data model that encapsulates the relationships between the tables.
 
-1. Under the **Home** tab, Click on  **New semantic model** to create the semantic model.
+In this task, you will create a semantic model from the warehouse tables and define many-to-one relationships between the fact table and each dimension table. This model is the foundation for the Power BI report that you will build later in this lab.
+
+1. Under the **Home** tab, click **New semantic model** to create the semantic model.
 
    ![](<./Images/L2T3S1.png>)
 
-1. Enter **dw semantic model** **(1)** in the name field and select the tables **DimCustomer**, **DimDate**, **DimProduct** and **FactSalesOrder** **(2)**, than click on **Confirm** **(3)** to proceed.
+1. Enter **dw semantic model** **(1)** in the name field and select the tables **DimCustomer**, **DimDate**, **DimProduct**, and **FactSalesOrder** **(2)**, then click **Confirm** **(3)** to proceed.
 
    ![](./Images/L2T3S2-1.png)
 
@@ -169,11 +169,11 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![](./Images/L1T8S3.png)
 
-1. Click on **ellipsis (...)** next to the **dw semantic model** **(1)** and click on **Open semantic model** **(2)** option to edit the semantic model.
+1. Click the **ellipsis (...)** next to the **dw semantic model** **(1)** and click the **Open semantic model** **(2)** option to edit the semantic model.
 
    ![](<./Images/lab2-t3-s4.png>)
 
-1. At the top right corner, Click on **Viewing (1)** to change it to **Editing** **(2)** permission settings. 
+1. At the top-right corner, click **Viewing (1)** to change it to **Editing** **(2)** permission settings.
 
    ![](<./Images/E2T3S5.png>)
 
@@ -181,7 +181,7 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
    ![Screenshot of the data warehouse model page.](./Images/L2T3S6.png)
 
-1. In the **Home** tab, click on **Manage relationships**.
+1. In the **Home** tab, click **Manage relationships**.
 
    ![](./Images/E2T3S7.png)
 
@@ -215,19 +215,21 @@ A relational data warehouse typically consists of fact and dimension tables. The
 
 Since the data warehouse is a relational database, you can use SQL to query its tables.
 
+In this task, you will run SQL queries that join the fact table with the dimension tables and aggregate sales revenue. You will start with a single dimension and then add a second dimension to the query.
+
 ### Task 4.1: Query fact and dimension tables
 
 Most queries in a relational data warehouse involve aggregating and grouping data (using aggregate functions and GROUP BY clauses) across related tables (using JOIN clauses).
 
-1. In the hub menu bar on the left, Click on your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)** and select the **myDataWarehouse** **(2)** warehouse.
+1. In the hub menu bar on the left, click your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/> (1)** and select the **myDataWarehouse** **(2)** warehouse.
 
    ![](<./Images/L2T4S1.png>)
 
-1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor
+1. On the **Home** tab, click the dropdown next to **New SQL query** **(1)**, then select **New SQL query** **(2)** to open a new query editor.
 
    ![](<./Images/E2T2S8.png>)
 
-1. Copy and paste the following code and click on **Run** This query calculates **monthly sales revenue** by combining **sales and date data**, and displays the results in chronological order.
+1. Copy and paste the following code and click **Run**. This query calculates **monthly sales revenue** by combining **sales and date data**, and displays the results in chronological order.
 
    ```sql
    SELECT  d.[Year] AS CalendarYear,
@@ -242,7 +244,7 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 
    ![](<./Images/E2T4S3.png>)
 
-   > **Note:** The attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels - in this case, year and month. This is a common pattern in data warehouses.
+   > **Note:** The attributes in the time dimension enable you to aggregate the measures in the fact table at multiple hierarchical levels, in this case year and month. This is a common pattern in data warehouses.
 
 1. Modify the query as follows to add a second dimension to the aggregation.
 
@@ -266,6 +268,8 @@ Most queries in a relational data warehouse involve aggregating and grouping dat
 ## Task 5: Create a View, Visual Query and Visualizing data
 
 A data warehouse in Microsoft Fabric has many of the same capabilities you may be used to in relational databases. For example, you can create database objects like views and stored procedures to encapsulate SQL logic.
+
+In this task, you will create a view, build a visual query, and visualize the warehouse data in a Power BI report. You will also hide unnecessary columns in the semantic model so that the report canvas is easier to use.
 
 ### Task 5.1: Create a View
 
@@ -309,13 +313,13 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
-1. Drag **DimProduct** onto the **canvas**. We now have two tables in our query.
+1. Drag **DimProduct** onto the **canvas**. You now have two tables in your query.
 
 1. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
 
    ![Screenshot of the canvas with the FactSalesOrder table selected.](./Images/visual-query-merge1.png)
 
-1. In the **Merge queries** window, select **DimProduct** **(1)** as the right table for merge, then select the **ProductKey** **(2)** column in both the source table and the right table **(3)**, keep the join kind as **Left outer** **(4)**, and click **OK** **(5)** to proceed.
+1. In the **Merge queries** window, select **DimProduct** **(1)** as the right table for the merge, then select the **ProductKey** **(2)** column in both the source table and the right table **(3)**, keep the join kind as **Left outer** **(4)**, and click **OK** **(5)** to proceed.
 
    ![Screenshot of a Visual query.](./Images/cor_e2_fz_4.png)
 
@@ -325,7 +329,7 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. If you're interested in looking at data for a single product, per a manager's request, you can now use the **ProductName** column to filter the data in the query. Filter the **ProductName** column to look at **Cable Lock** data only.
 
-1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so we don't need to analyze the results further.
+1. From here, you can analyze the results of this single query by selecting **Visualize results** or **Open in Excel**. You can now see exactly what the manager was asking for, so you don't need to analyze the results further.
 
 ### Task 5.3: Visualize your data
 
@@ -335,7 +339,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![](./Images/img_013.png)
 
-1. At the top right corner, Click on **Viewing** **(1)** to change it to **Editing** **(2)** permission settings. 
+1. At the top-right corner, click **Viewing** **(1)** to change it to **Editing** **(2)** permission settings.
 
    ![](<./Images/L2T5S11.png>)
 
@@ -359,7 +363,7 @@ You can easily visualize the data in either a single query or in your data wareh
 
 1. Now you're ready to build a report and make this dataset available to others.
 
-1. On the **File** tab **(1)**, click on **Create new report** **(2)** to begin creating a new Power BI report.
+1. On the **File** tab **(1)**, click **Create new report** **(2)** to begin creating a new Power BI report.
 
    ![](<./Images/ETS213.png>)
 
@@ -377,10 +381,10 @@ You can easily visualize the data in either a single query or in your data wareh
 
    ![](./Images/L2T5S17.png)
 
-1. To share your report with your team or external users, click the **Share** button located in the top-right corner of the report. Enter the recipient's name or email address, configure the required access permissions, and then click Grant Access to share the report.
- 
+1. To share your report with your team or external users, click the **Share** button located in the top-right corner of the report. Enter the recipient's name or email address, configure the required access permissions, and then click **Grant Access** to share the report.
+
    ![](./Images/share_button-1.png)
-    
+
 ## 📝 Summary
 
 In this exercise, you have accomplished the following:

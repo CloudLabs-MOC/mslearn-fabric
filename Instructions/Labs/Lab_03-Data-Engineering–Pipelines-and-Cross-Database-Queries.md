@@ -1,20 +1,16 @@
-# Lab 03: Data Engineering – Pipelines and Cross-Database Queries
+# Lab 03: Data Engineering - Pipelines and Cross-Database Queries
 
 ### Estimated Duration: 60 Minutes
 
 ## 📘 Scenario
 
-Contoso Retail has established a Lakehouse and a Data Warehouse in Microsoft Fabric. Now, the data engineering team needs to automate the data movement between these assets. Instead of manually uploading files and running scripts, you will use **Data Pipelines** to ingest data into the Lakehouse, transform it into Delta tables, and load curated data from the Lakehouse into the Data Warehouse using **cross-database queries** all orchestrated end-to-end through pipelines.
+Contoso Retail has established a Lakehouse and a Data Warehouse in Microsoft Fabric. Now, the data engineering team needs to automate the data movement between these assets. Instead of manually uploading files and running scripts, you will use **Data Pipelines** to ingest data into the Lakehouse, transform it into Delta tables, and load curated data from the Lakehouse into the Data Warehouse using **cross-database queries**, all orchestrated end-to-end through pipelines.
 
 As a Data Engineer, you will build a production-style data pipeline that mirrors real-world ETL patterns: ingest raw data, transform it using notebooks, and load refined data into the warehouse for reporting.
 
 ## 📋 Overview
 
 Microsoft Fabric Data Pipelines provide a visual orchestration engine that enables organizations to move, transform, and manage data efficiently across various Fabric items. When combined with cross-database (cross-object) queries, data can be accessed directly from Lakehouse Delta tables through the Warehouse SQL endpoint, eliminating the need for redundant data copies and simplifying data integration. In this lab, you will learn how to create a Data Pipeline to ingest external data into a Lakehouse, use a Notebook activity to transform raw data into a curated Delta table, leverage cross-database queries to load data from the Lakehouse into a Data Warehouse, and orchestrate the entire workflow within a single pipeline using proper activity sequencing and dependencies.
-
-## 🏗️ Architecture Diagram
-
-![](<./Images/archlab03.png>)
 
 ## 🎯 Objectives
 
@@ -41,26 +37,26 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
       > **Note:** If prompted to select a Lakehouse, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** and click **Add**.
 
-1. On the New Notebook pop-up rename it to **nb_transform_products** **(1)** and click on **Create (2)**.
+1. On the New Notebook pop-up, rename it to **nb_transform_products** **(1)** and click **Create (2)**.
 
    ![](<./Images/img2.png>)
 
    > **Note:** If the **Notebook Copilot Updates and Git Integration Supporting Resources** pop-up appears, click **Skip for now** to continue.
 
    ![](<./Images/task03.png>)
-   
-1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click on **From OneLake catalog (2)**.
-    
+
+1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click **From OneLake catalog (2)**.
+
    ![](<./Images/img3.png>)
 
-1. In the OneLake catalog window, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** **(1)**, and click **Add(2)**.
-    
+1. In the OneLake catalog window, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** **(1)**, and click **Add (2)**.
+
    ![](<./Images/img4.png>)
 
-   > **Note:** Identify the lakehouse by using the icon of the lakehouse there are more lakehouse select that matches the **lakehouse icon**.
+   > **Note:** Identify the lakehouse by using the lakehouse icon. If there are multiple lakehouses, select the one that matches the **lakehouse icon**.
 
-1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipsis **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**
-   
+1. First, upload the sample data so you can test the notebook. In the **Explorer** pane on the left, click the ellipsis **(...) (1)** next to the **Files** folder, then select **New subfolder (2)**.
+
    ![](<./Images/img5.png>)
 
 1. In the **New subfolder** dialog, enter **raw** as the **Folder name (1)**, and then select **Create (2)**.
@@ -71,7 +67,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    ![](<./Images/img7.png>)
 
-1. On the Upload files dialog, click the **folder icon** on the right to **browse**, go to path **C:\LabFiles\dp-data-main** and select the **products.csv (1)** file from your lab virtual machine and click on **Open (2)**.
+1. On the Upload files dialog, click the **folder icon** on the right to **browse**, go to the path **C:\LabFiles\dp-data-main**, select the **products.csv (1)** file from your lab virtual machine, and click **Open (2)**.
 
    ![](<./Images/imgupload.png>)
 
@@ -85,7 +81,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    ![](<./Images/img1111.png>)
 
-1. In the first cell, paste the following PySpark code and click the **&#9655; Run (1)** button to execute and check the **results (2)**.
+1. In the first cell, paste the following PySpark code and click the **&#9655; Run (1)** button to execute it and check the **results (2)**.
 
    ```python
    # Read the raw CSV file from the Lakehouse Files area
@@ -98,12 +94,12 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    print(f"Raw row count: {df_raw.count()}")
    df_raw.show(5)
    ```
-   
+
    ![](<./Images/img8.png>)
 
    > **Note:** The code loads the products.csv file into a Spark DataFrame, displays the total number of rows in the dataset, and shows the first 5 records for validation. You should see **295 rows** and the columns **ProductID, ProductName, Category, and ListPrice.(2)**.
 
-1. Click **+ Code** below the first cell to add a new code cell. Paste the following transformation code and **&#9655; Run** button. This code cleans and transforms the raw data, adds a load timestamp, and saves the results as a Delta table named **stg_products** in the Lakehouse.
+1. Click **+ Code** below the first cell to add a new code cell. Paste the following transformation code and click the **&#9655; Run** button. This code cleans and transforms the raw data, adds a load timestamp, and saves the results as a Delta table named **stg_products** in the Lakehouse.
 
    ![](<./Images/img10.png>)
 
@@ -128,10 +124,10 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    print(f"Staged row count: {df_clean.count()}")
    df_clean.show(5)
    ```
-   
+
    ![](<./Images/img9.png>)
 
-1. In the **Explorer** pane, Click it on the ellipsis **(...) (1)** of the onelake and click on the **Refresh all sources (2)**. Expand **Tables** under the **dbo** verify that the **stg_products** table now appears.
+1. In the **Explorer** pane, click the ellipsis **(...) (1)** of the OneLake and click **Refresh all sources (2)**. Expand **Tables** under **dbo** and verify that the **stg_products** table now appears.
 
    ![](<./Images/img12.png>)
 
@@ -146,7 +142,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
 ## Task 2: Create a Data Pipeline
 
-In this task, you will create a new Data Pipeline that will orchestrate the entire data flow - from ingestion to transformation to loading.
+In this task, you will create a new Data Pipeline that will orchestrate the entire data flow, from ingestion to transformation to loading. The pipeline acts as the central workflow to which you will add the Copy, Notebook, and Script activities in the next tasks.
 
 1. From the left navigation pane, select **Workspaces (1)**, and then select **Workspace-<inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
 
@@ -168,7 +164,7 @@ In this task, you will create a new Data Pipeline that will orchestrate the enti
 
 In this task, you will add a **Copy Data** activity to the pipeline. This activity will download a sample products CSV file from an external HTTP source and land it in the Lakehouse **Files** folder.
 
-1. On the pipeline canvas, select the **Activities (1)** tab, select the **Copy data (2)** drop-down, and then click on **Add copy data activity (3)**.
+1. On the pipeline canvas, select the **Activities (1)** tab, select the **Copy data (2)** drop-down, and then click **Add copy data activity (3)**.
 
       ![](<./Images/img16.png>)
 
@@ -186,7 +182,7 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
 
 1. In the **Choose a data source to get started** dialog:
 
-      - Search **http** **(1)** as the data source type and select **HTTP (2)**
+      - Search for **http** **(1)** as the data source type and select **HTTP (2)**.
 
         ![](<./Images/img19.png>)
 
@@ -199,28 +195,28 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
         ![](<./Images/ETS313.png>)
 
       - Set **Authentication kind** to **Anonymous** **(2)**.
-     
+
       - Click **Connect** **(3)**.
-     
+
         ![](<./Images/ETS314.png>)
 
 1. Back on the **Source** tab, under **File format**, confirm the format is set to **DelimitedText**.
 
       ![](<./Images/img21.png>)
-  
+
 1. Click the **Destination** tab:
 
-      - Under **Connection** dropdown click on **Browse all**.
+      - Under the **Connection** dropdown, click **Browse all**.
 
         ![](./Images/img_016.png)
 
-      - On the next screen scroll down to **OneLake Catalog**, select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+      - On the next screen, scroll down to **OneLake Catalog** and select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
         ![](<./Images/img23.png>)
-    
+
       - Set **Root folder** to **Files (1)**.
-      - In the **File path** field, enter the folder path as **raw** and file name as **products.csv** **(2)**. Save the file from Home menu.
-     
+      - In the **File path** field, enter the folder path as **raw** and the file name as **products.csv** **(2)**. Save the file from the Home menu.
+
         ![](<./Images/E3T3S6ii.png>)
 
         > **Note:** The pipeline stores the file in Files/raw/products.csv within the Lakehouse and replaces any existing file during each run, ensuring the latest source data is always used.
@@ -241,7 +237,7 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
       ![](<./Images/E3T4S3.png>)
 
-1. Now connect the two activities. Hover over the right edge of the **Copy Products CSV** activity until the green checkmark (&#10004;) connector appears. Drag it to the **Transform to Delta** activity. Then save the file from Home menu.
+1. Now connect the two activities. Hover over the right edge of the **Copy Products CSV** activity until the green checkmark (&#10004;) connector appears. Drag it to the **Transform to Delta** activity. Then save the file from the Home menu.
 
       ![](<./Images/img29.png>)
 
@@ -249,7 +245,7 @@ In this task, you will add a **Notebook** activity after the Copy activity. This
 
 ## Task 5: Use cross-database query to load data into the Warehouse
 
-In this task, you will add a **Script** activity that uses a cross-database query to read the Delta table from the Lakehouse and insert it into a table in the Data Warehouse - all without moving files.
+In this task, you will add a **Script** activity that uses a cross-database query to read the Delta table from the Lakehouse and insert it into a table in the Data Warehouse, all without moving files.
 
 1. First, you need to create the target table in the Warehouse. Open a **new browser tab** and navigate to your workspace **Workspace-<inject key="DeploymentID" enableCopy="false"/>** **(1)**.
 
@@ -274,22 +270,22 @@ In this task, you will add a **Script** activity that uses a cross-database quer
       );
       GO
       ```
-   
+
       ![](<./Images/img30.png>)
 
 1. Verify that the table **DimProductStaging** appears in the **Explorer** pane under **dbo > Tables**. Click **Refresh** if needed.
 
       ![](<./Images/img31.png>)
 
-1. Now, test the **cross-database query**. In a new SQL query editor, **run (1)** the following below query which read **Lakehouse data (2)** from the Warehouse.
+1. Now, test the **cross-database query**. In a new SQL query editor, **run (1)** the following query, which reads **Lakehouse data (2)** from the Warehouse.
 
-      >**Note:** Please replace the **Lakehouse_** with the actual value of your Lakehouse i.e. **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
+      >**Note:** Please replace the **Lakehouse_** with the actual value of your Lakehouse, i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
 
       ```sql
       SELECT TOP 10 *
       FROM Lakehouse_.dbo.stg_products;
       ```
-   
+
       ![](<./Images/lab3-t5-s6.png>)
 
       > **Note:** Cross-database queries use the **three-part naming** convention: `LakehouseName.SchemaName.TableName`. Both the Lakehouse and Warehouse must be in the **same workspace** for this to work.
@@ -306,7 +302,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 1. Click the **Settings** **(1)** tab:
 
-      - Under **Connection** dropdown click **Browse all (2)**.
+      - Under the **Connection** dropdown, click **Browse all (2)**.
 
         ![](./Images/img_017.png)
 
@@ -330,9 +326,9 @@ In this task, you will add a **Script** activity that uses a cross-database quer
           LoadTimestamp
       FROM Lakehouse_.dbo.stg_products;
       ```
-   
-      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse i.e **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
-    
+
+      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse, i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
+
       ![](./Images/img_019.png)
 
 1. Connect the **Transform to Delta** activity to the **Load to Warehouse** activity using the green (on success) connector, just as you did in Task 4.
@@ -347,10 +343,10 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 ## Task 6: Run and monitor the pipeline
 
-In this task, you will validate, run, and monitor the pipeline to ensure all three activities complete successfully.
+In this task, you will validate, run, and monitor the pipeline to ensure all three activities complete successfully. You will then query the Warehouse to confirm that the data was loaded correctly.
 
-1. Switch to **Home (1)** on the pipeline toolbar, click on **Validate** **(2)**. You can check for configuration errors or validation errors on the **Pipeline Validation Output (3)**.
-   
+1. Switch to **Home (1)** on the pipeline toolbar and click **Validate** **(2)**. You can check for configuration errors or validation errors in the **Pipeline Validation Output (3)**.
+
       ![](<./Images/img38.png>)
 
 1. Once validation passes, click **Run** to execute the pipeline.
@@ -363,9 +359,9 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. The **Output** tab opens at the bottom, showing the pipeline run progress. Monitor each activity status:
 
-      - **Copy Products CSV** - should show **Succeeded** (&#10004;)
-      - **Transform to Delta** - should show **Succeeded** (&#10004;)
-      - **Load to Warehouse** - should show **Succeeded** (&#10004;)
+      - **Copy Products CSV**: should show **Succeeded** (&#10004;)
+      - **Transform to Delta**: should show **Succeeded** (&#10004;)
+      - **Load to Warehouse**: should show **Succeeded** (&#10004;)
 
         ![](<./Images/img41.png>)
 
@@ -373,16 +369,16 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
 1. To verify the data landed in the Warehouse, switch to the browser tab with **myDataWarehouse**.
 
-1. Open a **New SQL query** and **Run (2)** the following **Query(1)**. Also you can validate the **Result(3)**.
+1. Open a **New SQL query** and **Run (2)** the following **Query (1)**. You can also validate the **Result (3)**.
 
       ```sql
       SELECT COUNT(*) AS TotalProducts FROM dbo.DimProductStaging;
       GO
       ```
-      
+
       ![](<./Images/E3T6S6.png>)
 
-      >**Note:** You should see the Totalproducts  number that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
+      >**Note:** You should see the **TotalProducts** number of products that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
 1. **Run** the following **Query (1)**. You should see the **top 10 product rows (2)** that were ingested from the CSV, transformed in the notebook, and loaded via the cross-database query.
 
@@ -390,7 +386,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
       SELECT TOP 10 * FROM dbo.DimProductStaging ORDER BY Category, ProductName;
       GO
       ```
-   
+
       ![](<./Images/lab3-sql-1.png>)
 
 1. **(Optional)** To schedule the pipeline for recurring runs:
@@ -402,8 +398,8 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
       - Click **Schedule** under the Home menu.
 
         ![](<./Images/img44.png>)
-   
-      - On the next screen, click on **+ Add schedule**.
+
+      - On the next screen, click **+ Add schedule**.
 
         ![](<./Images/img45.png>)
 
@@ -425,7 +421,7 @@ In this exercise, you have accomplished the following:
 - Executed and monitored the end-to-end pipeline run
 - Learned how to schedule the pipeline for recurring automated runs
 
-## ✅ Conclusion 
+## ✅ Conclusion
 
 In this lab, you explored the core data analytics and engineering capabilities of Microsoft Fabric. You learned how to create and work with Lakehouses and Data Warehouses, ingest and organize data from multiple sources, query and analyze data using SQL, and build interactive reports for business insights. You also gained experience in automating data movement and transformation processes using Data Pipelines and Notebooks, enabling end-to-end data workflows. Through these exercises, you developed practical skills in managing, transforming, analyzing, and visualizing data within Microsoft Fabric's unified analytics platform.
 
