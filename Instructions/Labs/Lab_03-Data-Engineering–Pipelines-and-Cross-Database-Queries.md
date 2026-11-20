@@ -42,8 +42,8 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
    ![](<./Images/img2.png>)
 
    > **Note:** If the **Notebook Copilot Updates and Git Integration Supporting Resources** pop-up appears, click **Skip for now** to continue.
-
-   ![](<./Images/task03.png>)
+   >
+   > ![](<./Images/task03.png>)
 
 1. If the notebook does not have a default Lakehouse attached, click **Add data items (1)** in the **Data Items** section of the left **Explorer** pane, and click **From OneLake catalog (2)**.
 
@@ -99,7 +99,7 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
    > **Note:** The code loads the products.csv file into a Spark DataFrame, displays the total number of rows in the dataset, and shows the first 5 records for validation. You should see **295 rows** and the columns **ProductID, ProductName, Category, and ListPrice.(2)**.
 
-1. Click **+ Code** below the first cell to add a new code cell. Paste the following transformation code and click the **&#9655; Run** button. This code cleans and transforms the raw data, adds a load timestamp, and saves the results as a Delta table named **stg_products** in the Lakehouse.
+1. Click **+ Add Cell** below the first cell to add a new code cell. Paste the following transformation code and click the **&#9655; Run** button. This code cleans and transforms the raw data, adds a load timestamp, and saves the results as a Delta table named **stg_products** in the Lakehouse.
 
    ![](<./Images/img10.png>)
 
@@ -300,36 +300,37 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
       ![](<./Images/img34.png>)
 
-1. Click the **Settings** **(1)** tab:
+1. Click the **Settings** **(1)** tab, then configure the following:
 
-      - Under the **Connection** dropdown, click **Browse all (2)**.
+      - Under the **Connection** dropdown, click **Browse all** **(2)**.
 
-        ![](./Images/img_017.png)
+        ![](<./Images/img_017.png>)
 
-      - In the **Choose a data source to get started** window, under **OneLake catalog**, select **myDataWarehouse (3)**.
+      - In the **Choose a data source to get started** window, under **OneLake catalog**, select **myDataWarehouse** **(3)**.
 
-        ![](./Images/img_018.png)
+        ![](<./Images/img_018.png>)
 
       - Set **Script type** to **NonQuery** **(4)**.
+
       - In the **Script** field, paste the following SQL **(5)**.
 
-      ```sql
-      -- Truncate and reload the staging table using cross-database query
-      TRUNCATE TABLE dbo.DimProductStaging;
+        ```sql
+        -- Truncate and reload the staging table using cross-database query
+        TRUNCATE TABLE dbo.DimProductStaging;
 
-      INSERT INTO dbo.DimProductStaging (ProductID, ProductName, Category, ListPrice, LoadTimestamp)
-      SELECT
-          ProductID,
-          ProductName,
-          Category,
-          ListPrice,
-          LoadTimestamp
-      FROM Lakehouse_.dbo.stg_products;
-      ```
+        INSERT INTO dbo.DimProductStaging (ProductID, ProductName, Category, ListPrice, LoadTimestamp)
+        SELECT
+            ProductID,
+            ProductName,
+            Category,
+            ListPrice,
+            LoadTimestamp
+        FROM Lakehouse_.dbo.stg_products;
+        ```
 
-      >**Note:** Please replace the Lakehouse_ with the actual value of your Lakehouse, i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
+        > **Note:** Please replace **Lakehouse_** with the actual name of your Lakehouse, i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
 
-      ![](./Images/img_019.png)
+        ![](<./Images/img_019.png>)
 
 1. Connect the **Transform to Delta** activity to the **Load to Warehouse** activity using the green (on success) connector, just as you did in Task 4.
 
@@ -345,7 +346,7 @@ In this task, you will add a **Script** activity that uses a cross-database quer
 
 In this task, you will validate, run, and monitor the pipeline to ensure all three activities complete successfully. You will then query the Warehouse to confirm that the data was loaded correctly.
 
-1. Switch to **Home (1)** on the pipeline toolbar and click **Validate** **(2)**. You can check for configuration errors or validation errors in the **Pipeline Validation Output (3)**.
+1. Switch to **Home (1)** on the pipeline toolbar and click **Validate** **(2)**. You can check for configuration errors or validation errors in the **Pipeline validation output (3)**. Once validation succeeds with no errors, click **Close (4)**.
 
       ![](<./Images/img38.png>)
 
@@ -365,7 +366,7 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 
         ![](<./Images/img41.png>)
 
-      > **Note:** The pipeline run typically completes in 2-4 minutes. If an activity fails, click on it to see the error details and troubleshoot.
+      > **Note:** The pipeline run typically completes in 5-8 minutes. If an activity fails, click on it to see the error details and troubleshoot.
 
 1. To verify the data landed in the Warehouse, switch to the browser tab with **myDataWarehouse**.
 
