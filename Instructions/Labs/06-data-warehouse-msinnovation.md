@@ -42,6 +42,10 @@ In this task, you will provision a new data warehouse within Microsoft Fabric. A
 
    >**Note:** A Data Warehouse is used to store and organize business data in one place so that it can be easily analyzed and used for creating reports and dashboards.
 
+   > **Note:** If the **Welcome to your warehouse** pop-up appears, click **Try later** to continue.
+   >
+   > ![](./Images/task2.png)
+
 ## Task 2: Create tables and insert data
 
 A warehouse is a relational database in which you can define tables and other objects.
@@ -51,10 +55,6 @@ In this task, you will create the **DimProduct** table and insert sample rows in
 1. On the **myDataWarehouse** home page, under **Start developing**, select the **T-SQL** tile to open a new SQL query editor. Enter the following `CREATE TABLE` statement:
 
    ![Screenshot of a new warehouse.](./Images/L2T2S2.png)
-
-   > **Note:** If the **Welcome to your warehouse** pop-up appears, click **Try later** to continue.
-
-   ![](./Images/task2.png)
 
    ```sql
    CREATE TABLE dbo.DimProduct
@@ -86,7 +86,7 @@ In this task, you will create the **DimProduct** table and insert sample rows in
 
    ![](<./Images/l6-new-query.png>)
 
-1. Insert the following query, then click **Run** to execute it. This query will insert three rows into the **DimProduct** table.
+1. Insert the following query, then click **&#9655; Run** to execute it. This query will insert three rows into the **DimProduct** table.
 
       ```sql
       INSERT INTO dbo.DimProduct
@@ -112,7 +112,7 @@ In this task, you will create the **DimProduct** table and insert sample rows in
    - [Dimensions Script](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/Dimensions.txt)
    - [FactSalesOrder Script - Part 1](https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-fabric/refs/heads/main/Instructions/Labs/FactSalesOrder-1.txt)
 
-   - **Note:** After pasting the **Part 1** script into the SQL query editor, please type **GO** at the end of the line, then paste **Part 2** on the next line and **Run** the query.
+   - **Note:** After pasting the **FactSalesOrder Script - Part 1** script into the SQL query editor, please type **GO** at the end of the line, then paste **FactSalesOrder Script - Part 2** on the next line and **Run** the query.
 
       ![](<./Images/E2T2S9.png>)
 
@@ -289,7 +289,11 @@ In this task, you will create a view, build a visual query, and visualize the wa
    GROUP BY d.[Year], d.[Month], d.MonthName, c.CountryRegion;
    ```
 
-1. Run the query to create the view. Then refresh the data warehouse schema and verify that the new view **vSalesByRegion** is listed in the **Explorer** pane.
+1. Click **Run** to execute the query and create the view.
+
+   ![](<./Images/ETS211-note.png>)
+
+1. In the **Explorer** pane, refresh the data warehouse schema, then expand **Schemas** > **dbo** > **Views** and verify that the new view **vSalesByRegion** is listed.
 
    ![](<./Images/ETS211.png>)
 
@@ -313,7 +317,11 @@ Instead of writing SQL code, you can use the graphical query designer to query t
 
 1. Drag **FactSalesOrder** onto the **canvas**. Notice that a preview of the table is displayed in the **Preview** pane below.
 
+   ![Screenshot of a Visual query.](./Images/E2T5S1i-note1.png)
+
 1. Drag **DimProduct** onto the **canvas**. You now have two tables in your query.
+   
+   ![Screenshot of a Visual query.](./Images/E2T5S1i-note2.png)
 
 1. Use the **(+)** button on the **FactSalesOrder** table on the canvas to **Merge queries**.
 

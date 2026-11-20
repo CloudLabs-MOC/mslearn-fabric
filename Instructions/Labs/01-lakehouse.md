@@ -35,35 +35,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a new workspace that serves as a collaborative environment for managing datasets, reports, dashboards, and other related resources. The workspace will act as a centralized location where you and your team can securely store, organize, and share content, enabling better collaboration and streamlined access for reporting and analytics.
 
-Before working with data in Fabric, create a workspace with the Fabric trial enabled.
+Before working with data in Fabric, create a workspace that uses the pre-created Fabric capacity.
 
 1. After signing in, you'll be redirected to the **Welcome to Fabric** home page. Verify that **Fabric** is selected as the experience at the bottom of the left navigation pane.
 
    ![](./Images/fabric-image6.png)
-
-1. To start a free Microsoft Fabric trial, select the **Profile** icon **(1)** in the top-right corner, select the **Start trial** drop-down **(2)** under **Free trial**, and then select **Fabric and Power BI (3)**.
-
-   ![](./Images/E1T1S7.png)
-
-   >**Note:** The Fabric trial is enabled to ensure that your account has access to Microsoft Fabric features and experiences. However, the hands-on lab resources and workloads in this guide are configured to use the F2 Fabric capacity provided for the lab environment. The trial activation is only to enable Fabric access for your user account and does not replace the dedicated F2 capacity used throughout the lab.
-
-1. In the **Activate your 60-day free Fabric and Power BI trial** dialog, keep the default **Trial capacity region**, and then select **Activate**.
-
-   ![](./Images/activiate_trial.png)
-
-   > **Note:** If any invite cards are displayed, click **Cancel** to continue the setup.
-
-1. In the **Successfully upgraded to a free Microsoft Fabric trial** dialog, select **OK** to continue.
-
-   ![](./Images/Img_010.png)
-
-1. In the **Invite teammates to try Fabric to extend your trial** dialog, select the **X** (Close) icon in the top-right corner to dismiss it.
-
-   ![](./Images/img_011.png)
-
-1. Click the **Profile (1)** icon in the top-right corner. Under the **Profile** section, verify that the **Fabric and Power BI trial status (2)** shows the number of days remaining.
-
-   ![](./Images/E1T1S9.png)
 
 1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;). Select **+ New workspace (2)**.
 
@@ -76,8 +52,8 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
    ![](./Images/E1T1S11ii.png)
 
    > **Note:** If you receive the **Introducing task flows (preview)** pop-up, click **Got it** to continue.
-
-   ![](<./Images/fb_ex1_8.png>)
+   >
+   >![](<./Images/fb_ex1_8.png>)
 
 1. When your new workspace opens, it should be empty.
 
