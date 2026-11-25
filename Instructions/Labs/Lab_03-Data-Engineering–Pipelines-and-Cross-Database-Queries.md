@@ -35,8 +35,6 @@ In this task, you will create a Spark notebook that transforms the raw CSV data 
 
       ![](./Images/img_014.png)
 
-      > **Note:** If prompted to select a Lakehouse, choose **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** and click **Add**.
-
 1. On the New Notebook pop-up, rename it to **nb_transform_products** **(1)** and click **Create (2)**.
 
    ![](<./Images/img2.png>)
@@ -173,8 +171,8 @@ In this task, you will add a **Copy Data** activity to the pipeline. This activi
       ![](<./Images/img17.png>)
 
       > **Note:** Drag the horizontal splitter bar upward to display the General tab options.
-
-      ![](<./Images/ETS312.png>)
+      >
+      >![](<./Images/ETS312.png>)
 
 1. Click the **Source** **(1)** tab. Under **Fabric item connections**, click **Browse all** **(2)** to create a new connection.
 
@@ -270,14 +268,14 @@ In this task, you will add a **Script** activity that uses a cross-database quer
       );
       GO
       ```
-
+      
       ![](<./Images/img30.png>)
 
 1. Verify that the table **DimProductStaging** appears in the **Explorer** pane under **dbo > Tables**. Click **Refresh** if needed.
 
       ![](<./Images/img31.png>)
 
-1. Now, test the **cross-database query**. In a new SQL query editor, **run (1)** the following query, which reads **Lakehouse data (2)** from the Warehouse.
+1. Now, test the **cross-database query**. In a new SQL query editor, **Run (1)** the following query, which reads **Lakehouse data (2)** from the Warehouse.
 
       >**Note:** Please replace the **Lakehouse_** with the actual value of your Lakehouse, i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>.dbo.stg_products**.
 
@@ -349,6 +347,8 @@ In this task, you will validate, run, and monitor the pipeline to ensure all thr
 1. Switch to **Home (1)** on the pipeline toolbar and click **Validate** **(2)**. You can check for configuration errors or validation errors in the **Pipeline validation output (3)**. Once validation succeeds with no errors, click **Close (4)**.
 
       ![](<./Images/img38.png>)
+
+   > **Note:** Before running the pipeline, open the **Monitor** option in the left navigation pane of the Fabric portal. If you do not see it, click the ellipsis (**...**) in the left navigation pane and select **Monitor**. In the Monitor hub, stop any notebooks that are still running, and then run the pipeline.
 
 1. Once validation passes, click **Run** to execute the pipeline.
 
