@@ -2,17 +2,17 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Scenario
+## 📘 Scenario
 
 After preparing the data, Contoso wants to analyze business data using a relational Data Warehouse in Microsoft Fabric.
 
 In this exercise, you will create a Data Warehouse, design tables and data models, run SQL queries, create views, and build visualizations to generate business insights and support reporting requirements.
 
-## Overview
+## 📋 Overview
 
 In this exercise, you will analyze data within a relational data warehouse using Microsoft Fabric. Utilize SQL for querying and create detailed visualizations to derive actionable insights. 
 
-## Objectives
+## 🎯 Objectives
 
 You will be able to complete the following tasks:
 
@@ -38,7 +38,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 3. Name the Warehouse as **Data Warehouse-<inject key="Deployment ID" enableCopy="false"/> (1)** and click on **Create (2)**.
 
-   ![Screenshot of a new warehouse.](./Images/p3t1p3.png)
+   ![Screenshot of a new warehouse.](./Images/p3t1p3-n.png)
 
 ## Task 2: Create tables and insert data
 
@@ -88,13 +88,13 @@ In this task, you will create database tables by defining their structure with a
 
     ![Screenshot of a new warehouse.](./Images/p3t2p5.png)
 
-6. In the **Explorer** pane, select the **DimProduct** table and verify that the three rows have been added to the table.
+6. In the **Explorer** pane, select the **DimProduct** table, open **Data preview**, and verify that all three rows have been added successfully.
 
-     ![Screenshot of a new warehouse.](./Images/p3t2p6.png)
+     ![Screenshot of a new warehouse.](./Images/p3t2p6-n.png)
 
 7. On the **Home (1)** menu tab, use the **New SQL Query (2)** button to create a new query.
 
-1. Copy this URL `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/create-dw.txt` and paste it in a new tab in the browser, and then copy and paste **(3)** the entire Transact-SQL code into the new query pane. Then click on **Run (4)**.
+1. Copy this URL `https://experienceazure.blob.core.windows.net/templates/ingesting-data-with-ms-fabric/create-dw.txt` and paste it in a new tab in the browser, and then copy and paste **(3)** the entire Transact-SQL code into the new query pane. Then click on **Run (4)**.
 
     ![](./Images/p3t2p7.png)
    
@@ -385,7 +385,7 @@ In this task, you will visualize your data from a single query or your data ware
 
     ![03](./Images/p3t7p12.png)
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you analyzed data in a Microsoft Fabric data warehouse. You created a data warehouse, defined tables, inserted data, and built relationships between fact and dimension tables. Using SQL, you queried and aggregated data for insights. You also created a view to streamline queries and used the visual query designer for no-code data exploration. Finally, you visualized the data in a Power BI report, learning how to effectively analyze and present warehouse data for decision-making.
 

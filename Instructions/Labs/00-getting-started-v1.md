@@ -2,39 +2,39 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## Lab Scenario
+## 📘 Lab Scenario
 
 Contoso is modernizing its analytics platform using Microsoft Fabric to improve data ingestion, transformation, storage, and reporting.
 
 As part of the data engineering and analytics team, you will use Dataflows (Gen2), Lakehouse, and Data Warehouse capabilities in Microsoft Fabric to ingest, standardize, analyze, and visualize business data for better decision-making.
 
-## Lab Overview
+## 📋 Lab Overview
 
 In this lab, you will explore key components of Microsoft Fabric's data solution. First, you will create and use Dataflows (Gen2) to ingest, transform, and standardize data from various sources, preparing it for analysis and landing it in a Lakehouse. Next, you will analyze the processed data within a relational data warehouse in Microsoft Fabric, leveraging its SQL capabilities for querying and visualization.
 
-## Lab Objectives
+## 🎯 Lab Objectives
 
 Explore dataflows, data warehousing, and reporting in Microsoft Fabric. By the end of this lab, you will gain insights on :
 
 - **Create and use a Dataflow (Gen2) in Microsoft Fabric:** Learn to effectively ingest and transform data using Dataflows (Gen2) in Microsoft Fabric. Connect data sources, standardize the data, and efficiently load it to Lakehouse.
 - **Analyze data in a Data Warehouse:** Learn to create and manage a relational data warehouse in Microsoft Fabric. Utilize SQL to perform queries and visualizations.
 
-## Pre-requisites
+## ⚙️ Pre-requisites
 
 Participants should have:
 
 - Fundamental knowledge of Microsoft Fabric
 - Basic understanding of Data Analytics
 
-## Architecture
+## 🏗️ Architecture
 
 This lab begins with setting up a workspace and a Lakehouse in the Data Engineering area. Next, Dataflows (Gen2) are created to import and configure data sources. These dataflows are then integrated into a pipeline for additional processing. Then  the Data Warehouse is created, with tables and their structure defined. Following this, data is queried, and views are created for further analysis. Finally, visual queries are developed to enable data visualization and provide insights.
 
-## Architecture Diagram
+## 🖼️ Architecture Diagram
 
 ![](./Images/new/arch.png)
 
-## Explanation of Components
+## 🔍 Explanation of Components
 
 The architecture for this lab involves the following key components:
 
@@ -47,7 +47,7 @@ The architecture for this lab involves the following key components:
 
 The Fabric trial includes access to most platform features required for this lab. However, Copilot, Private Links, and Trusted Workspace Access are not available in the trial capacity. For more details, refer to the official Microsoft documentation here: [Overview of the Fabric Trial](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity).
 
-## Getting Started with the Lab
+## 🚀 Getting Started with the Lab
 
 Welcome to the **Get Started with Data Warehouses and Ingesting Data with Dataflows Gen2 with Microsoft Fabric** lab. This hands-on workshop provides an opportunity to explore Microsoft Fabric capabilities for data ingestion, transformation, storage, and analytics. Follow the guided steps to work with Dataflows (Gen2), Lakehouse, and Data Warehouse components to build modern data solutions and gain practical experience with data engineering workflows.
 
@@ -99,7 +99,7 @@ After completing the task, hit the **Validate** button under the Validation tab 
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. 
 
-## Support Contact
+## 📞 Support Contact
 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
