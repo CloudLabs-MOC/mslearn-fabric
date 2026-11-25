@@ -2,17 +2,17 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Scenario
+## 📘 Scenario
 
 Contoso collects sales and operational data from multiple systems, resulting in inconsistent and unstructured datasets.
 
 In this exercise, you will create a Fabric workspace and Lakehouse, use Dataflows (Gen2) to ingest and transform data, standardize datasets, and load the processed data into the Lakehouse. You will also automate the workflow by adding the Dataflow to a pipeline.
 
-## Overview
+## 📋 Overview
 
 In this exercise, you will use Dataflows (Gen2) to ingest, transform, and standardize data. You will set up data ingestion processes, apply necessary transformations, and create standardized datasets for analysis. This exercise will help you understand how to efficiently prepare and manage data using Dataflows (Gen2).
 
-## Objectives
+## 🎯 Objectives
 
 You will be able to complete the following tasks:
 
@@ -73,7 +73,7 @@ In this task, you will create a dedicated workspace in Microsoft Fabric with the
 
       ![](./Images/p2t1p8.png)
 
-1. On the **Power BI homepage**, click on the **Profile icon (1)** on the top right, and then click on **Start trial (2)**.
+1. On the **Power BI homepage**, click the **Profile icon (1)** in the top-right corner. Then click **Start trial (2)**, followed by **Fabric and Power BI (3)**.
     
    ![](./Images/E1T1S9i.png)
      
@@ -143,7 +143,7 @@ The Lakehouse will provide a unified data storage and management solution, allow
 
 1. After a few moments, your new Lakehouse will be created and should open automatically, displaying the following screen:
 
-   ![New lakehouse created.](./Images/E1T2S3.png)
+      ![New lakehouse created.](./Images/E1T2S3.png)
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -173,18 +173,18 @@ In this task, you will create a Dataflow Gen2 to ingest data into a Lakehouse us
 5. Create a new data source with the following settings and click on **Next (8)** :
  
     - **Link to file**: Selected **(1)**
-    - **File path or URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/orders.csv` **(2)**
+    - **File path or URL**: `https://experienceazure.blob.core.windows.net/templates/ingesting-data-with-ms-fabric/orders.csv` **(2)**
     - **Connection**: Create new connection **(3)**
     - **Connection Name**: Connection **(4)**
     - **Data gateway**: (none) **(5)**
     - **Authentication kind**: Anonymous **(6)**
     - **Privacy Level** : None **(7)**
 
-      ![New lakehouse.](./Images/p2t3p5-1.png)
+      ![New lakehouse.](./Images/p2t3p5-1-n.png)
 
 6. On the **Preview file data**, click on **Create**.
 
-      ![New lakehouse.](./Images/createdataupd.png)
+      ![New lakehouse.](./Images/createdataupd-n.png)
 
 6. The Power Query editor shows the data source and an initial set of query steps to format the data, as shown here:
 
@@ -232,7 +232,7 @@ In this task, you will configure a data destination for a dataflow to enable sea
       - Select the **dbo (3)**
       - Specify the new table name as **orders (4)**.
 
-        ![Data destination configuration page.](./Images/E1T4S4.png)
+        ![Data destination configuration page.](./Images/E1T4S4-n.png)
 
 1. On the **Choose destination settings** page, observe that **MonthNo (1)** is not selected in the Column mapping, and an informational message is displayed. Click **Cancel (2)**.
 
@@ -324,7 +324,7 @@ In this task, you will add a dataflow to a pipeline to streamline the data proce
 
 <validation step="6f702ff3-1450-4b7c-b44f-052a3a77f380" />
 
-## Summary
+## 🧾 Summary
 
 In this exercise, you have learned how to use Dataflows (Gen2) to ingest, transform, and standardize data within Microsoft Fabric. You successfully set up data ingestion processes, applied necessary transformations, and created standardized datasets for analysis. By completing these tasks, you gained practical experience in preparing and managing data using Dataflows (Gen2) efficiently.
 
